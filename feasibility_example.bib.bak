@@ -58,6 +58,46 @@
   url   = {https://dl.acm.org/doi/abs/10.1145/2742647.2742662},
 }
 
+@InProceedings{,
+  title = {Air Mouse: An Everyday Mouse for the Ease of Computing},
+  url   = {https://link.springer.com/chapter/10.1007/978-981-10-1708-7_49},
+}
+
+@Article{,
+  title = {Comparing the Performance, Workload, and Usability of a Gamepad and Joystick in a Complex Task},
+  url   = {https://journals.sagepub.com/doi/abs/10.1177/1541931213571398?casa_token=K7HQk13XT6wAAAAA:tqtmE5zfDPV_Yk1tDAX6UFvAZbttQlkTuxd9YGrJd9fx2RWoSrIeLjKC5pYnzeZ1iKX6JDJcg1Y-Mg&},
+}
+
+@TechReport{,
+  title = {Enhancing Gamepad FPS Controls with Tilt-Driven Sensitivity Adjustment},
+  url   = {http://www.eurasiagraphics.hacettepe.edu.tr/papers/13-Alankus.pdf},
+}
+
+@InProceedings{,
+  title = {Measuring the impact of game controllers on player experience in FPS games},
+  url   = {https://dl.acm.org/doi/abs/10.1145/2181037.2181052},
+}
+
+@Article{,
+  title = {Beyond the Gamepad: HCI and Game Controller Design and Evaluation},
+  url   = {https://link.springer.com/chapter/10.1007/978-1-84882-963-3_12},
+}
+
+@Article{,
+  title = {Evaluation of Crosshair-Aided Gyroscope Gamepad Controller},
+  url   = {https://link.springer.com/chapter/10.1007/978-3-030-27192-3_23},
+}
+
+@Article{,
+  title = {Motion Controllers, Sound, and Music in Video Games: State of the Art and Research Perspectives},
+  url   = {https://link.springer.com/chapter/10.1007/978-3-319-72272-6_8},
+}
+
+@Article{,
+  title = {Applying Design Thinking for Prototyping a Game Controller},
+  url   = {https://link.springer.com/chapter/10.1007/978-3-319-99426-0_2},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
 
 %url={http://www.digra.org/wp-content/uploads/digital-library/05163.50560.pdf},
