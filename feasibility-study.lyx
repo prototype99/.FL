@@ -393,6 +393,27 @@ literal "false"
 
 A wide range of gamepads additionally feature gyroscopic and accelerometer
  controls, which could allow for an accurate pointing experience.
+ During testing Valve found motion control to be 
+\begin_inset Quotes eld
+\end_inset
+
+too tiring in some use cases
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Nerrel2020"
+literal "false"
+
+\end_inset
+
+, however this may have been due to the poorer build quality that featured
+ in the final version of the steam controller and their inexperience in
+ motion control, an argument that could be supported by their later use
+ of motion control in the Valve index controllers and the general success
+ of the Nintendo Wii: an almost purely motion based experience.
  Popular gamepads also have keyboard attachments available on the market,
  which could be considered acceptable if they can at least match the typing
  speed of a standard typist.
