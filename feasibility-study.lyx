@@ -321,20 +321,6 @@ literal "false"
 \begin_inset Newline newline
 \end_inset
 
-Independent studies suggest that gyroscopic controls are better than the
- traditional computer mouse or a joystick when it comes to aiming, a task
- that is common during personal computing.
- In one such study it is posited that friction could be the reason computer
- mice are less performant than gyroscopic controls, something that makes
- sense when the reason computer mice evolved from ball technology to optical
- technology is considered.
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
 Virtual reality (VR) and augmented reality (AR) both promise to offer a
  new way to interact with computers in subtly different ways, however a
  high electrical, processing and monetary cost as well as a lack of familiarity
@@ -376,6 +362,49 @@ A wide range of gamepads additionally feature gyroscopic and accelerometer
  A variety of 'air mouse' devices do exist, however the hardware is often
  a lot less advanced, and they do not feature as large a range of input
  methods, or are as ergonomically designed.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Yun2015"
+literal "false"
+
+\end_inset
+
+ say that air mice 
+\begin_inset Quotes eld
+\end_inset
+
+rely on accelerometers and gyroscopes, which significantly limit the accuracy
+ and ease of use
+\begin_inset Quotes erd
+\end_inset
+
+, however it has to be wondered whether that is due to the one handed nature,
+ as independent studies suggest that gyroscopic gamepads are better than
+ the traditional computer mouse or a joystick when it comes to aiming.
+ Aiming is a task that is common during personal computing.
+ In one such study it is posited that friction could be the reason computer
+ mice are less performant than gyroscopic controls, something that makes
+ sense when the reason computer mice evolved from ball technology to optical
+ technology is considered.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Novel techniques such as lidar, echolocation and WiFi signal phase shift
+ could also offer compelling experiences, however it is too early to be
+ certain as the technologies have yet to properly enter the consumer space
+ in a sizeable manner.
 \end_layout
 
 \begin_layout Section
