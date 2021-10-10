@@ -53,9 +53,14 @@
   url   = {https://www.cnet.com/news/the-cure-for-mouse-arm-gyroscopic-mice/},
 }
 
-@InProceedings{,
-  title = {Turning a Mobile Device into a Mouse in the Air},
-  url   = {https://dl.acm.org/doi/abs/10.1145/2742647.2742662},
+@InProceedings{Yun2015,
+  author    = {Sangki Yun and Yi-Chao Chen and Lili Qiu},
+  booktitle = {MobiSys '15: Proceedings of the 13th Annual International Conference on Mobile Systems, Applications, and Services},
+  title     = {Turning a Mobile Device into a Mouse in the Air},
+  year      = {2015},
+  month     = may,
+  ranking   = {rank3},
+  url       = {https://dl.acm.org/doi/abs/10.1145/2742647.2742662},
 }
 
 @InProceedings{,
