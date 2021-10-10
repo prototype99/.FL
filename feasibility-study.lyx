@@ -347,6 +347,25 @@ Gamepads/controllers could prove to be the perfect stepping stone to future
  Gamepads are capable of adding new ways to control experiences thanks to
  a variety of features such as variable pressure triggers, joysticks, programmab
 le lights and force feedback.
+ As an example, on the late steam controller, a user 
+\begin_inset Quotes eld
+\end_inset
+
+can play Vivaldi on their haptic trackpads
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Nerrel2020"
+literal "false"
+
+\end_inset
+
+; although it may seem comical or absurd at first, this is one example of
+ many that illustrates how gamepads can create new experiences using their
+ wide variety of inputs, and would be very compelling for a musician especially.
 \begin_inset Newline newline
 \end_inset
 
@@ -386,9 +405,8 @@ rely on accelerometers and gyroscopes, which significantly limit the accuracy
 \begin_inset Quotes erd
 \end_inset
 
-, however it has to be wondered whether that is due to the one handed nature,
- as independent studies suggest that gyroscopic gamepads are better than
- the traditional computer mouse or a joystick when it comes to aiming.
+, however it has to be wondered whether that is only due to the one handed
+ nature of such devices, which would likely reduce stability.
  Aiming is a task that is common during personal computing.
  In one such study it is posited that friction could be the reason computer
  mice are less performant than gyroscopic controls, something that makes
