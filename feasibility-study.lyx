@@ -384,7 +384,14 @@ literal "false"
 ; although it may seem comical or absurd at first, this is one example of
  many that illustrates how gamepads can create new experiences using their
  wide variety of inputs, and would be very compelling for a musician especially.
- All the same, trackpads are not a valid alternative to a mouse, as 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+All the same, trackpads are not a valid alternative to a mouse, as 
 \begin_inset Quotes eld
 \end_inset
 
@@ -402,6 +409,43 @@ literal "false"
 
  a casual user struggles to use them as effectively as a mouse, a concerning
  fact considering the rising popularity of laptop devices.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Applying any pressure at all will create friction with the pad
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Nerrel2020"
+literal "false"
+
+\end_inset
+
+ which may explain why the computer mouse (two low friction surfaces) does
+ comparably better than the trackpad (a low friction surface and a high
+ friction surface).
+ Another highlighted issue is having to 
+\begin_inset Quotes eld
+\end_inset
+
+to make multiple swipes
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Nerrel2020"
+literal "false"
+
+\end_inset
+
+ an issue that was in fact experienced in the making of this feasibility
+ study.
 \begin_inset Newline newline
 \end_inset
 
