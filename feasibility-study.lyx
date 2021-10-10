@@ -344,6 +344,24 @@ Gamepads/controllers could prove to be the perfect stepping stone to future
  Due to their prevalence in leisure activities a lot of people already have
  a gamepad, and if not they are often at around the same price as a medium
  quality mouse thus being easily accessible.
+ It is generally accepted that gamepads 
+\begin_inset Quotes eld
+\end_inset
+
+make couch play better
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Nerrel2020"
+literal "false"
+
+\end_inset
+
+, following that logic it has to be wondered what they could do for 'couch
+ work'.
  Gamepads are capable of adding new ways to control experiences thanks to
  a variety of features such as variable pressure triggers, joysticks, programmab
 le lights and force feedback.
@@ -378,17 +396,21 @@ A wide range of gamepads additionally feature gyroscopic and accelerometer
  Popular gamepads also have keyboard attachments available on the market,
  which could be considered acceptable if they can at least match the typing
  speed of a standard typist.
- A variety of 'air mouse' devices do exist, however the hardware is often
+ In one such study it is posited that friction could be the reason computer
+ mice are less performant than gyroscopic controls, something that makes
+ sense when the reason computer mice evolved from ball technology to optical
+ technology is considered.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+A variety of 'air mouse' devices do exist, however the hardware is often
  a lot less advanced, and they do not feature as large a range of input
  methods, or are as ergonomically designed.
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-
+ 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "Yun2015"
@@ -408,10 +430,6 @@ rely on accelerometers and gyroscopes, which significantly limit the accuracy
 , however it has to be wondered whether that is only due to the one handed
  nature of such devices, which would likely reduce stability.
  Aiming is a task that is common during personal computing.
- In one such study it is posited that friction could be the reason computer
- mice are less performant than gyroscopic controls, something that makes
- sense when the reason computer mice evolved from ball technology to optical
- technology is considered.
 \begin_inset Newline newline
 \end_inset
 
