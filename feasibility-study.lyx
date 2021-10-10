@@ -401,10 +401,78 @@ rely on accelerometers and gyroscopes, which significantly limit the accuracy
 \begin_inset Newline newline
 \end_inset
 
-Novel techniques such as lidar, echolocation and WiFi signal phase shift
- could also offer compelling experiences, however it is too early to be
- certain as the technologies have yet to properly enter the consumer space
- in a sizeable manner.
+Novel techniques also exist, such as lidar.
+ another approach is where the device 
+\begin_inset Quotes eld
+\end_inset
+
+sends inaudible sound pulses at a few selected frequencies, and uses the
+ frequency shifts to estimate the speed and distance traveled
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Yun2015"
+literal "false"
+
+\end_inset
+
+, a form of echolocation.
+ Another technique involves 
+\begin_inset Quotes eld
+\end_inset
+
+the phase of received WiFi signal
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Yun2015"
+literal "false"
+
+\end_inset
+
+.
+ These newer technologies could all offer compelling experiences, however
+ it is too early to be certain as the technologies have yet to properly
+ enter the consumer space in a sizeable manner.
+ In the context of the aforementiened two techniques, 
+\begin_inset Quotes eld
+\end_inset
+
+evaluation and user study
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Yun2015"
+literal "false"
+
+\end_inset
+
+ shows that they can be combined to achieve 
+\begin_inset Quotes eld
+\end_inset
+
+high tracking accuracy (e.g., median error of around 1.4 cm)
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Yun2015"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
