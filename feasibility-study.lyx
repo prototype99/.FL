@@ -272,9 +272,42 @@ literal "false"
 .
  This, paired with the keyboard, has stuck with personal computers as they
  have continuously miniaturised and evolved over time with disproportionately
- little to no changes.
- This interface requires a large, flat, semi-dedicated workspace which creates
- a rigid, fixed layout that consumes a large amount of space.
+ little to no changes despite the new, 
+\begin_inset Quotes eld
+\end_inset
+
+rich options for users to choose from
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Yun2015"
+literal "false"
+
+\end_inset
+
+ that have emerged.
+ This interface 
+\begin_inset Quotes eld
+\end_inset
+
+requires a surface
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Yun2015"
+literal "false"
+
+\end_inset
+
+ which is typically flat, and semi-dedicated which creates a rigid, fixed
+ workspace layout that consumes a large amount of space compared to the
+ other equipment.
  The limited set of motions seen in such a setup is well known to cause
  repetitive strain injury.
  The goal of this project is not to solve repetitive strain, however it
