@@ -451,6 +451,25 @@ rely on accelerometers and gyroscopes, which significantly limit the accuracy
 , however it has to be wondered whether that is only due to the one handed
  nature of such devices, which would likely reduce stability.
  Aiming is a task that is common during personal computing.
+ The key issue with aiming is that users typically will make one large estimated
+ movement and then 
+\begin_inset Quotes eld
+\end_inset
+
+make small corrections
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Nerrel2020"
+literal "false"
+
+\end_inset
+
+, meaning that any input method used has to be able to effectively accomodate
+ both to be of any real use.
  A modern high resolution trackball could also be a solution for such aiming
  tasks, however much like the original trackball it requires 
 \begin_inset Quotes eld
