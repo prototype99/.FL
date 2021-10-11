@@ -476,6 +476,23 @@ literal "false"
  motion control, an argument that could be supported by their later use
  of motion control in the Valve index controllers and the general success
  of the Nintendo Wii: an almost purely motion based experience.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+The advantage of gyro is that there’s zero friction
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Nerrel2020"
+literal "false"
+
+\end_inset
+
+ which allows users to follow far more natural movements.
  Popular gamepads also have keyboard attachments available on the market,
  which could be considered acceptable if they can at least match the typing
  speed of a standard typist.
