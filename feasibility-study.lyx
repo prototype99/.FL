@@ -495,6 +495,29 @@ literal "false"
  which allows users to follow far more natural movements.
  This statement makes sense when the reason computer mice evolved from ball
  technology to optical technology is considered.
+ Even if we ignore gyroscopic controls and look at the Xbox controller,
+ a purely joystick based controller in comparison to a dedicated joystick:
+ 
+\begin_inset Quotes eld
+\end_inset
+
+The results indicate that the Xbox controller had lower tracking errors
+ and trended to lower workload and a slightly higher usability score as
+ measured by the system usability scale (SUS)
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Rupp2013"
+literal "false"
+
+\end_inset
+
+.
+ This suggests that ergonomic design that is purpose built for two handed
+ use could be key.
  Popular gamepads also have keyboard attachments available on the market,
  which could be considered acceptable if they can at least match the typing
  speed of a standard typist.
