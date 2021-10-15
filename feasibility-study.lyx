@@ -9,9 +9,7 @@
 \usepackage{a4}
 \usepackage{times}
 \usepackage{graphicx}
-
-
-\title{Feasibility Study}
+\usepackage{colortbl}
 \end_preamble
 \use_default_options false
 \maintain_unincluded_children false
@@ -88,22 +86,13 @@
 
 \begin_body
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-maketitle
+\begin_layout Title
+Feasibility Study
 \end_layout
 
-\end_inset
+\begin_layout Standard
 
- 
 \size larger
-
 \begin_inset Tabular
 <lyxtabular version="3" rows="5" columns="2">
 <features tabularvalignment="middle">
