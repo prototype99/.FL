@@ -311,9 +311,8 @@ literal "false"
 \begin_inset Newline newline
 \end_inset
 
-Virtual reality (VR) and augmented reality (AR) both promise to offer a
- new way to interact with computers in subtly different ways, however a
- high electrical, processing and £899
+Virtual reality (VR) promises to offer a new way to interact with computers
+ in subtly different ways, however a high electrical, processing and £899
 \begin_inset CommandInset citation
 LatexCommand citep
 key "CurrysVive2021"
@@ -323,6 +322,18 @@ literal "false"
 
  cost as well as a lack of familiarity makes such a notion seem as of yet
  distant.
+ Augmented reality (AR) would offer an even higher level of interaction,
+ however AR has a cost of $3500
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Microsoft2021"
+literal "false"
+
+\end_inset
+
+, thus it is not particularly relevant to talk about AR separately.
+ One way to try and make AR cheaper is by emulating it via cameras on a
+ VR headset.
  These methods are otherwise compelling due to the fact that they allow
  more natural movement and the ability for the user to feel that they are
  exploring a true three dimensional space.
