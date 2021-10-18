@@ -313,13 +313,31 @@ literal "false"
 
 Virtual reality (VR) and augmented reality (AR) both promise to offer a
  new way to interact with computers in subtly different ways, however a
- high electrical, processing and monetary cost as well as a lack of familiarity
- makes such a notion seem as of yet distant.
+ high electrical, processing and £899
+\begin_inset CommandInset citation
+LatexCommand citep
+key "CurrysVive2021"
+literal "false"
+
+\end_inset
+
+ cost as well as a lack of familiarity makes such a notion seem as of yet
+ distant.
  These methods are otherwise compelling due to the fact that they allow
  more natural movement and the ability for the user to feel that they are
  exploring a true three dimensional space.
  It can be expected that VR will become more common as increased demand
  leads to the development of cheaper, more affordable, viable solutions.
+ One solution is the Oculus quest 2 at a cost of £299
+\begin_inset CommandInset citation
+LatexCommand citep
+key "CurrysOculus2021"
+literal "false"
+
+\end_inset
+
+ which also has wireless mobility, however the pricing model has lead to
+ privacy concerns.
 \begin_inset Newline newline
 \end_inset
 
@@ -328,7 +346,16 @@ Virtual reality (VR) and augmented reality (AR) both promise to offer a
 \end_inset
 
 Gamepads/controllers could prove to be the perfect stepping stone to future
- VR experiences due to their lower cost.
+ VR experiences due to their lower cost; the DualSense, one of the most
+ advanced gamepads currently, costs £59.99
+\begin_inset CommandInset citation
+LatexCommand citep
+key "CurrysDualShock2021"
+literal "false"
+
+\end_inset
+
+.
  Gamepads are designed with ergonomics in mind, allowing a comfortable two
  handed grip for an extended amount of time.
  Due to their prevalence in leisure activities a lot of people already have
