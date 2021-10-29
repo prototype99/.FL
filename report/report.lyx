@@ -236,13 +236,6 @@ hyphenation{op-tical net-works semi-conduc-tor IEEEtran}
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset bibtex
-LatexCommand bibtex
-bibfiles "refs"
-
-\end_inset
-
- 
 \begin_inset ERT
 status collapsed
 
@@ -639,6 +632,9 @@ bibliographystyle{agsm}
 
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "refs"
+options "bibtotoc,plain"
 
 \end_inset
 
