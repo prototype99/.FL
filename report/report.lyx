@@ -6,6 +6,7 @@
 \origin unavailable
 \textclass ../../../../.lyx/layouts/mmuthesis
 \begin_preamble
+%in manjaro you may need texlive-bibtexextra and texlive-latexextra
 \usepackage{ifthen}
 \usepackage{verbatim}
 \usepackage{graphicx}
