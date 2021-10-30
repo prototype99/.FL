@@ -84,6 +84,7 @@
 
 \addtocounter{MaxMatrixCols}{20}
 \end_preamble
+\options 12pt,BSc
 \use_default_options false
 \maintain_unincluded_children false
 \language english
