@@ -1,10 +1,10 @@
-#LyX file created by tex2lyx 2.3
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
 \lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
-\origin /home/seirra/Documents/src/DotFL/report/
-\textclass article
+\origin unavailable
+\textclass ../../../../.lyx/layouts/mmuthesis
 \use_default_options false
 \maintain_unincluded_children false
 \language english
@@ -78,7 +78,10 @@
 \begin_body
 
 \begin_layout Standard
-The abstract is a formal description of the reason for doing this work, the methods used and results found, and the conclusions drawn. It should not be more than one page in length. 
+The abstract is a formal description of the reason for doing this work,
+ the methods used and results found, and the conclusions drawn.
+ It should not be more than one page in length.
+ 
 \end_layout
 
 \end_body
