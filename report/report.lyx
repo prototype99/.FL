@@ -5,6 +5,85 @@
 \save_transient_properties true
 \origin unavailable
 \textclass ../../../../.lyx/layouts/mmuthesis
+\begin_preamble
+\usepackage{ifthen}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{url} 
+
+\usepackage{epsfig} 
+\usepackage{tabls}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\interdisplaylinepenalty=2500
+\usepackage[usenames]{color}
+
+\usepackage{multicol}
+\usepackage{colortbl}
+\usepackage{pdfcolmk}
+%\usepackage{natbib}
+\usepackage[style=authoryear,backend=biber]{biblatex}
+
+\usepackage{color}
+\usepackage{times}
+\usepackage{amsfonts}
+\usepackage{longtable}
+
+
+\definecolor{MyBlack}{rgb}{0,0,0}
+\definecolor{MyGray}{rgb}{0.5,0.5,0.5} 
+\definecolor{MyBlue}{rgb}{0,0.4,1}
+\definecolor{MyLightBlue}{rgb}{0,0.8,0.7}
+
+\providecommand{\pt}{\cellcolor{MyBlack}}
+\providecommand{\st}{\cellcolor{MyGray}}
+
+\providecommand{\bt}{\cellcolor{MyBlue}}
+\providecommand{\lt}{\cellcolor{MyLightBlue}}
+
+\usepackage{array}
+
+
+\ifx\pdfoutput\undefined
+\usepackage[hypertex]{hyperref}
+\else
+\usepackage[pdftex,hypertexnames=false]{hyperref}
+\fi
+
+%% *** Do not adjust lengths that control margins, column widths, etc. ***
+%% *** Do not use packages that alter fonts (such as pslatex).         ***
+%% There should be no need to do such things with IEEEtran.cls V1.6 and later.
+%%page layout
+%%\usepackage{layout}
+%%
+%%resetting
+%%\setlength{\hoffset}{-1in}
+%%\setlength{\voffset}{-1in}
+%%
+%%gap between columns
+%%\setlength{\columnsep}{10mm}
+%%gap above header
+%%\setlength{\topmargin}{1in}
+%%between header and text
+%%\setlength{\topskip}{0cm}
+%%height of main text
+%%\setlength{\textheight}{8in}
+%% width of text
+%%\setlength{\textwidth}{5.5in}
+%%odd page left margin
+%%\setlength{\oddsidemargin}{1.5in}
+%%even page left margin
+%%\setlength{\evensidemargin}{4cm}
+%%\setlength{\headheight}{0mm}
+%%\setlength{\marginparsep}{0mm}
+%%\setlength{\marginparwidth}{0mm}
+%%\setlength{\headsep}{0mm}
+%%bottom margin
+%%\setlength{\footskip}{0cm}
+
+\addtocounter{MaxMatrixCols}{20}
+\end_preamble
 \use_default_options false
 \maintain_unincluded_children false
 \language english
@@ -88,40 +167,6 @@ status collapsed
 
 \begin_layout Plain Layout
 
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%
-\backslash
-documentclass[12pt,BSc]{mmuthesis}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "command.lyx"
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-% this reads in lots of packages etc..
 \end_layout
 
 \end_inset
