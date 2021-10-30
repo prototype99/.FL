@@ -1,0 +1,50 @@
+%H computation range to change
+\documentclass[12pt,BSc]{mmuthesis}
+
+\input{command} % this reads in lots of packages etc..
+
+% you may find that a few of your words run off the edge of the page
+% add them to this list with a hyphen in the right place to have
+% them broken appropriately
+\hyphenation{op-tical net-works semi-conduc-tor IEEEtran}
+
+\bibliography{refs}  
+\begin{document}
+
+% Uncomment the following lines to leave out list of figures, tables
+% and copyright until final printing
+% leave this alone - sorry I can't put in the command.tex file.
+%\figurespagefalse
+%\tablespagefalse
+\copyrightfalse 
+
+
+\title{The title of your project}
+\author{Your Name}
+\principaladviser{Your Supervisor}
+\ethicsnumber{Your EthOS Number}
+
+\beforeabstract
+\prefacesection{Abstract}
+\input{abstract}
+\afterabstract
+\prefacesection{Acknowledgements}
+\input{acknowledgements}
+\prefacesection{Abbreviations}
+\input{abbreviations}
+\afterpreface
+
+
+\include{chapter1}
+\include{chapter2}
+
+%\bibliographystyle{agsm}
+\printbibliography
+\addcontentsline{toc}{chapter}{References}      
+
+\appendix
+\include{appendix1}
+\include{appendix2}
+
+
+\end{document}
