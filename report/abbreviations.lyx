@@ -82,7 +82,7 @@
 <lyxtabular version="3" rows="2" columns="2">
 <features islongtable="true" longtabularalignment="center">
 <column alignment="left" valignment="top">
-<column alignment="none" valignment="top">
+<column alignment="left" valignment="top" width="0pt">
 <row>
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
@@ -93,7 +93,7 @@ PCA
 
 \end_inset
 </cell>
-<cell alignment="none" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -113,7 +113,7 @@ LTA
 
 \end_inset
 </cell>
-<cell alignment="none" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
