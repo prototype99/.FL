@@ -344,7 +344,7 @@ Documentation:
   \vfill
   \begin{center}
     \normalfont By\\
-    \@author\\
+    \@author
     \expandafter{\@dept}
   \end{center}\vskip.5in
   \newpage
