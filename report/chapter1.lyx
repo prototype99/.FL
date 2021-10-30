@@ -1,0 +1,588 @@
+#LyX file created by tex2lyx 2.3
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin /home/seirra/Documents/src/DotFL/report/
+\textclass article
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+chapter{First Chapter - probably ``Introduction''}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:chap1"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Referencing
+\end_layout
+
+\begin_layout Standard
+Whenever you refer to another's ideas or findings you should include a reference. This will allow the reader to locate and refer to the original source in the event of wishing to find out more information about a particular topic. Please note that references do not allow you to copy sections of work that are not your own.
+\end_layout
+
+\begin_layout Standard
+There are a number of conventions for citing references. You should follow the one referred to as 
+\begin_inset Quotes eld
+\end_inset
+
+Harvard
+\begin_inset Quotes erd
+\end_inset
+
+, described in great detail in the University's guide
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+verb|http://libguides.mmu.ac.uk/refguide/mmuharvard|
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The citation should be given name and a year, as in the case this case: 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+textcite
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+frith-2012
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+. This name form is easier to work with than others and gives some visual clue to the reference. When naming authors, use their surname only; do not use their personal names, titles or initials unless it is necessary to distinguish two people with the same surname. If there are two authors of a paper, use both their surnames to identify it 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+parencite
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+ryoo-matthies-2013
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+. For three or more, give the name of the first author and the words 
+\begin_inset Quotes eld
+\end_inset
+
+et al
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+parencite
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+chen-j-k-2015
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+. It is not normal to state where the authors work; this is an attempt by journalists to give credibility their statements and is not appropriate in scientific writing where we are concentrating on the content of the work.
+\end_layout
+
+\begin_layout Section
+Figures and Tables
+\end_layout
+
+\begin_layout Standard
+A figure caption should appear below each figure, and a table caption should appear below each table. Insert figures and tables after they are cited in the text; make sure that you cite them all. The figure or table, together with the caption (which should give the number of the figure or table), should be centred and referred to within the text as 
+\begin_inset Quotes eld
+\end_inset
+
+Figure
+\begin_inset space ~
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:fig1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows...
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+...as shown in Table
+\begin_inset space ~
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:tab1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+. There should be a blank line above and below each figure or table.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Float figure
+placement htb
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics 
+	filename style_guide_fig1.pdf
+	width 90col%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Transform coding.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:fig1"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Float table
+placement htb
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Tabular 
+<lyxtabular version="3" rows="6" columns="2">
+<features rotate="0" tabularvalignment="middle" tabularwidth="0pt">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\series bold
+Number
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\series bold
+Measurement
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+M0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Difference in Y values 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+M1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Maximum of TI 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+M2 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+RMS of TI 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+M3 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Range of TI values 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+M4 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+RMS of SI 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Quality measurements used by CQA
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:tab1"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If preparing your report on Word, use its caption handling facility to enter figure and table headings. This will allow you to auto-number the headings and also to generate a List of Figures and a List of Tables at the beginning of your report.
+\end_layout
+
+\begin_layout Section
+Equations
+\end_layout
+
+\begin_layout Standard
+Number equations consecutively within each chapter (e.g. the first equation in Chapter 1 should be numbered (1.1), the first equation in Chapter 2 should be numbered (2.1) etc.). Equation numbers, within parentheses, should be positioned flush right as in (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "equ:eqn1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+). The equation should be centred and included in the sentence within your text which brackets it. There should be a blank line above and below each equation.
+\end_layout
+
+\begin_layout Standard
+The following is an example of the correct use and formatting of an equation:
+\end_layout
+
+\begin_layout Quote
+Using the root mean square error, 
+\begin_inset Formula \begin{equation}
+RMSE = \sqrt{\frac{1}{N} \sum_{i=1}^{N}(x_i - m_i)^2},
+\label{equ:eqn1}
+\end{equation}
+\end_inset
+
+as a measure of accuracy, where 
+\begin_inset Formula $x_i$
+\end_inset
+
+ and 
+\begin_inset Formula $m_i$
+\end_inset
+
+ are respectively the 
+\begin_inset Formula $i$
+\end_inset
+
+-th elements of the observation and reference,.... 
+\end_layout
+
+\end_body
+\end_document
