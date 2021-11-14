@@ -23,8 +23,7 @@
 \usepackage{multicol}
 \usepackage{colortbl}
 \usepackage{pdfcolmk}
-%\usepackage{natbib}
-\usepackage[style=authoryear,backend=biber]{biblatex}
+\usepackage{natbib}
 
 \usepackage{color}
 \usepackage{times}
@@ -124,9 +123,9 @@
 \use_package stackrel 0
 \use_package stmaryrd 0
 \use_package undertilde 0
-\cite_engine basic
-\cite_engine_type default
-\biblio_style plain
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style agsm
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -599,28 +598,11 @@ filename "chapter2.lyx"
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%
-\backslash
-bibliographystyle{agsm}
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 btprint "btPrintCited"
 bibfiles "refs"
-options "bibtotoc,plain"
+options "bibtotoc,agsm"
 
 \end_inset
 

@@ -144,37 +144,10 @@ verb|http://libguides.mmu.ac.uk/refguide/mmuharvard|
 \begin_layout Standard
 The citation should be given name and a year, as in the case this case:
  
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-textcite
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-frith-2012
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "frith-2012"
+literal "false"
 
 \end_inset
 
@@ -186,37 +159,10 @@ status collapsed
  with the same surname.
  If there are two authors of a paper, use both their surnames to identify
  it 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-parencite
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-ryoo-matthies-2013
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ryoo-matthies-2013"
+literal "false"
 
 \end_inset
 
@@ -230,37 +176,10 @@ et al
 \end_inset
 
  
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-parencite
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-chen-j-k-2015
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "chen-j-k-2015"
+literal "false"
 
 \end_inset
 
