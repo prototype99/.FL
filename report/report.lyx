@@ -606,19 +606,6 @@ options "bibtotoc,agsm"
 
 \end_inset
 
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-addcontentsline{toc}{chapter}{References}
-\end_layout
-
-\end_inset
-
 
 \end_layout
 
