@@ -395,18 +395,6 @@ options "bibtotoc,agsm"
 
 \begin_layout Standard
 \start_of_appendix
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%dummy comment inserted by tex2lyx to ensure that this paragraph is not
- empty
-\end_layout
-
-\end_inset
-
-
 \begin_inset CommandInset include
 LatexCommand include
 filename "appendix1.lyx"
@@ -421,22 +409,6 @@ filename "appendix2.lyx"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{document}
-\end_layout
-
-\end_inset
-
- 
 \end_layout
 
 \end_body
