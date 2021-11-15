@@ -259,6 +259,26 @@ Declaration
 \end_layout
 
 \begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "4in"
+height_special "none"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
 No part of this project has been submitted in support of an application
  for any other degree or qualification at this or any other institute of
  learning.
@@ -269,12 +289,31 @@ No part of this project has been submitted in support of an application
  number 36448
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 Signed:
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 Date:
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter*
@@ -345,7 +384,7 @@ Three Letter Acronym
 
 \begin_layout Standard
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
