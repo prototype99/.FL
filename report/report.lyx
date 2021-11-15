@@ -331,7 +331,7 @@ Abbreviations
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="2" columns="2">
+<lyxtabular version="3" rows="3" columns="2">
 <features islongtable="true" longtabularalignment="center">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top" width="0pt">
@@ -340,7 +340,7 @@ Abbreviations
 \begin_inset Text
 
 \begin_layout Plain Layout
-PCA
+AR
 \end_layout
 
 \end_inset
@@ -349,7 +349,27 @@ PCA
 \begin_inset Text
 
 \begin_layout Plain Layout
-Principal Components Analysis
+Augmented Reality
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+UI
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+User Interface
 \end_layout
 
 \end_inset
@@ -360,7 +380,7 @@ Principal Components Analysis
 \begin_inset Text
 
 \begin_layout Plain Layout
-LTA
+VR
 \end_layout
 
 \end_inset
@@ -369,7 +389,7 @@ LTA
 \begin_inset Text
 
 \begin_layout Plain Layout
-Three Letter Acronym
+Virtual Reality
 \end_layout
 
 \end_inset
