@@ -332,11 +332,42 @@ copyrightfalse
 \end_layout
 
 \begin_layout Title
+
+\size huge
 The title of your project
 \end_layout
 
 \begin_layout Author
 Your Name
+\end_layout
+
+\begin_layout Standard
+\align center
+A REPORT SUBMITTED TO MANCHESTER METROPOLITAN UNIVERSITY
+\begin_inset Newline newline
+\end_inset
+
+FOR THE DEGREE OF BACHELOR OF SCIENCE
+\begin_inset Newline newline
+\end_inset
+
+IN THE FACULTY OF SCIENCE AND ENGINEERING
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename mmu_logo.pdf
+	width 40col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Department of Computing and Mathematics
 \end_layout
 
 \begin_layout Standard
