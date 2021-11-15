@@ -83,6 +83,7 @@
 %%\setlength{\footskip}{0cm}
 
 \addtocounter{MaxMatrixCols}{20}
+\pagenumbering{roman}
 \end_preamble
 \options 12pt,BSc
 \use_default_options false
@@ -231,19 +232,22 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-beforeabstract
-\end_layout
+\begin_inset FloatList table
 
 \end_inset
 
- 
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status collapsed
 
@@ -391,6 +395,29 @@ status collapsed
 
 \backslash
 afterpreface
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{arabic}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{page}{1}
 \end_layout
 
 \end_inset
