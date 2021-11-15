@@ -331,7 +331,7 @@ Abbreviations
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="6" columns="2">
+<lyxtabular version="3" rows="9" columns="2">
 <features islongtable="true" longtabularalignment="center">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top" width="0pt">
@@ -340,12 +340,32 @@ Abbreviations
 \begin_inset Text
 
 \begin_layout Plain Layout
-AR
+6axis
 \end_layout
 
 \end_inset
 </cell>
 <cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+gyroscopic and accelerometer (control)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+AR
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -370,6 +390,46 @@ CM
 
 \begin_layout Plain Layout
 Centimetres
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DidOS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Didelphimorphic OS
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DotFL
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dance Of The Flowing Lines
 \end_layout
 
 \end_inset
@@ -504,6 +564,12 @@ Inspiration
 Motivation
 \end_layout
 
+\begin_layout Standard
+The use of 6axis could present a new way to interact with PCs, this warrants
+ some basic research to help identify future related studies that could
+ be undertaken, as well as the general efficacy of such a concept.
+\end_layout
+
 \begin_layout Section
 Project background
 \end_layout
@@ -622,9 +688,9 @@ literal "false"
 \begin_inset Newline newline
 \end_inset
 
-Gamepads/controllers could prove to be the perfect stepping stone to future
- VR experiences due to their lower cost; the DualSense, one of the most
- advanced gamepads currently, costs £59.99
+Gamepads could prove to be the perfect stepping stone to future VR experiences
+ due to their lower cost; the DualSense, one of the most advanced gamepads
+ currently, costs £59.99
 \begin_inset CommandInset citation
 LatexCommand citep
 key "CurrysDualShock2021"
@@ -981,6 +1047,60 @@ Apply the principles and operation of languages, compilers and interpreters.
 Possible future
 \end_layout
 
+\begin_layout Standard
+Whilst the end goal would probably be to integrate 6axis into more popular
+ software such as GIMP or Krita, there is nothing to say that the software
+ produced by this project will be overly useless.
+ The software can serve multiple purposes explored below.
+\end_layout
+
+\begin_layout Subsection
+As part of an OS
+\end_layout
+
+\begin_layout Standard
+The author may decide to include the resultant software as part of DidOS
+ as a semi exclusive bundled accessory.
+ DidOS is a Linux based, source compiled OS in the very early stages of
+ production.
+\end_layout
+
+\begin_layout Subsection
+Demo
+\end_layout
+
+\begin_layout Standard
+DotFL could serve as a demo for a larger set of 6axis software, much like
+ demo software for frameworks.
+\end_layout
+
+\begin_layout Subsection
+Familiarisation
+\end_layout
+
+\begin_layout Standard
+DotFL could serve as a way to familiarise users with gyroscopic controls,
+ due to it mirroring a concept users are often already very familiar with.
+\end_layout
+
+\begin_layout Subsection
+Concept model
+\end_layout
+
+\begin_layout Standard
+DotFL could serve as a reference model for further integrations into more
+ popular software as aforementioned.
+\end_layout
+
+\begin_layout Subsection
+Niche interest
+\end_layout
+
+\begin_layout Standard
+DotFL may just happen to fit one of the smaller demographics, such as those
+ with strict licencing requirements, language enthusiasts or both.
+\end_layout
+
 \begin_layout Section
 Hypothesis
 \end_layout
@@ -995,7 +1115,7 @@ literal "false"
 
 \end_inset
 
- could also translate to a desktop PC experience.
+ could also translate to a PC experience.
  I hypothesise that users will give positive testimonials, including digital
  artists, if available.
  I hypothesise that with some basic practice a hardware keypad such as seen
