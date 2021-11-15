@@ -84,6 +84,8 @@
 
 \addtocounter{MaxMatrixCols}{20}
 \pagenumbering{roman}
+\copyrightfalse
+\ethicsnumber{36448}
 \end_preamble
 \options 12pt,BSc
 \use_default_options false
@@ -209,11 +211,6 @@ IN THE FACULTY OF SCIENCE AND ENGINEERING
 \begin_layout Standard
 \align center
 Department of Computing and Mathematics
-\end_layout
-
-\begin_layout Standard
-\align center
-EthOS number 36448
 \end_layout
 
 \begin_layout Standard
