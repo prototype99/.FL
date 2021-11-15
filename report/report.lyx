@@ -355,6 +355,13 @@ IN THE FACULTY OF SCIENCE AND ENGINEERING
 \end_layout
 
 \begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \align center
 \begin_inset Graphics
 	filename mmu_logo.pdf
@@ -366,8 +373,24 @@ IN THE FACULTY OF SCIENCE AND ENGINEERING
 \end_layout
 
 \begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \align center
 Department of Computing and Mathematics
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
