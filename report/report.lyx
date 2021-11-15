@@ -365,23 +365,6 @@ setcounter{page}{1}
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "chapter1.lyx"
-
-\end_inset
-
- 
-\begin_inset CommandInset include
-LatexCommand include
-filename "chapter2.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 btprint "btPrintCited"
@@ -395,20 +378,7 @@ options "bibtotoc,agsm"
 
 \begin_layout Standard
 \start_of_appendix
-\begin_inset CommandInset include
-LatexCommand include
-filename "appendix1.lyx"
-
-\end_inset
-
- 
-\begin_inset CommandInset include
-LatexCommand include
-filename "appendix2.lyx"
-
-\end_inset
-
-
+this is da appendix
 \end_layout
 
 \end_body
