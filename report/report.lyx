@@ -345,7 +345,7 @@ Three Letter Acronym
 
 \begin_layout Standard
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -359,6 +359,13 @@ pagenumbering{arabic}
 
 \backslash
 setcounter{page}{1}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagestyle{headings}
 \end_layout
 
 \end_inset
