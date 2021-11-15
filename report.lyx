@@ -331,7 +331,7 @@ Abbreviations
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="2">
+<lyxtabular version="3" rows="6" columns="2">
 <features islongtable="true" longtabularalignment="center">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top" width="0pt">
@@ -390,6 +390,26 @@ OS
 
 \begin_layout Plain Layout
 Operating System
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PC
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Personal Computer
 \end_layout
 
 \end_inset
@@ -959,6 +979,27 @@ Apply the principles and operation of languages, compilers and interpreters.
 
 \begin_layout Section
 Possible future
+\end_layout
+
+\begin_layout Section
+Hypothesis
+\end_layout
+
+\begin_layout Standard
+I hypothesise that the benefits seen in FPS videogames when gyroscopic controls
+ are used to aim
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Nerrel2020"
+literal "false"
+
+\end_inset
+
+ could also translate to a desktop PC experience.
+ I hypothesise that users will give positive testimonials, including digital
+ artists, if available.
+ I hypothesise that with some basic practice a hardware keypad such as seen
+ for the DualSense gamepad could be comparable to an actual keyboard.
 \end_layout
 
 \begin_layout Chapter
