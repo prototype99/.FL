@@ -84,8 +84,6 @@
 
 \addtocounter{MaxMatrixCols}{20}
 \pagenumbering{roman}
-\copyrightfalse
-\ethicsnumber{36448}
 \end_preamble
 \options 12pt,BSc
 \use_default_options false
@@ -244,155 +242,99 @@ LatexCommand tableofcontents
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-prefacesection
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
+\begin_layout Chapter*
 Abstract
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
 \end_layout
 
-\end_inset
-
- 
-\begin_inset CommandInset include
-LatexCommand input
-filename "abstract.lyx"
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-afterabstract
+\begin_layout Standard
+The abstract is a formal description of the reason for doing this work,
+ the methods used and results found, and the conclusions drawn.
+ It should not be more than one page in length.
 \end_layout
 
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-prefacesection
+\begin_layout Chapter*
+Declaration
 \end_layout
 
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
+\begin_layout Standard
+No part of this project has been submitted in support of an application
+ for any other degree or qualification at this or any other institute of
+ learning.
+ Apart from those parts of the project containing citations to the work
+ of others, this project is my own unaided work.
+ This work has been carried out in accordance with the Manchester Metropolitan
+ University research ethics procedures, and has received ethical approval
+ number 36448
 \end_layout
 
-\end_inset
+\begin_layout Standard
+Signed:
+\end_layout
 
+\begin_layout Standard
+Date:
+\end_layout
+
+\begin_layout Chapter*
 Acknowledgements
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
 \end_layout
 
-\end_inset
-
- 
-\begin_inset CommandInset include
-LatexCommand input
-filename "acknowledgements.lyx"
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-prefacesection
+\begin_layout Standard
+The acknowledgements thank the people who helped you do the work.
+ It's traditional to include your supervisor....
 \end_layout
 
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
+\begin_layout Chapter*
 Abbreviations
-\begin_inset ERT
-status collapsed
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features islongtable="true" longtabularalignment="center">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="0pt">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
 
 \begin_layout Plain Layout
-
-}
+PCA
 \end_layout
 
 \end_inset
-
- 
-\begin_inset CommandInset include
-LatexCommand input
-filename "abbreviations.lyx"
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
 
 \begin_layout Plain Layout
-
-
-\backslash
-afterpreface
+Principal Components Analysis
 \end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+LTA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Three Letter Acronym
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
 
 \end_inset
 
