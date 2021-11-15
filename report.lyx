@@ -921,6 +921,128 @@ Apply the principles and operation of languages, compilers and interpreters.
 Possible future
 \end_layout
 
+\begin_layout Chapter
+Planning
+\end_layout
+
+\begin_layout Section
+Aim
+\end_layout
+
+\begin_layout Standard
+Investigate alternatives to mouse and keyboard for a desktop computer by
+ prototyping gamepad-based drawing software that could later be extended
+ and adapted into a full system.
+\end_layout
+
+\begin_layout Section
+Objectives
+\end_layout
+
+\begin_layout Standard
+For this project there are three main deliverables: the software itself,
+ and two pieces of research.
+ A large part of the project will follow a linear structure, however near
+ the end I plan to adopt an agile/cyclical structure as I perfect the final
+ deliverable
+\end_layout
+
+\begin_layout Enumerate
+Create a Linux compatible layer to interact with the gyroscopic controls,
+ it is suspected that a library based around libsdl would be the best fit.
+\end_layout
+
+\begin_layout Enumerate
+Successfully translate gyroscopic movements to the movement of an onscreen
+ cursor
+\end_layout
+
+\begin_layout Enumerate
+Research existing art software that utilises the same or similar gamepads
+ (if any)
+\end_layout
+
+\begin_layout Enumerate
+Implement drawing features that illustrate the versatility of the hardware
+\end_layout
+
+\begin_layout Enumerate
+Investigate whether it is possible to make it windows compatible to increase
+ userbase
+\end_layout
+
+\begin_layout Enumerate
+Gather test user feedback
+\end_layout
+
+\begin_layout Enumerate
+As part of the project I will test the typing speed of a popular 
+\begin_inset Quotes eld
+\end_inset
+
+chatpad
+\begin_inset Quotes erd
+\end_inset
+
+ attachment/accessory.
+ While I feel it is important to have some preliminary data to support justifica
+tion for future developments I do not feel it is important as establishing
+ whether or not gyroscopic gamepads could be viable as pointing devices
+ according to user opinions.
+\end_layout
+
+\begin_layout Section
+Problems
+\end_layout
+
+\begin_layout Standard
+The biggest risk I can see is that I have no experience writing software
+ to work with gyroscopic gamepads.
+ I feel that the allotted time should be enough for me to both design and
+ implement the appropriate software to do so.
+\end_layout
+
+\begin_layout Section
+Required resources
+\end_layout
+
+\begin_layout Itemize
+Dualshock 4 controller
+\end_layout
+
+\begin_layout Itemize
+DualSense controller
+\end_layout
+
+\begin_layout Itemize
+Switch pro controller
+\end_layout
+
+\begin_layout Itemize
+DualSense chatpad (for testing alternative to full size keyboard)
+\end_layout
+
+\begin_layout Itemize
+It may prove beneficial to acquisition artistic software that has an attached
+ monetary cost for research purposes
+\end_layout
+
+\begin_layout Section
+Schedule
+\end_layout
+
+\begin_layout Subsection
+Library selection
+\end_layout
+
+\begin_layout Subsection
+DualShock 4 prototype
+\end_layout
+
+\begin_layout Subsection
+DualSense modern implementation
+\end_layout
+
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
