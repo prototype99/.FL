@@ -444,6 +444,26 @@ options "bibtotoc,agsm"
 
 \end_layout
 
+\begin_layout Chapter
+Introduction
+\end_layout
+
+\begin_layout Section
+Inspiration
+\end_layout
+
+\begin_layout Section
+Motivation
+\end_layout
+
+\begin_layout Section
+Project background
+\end_layout
+
+\begin_layout Section
+Possible future
+\end_layout
+
 \begin_layout Standard
 \start_of_appendix
 this is da appendix
