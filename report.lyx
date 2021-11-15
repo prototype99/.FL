@@ -432,18 +432,6 @@ pagestyle{headings}
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset CommandInset bibtex
-LatexCommand bibtex
-btprint "btPrintCited"
-bibfiles "refs"
-options "bibtotoc,agsm"
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Chapter
 Introduction
 \end_layout
@@ -931,6 +919,18 @@ Apply the principles and operation of languages, compilers and interpreters.
 
 \begin_layout Section
 Possible future
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "refs"
+options "bibtotoc,agsm"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
