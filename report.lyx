@@ -1244,6 +1244,22 @@ DualShock 4 prototype
 DualSense modern implementation
 \end_layout
 
+\begin_layout Section
+Method
+\end_layout
+
+\begin_layout Subsection
+User experience level
+\end_layout
+
+\begin_layout Standard
+There is no direct focus on how experienced a user is.
+ The author is, however, entirely new to the DualShock 4 and DualSense controlle
+rs that will play a major part in this study.
+ The author will try to dedicate time outside of development to become more
+ experienced with the DualShock 4 controller.
+\end_layout
+
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
