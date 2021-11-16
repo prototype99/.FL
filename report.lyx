@@ -331,7 +331,7 @@ Abbreviations
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="9" columns="2">
+<lyxtabular version="3" rows="11" columns="2">
 <features islongtable="true" longtabularalignment="center">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top" width="0pt">
@@ -430,6 +430,46 @@ DotFL
 
 \begin_layout Plain Layout
 Dance Of The Flowing Lines
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DS4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DualShock 4 (gamepad)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DS5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DualSense (gamepad)
 \end_layout
 
 \end_inset
@@ -689,8 +729,8 @@ literal "false"
 \end_inset
 
 Gamepads could prove to be the perfect stepping stone to future VR experiences
- due to their lower cost; the DualSense, one of the most advanced gamepads
- currently, costs £59.99
+ due to their lower cost; the DS5, one of the most advanced currently, costs
+ £59.99
 \begin_inset CommandInset citation
 LatexCommand citep
 key "CurrysDualShock2021"
@@ -1079,8 +1119,8 @@ Familiarisation
 \end_layout
 
 \begin_layout Standard
-DotFL could serve as a way to familiarise users with gyroscopic controls,
- due to it mirroring a concept users are often already very familiar with.
+DotFL could serve as a way to familiarise users with 6axis, due to it mirroring
+ a concept users are often already very familiar with.
 \end_layout
 
 \begin_layout Subsection
@@ -1106,8 +1146,8 @@ Hypothesis
 \end_layout
 
 \begin_layout Standard
-I hypothesise that the benefits seen in FPS videogames when gyroscopic controls
- are used to aim
+I hypothesise that the benefits seen in FPS videogames when 6axis is used
+ to aim
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Nerrel2020"
@@ -1119,7 +1159,7 @@ literal "false"
  I hypothesise that users will give positive testimonials, including digital
  artists, if available.
  I hypothesise that with some basic practice a hardware keypad such as seen
- for the DualSense gamepad could be comparable to an actual keyboard.
+ for the DS5 could be comparable to an actual keyboard.
 \end_layout
 
 \begin_layout Chapter
@@ -1131,9 +1171,9 @@ Aim
 \end_layout
 
 \begin_layout Standard
-Investigate alternatives to mouse and keyboard for a desktop computer by
- prototyping gamepad-based drawing software that could later be extended
- and adapted into a full system.
+Investigate alternatives to mouse and keyboard for a desktop PC by prototyping
+ gamepad-based drawing software that could later be extended and adapted
+ into a full system.
 \end_layout
 
 \begin_layout Section
@@ -1183,9 +1223,9 @@ As part of the project I will test the typing speed of a popular ``chatpad
 
  attachment/accessory.
  While I feel it is important to have some preliminary data to support justifica
-tion for future developments I do not feel it is important as establishing
- whether or not gyroscopic gamepads could be viable as pointing devices
- according to user opinions.
+tion for future developments I do not feel it is as important as establishing
+ whether or not 6axis gamepads could be viable as pointing devices according
+ to user opinions.
 \end_layout
 
 \begin_layout Section
@@ -1194,7 +1234,7 @@ Problems
 
 \begin_layout Standard
 The biggest risk I can see is that I have no experience writing software
- to work with gyroscopic gamepads.
+ to work with 6axis gamepads.
  I feel that the allotted time should be enough for me to both design and
  implement the appropriate software to do so.
 \end_layout
@@ -1204,11 +1244,11 @@ Required resources
 \end_layout
 
 \begin_layout Itemize
-Dualshock 4 controller
+DS4
 \end_layout
 
 \begin_layout Itemize
-DualSense controller
+DS5
 \end_layout
 
 \begin_layout Itemize
@@ -1216,7 +1256,7 @@ Switch pro controller
 \end_layout
 
 \begin_layout Itemize
-DualSense chatpad (for testing alternative to full size keyboard)
+DS5 chatpad (for testing alternative to full size keyboard)
 \end_layout
 
 \begin_layout Itemize
@@ -1233,11 +1273,11 @@ Library selection
 \end_layout
 
 \begin_layout Subsection
-DualShock 4 prototype
+DS4 prototype
 \end_layout
 
 \begin_layout Subsection
-DualSense modern implementation
+DS5 modern implementation
 \end_layout
 
 \begin_layout Section
@@ -1250,10 +1290,10 @@ User experience level
 
 \begin_layout Standard
 There is no direct focus on how experienced a user is.
- The author is, however, entirely new to the DualShock 4 and DualSense controlle
-rs that will play a major part in this study.
+ The author is, however, entirely new to the DS4 and DS5 that will play
+ a major part in this study.
  The author will try to dedicate time outside of development to become more
- experienced with the DualShock 4 controller.
+ experienced with the DS4.
 \end_layout
 
 \begin_layout Standard
