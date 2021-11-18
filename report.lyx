@@ -1417,54 +1417,62 @@ A general point about the project – is linux a good idea here, or would
  windows be easier? You can try both, but I think a library like SFML could
  give you controller support and easy access to graphics.
  I think there are windows and linux versions of this.
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
 Regards
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
 Huw
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
---------------------------------------------------------------------------------
---------------------------------------------------------------
-\end_layout
 
-\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
 Dr Huw Lloyd
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
 Department of Computing and Mathematics
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
 Manchester Metropolitan University
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
 John Dalton Building
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
 Chester Street
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
 Manchester M1 5GD
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
 Senior Lecturer, School Disability Coordinator.
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
 Email: Huw.Lloyd@mmu.ac.uk Tel: 0161 247 1568 
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
 Office: E131, John Dalton East (office hours – Mon 10-11, Tues 11-12, Thurs
  10-11)
 \end_layout
