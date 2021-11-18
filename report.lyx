@@ -1296,6 +1296,18 @@ There is no direct focus on how experienced a user is.
  experienced with the DS4.
 \end_layout
 
+\begin_layout Chapter
+Software research
+\end_layout
+
+\begin_layout Section
+SDL
+\end_layout
+
+\begin_layout Section
+SFML
+\end_layout
+
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
