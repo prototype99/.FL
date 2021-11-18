@@ -1301,7 +1301,43 @@ Software research
 \end_layout
 
 \begin_layout Section
+Libgdx
+\end_layout
+
+\begin_layout Subsection
+Sdl2gdx
+\end_layout
+
+\begin_layout Standard
+https://github.com/electronstudio/sdl2gdx
+\end_layout
+
+\begin_layout Section
 SDL
+\end_layout
+
+\begin_layout Subsection
+Libjsdl
+\end_layout
+
+\begin_layout Standard
+https://github.com/shinedeveloper/libjsdl
+\end_layout
+
+\begin_layout Subsection
+Sdl2gdx
+\end_layout
+
+\begin_layout Standard
+https://github.com/electronstudio/sdl2gdx
+\end_layout
+
+\begin_layout Subsection
+Sdljava
+\end_layout
+
+\begin_layout Standard
+https://sourceforge.net/projects/sdljava/
 \end_layout
 
 \begin_layout Section
