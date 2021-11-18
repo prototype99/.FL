@@ -1344,6 +1344,14 @@ https://sourceforge.net/projects/sdljava/
 SFML
 \end_layout
 
+\begin_layout Subsection
+JSFML
+\end_layout
+
+\begin_layout Standard
+https://github.com/DeflatedPickle/JSFML
+\end_layout
+
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
