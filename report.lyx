@@ -1320,9 +1320,117 @@ options "bibtotoc,agsm"
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Chapter
 \start_of_appendix
-this is da appendix
+Feasibility study review email
+\end_layout
+
+\begin_layout Standard
+From: Huw Lloyd <Huw.Lloyd@mmu.ac.uk>
+\begin_inset Newline newline
+\end_inset
+
+Sent: 18 October 2021 10:35
+\begin_inset Newline newline
+\end_inset
+
+To: Seirra Blake <SEIRRA.BLAKE@stu.mmu.ac.uk>
+\begin_inset Newline newline
+\end_inset
+
+Subject: RE: Request for review of feasibility study 
+\end_layout
+
+\begin_layout Standard
+Hi Seirra,
+\end_layout
+
+\begin_layout Standard
+This is looking pretty good, and certainly fine to submit, but a few things
+ to think about:
+\end_layout
+
+\begin_layout Enumerate
+You could be more detailed in the timeline.
+ Getting more detail in here is really about breaking the task down into
+ smaller chunks and thinking about the relative size of each part 
+\end_layout
+
+\begin_layout Enumerate
+The background is quite long, which is good in terms of getting ahead of
+ the game for the report, where this can form part of your literature review.
+ When you do repurpose it for that, think about organizing it into subsections,
+ and providing some overarching structure at the beginning.
+\end_layout
+
+\begin_layout Enumerate
+There is a lot of quoting here, which is fine, but when the quotes are only
+ a few words long, think about paraphrasing instead.
+ Quotes can then be reserved for longer sections.
+\end_layout
+
+\begin_layout Enumerate
+A few issues with quotation marks, especially around “Nerrel”.
+ Sometimes the quotation marks are the wrong way round.
+ If you are using latex, you need to open quotes with `` and close with
+ "
+\end_layout
+
+\begin_layout Standard
+A general point about the project – is linux a good idea here, or would
+ windows be easier? You can try both, but I think a library like SFML could
+ give you controller support and easy access to graphics.
+ I think there are windows and linux versions of this.
+\end_layout
+
+\begin_layout Standard
+Regards
+\end_layout
+
+\begin_layout Standard
+Huw
+\end_layout
+
+\begin_layout Standard
+--------------------------------------------------------------------------------
+--------------------------------------------------------------
+\end_layout
+
+\begin_layout Standard
+Dr Huw Lloyd
+\end_layout
+
+\begin_layout Standard
+Department of Computing and Mathematics
+\end_layout
+
+\begin_layout Standard
+Manchester Metropolitan University
+\end_layout
+
+\begin_layout Standard
+John Dalton Building
+\end_layout
+
+\begin_layout Standard
+Chester Street
+\end_layout
+
+\begin_layout Standard
+Manchester M1 5GD
+\end_layout
+
+\begin_layout Standard
+Senior Lecturer, School Disability Coordinator.
+\end_layout
+
+\begin_layout Standard
+Email: Huw.Lloyd@mmu.ac.uk Tel: 0161 247 1568 
+\end_layout
+
+\begin_layout Standard
+Office: E131, John Dalton East (office hours – Mon 10-11, Tues 11-12, Thurs
+ 10-11)
 \end_layout
 
 \end_body
