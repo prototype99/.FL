@@ -331,7 +331,7 @@ Abbreviations
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="13" columns="2">
+<lyxtabular version="3" rows="15" columns="2">
 <features islongtable="true" longtabularalignment="center">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top" width="0pt">
@@ -480,6 +480,26 @@ DualSense (gamepad)
 \begin_inset Text
 
 \begin_layout Plain Layout
+JS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+JavaScript
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 OS
 \end_layout
 
@@ -550,6 +570,26 @@ SFML
 
 \begin_layout Plain Layout
 Simple and Fast Multimedia Library
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SPDE
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Scala Processing Development Environment
 \end_layout
 
 \end_inset
@@ -1309,7 +1349,11 @@ Schedule
 \end_layout
 
 \begin_layout Subsection
-Library selection
+Library research
+\end_layout
+
+\begin_layout Subsection
+Library testing
 \end_layout
 
 \begin_layout Subsection
@@ -1337,7 +1381,189 @@ There is no direct focus on how experienced a user is.
 \end_layout
 
 \begin_layout Chapter
-Software research
+How do we produce a UI?
+\end_layout
+
+\begin_layout Standard
+This will form the crucial backbone for the rest of the application, therefore
+ all other libraries will need to work with this library (use the same language).
+ Although there are probably alternative ways to achieve the same effect,
+ the author has decided to use processing as they are familiar with it,
+ as a result the main point of comparison in this chapter is the language.
+\end_layout
+
+\begin_layout Section
+Clojure/ClojureScript
+\end_layout
+
+\begin_layout Standard
+The author is not familiar with this language, so it is an unlikely choice.
+\end_layout
+
+\begin_layout Subsection
+Quil
+\end_layout
+
+\begin_layout Section
+Java
+\end_layout
+
+\begin_layout Standard
+The author is very familiar with this language and feels this may be the
+ best choice due to familiarity.
+\end_layout
+
+\begin_layout Subsection
+Processing
+\end_layout
+
+\begin_layout Standard
+This is the original version produced in part by Casey Reas, and the one
+ the author has used before.
+ The language was historically known as ``proce55ing
+\begin_inset Quotes erd
+\end_inset
+
+ due to ``proce55ing.net
+\begin_inset Quotes erd
+\end_inset
+
+ being the only available domain
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Reas2012"
+literal "false"
+
+\end_inset
+
+.
+ Even now, processing can often be referred to as ``p5
+\begin_inset Quotes erd
+\end_inset
+
+, an obscure holdover from the past
+\begin_inset CommandInset citation
+LatexCommand citep
+key "McCarthy2017"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+JS
+\end_layout
+
+\begin_layout Standard
+The author is familiar with this language, they do not have fond memories
+ of it.
+ The author also does not do well with weak typing.
+\end_layout
+
+\begin_layout Subsection
+P5.js
+\end_layout
+
+\begin_layout Standard
+Having begun development in 2013
+\begin_inset CommandInset citation
+LatexCommand citep
+key "processing2021"
+literal "false"
+
+\end_inset
+
+, this project produced by Lauren Lee McCarthy
+\begin_inset CommandInset citation
+LatexCommand citep
+key "McCarthy2013"
+literal "false"
+
+\end_inset
+
+ has grown to become the successor to the original processing.js and is the
+ official JS implementation
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Foundation2016"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Processing.js
+\end_layout
+
+\begin_layout Standard
+This is the original, having been produced in 2008
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Resig2008"
+literal "false"
+
+\end_inset
+
+.
+ This project was archived, therefore it will be of minimal use
+\begin_inset CommandInset citation
+LatexCommand citep
+key "processingjs2018"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Python
+\end_layout
+
+\begin_layout Standard
+The author does not do well with weak typing, therefore this is not a likely
+ choice.
+\end_layout
+
+\begin_layout Subsection
+P5Py
+\end_layout
+
+\begin_layout Subsection
+Processing.py
+\end_layout
+
+\begin_layout Section
+Ruby
+\end_layout
+
+\begin_layout Standard
+The author has tried to write code in this language previously and struggled,
+ therefore this language is an unlikely choice.
+\end_layout
+
+\begin_layout Subsection
+JRubyArt
+\end_layout
+
+\begin_layout Section
+Scala
+\end_layout
+
+\begin_layout Standard
+The author is not familiar with this language, so it is an unlikely choice.
+\end_layout
+
+\begin_layout Subsection
+Spde
+\end_layout
+
+\begin_layout Chapter
+How do we interact with the gamepad?
 \end_layout
 
 \begin_layout Section
@@ -1345,6 +1571,10 @@ LibGDX
 \end_layout
 
 \begin_layout Subsection
+Java
+\end_layout
+
+\begin_layout Subsubsection
 Sdl2gdx
 \end_layout
 
@@ -1357,6 +1587,15 @@ SDL
 \end_layout
 
 \begin_layout Subsection
+Java
+\end_layout
+
+\begin_layout Standard
+There is no official java implementation, however there are many unofficial
+ versions as detailed below.
+\end_layout
+
+\begin_layout Subsubsection
 Libjsdl
 \end_layout
 
@@ -1364,7 +1603,7 @@ Libjsdl
 https://github.com/shinedeveloper/libjsdl
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Sdl2gdx
 \end_layout
 
@@ -1372,7 +1611,7 @@ Sdl2gdx
 https://github.com/electronstudio/sdl2gdx
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Sdljava
 \end_layout
 
@@ -1385,6 +1624,10 @@ SFML
 \end_layout
 
 \begin_layout Subsection
+Java
+\end_layout
+
+\begin_layout Subsubsection
 JSFML
 \end_layout
 
