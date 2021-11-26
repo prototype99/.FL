@@ -2072,8 +2072,55 @@ Usage
 DS4
 \end_layout
 
+\begin_layout Standard
+The author is new to the DS4, so there is a necessity to become familiar
+ with it.
+\end_layout
+
+\begin_layout Subsubsection
+Basic functionality
+\end_layout
+
+\begin_layout Standard
+To become used to the gamepad in general, the author played the game ``among
+ us
+\begin_inset Quotes erd
+\end_inset
+
+, which has a native DS4 control scheme.
+ The control scheme was not optimal, as it required a trackpad click to
+ enter text, which proved to impact the overall performance.
+ The author had to switch between gamepad and keyboard which was a generally
+ bothersome experience.
+\end_layout
+
+\begin_layout Subsubsection
+6axis functionality
+\end_layout
+
+\begin_layout Standard
+At first the author could not think of a way to properly test this experience.
+ After a while, an idea came to incorporate it into as a custom control
+ scheme into the game ``Sid Meier's civilization 6
+\begin_inset Quotes erd
+\end_inset
+
+.
+ At first there was issues due to intense drift to the right of the display,
+ however after calibrating the gamepad this disappears; there may be a need
+ to implement a calibration feature, unless the calibration saves between
+ software.
+\end_layout
+
 \begin_layout Subsection
 XB1S gamepad
+\end_layout
+
+\begin_layout Standard
+The author has an extensive amount of experience using this gamepad.
+ It has no notable features outside of localised force feedback for the
+ triggers, which can at times add to the immersive experience, however the
+ goal is not immersion.
 \end_layout
 
 \begin_layout Chapter
