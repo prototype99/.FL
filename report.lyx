@@ -2091,7 +2091,7 @@ To become used to the gamepad in general, the author played the game ``among
  The control scheme was not optimal, as it required a trackpad click to
  enter text, which proved to impact the overall performance.
  The author had to switch between gamepad and keyboard which was a generally
- bothersome experience.
+ bothersome experience which would not occur with the keyboard attachment.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2107,9 +2107,16 @@ At first the author could not think of a way to properly test this experience.
 
 .
  At first there was issues due to intense drift to the right of the display,
- however after calibrating the gamepad this disappears; there may be a need
- to implement a calibration feature, unless the calibration saves between
- software.
+ however after calibrating the gamepad
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Faux2018"
+literal "false"
+
+\end_inset
+
+ this disappears; there may be a need to implement a calibration feature,
+ unless the calibration saves between software.
 \end_layout
 
 \begin_layout Subsection
