@@ -1529,19 +1529,12 @@ This will form the crucial backbone for the rest of the application, therefore
 \end_layout
 
 \begin_layout Section
-Clojure/ClojureScript
+Clojure/ClojureScript: Quil
 \end_layout
 
 \begin_layout Standard
 The author is not familiar with this language, so it is an unlikely choice.
-\end_layout
-
-\begin_layout Subsection
-Quil
-\end_layout
-
-\begin_layout Standard
-This is a version of processing written in clojure
+ This is a version of processing written in clojure
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Quil2014"
@@ -1553,20 +1546,13 @@ literal "false"
 \end_layout
 
 \begin_layout Section
-CoffeeScript
-\end_layout
-
-\begin_layout Standard
-The author is not familiar with this language, so it is an unlikely choice.
-\end_layout
-
-\begin_layout Subsection
 CoffeeScript mode
 \end_layout
 
 \begin_layout Standard
-The latest version of this is built to the specification of processing 2
- which is quite old, it is based on processing.js
+The author is not familiar with this language, so it is an unlikely choice.
+ The latest version of this is built to the specification of processing
+ 2 which is quite old, it is based on processing.js
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Jenett2015"
@@ -1578,20 +1564,13 @@ literal "false"
 \end_layout
 
 \begin_layout Section
-Java
+Java: Processing
 \end_layout
 
 \begin_layout Standard
 The author is very familiar with this language and feels this may be the
  best choice due to familiarity.
-\end_layout
-
-\begin_layout Subsection
-Processing
-\end_layout
-
-\begin_layout Standard
-This is the original version produced in part by Casey Reas
+ This is the original version produced in part by Casey Reas
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Reas2019"
@@ -1771,19 +1750,12 @@ literal "false"
 \end_layout
 
 \begin_layout Section
-R
+R: Processing.R
 \end_layout
 
 \begin_layout Standard
 The author is not familiar with this language, so it is an unlikely choice.
-\end_layout
-
-\begin_layout Subsection
-Processing.R
-\end_layout
-
-\begin_layout Standard
-This version adapts the java version to work with R.
+ This version adapts the java version to work with R.
  It is worth noting that it is listed as experimental
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -1796,20 +1768,13 @@ literal "false"
 \end_layout
 
 \begin_layout Section
-Ruby
+Ruby: JRubyArt
 \end_layout
 
 \begin_layout Standard
 The author has tried to write code in this language previously and struggled,
  therefore this language is an unlikely choice.
-\end_layout
-
-\begin_layout Subsection
-JRubyArt
-\end_layout
-
-\begin_layout Standard
-This uses Jruby to allow for processing in the ruby language.
+ This uses Jruby to allow for processing in the ruby language.
  Jruby allows ruby code to access java code
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -1822,19 +1787,12 @@ literal "false"
 \end_layout
 
 \begin_layout Section
-Scala
+Scala: Spde
 \end_layout
 
 \begin_layout Standard
 The author is not familiar with this language, so it is an unlikely choice.
-\end_layout
-
-\begin_layout Subsection
-Spde
-\end_layout
-
-\begin_layout Standard
-Scala runs on the JVM, so this can use the original processing libraries
+ Scala runs on the JVM, so this can use the original processing libraries
  without issue
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -1872,6 +1830,7 @@ How do we interact with the gamepad?
 There are a variety of possible libraries, as SDL is a popular library for
  interacting with gamepads it is likely it will be the best choice, however
  game control plus seems promising too.
+ as java was chosen, all of the libraries looked at are java based.
 \end_layout
 
 \begin_layout Section
@@ -1883,14 +1842,6 @@ This processing library claims to allow interaction with control devices.
 \end_layout
 
 \begin_layout Section
-LibGDX
-\end_layout
-
-\begin_layout Subsection
-Java
-\end_layout
-
-\begin_layout Subsubsection
 Sdl2gdx
 \end_layout
 
@@ -1916,16 +1867,12 @@ literal "false"
 SDL
 \end_layout
 
-\begin_layout Subsection
-Java
-\end_layout
-
 \begin_layout Standard
-There is no official java implementation, however there are many unofficial
- versions as detailed below.
+There is no official java implementation, however there are unofficial versions
+ as detailed below.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Libjsdl
 \end_layout
 
@@ -1941,7 +1888,7 @@ literal "false"
 .
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Sdljava
 \end_layout
 
@@ -1994,11 +1941,7 @@ literal "false"
 \end_layout
 
 \begin_layout Chapter
-Hardware research
-\end_layout
-
-\begin_layout Section
-Input latency
+Hardware input latency research
 \end_layout
 
 \begin_layout Standard
