@@ -1820,7 +1820,22 @@ literal "false"
 \end_layout
 
 \begin_layout Chapter
+Choosing the processing version and language
+\end_layout
+
+\begin_layout Standard
+As java is a good mix of performance and familiarity of the choices, it
+ seems logical that this would be the ideal choice.
+\end_layout
+
+\begin_layout Chapter
 How do we interact with the gamepad?
+\end_layout
+
+\begin_layout Standard
+There are a variety of possible libraries, as SDL is a popular library for
+ interacting with gamepads it is likely it will be the best choice, however
+ game control plus seems promising too.
 \end_layout
 
 \begin_layout Section
