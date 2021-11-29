@@ -331,7 +331,7 @@ Abbreviations
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="19" columns="2">
+<lyxtabular version="3" rows="20" columns="2">
 <features islongtable="true" longtabularalignment="center">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top" width="0pt">
@@ -490,6 +490,26 @@ JS
 
 \begin_layout Plain Layout
 JavaScript
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+JVM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Java Virtual Machine
 \end_layout
 
 \end_inset
@@ -1484,6 +1504,43 @@ The author is not familiar with this language, so it is an unlikely choice.
 Quil
 \end_layout
 
+\begin_layout Standard
+This is a version of processing written in clojure
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Quil2014"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+CoffeeScript
+\end_layout
+
+\begin_layout Standard
+The author is not familiar with this language, so it is an unlikely choice.
+\end_layout
+
+\begin_layout Subsection
+CoffeeScript mode
+\end_layout
+
+\begin_layout Standard
+The latest version of this is built to the specification of processing 2
+ which is quite old, it is based on processing.js
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Jenett2015"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Section
 Java
 \end_layout
@@ -1498,8 +1555,15 @@ Processing
 \end_layout
 
 \begin_layout Standard
-This is the original version produced in part by Casey Reas, and the one
- the author has used before.
+This is the original version produced in part by Casey Reas
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Reas2019"
+literal "false"
+
+\end_inset
+
+, and the one the author has used before.
  The language was historically known as ``proce55ing
 \begin_inset Quotes erd
 \end_inset
@@ -1525,6 +1589,15 @@ literal "false"
 \begin_inset CommandInset citation
 LatexCommand citep
 key "McCarthy2017"
+literal "false"
+
+\end_inset
+
+.
+ Processing is inspired by OpenGL, PostScript and Design By Numbers
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Parrish2016"
 literal "false"
 
 \end_inset
@@ -1613,8 +1686,77 @@ The author does not do well with weak typing, therefore this is not a likely
 P5Py
 \end_layout
 
+\begin_layout Standard
+This is a native python implementation of processing.
+\begin_inset CommandInset citation
+LatexCommand citep
+key "p5py2021"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Processing.py
+\end_layout
+
+\begin_layout Standard
+This is the official python impelementation
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Foundation2016"
+literal "false"
+
+\end_inset
+
+.
+ This uses jython, a bridge that allows it to use both native python and
+ the original java classes present in processing.
+ This uses a custom jython based upon python 2.7
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Parrish2016"
+literal "false"
+
+\end_inset
+
+; python 2.7 is heavily deprecated
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Peterson2020"
+literal "false"
+
+\end_inset
+
+, so unless that detail has changed this is definitely not a good option.
+ 
+\end_layout
+
+\begin_layout Section
+R
+\end_layout
+
+\begin_layout Standard
+The author is not familiar with this language, so it is an unlikely choice.
+\end_layout
+
+\begin_layout Subsection
+Processing.R
+\end_layout
+
+\begin_layout Standard
+This version adapts the java version to work with R.
+ It is worth noting that it is listed as experimental
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Gao2017"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
@@ -1630,6 +1772,19 @@ The author has tried to write code in this language previously and struggled,
 JRubyArt
 \end_layout
 
+\begin_layout Standard
+This uses Jruby to allow for processing in the ruby language.
+ Jruby allows ruby code to access java code
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Prout2017"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Section
 Scala
 \end_layout
@@ -1642,8 +1797,38 @@ The author is not familiar with this language, so it is an unlikely choice.
 Spde
 \end_layout
 
+\begin_layout Standard
+Scala runs on the JVM, so this can use the original processing libraries
+ without issue
+\begin_inset CommandInset citation
+LatexCommand citep
+key "SPDE2009"
+literal "false"
+
+\end_inset
+
+.
+ With the latest code commit being from 2012
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Nathan2012"
+literal "false"
+
+\end_inset
+
+, it is unlikely this would work as expected.
+\end_layout
+
 \begin_layout Chapter
 How do we interact with the gamepad?
+\end_layout
+
+\begin_layout Section
+Game control plus
+\end_layout
+
+\begin_layout Standard
+This processing library claims to allow interaction with control devices.
 \end_layout
 
 \begin_layout Section
