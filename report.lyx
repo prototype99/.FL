@@ -331,7 +331,7 @@ Abbreviations
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="20" columns="2">
+<lyxtabular version="3" rows="21" columns="2">
 <features islongtable="true" longtabularalignment="center">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top" width="0pt">
@@ -350,6 +350,26 @@ Abbreviations
 
 \begin_layout Plain Layout
 gyroscopic and accelerometer (control)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+API
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Application Programming Interface
 \end_layout
 
 \end_inset
@@ -1875,7 +1895,21 @@ Sdl2gdx
 \end_layout
 
 \begin_layout Standard
-https://github.com/electronstudio/sdl2gdx
+This is designed as somewhat of a fusion of SDL and GDX.
+ Supposed benefits over pure GDX are hotplugging support, screenmode change
+ support, functional rumble support, predefined controller mappings and
+ support for more than 4 xinput controllers
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Smith2019"
+literal "false"
+
+\end_inset
+
+.
+ Predefined mappings may make development a lot easier.
+ Rumble could be used in some way, and hotplugging could allow for a smoother
+ user experience.
 \end_layout
 
 \begin_layout Section
@@ -1896,15 +1930,15 @@ Libjsdl
 \end_layout
 
 \begin_layout Standard
-https://github.com/shinedeveloper/libjsdl
-\end_layout
+This is a direct port using JNA
+\begin_inset CommandInset citation
+LatexCommand citep
+key "shinedeveloper2021"
+literal "false"
 
-\begin_layout Subsubsection
-Sdl2gdx
-\end_layout
+\end_inset
 
-\begin_layout Standard
-https://github.com/electronstudio/sdl2gdx
+.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1912,23 +1946,51 @@ Sdljava
 \end_layout
 
 \begin_layout Standard
-https://sourceforge.net/projects/sdljava/
+This is also a potential choice.
+ Along with the porting of SDL, it has OpenGL specific bindings
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Ganza2005"
+literal "false"
+
+\end_inset
+
+.
+ Being a binding to SDL 1.2
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Rojek2014"
+literal "false"
+
+\end_inset
+
+, it may prove to be a challenge getting this library to behave as expected
+ as SDL 2 has major API changes
+\begin_inset CommandInset citation
+LatexCommand citep
+key "libsdl2021"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
-SFML
-\end_layout
-
-\begin_layout Subsection
-Java
-\end_layout
-
-\begin_layout Subsubsection
 JSFML
 \end_layout
 
 \begin_layout Standard
-https://github.com/DeflatedPickle/JSFML
+This is a port of SFML to java.
+ It does not appear to receive many updates so it may not be the best choice
+\begin_inset CommandInset citation
+LatexCommand citep
+key "DeflatedPickle2021"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Chapter
