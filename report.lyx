@@ -1835,8 +1835,8 @@ literal "false"
 , it is unlikely this would work as expected.
 \end_layout
 
-\begin_layout Chapter
-Choosing the processing version and language
+\begin_layout Section
+Overall choice of the processing version and language
 \end_layout
 
 \begin_layout Standard
