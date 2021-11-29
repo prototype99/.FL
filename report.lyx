@@ -1481,6 +1481,22 @@ There is no direct focus on how experienced a user is.
 \end_layout
 
 \begin_layout Chapter
+What should it be?
+\end_layout
+
+\begin_layout Standard
+In an ideal situation, DotFL would leverage an existing codebase, in order
+ to ensure the best performance and set of features.
+ The easiest solution in such a hypothetical situation would be to design
+ a plugin, however it is likely that it would not be possible to modiy the
+ UI in order to offer clear gamepad control prompts.
+ Moving on from that, it would appear that making a fork would be the best
+ solution, however this would require extensive knowledge of the codebase.
+ As the author does not have the extensive knowledge required, the next
+ best solution would be to create an application from scratch.
+\end_layout
+
+\begin_layout Chapter
 How do we produce a UI?
 \end_layout
 
