@@ -1843,6 +1843,7 @@ This processing library claims to allow interaction with control devices.
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -1850,6 +1851,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename game-control-plus.png
+	width 100col%
 
 \end_inset
 
