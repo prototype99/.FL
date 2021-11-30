@@ -1902,6 +1902,8 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+With a generally older codebase and no available example code, it does not
+ feel 
 \begin_inset Graphics
 	filename game-control-plus.png
 	width 100col%
@@ -1939,6 +1941,16 @@ name "fig:Testing-the-library"
 
 \end_layout
 
+\begin_layout Subsection
+Jinput
+\end_layout
+
+\begin_layout Standard
+As previously mentioned, this library uses jinput extensively.
+ Theoretically all that is needed to achieve 6axis support is to integrate
+ a newer jinput designed to utilise all the capabilities of the DS4.
+\end_layout
+
 \begin_layout Section
 Sdl2gdx
 \end_layout
@@ -1959,6 +1971,7 @@ literal "false"
  Predefined mappings may make development a lot easier.
  Rumble could be used in some way, and hotplugging could allow for a smoother
  user experience.
+ This library does not appear to have 6axis support.
 \end_layout
 
 \begin_layout Subsection
