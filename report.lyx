@@ -1838,7 +1838,31 @@ Game control plus
 \end_layout
 
 \begin_layout Standard
-This processing library claims to allow interaction with control devices.
+This library is designed specifically for use with processing.
+ The use of G4P in the library may prove useful as inspiration for UI drawing
+ in the future
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Lager2014"
+literal "false"
+
+\end_inset
+
+.
+ As seen in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Testing-the-library"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, this library is incapable of detecting the DS4's 6axis capabilities.
+ After some examination of the source code, it appears that this library
+ leverage's jinput from 2014 or 2015, so it may be as simple as swapping
+ out the jinput library that helps form the greater whole.
 \end_layout
 
 \begin_layout Standard
@@ -1863,6 +1887,13 @@ status open
 
 \begin_layout Plain Layout
 Testing the library using the built in example
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Testing-the-library"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
