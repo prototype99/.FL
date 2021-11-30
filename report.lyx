@@ -2085,16 +2085,22 @@ name "fig:The-official-GUI"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
 \end_layout
 
 \begin_layout Section
+Other possibilities
+\end_layout
+
+\begin_layout Standard
+With generally older codebases, no obvious sign of 6axis support in the
+ source code and no available example code, it does not seem logical to
+ entertain these other options.
+\end_layout
+
+\begin_layout Subsection
 SDL
 \end_layout
 
@@ -2103,7 +2109,7 @@ There is no official java implementation, however there are unofficial versions
  as detailed below.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Libjsdl
 \end_layout
 
@@ -2119,7 +2125,7 @@ literal "false"
 .
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Sdljava
 \end_layout
 
@@ -2154,7 +2160,7 @@ literal "false"
 .
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 JSFML
 \end_layout
 
