@@ -1863,6 +1863,15 @@ noprefix "false"
  After some examination of the source code, it appears that this library
  leverage's jinput from 2014 or 2015, so it may be as simple as swapping
  out the jinput library that helps form the greater whole.
+ It is worth noting that there is a github repository
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Lager2015"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
