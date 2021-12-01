@@ -1537,7 +1537,7 @@ In an ideal situation, DotFL would leverage an existing codebase, in order
 \end_layout
 
 \begin_layout Chapter
-How do we produce a UI?
+How do we produce visuals?
 \end_layout
 
 \begin_layout Standard
@@ -1834,7 +1834,7 @@ literal "false"
 \end_layout
 
 \begin_layout Section
-Overall choice of the processing version and language
+Overall choice
 \end_layout
 
 \begin_layout Standard
