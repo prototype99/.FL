@@ -1884,6 +1884,310 @@ As java is a good mix of performance and familiarity of the choices, it
 \end_layout
 
 \begin_layout Chapter
+Hardware input latency research
+\end_layout
+
+\begin_layout Standard
+Input latency is not a key concern for DotFL, however it is still a factor
+ that can alter a user's experience.
+ As seen in table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Gamepad-latency-of"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the DS4 has generally favourable latency, especially when used wirelessly.
+ It is worth noting that latency does not stop at the gamepad, therefore
+ it is best to test the experience of DotFL itself for latency issues.
+ ``With the original model Dualshock 4s, even when a USB cable is connected
+ the controller only communicates via Bluetooth
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Jinny2018"
+literal "false"
+
+\end_inset
+
+.
+ There are reports that a hdmi converter ``adds 0.25-0.5ms of lag
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Woodall2019"
+literal "false"
+
+\end_inset
+
+, so I could add the removal of any such converters as a suggested solution
+ for solving latency, however clearly there could be better results by switching
+ from wired to wireless in some situations, as there's a potential difference
+ of 10.7ms.
+ Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Gamepad-latency-of"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ does not account for monitor related latency
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Woodall2019"
+literal "false"
+
+\end_inset
+
+, therefore that is another factor to consider.
+ Esports is an industry that uses gampads extensively; in the esport community
+ it can be found that in real world applications while wireless latency
+ should be lower, it is often prone to variance
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Handa2018"
+literal "false"
+
+\end_inset
+
+.
+ it can be assumed that the range of the DS4 is 3 metres due to the fact
+ that ``my DS4 can have connection issues when I sit 3 meters (around 10
+ ft) away from my PS4, stretch and put the controller behind my back or
+ head
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Jinny2018"
+literal "false"
+
+\end_inset
+
+.
+ It is theorised that the DS4 USB port may be``lower than micro USB usually
+ is
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Jinny2018"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Gamepad
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Latency (ms)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DS4 v1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+43.9
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DS4 wired
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+54.8
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DS4 wireless
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+44.1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Gamecube
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+74.8
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Wii
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+73.9
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Wii U
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+76.9
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Input latency of well-known gamepads
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Woodall2019"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Gamepad-latency-of"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
 How do we interact with the gamepad?
 \end_layout
 
@@ -2554,310 +2858,6 @@ Final choice
 \begin_layout Standard
 Although there was a strong leaning towards using java, it turns out that
  JS may be the best option after all.
-\end_layout
-
-\begin_layout Chapter
-Hardware input latency research
-\end_layout
-
-\begin_layout Standard
-Input latency is not a key concern for DotFL, however it is still a factor
- that can alter a user's experience.
- As seen in table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:Gamepad-latency-of"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, the DS4 has generally favourable latency, especially when used wirelessly.
- It is worth noting that latency does not stop at the gamepad, therefore
- it is best to test the experience of DotFL itself for latency issues.
- ``With the original model Dualshock 4s, even when a USB cable is connected
- the controller only communicates via Bluetooth
-\begin_inset Quotes erd
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Jinny2018"
-literal "false"
-
-\end_inset
-
-.
- There are reports that a hdmi converter ``adds 0.25-0.5ms of lag
-\begin_inset Quotes erd
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Woodall2019"
-literal "false"
-
-\end_inset
-
-, so I could add the removal of any such converters as a suggested solution
- for solving latency, however clearly there could be better results by switching
- from wired to wireless in some situations, as there's a potential difference
- of 10.7ms.
- Table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:Gamepad-latency-of"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- does not account for monitor related latency
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Woodall2019"
-literal "false"
-
-\end_inset
-
-, therefore that is another factor to consider.
- Esports is an industry that uses gampads extensively; in the esport community
- it can be found that in real world applications while wireless latency
- should be lower, it is often prone to variance
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Handa2018"
-literal "false"
-
-\end_inset
-
-.
- it can be assumed that the range of the DS4 is 3 metres due to the fact
- that ``my DS4 can have connection issues when I sit 3 meters (around 10
- ft) away from my PS4, stretch and put the controller behind my back or
- head
-\begin_inset Quotes erd
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Jinny2018"
-literal "false"
-
-\end_inset
-
-.
- It is theorised that the DS4 USB port may be``lower than micro USB usually
- is
-\begin_inset Quotes erd
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Jinny2018"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float table
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="7" columns="2">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Gamepad
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Latency (ms)
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-DS4 v1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-43.9
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-DS4 wired
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-54.8
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-DS4 wireless
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-44.1
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Gamecube
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-74.8
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Wii
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-73.9
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Wii U
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-76.9
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Input latency of well-known gamepads
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Woodall2019"
-literal "false"
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:Gamepad-latency-of"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Chapter
