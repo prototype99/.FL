@@ -2167,6 +2167,16 @@ literal "false"
 \end_inset
 
 .
+ Discussions surrounding the library suggest that it can access the required
+ data
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Park2018"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
