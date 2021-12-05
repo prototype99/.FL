@@ -2529,6 +2529,22 @@ literal "false"
 \end_layout
 
 \begin_layout Subsection
+Kaliber
+\end_layout
+
+\begin_layout Standard
+This may be another solution, it is hard to tell as it is quite old
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Fennis2012"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
 Sdl2gdx
 \end_layout
 
