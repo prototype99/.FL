@@ -6,7 +6,7 @@
 \origin unavailable
 \textclass ../../../.lyx/layouts/mmuthesis
 \begin_preamble
-%in manjaro you may need texlive-bibtexextra and texlive-latexextra
+%in manjaro you may need texlive-bibtexextra and texlive-latexextra and texlive-langcyrillic
 \usepackage{ifthen}
 \usepackage{verbatim}
 \usepackage{graphicx}
@@ -30,6 +30,7 @@
 \usepackage{amsfonts}
 \usepackage{longtable}
 
+\usepackage[T2A]{fontenc}
 
 \definecolor{MyBlack}{rgb}{0,0,0}
 \definecolor{MyGray}{rgb}{0.5,0.5,0.5} 
@@ -89,9 +90,9 @@
 \use_default_options false
 \maintain_unincluded_children false
 \language english
-\language_package none
-\inputencoding auto
-\fontencoding default
+\language_package default
+\inputencoding utf8
+\fontencoding global
 \font_roman "default" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -331,7 +332,7 @@ Abbreviations
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="22" columns="2">
+<lyxtabular version="3" rows="23" columns="2">
 <features islongtable="true" longtabularalignment="center">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top" width="0pt">
@@ -490,6 +491,26 @@ DS5
 
 \begin_layout Plain Layout
 DualSense (gamepad)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+GG
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Go Graphics
 \end_layout
 
 \end_inset
@@ -761,6 +782,8 @@ Xbox One
 
 \begin_layout Plain Layout
 XB1S
+\backslash
+usepackage[T2A]{fontenc}
 \end_layout
 
 \end_inset
@@ -1584,6 +1607,23 @@ literal "false"
 \end_layout
 
 \begin_layout Section
+Go: GG
+\end_layout
+
+\begin_layout Standard
+GG is regarded by some to be the closest thing go has to an equivalent version
+ of processing
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Horton2018"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
 Java: Processing
 \end_layout
 
@@ -1839,7 +1879,8 @@ Overall choice
 
 \begin_layout Standard
 As java is a good mix of performance and familiarity of the choices, it
- seems logical that this would be the ideal choice.
+ seems logical that this would be the ideal choice if processing is used.
+ Go is also a potentially good choice.
 \end_layout
 
 \begin_layout Chapter
@@ -1854,6 +1895,99 @@ There are a variety of possible libraries, as SDL is a popular library for
 \end_layout
 
 \begin_layout Section
+C++
+\end_layout
+
+\begin_layout Standard
+C++ has a lot of promise for producing a high performance application.
+ The issue that could arise is the longer development time associated with
+ c++.
+\end_layout
+
+\begin_layout Subsection
+Thoom76/DualShock4
+\end_layout
+
+\begin_layout Standard
+This library is a basic one, it has no uniquely identifiable name.
+ It appears to purely expose the DS4 data, leaving the programmer to do
+ the rest
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Smeele2021"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+JoyShockLibrary
+\end_layout
+
+\begin_layout Standard
+This library is both cross platform and has support for a range of controllers,
+ this would probably be ideal if there was not a time constraint
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Smart2021"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Go
+\end_layout
+
+\begin_layout Standard
+This language has a surprisingly more active than expected community for
+ the DS4.
+\end_layout
+
+\begin_layout Subsection
+Gds4
+\end_layout
+
+\begin_layout Standard
+This is a library designed for the DS4, at a glance it does not appear to
+ have good documentation, which coud be an issue
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Nong2020"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Gods4
+\end_layout
+
+\begin_layout Standard
+This is another library designed for the DS4.
+ The documentation is quite extensive, making it a more likely choice even
+ though it is older
+\begin_inset CommandInset citation
+LatexCommand citep
+key "kpeu3i2019"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Java
+\end_layout
+
+\begin_layout Subsection
 Game control plus
 \end_layout
 
@@ -1946,12 +2080,47 @@ Jinput
 \end_layout
 
 \begin_layout Standard
-As previously mentioned, this library uses jinput extensively.
+As previously mentioned, game control plus uses jinput extensively.
  Theoretically all that is needed to achieve 6axis support is to integrate
- a newer jinput designed to utilise all the capabilities of the DS4.
+ a newer jinput designed to utilise all the capabilities of the DS4, the
+ newest jinput library does not appear to do such a thing
+\begin_inset CommandInset citation
+LatexCommand citep
+key "jinput2019"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsubsection
+Jinput steam controller
+\end_layout
+
+\begin_layout Standard
+There is no DS4 jinput, however, there is a steam controller jinput
+\begin_inset CommandInset citation
+LatexCommand citep
+key "oddwarg2021"
+literal "false"
+
+\end_inset
+
+.
+ The steam controller provides all of the same crucial input types that
+ the DS4 has, so it could be possible to adapt it
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Dempsey2016"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
 Sdl2gdx
 \end_layout
 
@@ -1974,7 +2143,7 @@ literal "false"
  This library does not appear to have 6axis support.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Unofficial example
 \end_layout
 
@@ -2042,7 +2211,7 @@ name "fig:The-unofficial-GUI"
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Official example
 \end_layout
 
@@ -2101,16 +2270,6 @@ name "fig:The-official-GUI"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Section
-Other possibilities
-\end_layout
-
-\begin_layout Standard
-With generally older codebases, no obvious sign of 6axis support in the
- source code and no available example code, it does not seem logical to
- entertain these other options.
 \end_layout
 
 \begin_layout Subsection
@@ -2188,6 +2347,109 @@ literal "false"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Section
+JS
+\end_layout
+
+\begin_layout Subsection
+Ds-examples
+\end_layout
+
+\begin_layout Standard
+As the name suggests, this is a set of examples; this could be useful if
+ I end up using JS
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Steinherz2021"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Dualshock library
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:JS:-Dualshock-library"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This node.js library may in fact have the most extensive set of capabilities
+ out of any of the choices here
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Pecacheu2018"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Additional features
+\end_layout
+
+\begin_layout Subsection
+Ds4-lightbar
+\end_layout
+
+\begin_layout Standard
+This allows access to the gamepad lightbar.
+ This is done by leveraging dualshock library(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:JS:-Dualshock-library"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Cota2019"
+literal "false"
+
+\end_inset
+
+.
+ This could be used to display the current selected colour.
+\end_layout
+
+\begin_layout Subsection
+Dsbattery
+\end_layout
+
+\begin_layout Standard
+This library provides access to the battery level, and the ability to disconnect
+ the controller
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Tomsons2021"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Final choice
+\end_layout
+
+\begin_layout Standard
+Although there was a strong leaning towards using java, it turns out that
+ JS may be the best option after all.
 \end_layout
 
 \begin_layout Chapter
