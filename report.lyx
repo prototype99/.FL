@@ -1920,6 +1920,63 @@ literal "false"
 \end_inset
 
 .
+ As seen in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:An-excerpt-of"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, there is full access to the required 6axis data.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename dualshock4-cplusplus.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+An excerpt of the output, the format is too vertical to effectively include
+ all of it.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:An-excerpt-of"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1932,6 +1989,18 @@ This library is both cross platform and has support for a range of controllers,
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Smart2021"
+literal "false"
+
+\end_inset
+
+.
+ JoyShockMapper up to version 2.2.0 uses this library.
+ Even after setting the compiler to clang, however, this exaple application
+ would not compile, perhaps eluding to JoyShockLibrary not being the easiest
+ to implement
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Electronicks2021"
 literal "false"
 
 \end_inset
@@ -1963,6 +2032,11 @@ literal "false"
 \end_inset
 
 .
+ When testing this library it did not work, quoting ``host is down
+\begin_inset Quotes erd
+\end_inset
+
+ as the issue.
 \end_layout
 
 \begin_layout Subsection
@@ -1981,6 +2055,8 @@ literal "false"
 \end_inset
 
 .
+ Surprisingly this library could not detect the connected controller, meaning
+ no available go libraries seem to work.
 \end_layout
 
 \begin_layout Section
@@ -2073,6 +2149,24 @@ name "fig:Testing-the-library"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Gamepad4J
+\end_layout
+
+\begin_layout Standard
+This is another library with some potential.
+ Notable features include access to all basic input types and adaptive button
+ prompts
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Dudley2015"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
