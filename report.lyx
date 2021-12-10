@@ -2839,6 +2839,18 @@ literal "false"
 \end_inset
 
 .
+ The original branch of code does not work, however there are three other
+ branches
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Pecacheu2021"
+literal "false"
+
+\end_inset
+
+.
+ With so many forked versions available, it could be assumed that at least
+ one of them may fix the issue or offer guidance as to what needs doing.
 \end_layout
 
 \begin_layout Section
