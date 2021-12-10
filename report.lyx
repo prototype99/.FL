@@ -2851,6 +2851,11 @@ literal "false"
 .
  With so many forked versions available, it could be assumed that at least
  one of them may fix the issue or offer guidance as to what needs doing.
+ The branch by wonderunit had a large number of revert commits that could
+ be avoided by having an earlier base commit, so the first necessary action
+ was to create a localised version with that corrective action taken; removing
+ unnecessary commits aids in analysis of source code changes as it cleans
+ up the data that will be analysed.
 \end_layout
 
 \begin_layout Section
