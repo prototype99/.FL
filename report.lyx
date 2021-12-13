@@ -1327,64 +1327,6 @@ Apply the principles and operation of languages, compilers and interpreters.
 \end_layout
 
 \begin_layout Section
-Possible future
-\end_layout
-
-\begin_layout Standard
-Whilst the end goal would probably be to integrate 6axis into more popular
- software such as GIMP or Krita, there is nothing to say that the software
- produced by this project will be overly useless.
- The software can serve multiple purposes explored below.
-\end_layout
-
-\begin_layout Subsection
-As part of an OS
-\end_layout
-
-\begin_layout Standard
-The author may decide to include the resultant software as part of DidOS
- as a semi exclusive bundled accessory.
- DidOS is a Linux based, source compiled OS in the very early stages of
- production.
-\end_layout
-
-\begin_layout Subsection
-Demo
-\end_layout
-
-\begin_layout Standard
-DotFL could serve as a demo for a larger set of 6axis software, much like
- demo software for frameworks.
-\end_layout
-
-\begin_layout Subsection
-Familiarisation
-\end_layout
-
-\begin_layout Standard
-DotFL could serve as a way to familiarise users with 6axis, due to it mirroring
- a concept users are often already very familiar with.
-\end_layout
-
-\begin_layout Subsection
-Concept model
-\end_layout
-
-\begin_layout Standard
-DotFL could serve as a reference model for further integrations into more
- popular software as aforementioned.
-\end_layout
-
-\begin_layout Subsection
-Niche interest
-\end_layout
-
-\begin_layout Standard
-DotFL may just happen to fit one of the smaller demographics, such as those
- with strict licencing requirements, language enthusiasts or both.
-\end_layout
-
-\begin_layout Section
 Hypothesis
 \end_layout
 
@@ -3021,6 +2963,68 @@ The author has an extensive amount of experience using this gamepad.
  It has no notable features outside of localised force feedback for the
  triggers, which can at times add to the immersive experience, however the
  goal is not immersion.
+\end_layout
+
+\begin_layout Chapter
+Evaluation
+\end_layout
+
+\begin_layout Section
+Possible future
+\end_layout
+
+\begin_layout Standard
+Whilst the end goal would probably be to integrate 6axis into more popular
+ software such as GIMP or Krita, there is nothing to say that the software
+ produced by this project will be overly useless.
+ The software can serve multiple purposes explored below.
+\end_layout
+
+\begin_layout Subsection
+As part of an OS
+\end_layout
+
+\begin_layout Standard
+The author may decide to include the resultant software as part of DidOS
+ as a semi exclusive bundled accessory.
+ DidOS is a Linux based, source compiled OS in the very early stages of
+ production.
+\end_layout
+
+\begin_layout Subsection
+Demo
+\end_layout
+
+\begin_layout Standard
+DotFL could serve as a demo for a larger set of 6axis software, much like
+ demo software for frameworks.
+\end_layout
+
+\begin_layout Subsection
+Familiarisation
+\end_layout
+
+\begin_layout Standard
+DotFL could serve as a way to familiarise users with 6axis, due to it mirroring
+ a concept users are often already very familiar with.
+\end_layout
+
+\begin_layout Subsection
+Concept model
+\end_layout
+
+\begin_layout Standard
+DotFL could serve as a reference model for further integrations into more
+ popular software as aforementioned.
+\end_layout
+
+\begin_layout Subsection
+Niche interest
+\end_layout
+
+\begin_layout Standard
+DotFL may just happen to fit one of the smaller demographics, such as those
+ with strict licencing requirements, language enthusiasts or both.
 \end_layout
 
 \begin_layout Chapter
