@@ -2961,6 +2961,94 @@ The author has an extensive amount of experience using this gamepad.
 \end_layout
 
 \begin_layout Chapter
+Interacting with DS5
+\end_layout
+
+\begin_layout Standard
+Due to unforseen difficulties with DS4,
+\end_layout
+
+\begin_layout Section
+C++: Dual_sense
+\end_layout
+
+\begin_layout Standard
+https://github.com/XertDev/dual_sense
+\end_layout
+
+\begin_layout Section
+C#
+\end_layout
+
+\begin_layout Subsection
+DualSenseSupport
+\end_layout
+
+\begin_layout Standard
+https://github.com/Mxater/DualSenseSupport
+\end_layout
+
+\begin_layout Subsection
+DualSenseX
+\end_layout
+
+\begin_layout Standard
+https://github.com/Paliverse/DualSenseX
+\end_layout
+
+\begin_layout Subsection
+UniSense
+\end_layout
+
+\begin_layout Standard
+https://github.com/nullkal/UniSense
+\end_layout
+
+\begin_layout Section
+JS
+\end_layout
+
+\begin_layout Subsection
+dualsense
+\end_layout
+
+\begin_layout Standard
+https://github.com/nondebug/dualsense
+\end_layout
+
+\begin_layout Subsection
+node-dualsense
+\end_layout
+
+\begin_layout Standard
+https://github.com/CamTosh/node-dualsense
+\end_layout
+
+\begin_layout Section
+Python
+\end_layout
+
+\begin_layout Subsection
+Pydualsense
+\end_layout
+
+\begin_layout Standard
+https://github.com/flok/pydualsense
+\end_layout
+
+\begin_layout Subsection
+sc-controller
+\end_layout
+
+\begin_layout Standard
+https://github.com/kozec/sc-controller
+\end_layout
+
+\begin_layout Chapter
+DS5 experience
+\end_layout
+
+\begin_layout Chapter
 Evaluation
 \end_layout
 
