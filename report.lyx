@@ -2531,7 +2531,7 @@ literal "false"
 \end_inset
 
 .
- At first the program would not function, however this was fixed by changiing
+ At first the program would not function, however this was fixed by changing
  it to bytecode version 6
 \begin_inset CommandInset citation
 LatexCommand citep
