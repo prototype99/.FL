@@ -2128,7 +2128,7 @@ name "tab:Gamepad-latency-of"
 \end_layout
 
 \begin_layout Chapter
-How do we interact with the gamepad?
+Interacting with DS4
 \end_layout
 
 \begin_layout Standard
@@ -2855,7 +2855,7 @@ Although there was a strong leaning towards using java, it turns out that
 \end_layout
 
 \begin_layout Chapter
-Hardware experience
+DS4 experience
 \end_layout
 
 \begin_layout Section
