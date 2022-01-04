@@ -2356,8 +2356,6 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-With a generally older codebase and no available example code, it does not
- feel 
 \begin_inset Graphics
 	filename game-control-plus.png
 	width 100col%
