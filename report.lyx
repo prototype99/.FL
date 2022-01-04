@@ -2135,7 +2135,6 @@ Interacting with DS4
 There are a variety of possible libraries, as SDL is a popular library for
  interacting with gamepads it is likely it will be the best choice, however
  game control plus seems promising too.
- as java was chosen, all of the libraries looked at are java based.
 \end_layout
 
 \begin_layout Section
