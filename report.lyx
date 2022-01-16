@@ -2949,6 +2949,12 @@ https://github.com/XertDev/dual_sense
 C#
 \end_layout
 
+\begin_layout Standard
+This is not a likely choice.
+ Despite priding itself on being cross platform, C# is hardly ideal compared
+ to other languages.
+\end_layout
+
 \begin_layout Subsection
 DualSenseSupport
 \end_layout
