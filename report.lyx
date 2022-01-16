@@ -332,7 +332,7 @@ Abbreviations
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="23" columns="2">
+<lyxtabular version="3" rows="24" columns="2">
 <features islongtable="true" longtabularalignment="center">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top" width="0pt">
@@ -531,6 +531,26 @@ GUI
 
 \begin_layout Plain Layout
 Graphical UI
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+I
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The author
 \end_layout
 
 \end_inset
@@ -1477,10 +1497,10 @@ User experience level
 
 \begin_layout Standard
 There is no direct focus on how experienced a user is.
- The author is, however, entirely new to the DS4 and DS5 that will play
- a major part in this study.
- The author will try to dedicate time outside of development to become more
- experienced with the DS4.
+ I am, however, entirely new to the DS4 and DS5 that will play a major part
+ in this study.
+ I will try to dedicate time outside of development to become more experienced
+ with the DS4.
 \end_layout
 
 \begin_layout Chapter
@@ -1495,8 +1515,8 @@ In an ideal situation, DotFL would leverage an existing codebase, in order
  UI in order to offer clear gamepad control prompts.
  Moving on from that, it would appear that making a fork would be the best
  solution, however this would require extensive knowledge of the codebase.
- As the author does not have the extensive knowledge required, the next
- best solution would be to create an application from scratch.
+ As I do not have the extensive knowledge required, the next best solution
+ would be to create an application from scratch.
 \end_layout
 
 \begin_layout Chapter
@@ -1507,8 +1527,8 @@ How do we produce visuals?
 This will form the crucial backbone for the rest of the application, therefore
  all other libraries will need to work with this library (use the same language).
  Although there are probably alternative ways to achieve the same effect,
- the author has decided to use processing as they are familiar with it,
- as a result the main point of comparison in this chapter is the language.
+ I have decided to use processing as I am familiar with it, as a result
+ the main point of comparison in this chapter is the language.
 \end_layout
 
 \begin_layout Section
@@ -1516,7 +1536,7 @@ Clojure/ClojureScript: Quil
 \end_layout
 
 \begin_layout Standard
-The author is not familiar with this language, so it is an unlikely choice.
+I am not familiar with this language, so it is an unlikely choice.
  This is a version of processing written in clojure
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -1533,7 +1553,7 @@ CoffeeScript mode
 \end_layout
 
 \begin_layout Standard
-The author is not familiar with this language, so it is an unlikely choice.
+I am not familiar with this language, so it is an unlikely choice.
  The latest version of this is built to the specification of processing
  2 which is quite old, it is based on processing.js
 \begin_inset CommandInset citation
@@ -1568,8 +1588,8 @@ Java: Processing
 \end_layout
 
 \begin_layout Standard
-The author is very familiar with this language and feels this may be the
- best choice due to familiarity.
+I am very familiar with this language and feels this may be the best choice
+ due to familiarity.
  This is the original version produced in part by Casey Reas
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -1578,7 +1598,7 @@ literal "false"
 
 \end_inset
 
-, and the one the author has used before.
+, and the one I used before.
  The language was historically known as ``proce55ing
 \begin_inset Quotes erd
 \end_inset
@@ -1625,9 +1645,8 @@ JS
 \end_layout
 
 \begin_layout Standard
-The author is familiar with this language, they do not have fond memories
- of it.
- The author also does not do well with weak typing.
+I am familiar with this language, they do not have fond memories of it.
+ I also do not do well with weak typing.
 \end_layout
 
 \begin_layout Subsection
@@ -1693,8 +1712,7 @@ Python
 \end_layout
 
 \begin_layout Standard
-The author does not do well with weak typing, therefore this is not a likely
- choice.
+I do not do well with weak typing, therefore this is not a likely choice.
 \end_layout
 
 \begin_layout Subsection
@@ -1754,7 +1772,7 @@ R: Processing.R
 \end_layout
 
 \begin_layout Standard
-The author is not familiar with this language, so it is an unlikely choice.
+I am not familiar with this language, so it is an unlikely choice.
  This version adapts the java version to work with R.
  It is worth noting that it is listed as experimental
 \begin_inset CommandInset citation
@@ -1772,8 +1790,8 @@ Ruby: JRubyArt
 \end_layout
 
 \begin_layout Standard
-The author has tried to write code in this language previously and struggled,
- therefore this language is an unlikely choice.
+I have tried to write code in this language previously and struggled, therefore
+ this language is an unlikely choice.
  This uses Jruby to allow for processing in the ruby language.
  Jruby allows ruby code to access java code
 \begin_inset CommandInset citation
@@ -1791,7 +1809,7 @@ Scala: Spde
 \end_layout
 
 \begin_layout Standard
-The author is not familiar with this language, so it is an unlikely choice.
+I am not familiar with this language, so it is an unlikely choice.
  Scala runs on the JVM, so this can use the original processing libraries
  without issue
 \begin_inset CommandInset citation
@@ -2866,8 +2884,8 @@ DS4
 \end_layout
 
 \begin_layout Standard
-The DS4 could not connect to the author's PC via USB, however it could do
- so via bluetooth with little issue.
+The DS4 could not connect to my PC via USB, however it could do so via bluetooth
+ with little issue.
  As noted in appendix 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2879,8 +2897,8 @@ noprefix "false"
 \end_inset
 
 , it would appear that there is some kind of technical difference with the
- official USB adaptor that facilitates a connection, however the author
- struggled to find a definitive source.
+ official USB adaptor that facilitates a connection, however I struggled
+ to find a definitive source.
  Thankfully, the gamepad has the least latency when used wirelessly, so
  this is not a major issue.
 \end_layout
@@ -2903,8 +2921,7 @@ DS4
 \end_layout
 
 \begin_layout Standard
-The author is new to the DS4, so there is a necessity to become familiar
- with it.
+I am new to the DS4, so there is a necessity to become familiar with it.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2912,16 +2929,15 @@ Basic functionality
 \end_layout
 
 \begin_layout Standard
-To become used to the gamepad in general, the author played the game ``among
- us
+To become used to the gamepad in general, I played the game ``among us
 \begin_inset Quotes erd
 \end_inset
 
 , which has a native DS4 control scheme.
  The control scheme was not optimal, as it required a trackpad click to
  enter text, which proved to impact the overall performance.
- The author had to switch between gamepad and keyboard which was a generally
- bothersome experience which would not occur with the keyboard attachment.
+ I had to switch between gamepad and keyboard which was a generally bothersome
+ experience which would not occur with the keyboard attachment.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2929,7 +2945,7 @@ To become used to the gamepad in general, the author played the game ``among
 \end_layout
 
 \begin_layout Standard
-At first the author could not think of a way to properly test this experience.
+At first I could not think of a way to properly test this experience.
  After a while, an idea came to incorporate it into as a custom control
  scheme into the game ``Sid Meier's civilization 6
 \begin_inset Quotes erd
@@ -2954,7 +2970,7 @@ XB1S gamepad
 \end_layout
 
 \begin_layout Standard
-The author has an extensive amount of experience using this gamepad.
+I have an extensive amount of experience using this gamepad.
  It has no notable features outside of localised force feedback for the
  triggers, which can at times add to the immersive experience, however the
  goal is not immersion.
@@ -3068,8 +3084,8 @@ As part of an OS
 \end_layout
 
 \begin_layout Standard
-The author may decide to include the resultant software as part of DidOS
- as a semi exclusive bundled accessory.
+I may decide to include the resultant software as part of DidOS as a semi
+ exclusive bundled accessory.
  DidOS is a Linux based, source compiled OS in the very early stages of
  production.
 \end_layout
