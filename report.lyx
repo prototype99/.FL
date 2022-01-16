@@ -332,7 +332,7 @@ Abbreviations
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="25" columns="2">
+<lyxtabular version="3" rows="26" columns="2">
 <features islongtable="true" longtabularalignment="center">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top" width="0pt">
@@ -341,12 +341,32 @@ Abbreviations
 \begin_inset Text
 
 \begin_layout Plain Layout
-6axis
+.FL
 \end_layout
 
 \end_inset
 </cell>
 <cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DotFL
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6axis
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1527,6 +1547,10 @@ There is no direct focus on how experienced a user is.
 What should it be?
 \end_layout
 
+\begin_layout Section
+Conceptually
+\end_layout
+
 \begin_layout Standard
 In an ideal situation, DotFL would leverage an existing codebase, in order
  to ensure the best performance and set of features.
@@ -1537,6 +1561,29 @@ In an ideal situation, DotFL would leverage an existing codebase, in order
  solution, however this would require extensive knowledge of the codebase.
  As I do not have the extensive knowledge required, the next best solution
  would be to create an application from scratch.
+\end_layout
+
+\begin_layout Section
+Etymologically
+\end_layout
+
+\begin_layout Standard
+After some thought, I decided to create a name based on function and then
+ work onwards from that point, choosing an appropriate acronym.
+ Dance of the flowing lines was the name that was chosen for two reasons.
+ Firstly, the software would make use of motion, whilst the user will not
+ literally dance, it can be expected that use of the software would result
+ in an intricate method of movements that could be compared to dancing.
+ Secondly, while attempts may be made to flesh out the drawing functionality
+ the primary function will always be to draw lines, the act of drawing these
+ lines should be much like the movements the user makes, thus it can be
+ said that it flows with the user's movements.
+ When turned into an acronym, this could very easily be DotFL; it would
+ have in fact stayed as such, however I realised that when isolated, the
+ first three letters spell out the word dot, so it could reasonably be simplifie
+d further to .FL, this is alot easier to say verbally and could be viewed
+ as being more aesthetically pleasing, so that will be the final official
+ name.
 \end_layout
 
 \begin_layout Chapter
