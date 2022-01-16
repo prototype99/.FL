@@ -2872,7 +2872,91 @@ Although there was a strong leaning towards using java, it turns out that
 \end_layout
 
 \begin_layout Chapter
-DS4 experience
+Interacting with DS5
+\end_layout
+
+\begin_layout Standard
+Due to unforseen difficulties with DS4,
+\end_layout
+
+\begin_layout Section
+C++: Dual_sense
+\end_layout
+
+\begin_layout Standard
+https://github.com/XertDev/dual_sense
+\end_layout
+
+\begin_layout Section
+C#
+\end_layout
+
+\begin_layout Subsection
+DualSenseSupport
+\end_layout
+
+\begin_layout Standard
+https://github.com/Mxater/DualSenseSupport
+\end_layout
+
+\begin_layout Subsection
+DualSenseX
+\end_layout
+
+\begin_layout Standard
+https://github.com/Paliverse/DualSenseX
+\end_layout
+
+\begin_layout Subsection
+UniSense
+\end_layout
+
+\begin_layout Standard
+https://github.com/nullkal/UniSense
+\end_layout
+
+\begin_layout Section
+JS
+\end_layout
+
+\begin_layout Subsection
+dualsense
+\end_layout
+
+\begin_layout Standard
+https://github.com/nondebug/dualsense
+\end_layout
+
+\begin_layout Subsection
+node-dualsense
+\end_layout
+
+\begin_layout Standard
+https://github.com/CamTosh/node-dualsense
+\end_layout
+
+\begin_layout Section
+Python
+\end_layout
+
+\begin_layout Subsection
+Pydualsense
+\end_layout
+
+\begin_layout Standard
+https://github.com/flok/pydualsense
+\end_layout
+
+\begin_layout Subsection
+sc-controller
+\end_layout
+
+\begin_layout Standard
+https://github.com/kozec/sc-controller
+\end_layout
+
+\begin_layout Chapter
+Hardware experience
 \end_layout
 
 \begin_layout Section
@@ -2974,94 +3058,6 @@ I have an extensive amount of experience using this gamepad.
  It has no notable features outside of localised force feedback for the
  triggers, which can at times add to the immersive experience, however the
  goal is not immersion.
-\end_layout
-
-\begin_layout Chapter
-Interacting with DS5
-\end_layout
-
-\begin_layout Standard
-Due to unforseen difficulties with DS4,
-\end_layout
-
-\begin_layout Section
-C++: Dual_sense
-\end_layout
-
-\begin_layout Standard
-https://github.com/XertDev/dual_sense
-\end_layout
-
-\begin_layout Section
-C#
-\end_layout
-
-\begin_layout Subsection
-DualSenseSupport
-\end_layout
-
-\begin_layout Standard
-https://github.com/Mxater/DualSenseSupport
-\end_layout
-
-\begin_layout Subsection
-DualSenseX
-\end_layout
-
-\begin_layout Standard
-https://github.com/Paliverse/DualSenseX
-\end_layout
-
-\begin_layout Subsection
-UniSense
-\end_layout
-
-\begin_layout Standard
-https://github.com/nullkal/UniSense
-\end_layout
-
-\begin_layout Section
-JS
-\end_layout
-
-\begin_layout Subsection
-dualsense
-\end_layout
-
-\begin_layout Standard
-https://github.com/nondebug/dualsense
-\end_layout
-
-\begin_layout Subsection
-node-dualsense
-\end_layout
-
-\begin_layout Standard
-https://github.com/CamTosh/node-dualsense
-\end_layout
-
-\begin_layout Section
-Python
-\end_layout
-
-\begin_layout Subsection
-Pydualsense
-\end_layout
-
-\begin_layout Standard
-https://github.com/flok/pydualsense
-\end_layout
-
-\begin_layout Subsection
-sc-controller
-\end_layout
-
-\begin_layout Standard
-https://github.com/kozec/sc-controller
-\end_layout
-
-\begin_layout Chapter
-DS5 experience
 \end_layout
 
 \begin_layout Chapter
