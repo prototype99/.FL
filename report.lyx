@@ -332,7 +332,7 @@ Abbreviations
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="24" columns="2">
+<lyxtabular version="3" rows="25" columns="2">
 <features islongtable="true" longtabularalignment="center">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top" width="0pt">
@@ -551,6 +551,26 @@ I
 
 \begin_layout Plain Layout
 The author
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+JNI
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Java Native Interface
 \end_layout
 
 \end_inset
@@ -1528,7 +1548,7 @@ This will form the crucial backbone for the rest of the application, therefore
  all other libraries will need to work with this library (use the same language).
  Although there are probably alternative ways to achieve the same effect,
  I have decided to use processing as I am familiar with it, as a result
- the main point of comparison in this chapter is the language.
+ this chapter is mostly a compilation of the available options.
 \end_layout
 
 \begin_layout Section
@@ -1829,16 +1849,6 @@ literal "false"
 \end_inset
 
 , it is unlikely this would work as expected.
-\end_layout
-
-\begin_layout Section
-Overall choice
-\end_layout
-
-\begin_layout Standard
-As java is a good mix of performance and familiarity of the choices, it
- seems logical that this would be the ideal choice if processing is used.
- Go is also a potentially good choice.
 \end_layout
 
 \begin_layout Chapter
@@ -2862,15 +2872,6 @@ literal "false"
 .
 \end_layout
 
-\begin_layout Section
-Final choice
-\end_layout
-
-\begin_layout Standard
-Although there was a strong leaning towards using java, it turns out that
- JS may be the best option after all.
-\end_layout
-
 \begin_layout Chapter
 Interacting with DS5
 \end_layout
@@ -2953,6 +2954,53 @@ sc-controller
 
 \begin_layout Standard
 https://github.com/kozec/sc-controller
+\end_layout
+
+\begin_layout Chapter
+Final software choice
+\end_layout
+
+\begin_layout Section
+Native software
+\end_layout
+
+\begin_layout Standard
+Given the research so far, it would seem that JS is definitely the best
+ option.
+ This choice is not necessarily ideal, however it is perfectly doable, with
+ P5.js as the supporting UI library.
+\end_layout
+
+\begin_layout Section
+JNI
+\end_layout
+
+\begin_layout Standard
+As seen in appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Response-to-project"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, a very good point was raised to attention that JNI could be used in order
+ to use the native SDL library, whilst also using java, which is quicker
+ to develop with than the native C++.
+ I had not considered this as this, would add an extra layer that could
+ impact performance, however I can see that in this case it could be optimal.
+ As a compiled languge, C++ is the most performant choice of language, part
+ of the continuing popularity of java is that it has higher performance
+ than JS or python.
+ Through the use of JNI, the most important underpinning library, SDL gets
+ the most performant language.
+ The use of JNI helps reduce future technical debt as when a rewrite is
+ needed for more performance, it is very possible to replace components
+ piece by piece rather than in one whole go.
+ A codebase using java and C++ is certainly more preferable than a full
+ JS application, thus this is the route that will be taken.
 \end_layout
 
 \begin_layout Chapter
@@ -3176,14 +3224,18 @@ To: Seirra Blake <SEIRRA.BLAKE@stu.mmu.ac.uk>
 \begin_inset Newline newline
 \end_inset
 
-Subject: RE: Request for review of feasibility study 
-\end_layout
+Subject: RE: Request for review of feasibility study
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
+
+\begin_inset Newline newline
+\end_inset
+
 Hi Seirra,
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
 This is looking pretty good, and certainly fine to submit, but a few things
  to think about:
 \end_layout
@@ -3292,6 +3344,123 @@ DS4 user discussion transcript
 \begin_inset CommandInset label
 LatexCommand label
 name "chap:DS4-user-discussion"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Response to project update
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Response-to-project"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From: Huw Lloyd <Huw.Lloyd@mmu.ac.uk>
+\begin_inset Newline newline
+\end_inset
+
+Sent: 14 January 2022 11:25
+\begin_inset Newline newline
+\end_inset
+
+To: Seirra Blake <SEIRRA.BLAKE@stu.mmu.ac.uk>
+\begin_inset Newline newline
+\end_inset
+
+Subject: RE: Project update 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Hi Seirra,
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Thanks for the update.
+ Sorry it’s taken me a while to get back to you.
+ In terms of languages, you could look into using JNI (Java Native Interface)
+ to call functions from a DLL written in C++ in a Java application.
+ You could wrap the parts of SDL you want into your own DLL (minimizing
+ the amount of C++ coding required) and then write your application in Java.
+ If you find Javascript bindings that do what you want and you are happy
+ with that language, then that is fine.
+ You could maybe then use something like Electron or ReactNative to develop
+ the application.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+You should probably focus on getting one controller to work, so that you
+ have time to develop the application and do the user research.
+ Doing more could be too ambitious given the amount of work expected in
+ for a final year project.
+ Overcoming the technical hurdles required to bring these different libraries
+ together would be a substantial piece of work which could make a good project
+ report.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Regards
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Huw
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+Dr Huw Lloyd - Senior Lecturer, Departmental Disability Coordinator
+\begin_inset Newline newline
+\end_inset
+
+Department of Computing and Mathematics, Manchester Metropolitan University,
+ Manchester M1 5GD
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
 
 \end_inset
 
