@@ -3333,18 +3333,18 @@ Office: E131, John Dalton East (office hours – Mon 10-11, Tues 11-12, Thurs
 
 \begin_layout Chapter
 DS4 user discussion transcript
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:DS4-user-discussion"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 ``You know it's micro USB right? I just use the adapter that came with it
 \begin_inset Quotes erd
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "chap:DS4-user-discussion"
-
 \end_inset
 
 
