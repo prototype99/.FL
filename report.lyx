@@ -2924,7 +2924,17 @@ Interacting with DS5
 \end_layout
 
 \begin_layout Standard
-Due to unforseen difficulties with DS4,
+Due to unforseen difficulties with DS4 (see 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:DS4-recharge"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), it became a higher priority to finish DS5 development first.
 \end_layout
 
 \begin_layout Section
@@ -3063,7 +3073,7 @@ DS4
 \end_layout
 
 \begin_layout Standard
-The DS4 could not connect to my PC via USB, however it could do so via bluetooth
+This could not connect to my PC via USB, however it could do so via bluetooth
  with little issue.
  As noted in appendix 
 \begin_inset CommandInset ref
@@ -3083,12 +3093,70 @@ noprefix "false"
 \end_layout
 
 \begin_layout Subsection
+DS5
+\end_layout
+
+\begin_layout Standard
+This could connect very easily to my PC via USB, it seems capable of using
+ all functionality successfully.
+\end_layout
+
+\begin_layout Subsection
 XB1S gamepad
 \end_layout
 
 \begin_layout Standard
 This gamepad can connect via USB very easily.
  I did not test wireless connectivity as it was out of scope.
+\end_layout
+
+\begin_layout Section
+Recharging
+\end_layout
+
+\begin_layout Subsection
+DS4
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:DS4-recharge"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This was unable to charge, it is suspected this could be related to appendix
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:DS4-user-discussion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+DS5
+\end_layout
+
+\begin_layout Standard
+This was able to recharge easily using a USB C connector, this is the ideal
+ solution.
+\end_layout
+
+\begin_layout Subsection
+XB1S gamepad
+\end_layout
+
+\begin_layout Standard
+This can recharge using any micro USB connector.
+ The model I own is old and appears to struggle operating with solely the
+ internal battery, so battery degradation may be a key issue with this hardware.
 \end_layout
 
 \begin_layout Section
