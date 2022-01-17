@@ -332,7 +332,7 @@ Abbreviations
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="27" columns="2">
+<lyxtabular version="3" rows="28" columns="2">
 <features islongtable="true" longtabularalignment="center">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top" width="0pt">
@@ -691,6 +691,26 @@ PC
 
 \begin_layout Plain Layout
 Personal Computer
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PS5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PlayStation 5
 \end_layout
 
 \end_inset
@@ -2346,6 +2366,15 @@ literal "false"
 .
 \end_layout
 
+\begin_layout Subsection
+SDL
+\end_layout
+
+\begin_layout Standard
+This is the native version of SDL, it can generally be expected that SDL
+ supports the DS4.
+\end_layout
+
 \begin_layout Section
 Go
 \end_layout
@@ -2958,11 +2987,53 @@ noprefix "false"
 \end_layout
 
 \begin_layout Section
-C++: Dual_sense
+C++
+\end_layout
+
+\begin_layout Subsection
+Dual_sense
 \end_layout
 
 \begin_layout Standard
-https://github.com/XertDev/dual_sense
+This repository is listed as WIP, however it could be very possible to help
+ the developer finish it
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Jakubek2022"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+SDL
+\end_layout
+
+\begin_layout Standard
+While it was easy enough to acquire the DS5, not everyone may wish to purchase
+ the DS5 as a standalone device, even for software development.
+ This should be simple enough: the DS5 is designed for the PS5, so just
+ get the PS5; however, due to shortages
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Mochizuki2022"
+literal "false"
+
+\end_inset
+
+, that is not as simple as it should be.
+ This all means that it could be expected that SDL would not have DS5 support,
+ however with release 2.0.14 that all changed
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Lantinga2020"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
