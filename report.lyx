@@ -332,7 +332,7 @@ Abbreviations
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="26" columns="2">
+<lyxtabular version="3" rows="27" columns="2">
 <features islongtable="true" longtabularalignment="center">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top" width="0pt">
@@ -851,6 +851,26 @@ XB1S
 
 \begin_layout Plain Layout
 XB1 Slim
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+XB360
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Xbox 360
 \end_layout
 
 \end_inset
@@ -2960,7 +2980,15 @@ DualSenseSupport
 \end_layout
 
 \begin_layout Standard
-https://github.com/Mxater/DualSenseSupport
+This claims to only have preliminary support
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Unlok2021"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -2968,7 +2996,16 @@ DualSenseX
 \end_layout
 
 \begin_layout Standard
-https://github.com/Paliverse/DualSenseX
+This seems to be more advanced, having the ability to emulate the XB360
+ gamepad or DS4
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Paliverse2022"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -2976,7 +3013,17 @@ UniSense
 \end_layout
 
 \begin_layout Standard
-https://github.com/nullkal/UniSense
+This is specifically an extension for unity, I expect it will be of minimal
+ use
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Oliveira2021"
+literal "false"
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Section
@@ -2984,19 +3031,46 @@ JS
 \end_layout
 
 \begin_layout Subsection
-dualsense
+Dualsense
 \end_layout
 
 \begin_layout Standard
-https://github.com/nondebug/dualsense
+This claims to just collect information, however from what can be seen,
+ it is likely that it can be used as an input library
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Reynolds2020"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
-node-dualsense
+Node-dualsense
 \end_layout
 
 \begin_layout Standard
-https://github.com/CamTosh/node-dualsense
+This is based on pydualsense (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Pydualsense"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), it is able to read input and set LED status, powered by NodeJS
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Camille2021"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
@@ -3005,18 +3079,43 @@ Python
 
 \begin_layout Subsection
 Pydualsense
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Pydualsense"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-https://github.com/flok/pydualsense
+This relies on an external library called hidapi.
+ It seems to allow configuration of the trigger pressure
+\begin_inset CommandInset citation
+LatexCommand citep
+key "pydualsense2021"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
-sc-controller
+Sc-controller
 \end_layout
 
 \begin_layout Standard
-https://github.com/kozec/sc-controller
+This is designed primarily as a driver, however due to its user mode nature,
+ it should be easy to adapt into a library
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Kozec2021"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Chapter
