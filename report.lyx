@@ -3503,6 +3503,13 @@ noprefix "false"
  to become more reinforced.
  In this current iteration, point 207 has a clear risk of snapping, due
  to point 211 not having enough depth.
+ 208 is a spring, it can be assumed that this is to sustain enough rigidity
+ to allow thumbstick clicks (where the entire thumbstick is temporarily
+ pushed down into the gamepad, producing a ``click
+\begin_inset Quotes erd
+\end_inset
+
+ sound) as well as providing a consistent unlocked thumbstick height.
 \end_layout
 
 \begin_layout Standard
