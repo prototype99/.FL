@@ -332,7 +332,7 @@ Abbreviations
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="28" columns="2">
+<lyxtabular version="3" rows="31" columns="2">
 <features islongtable="true" longtabularalignment="center">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top" width="0pt">
@@ -511,6 +511,26 @@ DS5
 
 \begin_layout Plain Layout
 DualSense (gamepad)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DS6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DualSense 2 (gamepad, theoretical model)
 \end_layout
 
 \end_inset
@@ -721,6 +741,26 @@ PlayStation 5
 \begin_inset Text
 
 \begin_layout Plain Layout
+PSP
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PlayStation Portable
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 SDL
 \end_layout
 
@@ -791,6 +831,26 @@ UI
 
 \begin_layout Plain Layout
 User Interface
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+US
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+United States
 \end_layout
 
 \end_inset
@@ -3404,7 +3464,325 @@ Evaluation
 \end_layout
 
 \begin_layout Section
-Possible future
+Future hardware developments
+\end_layout
+
+\begin_layout Subsection
+Gamepad
+\end_layout
+
+\begin_layout Standard
+I expect that future developments will create an even better version of
+ an already good experience, as companies learn from each other and innovate.
+ As can be imagined, any developments from sony are of particular interest,
+ as their DS5 is the current best candidate.
+ Whilst a purpose built gamepad could certainly be made, I'm unsure how
+ much benefit would be derived from such a concept.
+ After looking through developments I will hypothesise on the ideal DS6,
+ then a more realistic DS6.
+\end_layout
+
+\begin_layout Subsubsection
+Collapsible joysticks
+\end_layout
+
+\begin_layout Standard
+There is a patent for collapsible joysticks that has been filed, the goal
+ is to make gamepads more portable.
+ As seen in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:A-cross-sectional-comparison"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, point 101 is replaced with a full spring assembly, point 102 also appears
+ to become more reinforced.
+ In this current iteration, point 207 has a clear risk of snapping, due
+ to point 211 not having enough depth.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename collapse1.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A cross-sectional comparison of a standard joystick and a proposed collapsible
+ joystick
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Khim2022"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:A-cross-sectional-comparison"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:A-diagram-of"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows the design numbered 2 improved so the breakage point is protected.
+ The design of 3A is definitely superior, as it protects the internal shaft
+ thanks to point 303's addition, which may offer shock protection.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename collapse2.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A diagram of a collapsible joystick, an upgraded design 2 is showed collapsed,
+ as well as a new design 3
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Khim2022"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:A-diagram-of"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:A-diagram-of-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows design 3 in the collapsed mode.
+ As can be seen, this design offers full shaft protection both collapsed
+ and uncollapsed.
+ I struggle to fathom the purpose of point 308, perhaps the circle just
+ exists for annotation purposes.
+ Design 3 seems to in many ways offer a lot of protection, while also adding
+ the same new functionality.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename collapse3.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A diagram of the collapsed design 3 joystick model, it seems to have some
+ structural reinforcement
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Khim2022"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:A-diagram-of-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The next drawing is skipped, it shows nothing new that isn't showed in the
+ following drawing.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Isometric-drawings-of"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows two hpyothetical locking mechanisms.
+ 4D is a standard rotary lock, the use of only one locking point could affect
+ longetivity or stability.
+ If I were to design it, I would have used two radial sets of grooves.
+ 5 is a more advanced system that uses non-newtonian fluid.
+ 5 is interesting, however it could be considered to be over-engineered
+ and a negative impact to repairability.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename collapse5.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Isometric drawings of the potential locking mechanisms that could be used
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Khim2022"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Isometric-drawings-of"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Overall, this is an interesting way to create a more portable gamepad.
+ I feel it could be improved by allowing the thumbsticks to collapse into
+ the body fully, rather than just partially
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Khim2022"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Keyboard
+\end_layout
+
+\begin_layout Section
+Future software developments
 \end_layout
 
 \begin_layout Standard
