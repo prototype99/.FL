@@ -3770,7 +3770,24 @@ Overall, this is an interesting way to create a more portable gamepad.
  This feels especially important because while it is mentioned that thumbsticks
  are prone to becoming caught in fabric, the final design shown does not
  actually reduce the risk of becoming caught in fabric, only the risk of
- breakage
+ breakage.
+ The only reason I can imagine they would want that behaviour is to mimic
+ the behaviour of the ``analog nubs
+\begin_inset Quotes erd
+\end_inset
+
+ they mention earlier, by which they probably mean the controlstick which
+ is seen on the PSP as seen in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-analog-nub"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, seeing as it is a Sony patent
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Khim2022"
@@ -3779,6 +3796,59 @@ literal "false"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename nubs.jpg
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The analog nub, the PSP's distinctive low-profile controlstick
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Guide2011"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-analog-nub"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
