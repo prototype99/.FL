@@ -3719,6 +3719,9 @@ noprefix "false"
  do mention something to that effect as an option.
  404 and 409 are hooks which hold an elastic band; theoretically this is
  repairable, although users may find it difficult.
+ Thumbsticks are typically plastic, however they make extensive mention
+ of kinds of metals that could be used, suggesting that they may believe
+ plastic would be too weak.
  5 is a more advanced system that uses non-newtonian fluid.
  5 is interesting, however it could be considered to be over-engineered
  and a negative impact to repairability.
