@@ -1164,8 +1164,8 @@ literal "false"
 , following that logic it has to be wondered what they could do for 'couch
  work'.
  Gamepads are capable of adding new ways to control experiences thanks to
- a variety of features such as variable pressure triggers, joysticks, programmab
-le lights and force feedback.
+ a variety of features such as variable pressure triggers, thumbsticks,
+ programmable lights and force feedback.
  As an example, on the late steam controller, a user 
 \begin_inset Quotes eld
 \end_inset
@@ -1297,7 +1297,7 @@ literal "false"
  This statement makes sense when the reason computer mice evolved from ball
  technology to optical technology is considered.
  Even if we ignore gyroscopic controls and look at the Xbox controller,
- a purely joystick based controller in comparison to a dedicated joystick:
+ a purely thumbstick based controller in comparison to a dedicated thumbstick:
  
 \begin_inset Quotes eld
 \end_inset
@@ -3483,11 +3483,11 @@ I expect that future developments will create an even better version of
 \end_layout
 
 \begin_layout Subsubsection
-Collapsible joysticks
+Collapsible thumbsticks
 \end_layout
 
 \begin_layout Standard
-There is a patent for collapsible joysticks that has been filed, the goal
+There is a patent for collapsible thumbsticks that has been filed, the goal
  is to make gamepads more portable.
  As seen in figure 
 \begin_inset CommandInset ref
@@ -3526,8 +3526,8 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-A cross-sectional comparison of a standard joystick and a proposed collapsible
- joystick
+A cross-sectional comparison of a standard thumbstick and a proposed collapsible
+ thumbstick
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Khim2022"
@@ -3592,7 +3592,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-A diagram of a collapsible joystick, an upgraded design 2 is showed collapsed,
+A diagram of a collapsible thumbstick, an upgraded design 2 is showed collapsed,
  as well as a new design 3
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -3663,7 +3663,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-A diagram of the collapsed design 3 joystick model, it seems to have some
+A diagram of the collapsed design 3 thumbstick model, it seems to have some
  structural reinforcement
 \begin_inset CommandInset citation
 LatexCommand citep
