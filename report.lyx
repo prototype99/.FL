@@ -3766,7 +3766,11 @@ name "fig:Isometric-drawings-of"
 \begin_layout Standard
 Overall, this is an interesting way to create a more portable gamepad.
  I feel it could be improved by allowing the thumbsticks to collapse into
- the body fully, rather than just partially
+ the body fully, rather than just partially.
+ This feels especially important because while it is mentioned that thumbsticks
+ are prone to becoming caught in fabric, the final design shown does not
+ actually reduce the risk of becoming caught in fabric, only the risk of
+ breakage
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Khim2022"
