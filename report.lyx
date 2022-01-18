@@ -3715,7 +3715,10 @@ noprefix "false"
  shows two hpyothetical locking mechanisms.
  4D is a standard rotary lock, the use of only one locking point could affect
  longetivity or stability.
- If I were to design it, I would have used two radial sets of grooves.
+ If I were to design it, I would have used two radial sets of grooves, they
+ do mention something to that effect as an option.
+ 404 and 409 are hooks which hold an elastic band; theoretically this is
+ repairable, although users may find it difficult.
  5 is a more advanced system that uses non-newtonian fluid.
  5 is interesting, however it could be considered to be over-engineered
  and a negative impact to repairability.
