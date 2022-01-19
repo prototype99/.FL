@@ -32,6 +32,9 @@
 
 \usepackage[T2A]{fontenc}
 
+\usepackage{CJKutf8}
+\newcommand{\japanese}[1]{\begin{CJK}{UTF8}{ipxm}#1\end{CJK}}
+
 \definecolor{MyBlack}{rgb}{0,0,0}
 \definecolor{MyGray}{rgb}{0.5,0.5,0.5} 
 \definecolor{MyBlue}{rgb}{0,0.4,1}
@@ -91,7 +94,7 @@
 \maintain_unincluded_children false
 \language english
 \language_package default
-\inputencoding utf8
+\inputencoding utf8-cjk
 \fontencoding global
 \font_roman "default" "default"
 \font_sans "default" "default"
@@ -103,6 +106,7 @@
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\font_cjk goth
 \use_microtype false
 \use_dash_ligatures true
 \graphics default
@@ -332,7 +336,7 @@ Abbreviations
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="32" columns="2">
+<lyxtabular version="3" rows="33" columns="2">
 <features islongtable="true" longtabularalignment="center">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top" width="0pt">
@@ -971,6 +975,26 @@ XB360
 
 \begin_layout Plain Layout
 Xbox 360
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+YAJSDL
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Yet Another Java SDL
 \end_layout
 
 \end_inset
@@ -2930,6 +2954,24 @@ literal "false"
 \begin_inset CommandInset citation
 LatexCommand citep
 key "libsdl2021"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+YAJSDL
+\end_layout
+
+\begin_layout Standard
+This is a JNA based java SDL binding.
+ While the language is not a reason to discount the repository, the year
+ may be
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Rihine2012"
 literal "false"
 
 \end_inset
