@@ -2670,6 +2670,36 @@ literal "false"
 \end_layout
 
 \begin_layout Subsection
+JSFML
+\end_layout
+
+\begin_layout Standard
+This is a port of SFML to java; as seen in appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Feasibility-study-review"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, it was suggested as a solution by the supervisor, so it is worth looking
+ at.
+ It does not appear to receive many updates so it may not be the best choice
+\begin_inset CommandInset citation
+LatexCommand citep
+key "DeflatedPickle2021"
+literal "false"
+
+\end_inset
+
+.
+ Due to the fact that it is an engine as opposed to a dedicated library,
+ it does not immediately appear to be a good fit for the project.
+\end_layout
+
+\begin_layout Subsection
 Kaliber
 \end_layout
 
@@ -2905,36 +2935,6 @@ literal "false"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Subsection
-JSFML
-\end_layout
-
-\begin_layout Standard
-This is a port of SFML to java; as seen in appendix 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "chap:Feasibility-study-review"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, it was suggested as a solution by the supervisor, so it is worth looking
- at.
- It does not appear to receive many updates so it may not be the best choice
-\begin_inset CommandInset citation
-LatexCommand citep
-key "DeflatedPickle2021"
-literal "false"
-
-\end_inset
-
-.
- Due to the fact that it is an engine as opposed to a dedicated library,
- it does not immediately appear to be a good fit for the project.
 \end_layout
 
 \begin_layout Section
