@@ -3347,53 +3347,6 @@ literal "false"
 \end_layout
 
 \begin_layout Chapter
-Final software choice
-\end_layout
-
-\begin_layout Section
-Native software
-\end_layout
-
-\begin_layout Standard
-Given the research so far, it would seem that JS is definitely the best
- option.
- This choice is not necessarily ideal, however it is perfectly doable, with
- P5.js as the supporting UI library.
-\end_layout
-
-\begin_layout Section
-JNI
-\end_layout
-
-\begin_layout Standard
-As seen in appendix 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "chap:Response-to-project"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, a very good point was raised to attention that JNI could be used in order
- to use the native SDL library, whilst also using java, which is quicker
- to develop with than the native C++.
- I had not considered this as this, would add an extra layer that could
- impact performance, however I can see that in this case it could be optimal.
- As a compiled languge, C++ is the most performant choice of language, part
- of the continuing popularity of java is that it has higher performance
- than JS or python.
- Through the use of JNI, the most important underpinning library, SDL gets
- the most performant language.
- The use of JNI helps reduce future technical debt as when a rewrite is
- needed for more performance, it is very possible to replace components
- piece by piece rather than in one whole go.
- A codebase using java and C++ is certainly more preferable than a full
- JS application, thus this is the route that will be taken.
-\end_layout
-
-\begin_layout Chapter
 Hardware experience
 \end_layout
 
@@ -3554,6 +3507,56 @@ I have an extensive amount of experience using this gamepad.
  It has no notable features outside of localised force feedback for the
  triggers, which can at times add to the immersive experience, however the
  goal is not immersion.
+\end_layout
+
+\begin_layout Chapter
+The development journey
+\end_layout
+
+\begin_layout Section
+Choosing the hardware library
+\end_layout
+
+\begin_layout Standard
+Given the research so far, it would seem that JS is definitely the best
+ option.
+ This choice is not necessarily ideal, however it is perfectly doable, with
+ P5.js as the supporting UI library.
+ As seen in appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Response-to-project"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, a very good point was raised to attention that JNI could be used in order
+ to use the native SDL library, whilst also using java, which is quicker
+ to develop with than the native C++.
+ I had not considered this as this, would add an extra layer that could
+ impact performance, however I can see that in this case it could be optimal.
+ I had found some JNI and JNA examples before, but disregarded them as they
+ did not seem reliable; however as my supervisor recommended it, I will
+ try to adapt them in some way, to create a workable solution.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+As a compiled languge, C++ is the most performant choice of language, part
+ of the continuing popularity of java is that it has higher performance
+ than JS or python.
+ Through the use of JNI, the most important underpinning library, SDL gets
+ the most performant language.
+ The use of JNI helps reduce future technical debt as when a rewrite is
+ needed for more performance, it is very possible to replace components
+ piece by piece rather than in one whole go.
+ A codebase using java and C++ is certainly more preferable than a full
+ JS application, thus this is the route that will be taken.
 \end_layout
 
 \begin_layout Chapter
