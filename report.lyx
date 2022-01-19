@@ -2347,13 +2347,24 @@ name "tab:Gamepad-latency-of"
 \end_layout
 
 \begin_layout Chapter
-Interacting with DS4
+Interacting with hardware
 \end_layout
 
 \begin_layout Standard
 There are a variety of possible libraries, as SDL is a popular library for
  interacting with gamepads it is likely it will be the best choice, however
  game control plus seems promising too.
+ Due to unforseen difficulties with DS4 (see 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:DS4-recharge"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), it became a higher priority to finish DS5 development first.
 \end_layout
 
 \begin_layout Section
@@ -2364,6 +2375,23 @@ C++
 C++ has a lot of promise for producing a high performance application.
  The issue that could arise is the longer development time associated with
  c++.
+\end_layout
+
+\begin_layout Subsection
+Dual_sense
+\end_layout
+
+\begin_layout Standard
+This repository is listed as WIP, however it could be very possible to help
+ the developer finish it
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Jakubek2022"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -2477,6 +2505,88 @@ SDL
 \begin_layout Standard
 This is the native version of SDL, it can generally be expected that SDL
  supports the DS4.
+ While it was easy enough to acquire the DS5, not everyone may wish to purchase
+ the DS5 as a standalone device, even for software development.
+ This should be simple enough: the DS5 is designed for the PS5, so just
+ get the PS5; however, due to shortages
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Mochizuki2022"
+literal "false"
+
+\end_inset
+
+, that is not as simple as it should be.
+ This all means that it could be expected that SDL would not have DS5 support,
+ however with release 2.0.14 that all changed
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Lantinga2020"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+C#
+\end_layout
+
+\begin_layout Standard
+This is not a likely choice.
+ Despite priding itself on being cross platform, C# is hardly ideal compared
+ to other languages.
+\end_layout
+
+\begin_layout Subsection
+DualSenseSupport
+\end_layout
+
+\begin_layout Standard
+This claims to only have preliminary support
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Unlok2021"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+DualSenseX
+\end_layout
+
+\begin_layout Standard
+This seems to be more advanced, having the ability to emulate the XB360
+ gamepad or DS4
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Paliverse2022"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+UniSense
+\end_layout
+
+\begin_layout Standard
+This is specifically an extension for unity, I expect it will be of minimal
+ use
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Oliveira2021"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
@@ -2902,15 +3012,6 @@ name "fig:The-official-GUI"
 \end_layout
 
 \begin_layout Subsection
-SDL
-\end_layout
-
-\begin_layout Standard
-There is no official java implementation, however there are unofficial versions
- as detailed below.
-\end_layout
-
-\begin_layout Subsubsection
 Libjsdl
 \end_layout
 
@@ -2926,7 +3027,7 @@ literal "false"
 .
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Sdljava
 \end_layout
 
@@ -3041,188 +3142,6 @@ literal "false"
  up the data that will be analysed.
 \end_layout
 
-\begin_layout Section
-Additional features
-\end_layout
-
-\begin_layout Subsection
-Ds4-lightbar
-\end_layout
-
-\begin_layout Standard
-This allows access to the gamepad lightbar.
- This is done by leveraging dualshock library(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:JS:-Dualshock-library"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-)
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Cota2019"
-literal "false"
-
-\end_inset
-
-.
- This could be used to display the current selected colour.
-\end_layout
-
-\begin_layout Subsection
-Dsbattery
-\end_layout
-
-\begin_layout Standard
-This library provides access to the battery level, and the ability to disconnect
- the controller
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Tomsons2021"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Chapter
-Interacting with DS5
-\end_layout
-
-\begin_layout Standard
-Due to unforseen difficulties with DS4 (see 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "subsec:DS4-recharge"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-), it became a higher priority to finish DS5 development first.
-\end_layout
-
-\begin_layout Section
-C++
-\end_layout
-
-\begin_layout Subsection
-Dual_sense
-\end_layout
-
-\begin_layout Standard
-This repository is listed as WIP, however it could be very possible to help
- the developer finish it
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Jakubek2022"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsection
-SDL
-\end_layout
-
-\begin_layout Standard
-While it was easy enough to acquire the DS5, not everyone may wish to purchase
- the DS5 as a standalone device, even for software development.
- This should be simple enough: the DS5 is designed for the PS5, so just
- get the PS5; however, due to shortages
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Mochizuki2022"
-literal "false"
-
-\end_inset
-
-, that is not as simple as it should be.
- This all means that it could be expected that SDL would not have DS5 support,
- however with release 2.0.14 that all changed
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Lantinga2020"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Section
-C#
-\end_layout
-
-\begin_layout Standard
-This is not a likely choice.
- Despite priding itself on being cross platform, C# is hardly ideal compared
- to other languages.
-\end_layout
-
-\begin_layout Subsection
-DualSenseSupport
-\end_layout
-
-\begin_layout Standard
-This claims to only have preliminary support
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Unlok2021"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsection
-DualSenseX
-\end_layout
-
-\begin_layout Standard
-This seems to be more advanced, having the ability to emulate the XB360
- gamepad or DS4
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Paliverse2022"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsection
-UniSense
-\end_layout
-
-\begin_layout Standard
-This is specifically an extension for unity, I expect it will be of minimal
- use
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Oliveira2021"
-literal "false"
-
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Section
-JS
-\end_layout
-
 \begin_layout Subsection
 Dualsense
 \end_layout
@@ -3304,6 +3223,55 @@ This is designed primarily as a driver, however due to its user mode nature,
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Kozec2021"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Additional features
+\end_layout
+
+\begin_layout Subsection
+Ds4-lightbar
+\end_layout
+
+\begin_layout Standard
+This allows access to the gamepad lightbar.
+ This is done by leveraging dualshock library(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:JS:-Dualshock-library"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Cota2019"
+literal "false"
+
+\end_inset
+
+.
+ This could be used to display the current selected colour.
+\end_layout
+
+\begin_layout Subsection
+Dsbattery
+\end_layout
+
+\begin_layout Standard
+This library provides access to the battery level, and the ability to disconnect
+ the controller
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Tomsons2021"
 literal "false"
 
 \end_inset
