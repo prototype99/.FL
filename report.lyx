@@ -2702,11 +2702,10 @@ literal "false"
 \end_inset
 
 .
- Predefined mappings may make development a lot easier.
- Rumble could be used in some way, and hotplugging could allow for a smoother
- user experience.
- This library does not appear to have 6axis support.
+ It is worth noting, however, that the project is 3 years old, and since
+ then it appears SDL has all of the features that were originally missing.
  This uses JNI to access SDL.
+ This library does not appear to have 6axis support.
 \end_layout
 
 \begin_layout Subsubsection
