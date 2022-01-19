@@ -2645,6 +2645,23 @@ Java
 \end_layout
 
 \begin_layout Subsection
+ControllerBuddy
+\end_layout
+
+\begin_layout Standard
+This may prove useful.
+ support for DS4 and DS5 is listed, so it may be a helpful resource
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Hausner2022"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
 Game control plus
 \end_layout
 
@@ -2850,6 +2867,22 @@ literal "false"
 \end_layout
 
 \begin_layout Subsection
+Libjsdl
+\end_layout
+
+\begin_layout Standard
+This is a direct port using JNA
+\begin_inset CommandInset citation
+LatexCommand citep
+key "shinedeveloper2021"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
 Sdl2gdx
 \end_layout
 
@@ -3012,14 +3045,31 @@ name "fig:The-official-GUI"
 \end_layout
 
 \begin_layout Subsection
-Libjsdl
+SDL4J
 \end_layout
 
 \begin_layout Standard
-This is a direct port using JNA
+This uses a windows DLL of SDL, however it may be possible to adapt it to
+ use real SDL source code
 \begin_inset CommandInset citation
-LatexCommand citep
-key "shinedeveloper2021"
+LatexCommand citet
+key "Glosson2021"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+SDLJ
+\end_layout
+
+\begin_layout Standard
+This has minimal information, but is relatively up to date
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Lewis2021"
 literal "false"
 
 \end_inset
@@ -3055,6 +3105,23 @@ literal "false"
 \begin_inset CommandInset citation
 LatexCommand citep
 key "libsdl2021"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Sdljoystick4java
+\end_layout
+
+\begin_layout Standard
+This is another JNI SDL binding, it seems to be relatively up to date but
+ focus on basic functions
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Pavel2021"
 literal "false"
 
 \end_inset
