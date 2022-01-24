@@ -3582,6 +3582,25 @@ As a compiled languge, C++ is the most performant choice of language, part
  JS application, thus this is the route that will be taken.
  After some consideration, it appears that libjsdl will be the ideal base,
  as it aims to be performant and map directly.
+ 
+\end_layout
+
+\begin_layout Section
+Adapting libjsdl
+\end_layout
+
+\begin_layout Standard
+The first step that was taken was to commit a test configuration for the
+ fork of this library.
+ It appears that the current version was somewhat of a work in progress,
+ as it had over 300 stylistic errors according to the built in checkstyle
+ integration; this may be because it is a tentative feature upgrade branch
+ for SDL 2.0.16, however it appears to have a lot of improvements, it seems
+ appropriate to try integrating it to stay current.
+ It was possible to resolve all of the stylistic errors a lot quicker than
+ expected, with minimal experience of the library it is hard to say whether
+ all of the adaptations are correct, however producing an application utilising
+ them would surely be an excellent way to test.
 \end_layout
 
 \begin_layout Chapter
