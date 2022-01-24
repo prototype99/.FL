@@ -3597,6 +3597,16 @@ The first step that was taken was to commit a test configuration for the
  integration; this may be because it is a tentative feature upgrade branch
  for SDL 2.0.16, however it appears to have a lot of improvements, it seems
  appropriate to try integrating it to stay current.
+ SDL 2.0.16 has some DS5 improvements, so the ability to interact with it
+ would certainly be preferable choice
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Lantinga2021"
+literal "false"
+
+\end_inset
+
+.
  It was possible to resolve all of the stylistic errors a lot quicker than
  expected, with minimal experience of the library it is hard to say whether
  all of the adaptations are correct, however producing an application utilising
