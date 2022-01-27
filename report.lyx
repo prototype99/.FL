@@ -3613,6 +3613,18 @@ literal "false"
  them would surely be an excellent way to test.
 \end_layout
 
+\begin_layout Section
+Using libjsdl
+\end_layout
+
+\begin_layout Standard
+The next step has been to add the library as a submodule.
+ Now with the library integrated into the project the next step will be
+ to properly utilise it, although many routes could be taken, the one that
+ will be taken shall be the official documentation, which can most likely
+ be matched up to libjsdl.
+\end_layout
+
 \begin_layout Chapter
 Evaluation
 \end_layout
