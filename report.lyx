@@ -3623,6 +3623,16 @@ The next step has been to add the library as a submodule.
  to properly utilise it, although many routes could be taken, the one that
  will be taken shall be the official documentation, which can most likely
  be matched up to libjsdl.
+ There appears to be no directly official beginners guide, so a different
+ one was used
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Lantinga2022"
+literal "false"
+
+\end_inset
+
+.
  After the basics it became unclear what subsystems the DualSense would
  use.
 \end_layout
