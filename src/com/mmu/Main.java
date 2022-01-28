@@ -1,23 +1,22 @@
 package com.mmu;
 
-import org.libsdl.api.joystick.SDL_Joystick;
+import org.libsdl.api.gamecontroller.SDL_GameController;
 
-import static org.libsdl.api.SDL_SubSystem.SDL_INIT_JOYSTICK;
+import static org.libsdl.api.SDL_SubSystem.SDL_INIT_GAMECONTROLLER;
 import static org.libsdl.api.Sdl.SDL_Init;
 import static org.libsdl.api.Sdl.SDL_Quit;
 import static org.libsdl.api.error.SdlError.SDL_GetError;
-import static org.libsdl.api.joystick.SdlJoystick.SDL_JoystickClose;
-import static org.libsdl.api.joystick.SdlJoystick.SDL_JoystickOpen;
+import static org.libsdl.api.gamecontroller.SdlGamecontroller.SDL_GameControllerClose;
+import static org.libsdl.api.gamecontroller.SdlGamecontroller.SDL_GameControllerOpen;
+import static org.libsdl.api.gamecontroller.SdlGamecontroller.SDL_IsGameController;
 import static org.libsdl.api.joystick.SdlJoystick.SDL_NumJoysticks;
 
 public class Main {
 
     public static void main(String[] args) {
-        if((SDL_Init(SDL_INIT_JOYSTICK) == -1)) {
+        if((SDL_Init(SDL_INIT_GAMECONTROLLER) == -1)) {
             System.out.println(SDL_GetError());
         }
-        //Game Controller 1 handler
-        SDL_Joystick gGameController;
         //Check for joysticks
         if( SDL_NumJoysticks() < 1 )
         {
@@ -25,14 +24,21 @@ public class Main {
         }
         else
         {
-            System.out.println(SDL_NumJoysticks());
-            //Load joystick
-            gGameController = SDL_JoystickOpen( 0 );
-            if( gGameController == null )
+            SDL_GameController DS5 = null;
+            for(int i = 0; i < SDL_NumJoysticks(); i++)
+            {
+                if(SDL_IsGameController(i))
+                {
+                    //Load DS5
+                    DS5 = SDL_GameControllerOpen(i);
+                }
+            }
+            if( DS5 == null )
             {
                 System.out.println( "Warning: Unable to open game controller! SDL Error: %s\n" + SDL_GetError() );
+            } else {
+                SDL_GameControllerClose( DS5 );
             }
-            SDL_JoystickClose( gGameController );
         }
         SDL_Quit();
     }
