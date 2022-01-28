@@ -3254,6 +3254,13 @@ literal "false"
 
 \begin_layout Subsection
 Node-dualsense
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Node-dualsense"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3286,7 +3293,8 @@ noprefix "false"
 
 \end_inset
 
-, this library is definitely capable.
+, this library is definitely capable, unfortunately it does not read 6axis
+ data.
 \end_layout
 
 \begin_layout Standard
@@ -3360,6 +3368,18 @@ literal "false"
 \end_inset
 
 .
+ Testing with a library based on this (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Node-dualsense"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) shows that it may be a capable base.
+ The code does not appear to be ready for 6xis capabilities.
 \end_layout
 
 \begin_layout Subsection
