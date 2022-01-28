@@ -3276,6 +3276,62 @@ literal "false"
 \end_inset
 
 .
+ As seen in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:A-successful-basic"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, this library is definitely capable.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename dualsense-js.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A successful basic reading of DS5 input states
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:A-successful-basic"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
