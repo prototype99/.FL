@@ -2903,6 +2903,7 @@ literal "false"
 \end_inset
 
 .
+ This library is able to access SDL successfully and performantly.
 \end_layout
 
 \begin_layout Subsection
@@ -3634,7 +3635,22 @@ literal "false"
 
 .
  After the basics it became unclear what subsystems the DualSense would
- use.
+ use, after some research it appeared that the joystick subsystem was the
+ correct choice.
+ Unfortunately after successfully following a tutorial
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Foo2019"
+literal "false"
+
+\end_inset
+
+ SDL seemed to only detect one joystick.
+ Although the joystick reports having 6 axes which could cover all the loaded
+ joysticks, none of them appear to hold data.
+ It is almost definitely possible to use DS5 with SDL, however the documentation
+ available is generic.
+ Following these issues, an alternative specialised library will be attempted.
 \end_layout
 
 \begin_layout Chapter
