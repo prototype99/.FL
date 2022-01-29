@@ -3726,9 +3726,18 @@ literal "false"
  SDL seemed to only detect one joystick.
  Although the joystick reports having 6 axes which could cover all the loaded
  joysticks, none of them appear to hold data.
- It is almost definitely possible to use DS5 with SDL, however the documentation
- available is generic.
- Following these issues, an alternative specialised library will be attempted.
+ As an alternative, it will be switched to the gamecontroller API which
+ appears to better access the hardware.
+ Afterwards it is unclear what the next step is, however it appears that
+ the software yuzu implements motion control in the exact way required
+\begin_inset CommandInset citation
+LatexCommand citep
+key "German2021"
+literal "false"
+
+\end_inset
+
+, as a result the way forward may be to reverse engineer the relevant code.
 \end_layout
 
 \begin_layout Chapter
