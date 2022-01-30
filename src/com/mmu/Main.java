@@ -9,6 +9,7 @@ import static org.libsdl.api.error.SdlError.SDL_GetError;
 import static org.libsdl.api.gamecontroller.SdlGamecontroller.SDL_GameControllerClose;
 import static org.libsdl.api.gamecontroller.SdlGamecontroller.SDL_GameControllerHasSensor;
 import static org.libsdl.api.gamecontroller.SdlGamecontroller.SDL_GameControllerOpen;
+import static org.libsdl.api.gamecontroller.SdlGamecontroller.SDL_GameControllerSetSensorEnabled;
 import static org.libsdl.api.gamecontroller.SdlGamecontroller.SDL_IsGameController;
 import static org.libsdl.api.joystick.SdlJoystick.SDL_NumJoysticks;
 import static org.libsdl.api.sensor.SDL_SensorType.SDL_SENSOR_GYRO;
@@ -40,7 +41,11 @@ public class Main {
                 System.out.println( "Warning: Unable to open game controller! SDL Error: %s\n" + SDL_GetError() );
             } else {
                 if(SDL_GameControllerHasSensor(DS5, SDL_SENSOR_GYRO)) {
-                    System.out.println("awww yeah success");
+                    if(SDL_GameControllerSetSensorEnabled(DS5, SDL_SENSOR_GYRO, true) == -1) {
+                        System.out.println("Warning: unable to enable gyroscope");
+                    } else {
+                        System.out.println("awww yeah success");
+                    }
                 } else {
                     System.out.println("Warning: no gyroscope connected, did you connect the right controller?");
                 }
