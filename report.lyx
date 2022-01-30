@@ -3741,6 +3741,25 @@ literal "false"
  something similar.
 \end_layout
 
+\begin_layout Section
+Yuzu inspired implementation
+\end_layout
+
+\begin_layout Standard
+Although the methods used can by no means be copied on a 1:1 basis, a lot
+ of them are similar enough that minimal adaptation is required.
+ Yuzu uses a robust series of checks to ensure that the correct kind of
+ gamepad is connected, this is a good idea, as it may increase startup time,
+ however it makes it possible to give the user a clear error message.
+ Yuzu uses an event based structure to read the gamepad data, this is not
+ too unusual for applications that need to react to various events so .FL
+ will do the same.
+ Yuzu specificlly uses an event watcher, with enough effort it could also
+ work in .FL, however it was proving difficult to do so.
+ As an alternative, it is possible to use a loop based structure, which
+ can be a lot easier to understand.
+\end_layout
+
 \begin_layout Chapter
 Evaluation
 \end_layout
