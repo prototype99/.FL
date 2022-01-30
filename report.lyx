@@ -3726,8 +3726,8 @@ literal "false"
  SDL seemed to only detect one joystick.
  Although the joystick reports having 6 axes which could cover all the loaded
  joysticks, none of them appear to hold data.
- As an alternative, it will be switched to the gamecontroller API which
- appears to better access the hardware.
+ As an alternative, it was be switched to the gamecontroller API which appears
+ to better access the hardware.
  Afterwards it is unclear what the next step is, however it appears that
  the software yuzu implements motion control in the exact way required
 \begin_inset CommandInset citation
