@@ -1,11 +1,13 @@
 package com.mmu;
 
+import org.libsdl.api.event.events.SDL_Event;
 import org.libsdl.api.gamecontroller.SDL_GameController;
 
 import static org.libsdl.api.SDL_SubSystem.SDL_INIT_GAMECONTROLLER;
 import static org.libsdl.api.Sdl.SDL_Init;
 import static org.libsdl.api.Sdl.SDL_Quit;
 import static org.libsdl.api.error.SdlError.SDL_GetError;
+import static org.libsdl.api.event.SdlEvents.SDL_PollEvent;
 import static org.libsdl.api.gamecontroller.SdlGamecontroller.SDL_GameControllerClose;
 import static org.libsdl.api.gamecontroller.SdlGamecontroller.SDL_GameControllerHasSensor;
 import static org.libsdl.api.gamecontroller.SdlGamecontroller.SDL_GameControllerOpen;
@@ -44,7 +46,10 @@ public class Main {
                     if(SDL_GameControllerSetSensorEnabled(DS5, SDL_SENSOR_GYRO, true) == -1) {
                         System.out.println("Warning: unable to enable gyroscope");
                     } else {
-                        System.out.println("awww yeah success");
+                        SDL_Event e = new SDL_Event();
+                        while(SDL_PollEvent(e) != 0) {
+                            System.out.println(e.type);
+                        }
                     }
                 } else {
                     System.out.println("Warning: no gyroscope connected, did you connect the right controller?");
