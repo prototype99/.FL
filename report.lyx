@@ -3737,7 +3737,8 @@ literal "false"
 
 \end_inset
 
-, as a result the way forward may be to reverse engineer the relevant code.
+, as a result the way forward may be to examine the relevant code and implement
+ something similar.
 \end_layout
 
 \begin_layout Chapter
