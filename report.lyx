@@ -3765,6 +3765,11 @@ literal "false"
 \end_inset
 
 , which can be a lot easier to understand.
+ Whereas yuzu uses a multi threaded codebase, there are no current plans
+ to make .FL multithreaded, so all code will be made to be single threaded.
+ Any potential performance impact from minimal multi-threading may be reduced
+ somewhat, through the use of static variables where yuzu appears to use
+ a more object orientated approach.
 \end_layout
 
 \begin_layout Chapter
