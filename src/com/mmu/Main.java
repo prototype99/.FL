@@ -52,7 +52,7 @@ public class Main {
                         }
                     }
                 } else {
-                    System.out.println("Warning: no gyroscope connected, did you connect the right controller?");
+                    System.out.println("Warning: no gyroscope detected, did you connect the right controller?");
                 }
                 SDL_GameControllerClose( DS5 );
             }
