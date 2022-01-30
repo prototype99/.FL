@@ -4,6 +4,8 @@ import org.libsdl.api.event.events.SDL_ControllerSensorEvent;
 import org.libsdl.api.event.events.SDL_Event;
 import org.libsdl.api.gamecontroller.SDL_GameController;
 
+import java.util.Arrays;
+
 import static org.libsdl.api.SDL_SubSystem.SDL_INIT_GAMECONTROLLER;
 import static org.libsdl.api.Sdl.SDL_Init;
 import static org.libsdl.api.Sdl.SDL_Quit;
@@ -54,10 +56,19 @@ public class Main {
                         while(pollInput) {
                             SDL_PollEvent(e);
                             if(e.type == SDL_CONTROLLERSENSORUPDATE) {
-                                //es = e;
-                                e.read();
-                                System.out.println(e.readField("csensor"));
-                                //System.out.println("aww yeah sweet rotation");
+                                es = e.csensor;
+                                //System.out.println(e.readField("csensor"));
+                                //es = (SDL_ControllerSensorEvent) e.readField("csensor");
+                                //System.out.println(Arrays.toString(es.data));
+                                System.out.println(es.type);
+                                System.out.println(es.timestamp);
+                                System.out.println(es.which);
+                                System.out.println(es.sensor);
+                                System.out.println(Arrays.toString(es.data));
+                                //if(es.sensor == SDL_SENSOR_GYRO) {
+                                //    System.out.println("aww yeah sweet rotation");
+                                //}
+                                //
                                 //System.out.println("aww yeah sweet acceleration");
                             }
                         }
