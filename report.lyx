@@ -3756,8 +3756,15 @@ Although the methods used can by no means be copied on a 1:1 basis, a lot
  will do the same.
  Yuzu specificlly uses an event watcher, with enough effort it could also
  work in .FL, however it was proving difficult to do so.
- As an alternative, it is possible to use a loop based structure, which
- can be a lot easier to understand.
+ As an alternative, it is possible to use a loop based structure
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Shah2021"
+literal "false"
+
+\end_inset
+
+, which can be a lot easier to understand.
 \end_layout
 
 \begin_layout Chapter
