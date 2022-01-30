@@ -3074,7 +3074,8 @@ SDL4J
 
 \begin_layout Standard
 This uses a windows DLL of SDL, however it may be possible to adapt it to
- use real SDL source code
+ use the linux binary.
+ This library uses JNA
 \begin_inset CommandInset citation
 LatexCommand citet
 key "Glosson2021"
