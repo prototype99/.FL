@@ -52,24 +52,14 @@ public class Main {
                     } else {
                         boolean pollInput = true;
                         SDL_Event e = new SDL_Event();
-                        SDL_ControllerSensorEvent es = new SDL_ControllerSensorEvent();
+                        SDL_ControllerSensorEvent es;
                         while(pollInput) {
                             SDL_PollEvent(e);
                             if(e.type == SDL_CONTROLLERSENSORUPDATE) {
                                 es = e.csensor;
-                                //System.out.println(e.readField("csensor"));
-                                //es = (SDL_ControllerSensorEvent) e.readField("csensor");
-                                //System.out.println(Arrays.toString(es.data));
-                                System.out.println(es.type);
-                                System.out.println(es.timestamp);
-                                System.out.println(es.which);
-                                System.out.println(es.sensor);
-                                System.out.println(Arrays.toString(es.data));
-                                //if(es.sensor == SDL_SENSOR_GYRO) {
-                                //    System.out.println("aww yeah sweet rotation");
-                                //}
-                                //
-                                //System.out.println("aww yeah sweet acceleration");
+                                if(es.sensor == SDL_SENSOR_GYRO) {
+                                    System.out.println(Arrays.toString(es.data));
+                                }
                             }
                         }
                     }
