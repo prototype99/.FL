@@ -3070,6 +3070,13 @@ name "fig:The-official-GUI"
 
 \begin_layout Subsection
 SDL4J
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:SDL4J"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3771,6 +3778,55 @@ literal "false"
  Any potential performance impact from minimal multi-threading may be reduced
  somewhat, through the use of static variables where yuzu appears to use
  a more object orientated approach.
+\end_layout
+
+\begin_layout Section
+SDL4J improvements
+\end_layout
+
+\begin_layout Standard
+After a while it become apparent that the code needed a class that libjsdl
+ did not have: ``SDL_ControllerSensorEvent
+\begin_inset Quotes erd
+\end_inset
+
+.
+ At first this class was implemented manually, however through chance the
+ discovery was made that SDL4J (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:SDL4J"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) already implemented the class, with some noticeable levels of improvement.
+ An issue occurred where a lot of the SDL_ControllerSensorEvent data was
+ incorrect, after some comparison with the SDL4J class, it became apparent
+ that the use of NativeLong was incorrect and should have been int, an error
+ which misaligned the called addresses
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Matthew2020"
+literal "false"
+
+\end_inset
+
+.
+ Some final things that were adapted from SDL4J include missing enumerated
+ values, a better inheritance structure (with additions) and more in depth
+ code comments.
+\end_layout
+
+\begin_layout Section
+Finishing the implementation
+\end_layout
+
+\begin_layout Standard
+Now with the library appropriately enhanced it should be possible to finish
+ implementing the ability to read gyroscopic data.
 \end_layout
 
 \begin_layout Chapter
