@@ -30,11 +30,6 @@
 \usepackage{amsfonts}
 \usepackage{longtable}
 
-\usepackage[T2A]{fontenc}
-
-\usepackage{CJKutf8}
-\newcommand{\japanese}[1]{\begin{CJK}{UTF8}{ipxm}#1\end{CJK}}
-
 \definecolor{MyBlack}{rgb}{0,0,0}
 \definecolor{MyGray}{rgb}{0.5,0.5,0.5} 
 \definecolor{MyBlue}{rgb}{0,0.4,1}
@@ -48,12 +43,11 @@
 
 \usepackage{array}
 
+\usepackage{xeCJK}
+\setmainfont{Noto Serif}
+\setCJKmainfont{Source Han Sans JP}
 
-\ifx\pdfoutput\undefined
-\usepackage[hypertex]{hyperref}
-\else
-\usepackage[pdftex,hypertexnames=false]{hyperref}
-\fi
+\usepackage{hyperref}
 
 %% *** Do not adjust lengths that control margins, column widths, etc. ***
 %% *** Do not use packages that alter fonts (such as pslatex).         ***
@@ -92,16 +86,16 @@
 \options 12pt,BSc
 \use_default_options false
 \maintain_unincluded_children false
-\language english
-\language_package default
+\language british
+\language_package auto
 \inputencoding utf8-cjk
-\fontencoding global
+\fontencoding default
 \font_roman "default" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
 \font_math "auto" "auto"
 \font_default_family default
-\use_non_tex_fonts false
+\use_non_tex_fonts true
 \font_sc false
 \font_osf false
 \font_sf_scale 100 100
@@ -149,7 +143,7 @@
 \paragraph_indentation default
 \is_math_indent 0
 \math_numbering_side default
-\quotes_style english
+\quotes_style british
 \dynamic_quotes 0
 \papercolumns 1
 \papersides 1
@@ -3827,6 +3821,26 @@ Finishing the implementation
 \begin_layout Standard
 Now with the library appropriately enhanced it should be possible to finish
  implementing the ability to read gyroscopic data.
+ In the code was the equation 
+\begin_inset Formula $v=\frac{\omega}{2\pi}$
+\end_inset
+
+ which I struggled to understand, as there is no explanation in the yuzu
+ code.
+ Based on ω being radians per second, further research reveals that v is
+ the cycles per second, or hertz
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Mills2016"
+literal "false"
+
+\end_inset
+
+.
+ As either with or without the equation, the value would still be relative
+ to the level of rotation observed in an axis, it is not immediately obvious
+ why this extra layer of mathematics would be needed, however it is included
+ for the sake of completeness.
 \end_layout
 
 \begin_layout Chapter
