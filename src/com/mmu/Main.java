@@ -29,7 +29,7 @@ public class Main {
         //Check for joysticks
         if( SDL_NumJoysticks() < 1 )
         {
-            System.out.println( "Warning: No joysticks connected!" );
+            System.out.println( "Warning: No gamepads connected!" );
         }
         else
         {
