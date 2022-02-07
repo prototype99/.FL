@@ -3841,6 +3841,15 @@ literal "false"
  to the level of rotation observed in an axis, it is not immediately obvious
  why this extra layer of mathematics would be needed, however it is included
  for the sake of completeness.
+ Collecting the data is one step, however in the yuzu codebase there is
+ a clear effort to log the time of the last event and the current event.
+ The assumption would be that events sould be evenly spaced, however that
+ is not the case, a brief investigation shows that they can change a lot,
+ or in some cases not at all.
+ It is uncertain whether timestamps will be important for a basic implementation
+, however timestamps may prove useful later to help smooth out the drawing
+ experience, helping to improve the use experience for users that may be
+ more frustrated by uneven input updates, such as digital artists.
 \end_layout
 
 \begin_layout Chapter
