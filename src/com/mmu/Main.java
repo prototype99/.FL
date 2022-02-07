@@ -29,7 +29,7 @@ public class Main {
         //Check for joysticks
         if( SDL_NumJoysticks() < 1 )
         {
-            System.out.println( "Warning: No joysticks connected!\n" );
+            System.out.println( "Warning: No joysticks connected!" );
         }
         else
         {
@@ -44,7 +44,7 @@ public class Main {
             }
             if( DS5 == null )
             {
-                System.out.println( "Warning: Unable to open game controller! SDL Error: %s\n" + SDL_GetError() );
+                System.out.println( "Warning: Unable to open game controller! SDL Error:" + SDL_GetError() );
             } else {
                 if(SDL_GameControllerHasSensor(DS5, SDL_SENSOR_GYRO)) {
                     if(SDL_GameControllerSetSensorEnabled(DS5, SDL_SENSOR_GYRO, true) == -1) {
