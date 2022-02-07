@@ -3850,6 +3850,16 @@ literal "false"
 , however timestamps may prove useful later to help smooth out the drawing
  experience, helping to improve the use experience for users that may be
  more frustrated by uneven input updates, such as digital artists.
+ A step of preparation for future input smoothing will be taken by ignoring
+ timestamps with no difference, as it would be impossible to smooth those
+ such events as there is no recorded difference in time.
+ As the identical timestamps do, in fact, have differing data, it may be
+ wise to still log the data and calculate the mean average for all those
+ events, for use in the smoothing algorithm, as well as correcting the cursor
+ position keeping them in mind.
+ The aforementioned handling of duplicate events may introduce latency,
+ so it will be important to allow the user to select between high accuracy
+ and low latency.
 \end_layout
 
 \begin_layout Chapter
