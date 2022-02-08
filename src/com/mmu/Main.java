@@ -44,7 +44,7 @@ public class Main {
             }
             if( DS5 == null )
             {
-                System.out.println( "Warning: Unable to open game controller! SDL Error:" + SDL_GetError() );
+                System.out.println( "Warning: Unable to open gamepad! SDL Error:" + SDL_GetError() );
             } else {
                 if(SDL_GameControllerHasSensor(DS5, SDL_SENSOR_GYRO)) {
                     if(SDL_GameControllerSetSensorEnabled(DS5, SDL_SENSOR_GYRO, true) == -1) {
