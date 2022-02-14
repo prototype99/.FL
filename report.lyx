@@ -214,7 +214,7 @@ Department of Computing and Mathematics
 
 \begin_layout Standard
 \align center
-Principal advisor Dr.
+Principal adviser Dr.
  Huw Lloyd
 \end_layout
 
@@ -330,7 +330,7 @@ Abbreviations
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="34" columns="2">
+<lyxtabular version="3" rows="41" columns="2">
 <features islongtable="true" longtabularalignment="center">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top" width="0pt">
@@ -499,6 +499,26 @@ Dance Of The Flowing Lines
 \begin_inset Text
 
 \begin_layout Plain Layout
+DSBattery
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DS4 Battery
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 DS4
 \end_layout
 
@@ -559,6 +579,26 @@ DualSense 2 (gamepad, theoretical model)
 \begin_inset Text
 
 \begin_layout Plain Layout
+ESport
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Electronic Sport
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 GG
 \end_layout
 
@@ -589,6 +629,46 @@ GUI
 
 \begin_layout Plain Layout
 Graphical UI
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+HDMI
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+High Definition Multimedia Interface
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+HID
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Human Interface Device
 \end_layout
 
 \end_inset
@@ -699,6 +779,26 @@ Java Virtual Machine
 \begin_inset Text
 
 \begin_layout Plain Layout
+LIDAR
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Laser Imaging, Detection, And Ranging
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 MS
 \end_layout
 
@@ -789,6 +889,26 @@ PSP
 
 \begin_layout Plain Layout
 PlayStation Portable
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SC Controller
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Steam Controller Controller
 \end_layout
 
 \end_inset
@@ -929,6 +1049,26 @@ VR
 
 \begin_layout Plain Layout
 Virtual Reality
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+WIP
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Work In Progress
 \end_layout
 
 \end_inset
@@ -1427,7 +1567,7 @@ literal "false"
 
 \end_inset
 
-, meaning that any input method used has to be able to effectively accomodate
+, meaning that any input method used has to be able to effectively accommodate
  both to be of any real use.
  A modern high resolution trackball could also be a solution for such aiming
  tasks, however much like the original trackball it requires 
@@ -1455,13 +1595,13 @@ literal "false"
 \begin_inset Newline newline
 \end_inset
 
-Novel techniques also exist, such as lidar.
+Novel techniques also exist, such as LIDAR.
  Another approach is where the device 
 \begin_inset Quotes eld
 \end_inset
 
 sends inaudible sound pulses at a few selected frequencies, and uses the
- frequency shifts to estimate the speed and distance traveled
+ frequency shifts to estimate the speed and distance travelled
 \begin_inset Quotes erd
 \end_inset
 
@@ -1494,7 +1634,7 @@ literal "false"
  These newer technologies could all offer compelling experiences, however
  it is too early to be certain as the technologies have yet to properly
  enter the consumer space in a sizeable manner.
- In the context of the aforementiened two techniques, 
+ In the context of the aforementioned two techniques, 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1591,7 +1731,7 @@ For this project there are three main deliverables: the software itself,
 
 \begin_layout Enumerate
 Create a Linux compatible layer to interact with the gyroscopic controls,
- it is suspected that a library based around libsdl would be the best fit.
+ it is suspected that a library based around libSDL would be the best fit.
 \end_layout
 
 \begin_layout Enumerate
@@ -1713,8 +1853,8 @@ Conceptually
 In an ideal situation, DotFL would leverage an existing codebase, in order
  to ensure the best performance and set of features.
  The easiest solution in such a hypothetical situation would be to design
- a plugin, however it is likely that it would not be possible to modiy the
- UI in order to offer clear gamepad control prompts.
+ a plugin, however it is likely that it would not be possible to modify
+ the UI in order to offer clear gamepad control prompts.
  Moving on from that, it would appear that making a fork would be the best
  solution, however this would require extensive knowledge of the codebase.
  As I do not have the extensive knowledge required, the next best solution
@@ -1739,9 +1879,8 @@ After some thought, I decided to create a name based on function and then
  When turned into an acronym, this could very easily be DotFL; it would
  have in fact stayed as such, however I realised that when isolated, the
  first three letters spell out the word dot, so it could reasonably be simplifie
-d further to .FL, this is alot easier to say verbally and could be viewed
- as being more aesthetically pleasing, so that will be the final official
- name.
+d further to .FL, this is easier to say verbally and could be viewed as being
+ more aesthetically pleasing, so that will be the final official name.
 \end_layout
 
 \begin_layout Chapter
@@ -1762,7 +1901,7 @@ Clojure/ClojureScript: Quil
 
 \begin_layout Standard
 I am not familiar with this language, so it is an unlikely choice.
- This is a version of processing written in clojure
+ This is a version of processing written in Clojure
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Quil2014"
@@ -1961,7 +2100,7 @@ Processing.py
 \end_layout
 
 \begin_layout Standard
-This is the official python impelementation
+This is the official python implementation
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Foundation2016"
@@ -1970,9 +2109,9 @@ literal "false"
 \end_inset
 
 .
- This uses jython, a bridge that allows it to use both native python and
+ This uses Jython, a bridge that allows it to use both native python and
  the original java classes present in processing.
- This uses a custom jython based upon python 2.7
+ This uses a custom Jython based upon python 2.7
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Parrish2016"
@@ -2017,8 +2156,8 @@ Ruby: JRubyArt
 \begin_layout Standard
 I have tried to write code in this language previously and struggled, therefore
  this language is an unlikely choice.
- This uses Jruby to allow for processing in the ruby language.
- Jruby allows ruby code to access java code
+ This uses JRuby to allow for processing in the ruby language.
+ JRuby allows ruby code to access java code
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Prout2017"
@@ -2030,7 +2169,7 @@ literal "false"
 \end_layout
 
 \begin_layout Section
-Scala: Spde
+Scala: SPDE
 \end_layout
 
 \begin_layout Standard
@@ -2076,7 +2215,7 @@ noprefix "false"
 , the DS4 has generally favourable latency, especially when used wirelessly.
  It is worth noting that latency does not stop at the gamepad, therefore
  it is best to test the experience of DotFL itself for latency issues.
- ``With the original model Dualshock 4s, even when a USB cable is connected
+ ``With the original model DualShock 4s, even when a USB cable is connected
  the controller only communicates via Bluetooth
 \begin_inset Quotes erd
 \end_inset
@@ -2090,7 +2229,7 @@ literal "false"
 \end_inset
 
 .
- There are reports that a hdmi converter ``adds 0.25-0.5ms of lag
+ There are reports that a HDMI converter ``adds 0.25-0.5ms of lag
 \begin_inset Quotes erd
 \end_inset
 
@@ -2125,7 +2264,7 @@ literal "false"
 \end_inset
 
 , therefore that is another factor to consider.
- Esports is an industry that uses gampads extensively; in the esport community
+ Esports is an industry that uses gamepads extensively; in the Esport community
  it can be found that in real world applications while wireless latency
  should be lower, it is often prone to variance
 \begin_inset CommandInset citation
@@ -2266,7 +2405,7 @@ DS4 wireless
 \begin_inset Text
 
 \begin_layout Plain Layout
-Gamecube
+GameCube
 \end_layout
 
 \end_inset
@@ -2368,7 +2507,7 @@ Interacting with hardware
 There are a variety of possible libraries, as SDL is a popular library for
  interacting with gamepads it is likely it will be the best choice, however
  game control plus seems promising too.
- Due to unforseen difficulties with DS4 (see 
+ Due to unforeseen difficulties with DS4 (see 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:DS4-recharge"
@@ -2499,7 +2638,7 @@ literal "false"
 
 .
  JoyShockMapper up to version 2.2.0 uses this library.
- Even after setting the compiler to clang, however, this exaple application
+ Even after setting the compiler to clang, however, this example application
  would not compile, perhaps eluding to JoyShockLibrary not being the easiest
  to implement
 \begin_inset CommandInset citation
@@ -2618,7 +2757,7 @@ Gds4
 
 \begin_layout Standard
 This is a library designed for the DS4, at a glance it does not appear to
- have good documentation, which coud be an issue
+ have good documentation, which could be an issue
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Nong2020"
@@ -2703,9 +2842,9 @@ noprefix "false"
 
 , this library is incapable of detecting the DS4's 6axis capabilities.
  After some examination of the source code, it appears that this library
- leverage's jinput from 2014 or 2015, so it may be as simple as swapping
- out the jinput library that helps form the greater whole.
- It is worth noting that there is a github repository
+ leverage's JInput from 2014 or 2015, so it may be as simple as swapping
+ out the JInput library that helps form the greater whole.
+ It is worth noting that there is a GitHub repository
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Lager2015"
@@ -2787,20 +2926,20 @@ literal "false"
 \end_inset
 
 .
- This needed junit installed to proceed, ouya code also had to be removed.
+ This needed JUnit installed to proceed, Ouya code also had to be removed.
  An assumption was made that this used SDL, that assumption soon proved
  to be wrong, so no further testing will occur.
 \end_layout
 
 \begin_layout Subsection
-Jinput
+JInput
 \end_layout
 
 \begin_layout Standard
-As previously mentioned, game control plus uses jinput extensively.
+As previously mentioned, game control plus uses JInput extensively.
  Theoretically all that is needed to achieve 6axis support is to integrate
- a newer jinput designed to utilise all the capabilities of the DS4, the
- newest jinput library does not appear to do such a thing
+ a newer JInput designed to utilise all the capabilities of the DS4, the
+ newest JInput library does not appear to do such a thing
 \begin_inset CommandInset citation
 LatexCommand citep
 key "jinput2019"
@@ -2812,11 +2951,11 @@ literal "false"
 \end_layout
 
 \begin_layout Subsubsection
-Jinput steam controller
+JInput steam controller
 \end_layout
 
 \begin_layout Standard
-There is no DS4 jinput, however, there is a steam controller jinput
+There is no DS4 JInput, however, there is a steam controller JInput
 \begin_inset CommandInset citation
 LatexCommand citep
 key "oddwarg2021"
@@ -2884,7 +3023,7 @@ literal "false"
 \end_layout
 
 \begin_layout Subsection
-Libjsdl
+LibJSDL
 \end_layout
 
 \begin_layout Standard
@@ -2905,10 +3044,10 @@ Sdl2gdx
 \end_layout
 
 \begin_layout Standard
-This is designed as somewhat of a fusion of SDL and GDX.
- Supposed benefits over pure GDX are hotplugging support, screenmode change
- support, functional rumble support, predefined controller mappings and
- support for more than 4 xinput controllers
+This is designed as somewhat of a fusion of SDL and libGDX.
+ Supposed benefits over pure libGDX are hot-plugging support, screen-mode
+ change support, functional rumble support, predefined controller mappings
+ and support for more than 4 XInput controllers
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Smith2019"
@@ -3075,7 +3214,7 @@ name "subsec:SDL4J"
 
 \begin_layout Standard
 This uses a windows DLL of SDL, however it may be possible to adapt it to
- use the linux binary.
+ use the Linux binary.
  This library uses JNA
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -3178,7 +3317,7 @@ JS
 \end_layout
 
 \begin_layout Subsection
-Ds-examples
+DS-examples
 \end_layout
 
 \begin_layout Standard
@@ -3195,7 +3334,7 @@ literal "false"
 \end_layout
 
 \begin_layout Subsection
-Dualshock library
+DualShock library
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:JS:-Dualshock-library"
@@ -3236,7 +3375,7 @@ literal "false"
 \end_layout
 
 \begin_layout Subsection
-Dualsense
+DualSense
 \end_layout
 
 \begin_layout Standard
@@ -3255,7 +3394,7 @@ literal "false"
 \end_layout
 
 \begin_layout Subsection
-Node-dualsense
+Node-DualSense
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:Node-dualsense"
@@ -3360,7 +3499,7 @@ name "subsec:Pydualsense"
 \end_layout
 
 \begin_layout Standard
-This relies on an external library called hidapi.
+This relies on an external library called HIDAPI.
  It seems to allow configuration of the trigger pressure
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -3385,7 +3524,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Subsection
-Sc-controller
+SC controller
 \end_layout
 
 \begin_layout Standard
@@ -3410,8 +3549,8 @@ Ds4-lightbar
 \end_layout
 
 \begin_layout Standard
-This allows access to the gamepad lightbar.
- This is done by leveraging dualshock library(
+This allows access to the gamepad light-bar.
+ This is done by leveraging DualShock library(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:JS:-Dualshock-library"
@@ -3463,7 +3602,7 @@ DS4
 \end_layout
 
 \begin_layout Standard
-This could not connect to my PC via USB, however it could do so via bluetooth
+This could not connect to my PC via USB, however it could do so via Bluetooth
  with little issue.
  As noted in appendix 
 \begin_inset CommandInset ref
@@ -3651,7 +3790,7 @@ noprefix "false"
 \begin_inset Newline newline
 \end_inset
 
-As a compiled languge, C++ is the most performant choice of language, part
+As a compiled language, C++ is the most performant choice of language, part
  of the continuing popularity of java is that it has higher performance
  than JS or python.
  Through the use of JNI, the most important underpinning library, SDL gets
@@ -3661,20 +3800,20 @@ As a compiled languge, C++ is the most performant choice of language, part
  piece by piece rather than in one whole go.
  A codebase using java and C++ is certainly more preferable than a full
  JS application, thus this is the route that will be taken.
- After some consideration, it appears that libjsdl will be the ideal base,
+ After some consideration, it appears that LibJSDL will be the ideal base,
  as it aims to be performant and map directly.
  
 \end_layout
 
 \begin_layout Section
-Adapting libjsdl
+Adapting LibJSDL
 \end_layout
 
 \begin_layout Standard
 The first step that was taken was to commit a test configuration for the
  fork of this library.
  It appears that the current version was somewhat of a work in progress,
- as it had over 300 stylistic errors according to the built in checkstyle
+ as it had over 300 stylistic errors according to the built in Checkstyle
  integration; this may be because it is a tentative feature upgrade branch
  for SDL 2.0.16, however it appears to have a lot of improvements, it seems
  appropriate to try integrating it to stay current.
@@ -3695,15 +3834,15 @@ literal "false"
 \end_layout
 
 \begin_layout Section
-Using libjsdl
+Using LibJSDL
 \end_layout
 
 \begin_layout Standard
-The next step has been to add the library as a submodule.
+The next step has been to add the library as a sub-module.
  Now with the library integrated into the project the next step will be
  to properly utilise it, although many routes could be taken, the one that
  will be taken shall be the official documentation, which can most likely
- be matched up to libjsdl.
+ be matched up to LibJSDL.
  There appears to be no directly official beginners guide, so a different
  one was used
 \begin_inset CommandInset citation
@@ -3728,7 +3867,7 @@ literal "false"
  SDL seemed to only detect one joystick.
  Although the joystick reports having 6 axes which could cover all the loaded
  joysticks, none of them appear to hold data.
- As an alternative, it was be switched to the gamecontroller API which appears
+ As an alternative, it was be switched to the GameController API which appears
  to better access the hardware.
  Afterwards it is unclear what the next step is, however it appears that
  the software yuzu implements motion control in the exact way required
@@ -3756,7 +3895,7 @@ Although the methods used can by no means be copied on a 1:1 basis, a lot
  Yuzu uses an event based structure to read the gamepad data, this is not
  too unusual for applications that need to react to various events so .FL
  will do the same.
- Yuzu specificlly uses an event watcher, with enough effort it could also
+ Yuzu specifically uses an event watcher, with enough effort it could also
  work in .FL, however it was proving difficult to do so.
  As an alternative, it is possible to use a loop based structure
 \begin_inset CommandInset citation
@@ -3768,7 +3907,7 @@ literal "false"
 
 , which can be a lot easier to understand.
  Whereas yuzu uses a multi threaded codebase, there are no current plans
- to make .FL multithreaded, so all code will be made to be single threaded.
+ to make .FL multi-threaded, so all code will be made to be single threaded.
  Any potential performance impact from minimal multi-threading may be reduced
  somewhat, through the use of static variables where yuzu appears to use
  a more object orientated approach.
@@ -3779,7 +3918,7 @@ SDL4J improvements
 \end_layout
 
 \begin_layout Standard
-After a while it become apparent that the code needed a class that libjsdl
+After a while it become apparent that the code needed a class that LibJSDL
  did not have: ``SDL_ControllerSensorEvent
 \begin_inset Quotes erd
 \end_inset
@@ -3843,7 +3982,7 @@ literal "false"
  for the sake of completeness.
  Collecting the data is one step, however in the yuzu codebase there is
  a clear effort to log the time of the last event and the current event.
- The assumption would be that events sould be evenly spaced, however that
+ The assumption would be that events should be evenly spaced, however that
  is not the case, a brief investigation shows that they can change a lot,
  or in some cases not at all.
  It is uncertain whether timestamps will be important for a basic implementation
@@ -3877,7 +4016,7 @@ Gamepad
 \begin_layout Standard
 It can be expected that future developments will create an even better version
  of an already good experience, as companies learn from each other and innovate.
- As can be imagined, any developments from sony are of particular interest,
+ As can be imagined, any developments from Sony are of particular interest,
  as their DS5 is the current best candidate.
  Whilst a purpose built gamepad could certainly be made, I'm unsure how
  much benefit would be derived from such a concept.
@@ -4043,8 +4182,8 @@ noprefix "false"
 \end_inset
 
  shows design 3 in the collapsed mode.
- As can be seen, this design offers full shaft protection both collapsed
- and uncollapsed.
+ As can be seen, this design offers full shaft protection both lowered and
+ raised.
  I struggle to fathom the purpose of point 308, perhaps the circle just
  exists for annotation purposes.
  Design 3 seems to in many ways offer a lot of protection, while also adding
@@ -4115,9 +4254,9 @@ noprefix "false"
 
 \end_inset
 
- shows two hpyothetical locking mechanisms.
+ shows two hypothetical locking mechanisms.
  4D is a standard rotary lock, the use of only one locking point could affect
- longetivity or stability.
+ longevity or stability.
  If I were to design it, I would have used two radial sets of grooves, they
  do mention something to that effect as an option.
  404 and 409 are hooks which hold an elastic band; theoretically this is
@@ -4125,7 +4264,7 @@ noprefix "false"
  Thumbsticks are typically plastic, however they make extensive mention
  of kinds of metals that could be used, suggesting that they may believe
  plastic would be too weak.
- 5 is a more advanced system that uses non-newtonian fluid.
+ 5 is a more advanced system that uses non-Newtonian fluid.
  5 is interesting, however it could be considered to be over-engineered
  and a negative impact to repairability.
 \end_layout
@@ -4188,7 +4327,7 @@ Overall, this is an interesting way to create a more portable gamepad.
  actually reduce the risk of becoming caught in fabric, only the risk of
  breakage.
  The only reason I can imagine they would want that behaviour is to mimic
- the behaviour of the ``analog nubs
+ the behaviour of the ``analogue nubs
 \begin_inset Quotes erd
 \end_inset
 
@@ -4235,7 +4374,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-The analog nub, the PSP's distinctive low-profile controlstick
+The analogue nub, the PSP's distinctive low-profile controlstick
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Guide2011"
@@ -4326,7 +4465,7 @@ Niche interest
 
 \begin_layout Standard
 DotFL may just happen to fit one of the smaller demographics, such as those
- with strict licencing requirements, language enthusiasts or both.
+ with strict licensing requirements, language enthusiasts or both.
 \end_layout
 
 \begin_layout Chapter
@@ -4502,7 +4641,7 @@ name "chap:DS4-user-discussion"
 \end_layout
 
 \begin_layout Standard
-``You know it's micro USB right? I just use the adapter that came with it
+``You know it's micro USB right? I just use the adaptor that came with it
 \begin_inset Quotes erd
 \end_inset
 
