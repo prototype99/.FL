@@ -1,3 +1,6 @@
+[submodule "libjsdl"]
+	path = libjsdl
+	url = https://github.com/prototype99/libjsdl.git
 [submodule "processing4"]
 	path = processing4
 	url = https://github.com/processing/processing4.git
