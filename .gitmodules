@@ -1,6 +1,9 @@
 [submodule "libjsdl"]
 	path = libjsdl
 	url = https://github.com/prototype99/libjsdl.git
+[submodule "java-annotations"]
+	path = java-annotations
+	url = https://github.com/JetBrains/java-annotations.git
 [submodule "processing4"]
 	path = processing4
 	url = https://github.com/processing/processing4.git
