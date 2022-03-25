@@ -1,0 +1,458 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{a4}
+\usepackage{times}
+\usepackage{graphicx}
+
+
+\title{Feasibility Study}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine biblatex
+\cite_engine_type authoryear
+\biblio_style plainnat
+\biblio_options autocite=inline,backend=biber
+\biblatex_bibstyle authoryear
+\biblatex_citestyle authoryear
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+maketitle
+\end_layout
+
+\end_inset
+
+ 
+\size larger
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size larger
+Student name: 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Seirra Blake
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size larger
+Student number: 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+19096347
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size larger
+Degree course: 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Computer science (MComp)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size larger
+Supervisor name: 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Huw Lloyd
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size larger
+Project title: 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+UIs with gyroscopic controls
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Course-Specific Learning Outcomes
+\end_layout
+
+\begin_layout Itemize
+Analyse, design, and implement algorithms using a range of appropriate languages
+ and/or methodologies.
+\end_layout
+
+\begin_layout Itemize
+Apply the principles and operation of languages, compilers and interpreters.
+\end_layout
+
+\begin_layout Section
+Project Background
+\end_layout
+
+\begin_layout Standard
+As personal computers have continued to evolve and miniaturise, the interface
+ used to interact with them has generally stayed the same outside of minor
+ changes: the mouse and keyboard.
+ This interface requires a large, flat, semi-dedicated workspace which creates
+ a rigid, fixed layout that consumes a large amount of space.
+ The limited set of motions seen in such a setup is well known to cause
+ repetitive strain injury.
+ The goal of this project is not to solve repetitive strain, however it
+ is expected that the final deliverable may assist with such an issue.
+ I feel that users could benefit from a compact, portable alternative that
+ is similarly low power.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Independent studies suggest that gyroscopic controls are better than the
+ traditional computer mouse or a joystick when it comes to aiming, a task
+ that is common during personal computing.
+ In one such study it is posited that friction could be the reason computer
+ mice are less performant than gyroscopic controls, something that makes
+ sense when the reason computer mice evolved from ball technology to optical
+ technology is considered.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Virtual reality (VR) and augmented reality (AR) both promise to offer a
+ new way to interact with computers in subtly different ways, however a
+ high electrical, processing and monetary cost as well as a lack of familiarity
+ makes such a notion seem as of yet distant.
+ These methods are otherwise compelling due to the fact that they allow
+ more natural movement and the ability for the user to feel that they are
+ exploring a true three dimensional space.
+ It can be expected that VR will become more common as increased demand
+ leads to the development of cheaper, more affordable, viable solutions.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Gamepads/controllers could prove to be the perfect stepping stone to future
+ VR experiences due to their lower cost.
+ Gamepads are designed with ergonomics in mind, allowing a comfortable two
+ handed grip for an extended amount of time.
+ Due to their prevalence in leisure activities a lot of people already have
+ a gamepad, and if not they are often at around the same price as a medium
+ quality mouse thus being easily accessible.
+ Gamepads are capable of adding new ways to control experiences thanks to
+ a variety of features such as variable pressure triggers, joysticks, programmab
+le lights and force feedback.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+A wide range of gamepads additionally feature gyroscopic and accelerometer
+ controls, which could allow for an accurate pointing experience.
+ Popular gamepads also have keyboard attachments available on the market,
+ which could be considered acceptable if they can at least match the typing
+ speed of a standard typist.
+ A variety of 'air mouse' devices do exist, however the hardware is often
+ a lot less advanced, and they do not feature as large a range of input
+ methods, or are as ergonomically designed.
+\end_layout
+
+\begin_layout Section
+Aim
+\end_layout
+
+\begin_layout Standard
+Investigate alternatives to mouse and keyboard for a desktop computer by
+ prototyping gamepad-based drawing software that could later be extended
+ and adapted into a full system.
+\end_layout
+
+\begin_layout Section
+Objectives
+\end_layout
+
+\begin_layout Standard
+For this project there are three main deliverables: the software itself,
+ and two pieces of research.
+ A large part of the project will follow a linear structure, however near
+ the end I plan to adopt an agile/cyclical structure as I perfect the final
+ deliverable
+\end_layout
+
+\begin_layout Enumerate
+Create a Linux compatible layer to interact with the gyroscopic controls,
+ it is suspected that a library based around libsdl would be the best fit.
+\end_layout
+
+\begin_layout Enumerate
+Successfully translate gyroscopic movements to the movement of an onscreen
+ cursor
+\end_layout
+
+\begin_layout Enumerate
+Research existing art software that utilises the same or similar gamepads
+ (if any)
+\end_layout
+
+\begin_layout Enumerate
+Implement drawing features that illustrate the versatility of the hardware
+\end_layout
+
+\begin_layout Enumerate
+Investigate whether it is possible to make it windows compatible to increase
+ userbase
+\end_layout
+
+\begin_layout Enumerate
+Gather test user feedback
+\end_layout
+
+\begin_layout Enumerate
+As part of the project I will test the typing speed of a popular 
+\begin_inset Quotes eld
+\end_inset
+
+chatpad
+\begin_inset Quotes erd
+\end_inset
+
+ attachment/accessory.
+ While I feel it is important to have some preliminary data to support justifica
+tion for future developments I do not feel it is important as establishing
+ whether or not gyroscopic gamepads could be viable as pointing devices
+ according to user opinions.
+\end_layout
+
+\begin_layout Section
+Problems
+\end_layout
+
+\begin_layout Standard
+The biggest risk I can see is that I have no experience writing software
+ to work with gyroscopic gamepads.
+ I feel that the allotted time should be enough for me to both design and
+ implement the appropriate software to do so.
+\end_layout
+
+\begin_layout Section
+Required Resources
+\end_layout
+
+\begin_layout Itemize
+Dualshock 4 controller (high quality prospective test user)
+\end_layout
+
+\begin_layout Itemize
+DualSense controller (ensuring modern relevance, prospective test user)
+\end_layout
+
+\begin_layout Itemize
+Switch pro controller (prospective test user)
+\end_layout
+
+\begin_layout Itemize
+DualSense chatpad (for testing alternative to full size keyboard)
+\end_layout
+
+\begin_layout Itemize
+It may prove beneficial to acquisition artistic software that has an attached
+ monetary cost for research purposes
+\end_layout
+
+\begin_layout Section
+Schedule
+\end_layout
+
+\begin_layout Section
+Ethics number
+\end_layout
+
+\begin_layout Standard
+36448
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "feasibility_example"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_body
+\end_document
