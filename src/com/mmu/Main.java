@@ -1,5 +1,6 @@
 package com.mmu;
 
+import org.libsdl.api.event.events.SDL_ControllerSensorEvent;
 import org.libsdl.api.event.events.SDL_Event;
 import org.libsdl.api.gamecontroller.SDL_GameController;
 
@@ -7,6 +8,7 @@ import static org.libsdl.api.SDL_SubSystem.SDL_INIT_GAMECONTROLLER;
 import static org.libsdl.api.Sdl.SDL_Init;
 import static org.libsdl.api.Sdl.SDL_Quit;
 import static org.libsdl.api.error.SdlError.SDL_GetError;
+import static org.libsdl.api.event.SdlEvents.SDL_CONTROLLERSENSORUPDATE;
 import static org.libsdl.api.event.SdlEvents.SDL_PollEvent;
 import static org.libsdl.api.gamecontroller.SdlGamecontroller.SDL_GameControllerClose;
 import static org.libsdl.api.gamecontroller.SdlGamecontroller.SDL_GameControllerHasSensor;
@@ -46,9 +48,18 @@ public class Main {
                     if(SDL_GameControllerSetSensorEnabled(DS5, SDL_SENSOR_GYRO, true) == -1) {
                         System.out.println("Warning: unable to enable gyroscope");
                     } else {
+                        boolean pollInput = true;
                         SDL_Event e = new SDL_Event();
-                        while(SDL_PollEvent(e) != 0) {
-                            System.out.println(e.type);
+                        SDL_ControllerSensorEvent es = new SDL_ControllerSensorEvent();
+                        while(pollInput) {
+                            SDL_PollEvent(e);
+                            if(e.type == SDL_CONTROLLERSENSORUPDATE) {
+                                //es = e;
+                                e.read();
+                                System.out.println(e.readField("csensor"));
+                                //System.out.println("aww yeah sweet rotation");
+                                //System.out.println("aww yeah sweet acceleration");
+                            }
                         }
                     }
                 } else {
