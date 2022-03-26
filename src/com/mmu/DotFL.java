@@ -9,7 +9,6 @@ import java.util.Arrays;
 
 import static org.libsdl.api.SDL_SubSystem.SDL_INIT_GAMECONTROLLER;
 import static org.libsdl.api.Sdl.SDL_Init;
-import static org.libsdl.api.Sdl.SDL_Quit;
 import static org.libsdl.api.error.SdlError.SDL_GetError;
 import static org.libsdl.api.event.SdlEvents.SDL_CONTROLLERSENSORUPDATE;
 import static org.libsdl.api.event.SdlEvents.SDL_PollEvent;
