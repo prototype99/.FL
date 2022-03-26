@@ -3,6 +3,7 @@ package com.mmu;
 import org.libsdl.api.event.events.SDL_ControllerSensorEvent;
 import org.libsdl.api.event.events.SDL_Event;
 import org.libsdl.api.gamecontroller.SDL_GameController;
+import processing.core.PApplet;
 
 import java.util.Arrays;
 
@@ -20,12 +21,27 @@ import static org.libsdl.api.gamecontroller.SdlGamecontroller.SDL_IsGameControll
 import static org.libsdl.api.joystick.SdlJoystick.SDL_NumJoysticks;
 import static org.libsdl.api.sensor.SDL_SensorType.SDL_SENSOR_GYRO;
 
-public class Main {
+public class DotFL extends PApplet {
 
     public static void main(String[] args) {
+        PApplet.main("com.mmu.DotFL");
+    }
+
+    @Override
+    public void setup() {
+        clear();
+        windowResizable(true);
+        windowRatio(1280, 720);
+        cursor(CROSS);
+        //initialise sdl subsystems
         if((SDL_Init(SDL_INIT_GAMECONTROLLER) == -1)) {
             System.out.println(SDL_GetError());
         }
+    }
+
+    @Override
+    public void draw() {
+        clear();
         //Check for joysticks
         if( SDL_NumJoysticks() < 1 )
         {
@@ -70,5 +86,7 @@ public class Main {
             }
         }
         SDL_Quit();
+        fill(255);
+        rect(50, 50, 100, 100);
     }
 }

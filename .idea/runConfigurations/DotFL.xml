@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
-    <option name="MAIN_CLASS_NAME" value="com.mmu.Main" />
+  <configuration default="false" name="DotFL" type="Application" factoryName="Application" nameIsGenerated="true">
+    <option name="MAIN_CLASS_NAME" value="com.mmu.DotFL" />
     <module name=".FL" />
     <extension name="coverage">
       <pattern>
