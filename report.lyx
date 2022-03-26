@@ -3753,6 +3753,34 @@ I have an extensive amount of experience using this gamepad.
 \end_layout
 
 \begin_layout Chapter
+Development tools
+\end_layout
+
+\begin_layout Section
+GitHub
+\end_layout
+
+\begin_layout Standard
+GitHub is used to store the project code.
+ Alternatives such as Bitbucket or Gitlab were considered, however there
+ were no notable advantageous features for doing so.
+\end_layout
+
+\begin_layout Section
+Intellij idea
+\end_layout
+
+\begin_layout Standard
+Intellij idea is used to aid in development of the code, it is capable of
+ flagging various errors and actionable improvements, as well as having
+ easy to use refactoring
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Chapter
 The development journey
 \end_layout
 
