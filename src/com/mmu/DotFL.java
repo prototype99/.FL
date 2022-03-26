@@ -30,7 +30,7 @@ public class DotFL extends PApplet {
     public void setup() {
         clear();
         windowResizable(true);
-        windowRatio(1280, 720);
+        surface.setSize(displayWidth, displayHeight);
         cursor(CROSS);
         //initialise sdl subsystems
         if((SDL_Init(SDL_INIT_GAMECONTROLLER) == -1)) {
@@ -41,6 +41,7 @@ public class DotFL extends PApplet {
     @Override
     public void draw() {
         clear();
+        surface.setSize(width, height);
         //Check for joysticks
         if( SDL_NumJoysticks() < 1 )
         {
@@ -80,6 +81,6 @@ public class DotFL extends PApplet {
             }
         }
         fill(255);
-        rect(50, 50, 100, 100);
+        rect(width/4, height/4, width/2, height/2);
     }
 }
