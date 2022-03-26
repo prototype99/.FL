@@ -4001,6 +4001,26 @@ literal "false"
  and low latency.
 \end_layout
 
+\begin_layout Section
+Introducing: the processing library
+\end_layout
+
+\begin_layout Standard
+During integration it was discovered that a good processing template existed
+ that the repository could have been based on.
+ In order to properly credit the template, it was necessary to create a
+ repository using that template then cherry-pick the commits from the original
+ repository one by one.
+ In the original codebase with just SDL the code to report the data had
+ to be inside an infinite while loop, with processing the while loop was
+ no longer required thanks to processing's draw loop.
+ The extra difficulties created by starting with SDL code raises the question
+ whether it would have made more sense to start with processing, however
+ on the other hand if retrieving motion data proved to be not currently
+ possible, then there would be no .FL, and processing may not be required
+ anymore.
+\end_layout
+
 \begin_layout Chapter
 Evaluation
 \end_layout
