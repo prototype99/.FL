@@ -46,9 +46,7 @@ public class DotFL extends PApplet {
         if( SDL_NumJoysticks() < 1 )
         {
             System.out.println( "Warning: No gamepads connected!" );
-        }
-        else
-        {
+        } else {
             SDL_GameController DS5 = null;
             for(int i = 0; i < SDL_NumJoysticks(); i++)
             {
