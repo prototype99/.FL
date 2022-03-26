@@ -3964,8 +3964,8 @@ Now with the library appropriately enhanced it should be possible to finish
 \begin_inset Formula $v=\frac{\omega}{2\pi}$
 \end_inset
 
- which I struggled to understand, as there is no explanation in the yuzu
- code.
+ which was challenging to understand, as there was no explanation in the
+ yuzu code.
  Based on ω being radians per second, further research reveals that v is
  the cycles per second, or hertz
 \begin_inset CommandInset citation
