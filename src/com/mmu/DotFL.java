@@ -64,16 +64,13 @@ public class DotFL extends PApplet {
                     if(SDL_GameControllerSetSensorEnabled(DS5, SDL_SENSOR_GYRO, true) == -1) {
                         System.out.println("Warning: unable to enable gyroscope");
                     } else {
-                        boolean pollInput = true;
                         SDL_Event e = new SDL_Event();
                         SDL_ControllerSensorEvent es;
-                        while(pollInput) {
-                            SDL_PollEvent(e);
-                            if(e.type == SDL_CONTROLLERSENSORUPDATE) {
-                                es = e.csensor;
-                                if(es.sensor == SDL_SENSOR_GYRO) {
-                                    System.out.println(Arrays.toString(es.data));
-                                }
+                        SDL_PollEvent(e);
+                        if(e.type == SDL_CONTROLLERSENSORUPDATE) {
+                            es = e.csensor;
+                            if(es.sensor == SDL_SENSOR_GYRO) {
+                                System.out.println(Arrays.toString(es.data));
                             }
                         }
                     }
@@ -83,7 +80,6 @@ public class DotFL extends PApplet {
                 SDL_GameControllerClose( DS5 );
             }
         }
-        SDL_Quit();
         fill(255);
         rect(50, 50, 100, 100);
     }
