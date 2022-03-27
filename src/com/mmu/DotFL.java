@@ -1,12 +1,9 @@
 package com.mmu;
-
 import org.libsdl.api.event.events.SDL_ControllerSensorEvent;
 import org.libsdl.api.event.events.SDL_Event;
 import org.libsdl.api.gamecontroller.SDL_GameController;
 import processing.core.PApplet;
-
 import java.util.Arrays;
-
 import static org.libsdl.api.SDL_SubSystem.SDL_INIT_GAMECONTROLLER;
 import static org.libsdl.api.Sdl.SDL_Init;
 import static org.libsdl.api.error.SdlError.SDL_GetError;
@@ -19,13 +16,10 @@ import static org.libsdl.api.gamecontroller.SdlGamecontroller.SDL_GameController
 import static org.libsdl.api.gamecontroller.SdlGamecontroller.SDL_IsGameController;
 import static org.libsdl.api.joystick.SdlJoystick.SDL_NumJoysticks;
 import static org.libsdl.api.sensor.SDL_SensorType.SDL_SENSOR_GYRO;
-
 public class DotFL extends PApplet {
-
     public static void main(String[] args) {
         PApplet.main("com.mmu.DotFL");
     }
-
     @Override
     public void setup() {
         clear();
@@ -37,7 +31,6 @@ public class DotFL extends PApplet {
             System.out.println(SDL_GetError());
         }
     }
-
     @Override
     public void draw() {
         clear();
