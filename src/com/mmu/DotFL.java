@@ -32,11 +32,11 @@ public class DotFL extends PApplet {
         cursor(CROSS);
         //repetition free string construction~
         msgsChange[0] = "no ";
-        for (int i = 0; i < 3; i++) {
+        for(int i = 0; i < 3; i++) {
             msgsChange[i] += "gamepad";
         }
         msgsChange[2] += "s";
-        for (int i = 0; i < 3; i++) {
+        for(int i = 0; i < 3; i++) {
             msgsChange[i] += " connected";
         }
         //initialise sdl subsystems
@@ -58,20 +58,16 @@ public class DotFL extends PApplet {
             System.out.println(msgsChange[joyStatus]);
         }
         //Check for joysticks
-        if( numSticksNew > 0 )
-        {
+        if(numSticksNew > 0) {
             SDL_GameController DS5 = null;
-            for(int i = 0; i < numSticksNew; i++)
-            {
-                if(SDL_IsGameController(i))
-                {
+            for(int i = 0; i < numSticksNew; i++) {
+                if(SDL_IsGameController(i)) {
                     //Load DS5
                     DS5 = SDL_GameControllerOpen(i);
                 }
             }
-            if( DS5 == null )
-            {
-                System.out.println( "Warning: Unable to open gamepad! SDL Error:" + SDL_GetError() );
+            if(DS5 == null) {
+                System.out.println("Warning: Unable to open gamepad! SDL Error:" + SDL_GetError());
             } else {
                 if(SDL_GameControllerHasSensor(DS5, SDL_SENSOR_GYRO)) {
                     if(SDL_GameControllerSetSensorEnabled(DS5, SDL_SENSOR_GYRO, true) == -1) {
@@ -90,7 +86,7 @@ public class DotFL extends PApplet {
                 } else {
                     System.out.println("Warning: no gyroscope detected, did you connect the right controller?");
                 }
-                SDL_GameControllerClose( DS5 );
+                SDL_GameControllerClose(DS5);
             }
         }
         fill(255);
