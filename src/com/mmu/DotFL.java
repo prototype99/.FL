@@ -17,6 +17,10 @@ import static org.libsdl.api.gamecontroller.SdlGamecontroller.SDL_IsGameControll
 import static org.libsdl.api.joystick.SdlJoystick.SDL_NumJoysticks;
 import static org.libsdl.api.sensor.SDL_SensorType.SDL_SENSOR_GYRO;
 public class DotFL extends PApplet {
+    int numSticksNew;
+    int numSticksOld = 1;
+    //strings are predeclared to allow some cool math later. ye, i could probably use an enum but i've never liked them. also, less rewriting memory
+    String[] msgsChange = new String[3];
     public static void main(String[] args) {
         PApplet.main("com.mmu.DotFL");
     }
@@ -26,6 +30,15 @@ public class DotFL extends PApplet {
         windowResizable(true);
         surface.setSize(displayWidth, displayHeight);
         cursor(CROSS);
+        //repetition free string construction~
+        msgsChange[0] = "no ";
+        for (int i = 0; i < 3; i++) {
+            msgsChange[i] += "gamepad";
+        }
+        msgsChange[2] += "s";
+        for (int i = 0; i < 3; i++) {
+            msgsChange[i] += " connected";
+        }
         //initialise sdl subsystems
         if((SDL_Init(SDL_INIT_GAMECONTROLLER) == -1)) {
             System.out.println(SDL_GetError());
@@ -35,13 +48,20 @@ public class DotFL extends PApplet {
     public void draw() {
         clear();
         surface.setSize(width, height);
+        numSticksNew = SDL_NumJoysticks();
+        //output a message if required
+        if(numSticksNew != numSticksOld) {
+            int joyStatus = numSticksNew;
+            if(joyStatus > 2) {
+                joyStatus = 2;
+            }
+            System.out.println(msgsChange[joyStatus]);
+        }
         //Check for joysticks
-        if( SDL_NumJoysticks() < 1 )
+        if( numSticksNew > 0 )
         {
-            System.out.println( "Warning: No gamepads connected!" );
-        } else {
             SDL_GameController DS5 = null;
-            for(int i = 0; i < SDL_NumJoysticks(); i++)
+            for(int i = 0; i < numSticksNew; i++)
             {
                 if(SDL_IsGameController(i))
                 {
@@ -75,5 +95,6 @@ public class DotFL extends PApplet {
         }
         fill(255);
         rect(width/4, height/4, width/2, height/2);
+        numSticksOld = numSticksNew;
     }
 }
