@@ -92,7 +92,7 @@ public class DotFL extends PApplet {
                 SDL_GameControllerClose(DS5);
             }
         }
-        int[][] p = new int[0][2];
+        float[][] p = new float[0][2];
         //i feel like this might not be the cleverest way to error report, maybe i'm wrong though
         boolean on = true;
         int error = 0;
@@ -100,7 +100,7 @@ public class DotFL extends PApplet {
         strokeWeight(health/2);
         stroke(255);
         for(int i = 0;i < p.length;i ++) {
-            int[] prev = p[i];
+            float[] prev = p[i];
             if(i-1 >= 0) {
                 prev = p[i-1];
             } else {
@@ -118,7 +118,23 @@ public class DotFL extends PApplet {
             text("FailPass".substring(error>20?0:4, 4 + (error>20?0:4)) + ": " + health + " health", 100, 100);
         }
         if(mousePressed) {
-            drawing.create();
+            if(on) {
+                if(p.length > 0) {
+                    var ps = p[p.length-1];
+                    var angle = atan2(ps[1]-mouseY, ps[0]-mouseX);
+                    var dis = dist(mouseX, mouseY, ps[0], ps[1]);
+                    while(dis > 5) {
+                        float[] appendVals = {ps[0]-5*cos(angle), ps[1]-5*sin(angle)};
+                        append(p,appendVals);
+                        ps = p[p.length-1];
+                        angle = atan2(ps[1]-mouseY, ps[0]-mouseX);
+                        dis = dist(mouseX, mouseY, ps[0], ps[1]);
+                    }
+                } else {
+                    float[] appendVals = {mouseX, mouseY};
+                    append(p,appendVals);
+                }
+            }
         }
         numSticksOld = numSticksNew;
     }
