@@ -145,23 +145,23 @@ public class DotFL extends PApplet {
             on = false;
             int x = 0;
             int y = 0;
-            for(var i = 0;i < this.p.length;i ++) {
-                x += this.p[i][0];
-                y += this.p[i][1];
+            for (float[] floats : this.p) {
+                x += floats[0];
+                y += floats[1];
             }
             x /= this.p.length;
             y /= this.p.length;
             circleX = x;
             circleY = y;
             var dis = 0;
-            for(var i = 0;i < this.p.length;i ++) {
-                dis += dist(p[i][0], this.p[i][1], x, y);
+            for (float[] floats : this.p) {
+                dis += dist(floats[0], floats[1], x, y);
             }
             dis /= this.p.length;
             circleSize = dis;
             error = 0;
-            for(var i = 0;i < this.p.length;i ++) {
-                this.error += abs(dist(this.p[i][0], this.p[i][1], x, y) - circleSize);
+            for (float[] floats : this.p) {
+                this.error += abs(dist(floats[0], floats[1], x, y) - circleSize);
             }
             this.error /= this.p.length;
             if(circleSize < 25) {
