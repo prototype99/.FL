@@ -108,7 +108,6 @@ public class DotFL extends PApplet {
                     prev = p[p.length-1];
                 }
             }
-            int[] curr = p[i];
             //x is 0, y is 1, pretty simple really
             line(p[i][0], p[i][1], prev[0], prev[1]);
         }
