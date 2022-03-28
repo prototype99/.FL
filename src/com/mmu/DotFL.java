@@ -20,6 +20,7 @@ import static org.libsdl.api.gamecontroller.SdlGamecontroller.SDL_IsGameControll
 import static org.libsdl.api.joystick.SdlJoystick.SDL_NumJoysticks;
 import static org.libsdl.api.sensor.SDL_SensorType.SDL_SENSOR_GYRO;
 public class DotFL extends PApplet {
+    float[][] p = new float[0][2];
     int numSticksNew;
     int numSticksOld = 1;
     //strings are predeclared to allow some cool math later. ye, i could probably use an enum but i've never liked them. also, less rewriting memory
@@ -92,7 +93,6 @@ public class DotFL extends PApplet {
                 SDL_GameControllerClose(DS5);
             }
         }
-        float[][] p = new float[0][2];
         //i feel like this might not be the cleverest way to error report, maybe i'm wrong though
         boolean on = true;
         int error = 0;
@@ -137,5 +137,11 @@ public class DotFL extends PApplet {
             }
         }
         numSticksOld = numSticksNew;
+    }
+    @Override
+    public void mouseReleased() {
+        if(p.length > 10) {
+            drawing.end();
+        }
     }
 }
