@@ -20,7 +20,12 @@ import static org.libsdl.api.gamecontroller.SdlGamecontroller.SDL_IsGameControll
 import static org.libsdl.api.joystick.SdlJoystick.SDL_NumJoysticks;
 import static org.libsdl.api.sensor.SDL_SensorType.SDL_SENSOR_GYRO;
 public class DotFL extends PApplet {
+    boolean on = true;
+    float circleSize,circleX,circleY;
     float[][] p = new float[0][2];
+    //i feel like this might not be the cleverest way to error report, maybe i'm wrong though
+    int error = 0;
+    int health = 20;
     int numSticksNew;
     int numSticksOld = 1;
     //strings are predeclared to allow some cool math later. ye, i could probably use an enum but i've never liked them. also, less rewriting memory
@@ -93,10 +98,6 @@ public class DotFL extends PApplet {
                 SDL_GameControllerClose(DS5);
             }
         }
-        //i feel like this might not be the cleverest way to error report, maybe i'm wrong though
-        boolean on = true;
-        int error = 0;
-        int health = 20;
         strokeWeight(health/2);
         stroke(255);
         for(int i = 0;i < p.length;i ++) {
@@ -111,7 +112,7 @@ public class DotFL extends PApplet {
             //x is 0, y is 1, pretty simple really
             line(p[i][0], p[i][1], prev[0], prev[1]);
         }
-        circle(0, 0, 0);
+        circle(circleX, circleY, circleSize);
         if(!on) {
             textSize(50);
             strokeWeight(1);
@@ -141,7 +142,33 @@ public class DotFL extends PApplet {
     @Override
     public void mouseReleased() {
         if(p.length > 10) {
-            drawing.end();
+            on = false;
+            int x = 0;
+            int y = 0;
+            for(var i = 0;i < this.p.length;i ++) {
+                x += this.p[i][0];
+                y += this.p[i][1];
+            }
+            x /= this.p.length;
+            y /= this.p.length;
+            circleX = x;
+            circleY = y;
+            var dis = 0;
+            for(var i = 0;i < this.p.length;i ++) {
+                dis += dist(p[i][0], this.p[i][1], x, y);
+            }
+            dis /= this.p.length;
+            circleSize = dis;
+            error = 0;
+            for(var i = 0;i < this.p.length;i ++) {
+                this.error += abs(dist(this.p[i][0], this.p[i][1], x, y) - circleSize);
+            }
+            this.error /= this.p.length;
+            if(circleSize < 25) {
+                this.on = true;
+            } else {
+                health = ceil(20-this.error);
+            }
         }
     }
 }
