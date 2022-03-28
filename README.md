@@ -1,8 +1,5 @@
 # DotFL
 ## Usage
 This repository is designed to be opened in IntelliJ IDEA
-## About
-
-This project contains the Processing core libraries and is therefore distibuted under [GPL licence](LICENSE.md).
-
-*Thank you Processing!*
+## Notable inspirations
+This project adapts [circle drawing test](https://github.com/prototype99/circle-drawing-test) for the circle test function
