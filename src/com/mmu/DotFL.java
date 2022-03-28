@@ -1,10 +1,12 @@
 package com.mmu;
+
 import org.libsdl.api.event.events.SDL_ControllerSensorEvent;
 import org.libsdl.api.event.events.SDL_Event;
 import org.libsdl.api.gamecontroller.SDL_GameController;
 import processing.core.PApplet;
-import java.util.ArrayList;
+
 import java.util.Arrays;
+
 import static org.libsdl.api.SDL_SubSystem.SDL_INIT_GAMECONTROLLER;
 import static org.libsdl.api.Sdl.SDL_Init;
 import static org.libsdl.api.error.SdlError.SDL_GetError;
@@ -90,25 +92,25 @@ public class DotFL extends PApplet {
                 SDL_GameControllerClose(DS5);
             }
         }
-        ArrayList<int[]> p = new ArrayList<>();
+        int[][] p = new int[0][2];
         //i feel like this might not be the cleverest way to error report, maybe i'm wrong though
         boolean on = true;
         int error = 0;
         int health = 20;
         strokeWeight(health/2);
         stroke(255);
-        for(int i = 0;i < p.size();i ++) {
-            int[] prev = p.get(i);
+        for(int i = 0;i < p.length;i ++) {
+            int[] prev = p[i];
             if(i-1 >= 0) {
-                prev = p.get(i-1);
+                prev = p[i-1];
             } else {
                 if(!on) {
-                    prev = p.get(p.size()-1);
+                    prev = p[p.length-1];
                 }
             }
-            int[] curr = p.get(i);
+            int[] curr = p[i];
             //x is 0, y is 1, pretty simple really
-            line(curr[0], curr[1], prev[0], prev[1]);
+            line(p[i][0], p[i][1], prev[0], prev[1]);
         }
         circle(0, 0, 0);
         if(!on) {
