@@ -20,7 +20,7 @@ import static org.libsdl.api.gamecontroller.SdlGamecontroller.SDL_IsGameControll
 import static org.libsdl.api.joystick.SdlJoystick.SDL_NumJoysticks;
 import static org.libsdl.api.sensor.SDL_SensorType.SDL_SENSOR_GYRO;
 public class DotFL extends PApplet {
-    boolean on = true;
+    boolean mouseIsPressed = false,on = true;
     float circleSize,circleX,circleY;
     float[][] p = new float[0][2];
     //i feel like this might not be the cleverest way to error report, maybe i'm wrong though
@@ -119,7 +119,7 @@ public class DotFL extends PApplet {
             strokeWeight(1);
             text("FailPass".substring(error>20?0:4, 4 + (error>20?0:4)) + ": " + health + " health", 100, 100);
         }
-        if(mousePressed) {
+        if(mouseIsPressed) {
             if(on) {
                 if(p.length > 0) {
                     var ps = p[p.length-1];
@@ -171,5 +171,10 @@ public class DotFL extends PApplet {
                 health = ceil(20-this.error);
             }
         }
+        mouseIsPressed = false;
+    }
+    @Override
+    public void mousePressed() {
+        mouseIsPressed = true;
     }
 }
