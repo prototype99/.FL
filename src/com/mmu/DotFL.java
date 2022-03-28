@@ -39,6 +39,8 @@ public class DotFL extends PApplet {
         windowResizable(true);
         surface.setSize(displayWidth, displayHeight);
         cursor(CROSS);
+        stroke(255);
+        fill(255);
         //repetition free string construction~
         msgsChange[0] = "no ";
         for(int i = 0; i < 3; i++) {
@@ -99,7 +101,6 @@ public class DotFL extends PApplet {
             }
         }
         strokeWeight(health/2);
-        stroke(255);
         for(int i = 0;i < p.length;i ++) {
             float[] prev = p[i];
             if(i-1 >= 0) {
