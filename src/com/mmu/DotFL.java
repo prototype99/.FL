@@ -4,6 +4,7 @@ import org.libsdl.api.event.events.SDL_ControllerSensorEvent;
 import org.libsdl.api.event.events.SDL_Event;
 import org.libsdl.api.gamecontroller.SDL_GameController;
 import processing.core.PApplet;
+import processing.core.PVector;
 
 import java.util.Arrays;
 
@@ -22,7 +23,7 @@ import static org.libsdl.api.sensor.SDL_SensorType.SDL_SENSOR_GYRO;
 public class DotFL extends PApplet {
     boolean mouseIsPressed = false,on = true;
     float circleSize,circleX,circleY;
-    float[][] p = new float[0][2];
+    PVector[] p = new PVector[0];
     //i feel like this might not be the cleverest way to error report, maybe i'm wrong though
     int error = 0;
     int health = 20;
@@ -102,7 +103,7 @@ public class DotFL extends PApplet {
         }
         strokeWeight(health/2);
         for(int i = 0;i < p.length;i ++) {
-            float[] prev = p[i];
+            PVector prev = p[i];
             if(i-1 >= 0) {
                 prev = p[i-1];
             } else {
@@ -111,7 +112,7 @@ public class DotFL extends PApplet {
                 }
             }
             //x is 0, y is 1, pretty simple really
-            line(p[i][0], p[i][1], prev[0], prev[1]);
+            line(p[i].x, p[i].y, prev.x, prev.y);
         }
         circle(circleX, circleY, circleSize);
         if(!on) {
@@ -122,19 +123,17 @@ public class DotFL extends PApplet {
         if(mouseIsPressed) {
             if(on) {
                 if(p.length > 0) {
-                    var ps = p[p.length-1];
-                    var angle = atan2(ps[1]-mouseY, ps[0]-mouseX);
-                    var dis = dist(mouseX, mouseY, ps[0], ps[1]);
+                    PVector ps = p[p.length-1];
+                    var angle = atan2(ps.y-mouseY, ps.x-mouseX);
+                    var dis = dist(mouseX, mouseY, ps.x, ps.y);
                     while(dis > 5) {
-                        float[] appendVals = {ps[0]-5*cos(angle), ps[1]-5*sin(angle)};
-                        append(p,appendVals);
+                        append(p,new PVector(ps.x-5*cos(angle), ps.y-5*sin(angle)));
                         ps = p[p.length-1];
-                        angle = atan2(ps[1]-mouseY, ps[0]-mouseX);
-                        dis = dist(mouseX, mouseY, ps[0], ps[1]);
+                        angle = atan2(ps.y-mouseY, ps.x-mouseX);
+                        dis = dist(mouseX, mouseY, ps.x, ps.y);
                     }
                 } else {
-                    float[] appendVals = {mouseX, mouseY};
-                    append(p,appendVals);
+                    append(p,new PVector(mouseX, mouseY));
                 }
             }
         }
@@ -146,23 +145,23 @@ public class DotFL extends PApplet {
             on = false;
             int x = 0;
             int y = 0;
-            for (float[] floats : this.p) {
-                x += floats[0];
-                y += floats[1];
+            for ( PVector v : p) {
+                x += v.x;
+                y += v.y;
             }
             x /= this.p.length;
             y /= this.p.length;
             circleX = x;
             circleY = y;
             var dis = 0;
-            for (float[] floats : this.p) {
-                dis += dist(floats[0], floats[1], x, y);
+            for ( PVector v : p) {
+                dis += dist(v.x, v.y, x, y);
             }
             dis /= this.p.length;
             circleSize = dis;
             error = 0;
-            for (float[] floats : this.p) {
-                this.error += abs(dist(floats[0], floats[1], x, y) - circleSize);
+            for ( PVector v : p) {
+                this.error += abs(dist(v.x, v.y, x, y) - circleSize);
             }
             this.error /= this.p.length;
             if(circleSize < 25) {
