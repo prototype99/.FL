@@ -37,11 +37,11 @@ public class DotFL extends PApplet {
     @Override
     public void setup() {
         //processing setup
-        windowResizable(true);
         surface.setSize(displayWidth, displayHeight);
+        windowResizable(true);
         cursor(CROSS);
-        stroke(255);
         noFill();
+        stroke(255);
         //repetition free string construction~
         msgsChange[0] = "no ";
         for(int i = 0; i < 3; i++) {
