@@ -127,13 +127,13 @@ public class DotFL extends PApplet {
                     float angle = atan2(ps.y-mouseY, ps.x-mouseX);
                     float dis = dist(mouseX, mouseY, ps.x, ps.y);
                     while(dis > 5) {
-                        append(p,new PVector(ps.x-5*cos(angle), ps.y-5*sin(angle)));
+                        p = (PVector[]) append(p,new PVector(ps.x-5*cos(angle), ps.y-5*sin(angle)));
                         ps = p[p.length-1];
                         angle = atan2(ps.y-mouseY, ps.x-mouseX);
                         dis = dist(mouseX, mouseY, ps.x, ps.y);
                     }
                 } else {
-                    append(p,new PVector(mouseX, mouseY));
+                    p = (PVector[]) append(p,new PVector(mouseX, mouseY));
                 }
             }
         }
