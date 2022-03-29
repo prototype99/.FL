@@ -101,21 +101,6 @@ public class DotFL extends PApplet {
                 SDL_GameControllerClose(DS5);
             }
         }
-        strokeWeight(10);
-        for(int i = 0;i < p.length;i ++) {
-            PVector prev = p[i];
-            if(i-1 >= 0) {
-                prev = p[i-1];
-            } else {
-                if(!on) {
-                    prev = p[p.length-1];
-                }
-            }
-            line(p[i].x, p[i].y, prev.x, prev.y);
-        }
-        stroke(128);
-        circle(circleX, circleY, circleSize*2);
-        stroke(255);
         if(on) {
             if(mousePressed) {
                 if(p.length > 0) {
@@ -136,6 +121,22 @@ public class DotFL extends PApplet {
             textSize(50);
             text(health, 100, 100);
         }
+        //do all the actual drawing
+        strokeWeight(10);
+        for(int i = 0;i < p.length;i ++) {
+            PVector prev = p[i];
+            if(i-1 >= 0) {
+                prev = p[i-1];
+            } else {
+                if(!on) {
+                    prev = p[p.length-1];
+                }
+            }
+            line(p[i].x, p[i].y, prev.x, prev.y);
+        }
+        stroke(128);
+        circle(circleX, circleY, circleSize*2);
+        stroke(255);
         numSticksOld = numSticksNew;
     }
     @Override
