@@ -124,8 +124,8 @@ public class DotFL extends PApplet {
             if(on) {
                 if(p.length > 0) {
                     PVector ps = p[p.length-1];
-                    var angle = atan2(ps.y-mouseY, ps.x-mouseX);
-                    var dis = dist(mouseX, mouseY, ps.x, ps.y);
+                    float angle = atan2(ps.y-mouseY, ps.x-mouseX);
+                    float dis = dist(mouseX, mouseY, ps.x, ps.y);
                     while(dis > 5) {
                         append(p,new PVector(ps.x-5*cos(angle), ps.y-5*sin(angle)));
                         ps = p[p.length-1];
