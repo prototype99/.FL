@@ -36,6 +36,7 @@ public class DotFL extends PApplet {
     }
     @Override
     public void setup() {
+        //processing setup
         clear();
         windowResizable(true);
         surface.setSize(displayWidth, displayHeight);
