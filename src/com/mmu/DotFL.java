@@ -41,7 +41,6 @@ public class DotFL extends PApplet {
         surface.setSize(displayWidth, displayHeight);
         cursor(CROSS);
         stroke(255);
-        fill(255);
         //repetition free string construction~
         msgsChange[0] = "no ";
         for(int i = 0; i < 3; i++) {
@@ -116,7 +115,6 @@ public class DotFL extends PApplet {
         circle(circleX, circleY, circleSize*2);
         if(!on) {
             textSize(50);
-            strokeWeight(1);
             text("FailPass".substring(error>20?0:4, 4 + (error>20?0:4)) + ": " + health + " health", 100, 100);
         }
         if(mousePressed) {
