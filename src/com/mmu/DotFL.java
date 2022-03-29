@@ -136,25 +136,23 @@ public class DotFL extends PApplet {
     @Override
     public void mouseReleased() {
         if(p.length > 10) {
-            int x = 0;
-            int y = 0;
+            circleX = 0;
+            circleY = 0;
             for ( PVector v : p) {
-                x += v.x;
-                y += v.y;
+                circleX += v.x;
+                circleY += v.y;
             }
-            x /= p.length;
-            y /= p.length;
-            circleX = x;
-            circleY = y;
+            circleX /= p.length;
+            circleY /= p.length;
             int dis = 0;
             for ( PVector v : p) {
-                dis += dist(v.x, v.y, x, y);
+                dis += dist(v.x, v.y, circleX, circleY);
             }
             dis /= p.length;
             circleSize = dis;
             int mistakes = 0;
             for ( PVector v : p) {
-                mistakes += abs(dist(v.x, v.y, x, y) - circleSize);
+                mistakes += abs(dist(v.x, v.y, circleX, circleY) - circleSize);
             }
             mistakes /= p.length;
             if(circleSize < 25) {
