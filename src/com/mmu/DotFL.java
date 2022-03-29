@@ -114,7 +114,9 @@ public class DotFL extends PApplet {
             }
             line(p[i].x, p[i].y, prev.x, prev.y);
         }
+        stroke(128);
         circle(circleX, circleY, circleSize*2);
+        stroke(255);
         if(!on) {
             textSize(50);
             text("FailPass".substring(error>20?0:4, 4 + (error>20?0:4)) + ": " + health + " health", 100, 100);
