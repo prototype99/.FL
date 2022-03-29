@@ -37,7 +37,6 @@ public class DotFL extends PApplet {
     @Override
     public void setup() {
         //processing setup
-        clear();
         windowResizable(true);
         surface.setSize(displayWidth, displayHeight);
         cursor(CROSS);
@@ -59,7 +58,6 @@ public class DotFL extends PApplet {
     }
     @Override
     public void draw() {
-        clear();
         surface.setSize(width, height);
         numSticksNew = SDL_NumJoysticks();
         //output a message if required
