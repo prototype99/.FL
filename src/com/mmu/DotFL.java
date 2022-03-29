@@ -134,7 +134,7 @@ public class DotFL extends PApplet {
             }
         } else {
             textSize(50);
-            text("FailPass".substring(error>20?0:4, 4 + (error>20?0:4)) + ": " + health + " health", 100, 100);
+            text(health, 100, 100);
         }
         numSticksOld = numSticksNew;
     }
