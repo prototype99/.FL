@@ -24,8 +24,6 @@ public class DotFL extends PApplet {
     boolean on = true;
     float circleSize,circleX,circleY;
     PVector[] p = new PVector[0];
-    int mistakes = 0;
-    int health = 20;
     int numSticksNew;
     int numSticksOld = 1;
     //strings are predeclared to allow some cool math later. ye, i could probably use an enum but i've never liked them. also, less rewriting memory
@@ -154,17 +152,16 @@ public class DotFL extends PApplet {
             }
             dis /= this.p.length;
             circleSize = dis;
-            mistakes = 0;
+            int mistakes = 0;
             for ( PVector v : p) {
-                this.mistakes += abs(dist(v.x, v.y, x, y) - circleSize);
+                mistakes += abs(dist(v.x, v.y, x, y) - circleSize);
             }
-            this.mistakes /= this.p.length;
+            mistakes /= this.p.length;
             if(circleSize < 25) {
                 this.on = true;
             } else {
                 p = new PVector[0];
-                health = ceil(20-this.mistakes);
-                System.out.println(health);
+                System.out.println(ceil(20-mistakes));
             }
         }
     }
