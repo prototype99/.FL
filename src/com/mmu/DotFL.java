@@ -117,9 +117,6 @@ public class DotFL extends PApplet {
                     p = (PVector[]) append(p,new PVector(mouseX, mouseY));
                 }
             }
-        } else {
-            textSize(50);
-            text(health, 100, 100);
         }
         //do all the actual drawing
         strokeWeight(10);
@@ -142,7 +139,6 @@ public class DotFL extends PApplet {
     @Override
     public void mouseReleased() {
         if(p.length > 10) {
-            on = false;
             int x = 0;
             int y = 0;
             for ( PVector v : p) {
@@ -167,7 +163,9 @@ public class DotFL extends PApplet {
             if(circleSize < 25) {
                 this.on = true;
             } else {
+                p = new PVector[0];
                 health = ceil(20-this.error);
+                System.out.println(health);
             }
         }
     }
