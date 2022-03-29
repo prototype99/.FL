@@ -24,8 +24,7 @@ public class DotFL extends PApplet {
     boolean on = true;
     float circleSize,circleX,circleY;
     PVector[] p = new PVector[0];
-    //i feel like this might not be the cleverest way to error report, maybe i'm wrong though
-    int error = 0;
+    int mistakes = 0;
     int health = 20;
     int numSticksNew;
     int numSticksOld = 1;
@@ -155,16 +154,16 @@ public class DotFL extends PApplet {
             }
             dis /= this.p.length;
             circleSize = dis;
-            error = 0;
+            mistakes = 0;
             for ( PVector v : p) {
-                this.error += abs(dist(v.x, v.y, x, y) - circleSize);
+                this.mistakes += abs(dist(v.x, v.y, x, y) - circleSize);
             }
-            this.error /= this.p.length;
+            this.mistakes /= this.p.length;
             if(circleSize < 25) {
                 this.on = true;
             } else {
                 p = new PVector[0];
-                health = ceil(20-this.error);
+                health = ceil(20-this.mistakes);
                 System.out.println(health);
             }
         }
