@@ -114,7 +114,7 @@ public class DotFL extends PApplet {
             //x is 0, y is 1, pretty simple really
             line(p[i].x, p[i].y, prev.x, prev.y);
         }
-        circle(circleX, circleY, circleSize);
+        circle(circleX, circleY, circleSize*2);
         if(!on) {
             textSize(50);
             strokeWeight(1);
