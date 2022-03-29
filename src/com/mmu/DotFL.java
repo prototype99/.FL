@@ -41,6 +41,7 @@ public class DotFL extends PApplet {
         surface.setSize(displayWidth, displayHeight);
         cursor(CROSS);
         stroke(255);
+        noFill();
         //repetition free string construction~
         msgsChange[0] = "no ";
         for(int i = 0; i < 3; i++) {
