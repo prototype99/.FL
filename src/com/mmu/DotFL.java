@@ -20,17 +20,19 @@ import static org.libsdl.api.gamecontroller.SdlGamecontroller.SDL_GameController
 import static org.libsdl.api.gamecontroller.SdlGamecontroller.SDL_IsGameController;
 import static org.libsdl.api.joystick.SdlJoystick.SDL_NumJoysticks;
 import static org.libsdl.api.sensor.SDL_SensorType.SDL_SENSOR_GYRO;
+
 public class DotFL extends PApplet {
-    boolean on = true;
-    float circleSize,circleX,circleY;
+    float circleSize, circleX, circleY;
     PVector[] p = new PVector[0];
     int numSticksNew;
     int numSticksOld = 1;
     //strings are predeclared to allow some cool math later. ye, i could probably use an enum but i've never liked them. also, less rewriting memory
     String[] msgsChange = new String[3];
+
     public static void main(String[] args) {
         PApplet.main("com.mmu.DotFL");
     }
+
     @Override
     public void setup() {
         //processing setup
@@ -42,52 +44,53 @@ public class DotFL extends PApplet {
         stroke(255);
         //repetition free string construction~
         msgsChange[0] = "no ";
-        for(int i = 0; i < 3; i++) {
+        for (int i = 0; i < 3; i++) {
             msgsChange[i] += "gamepad";
         }
         msgsChange[2] += "s";
-        for(int i = 0; i < 3; i++) {
+        for (int i = 0; i < 3; i++) {
             msgsChange[i] += " connected";
         }
         //initialise sdl subsystems
-        if((SDL_Init(SDL_INIT_GAMECONTROLLER) == -1)) {
+        if ((SDL_Init(SDL_INIT_GAMECONTROLLER) == -1)) {
             System.out.println(SDL_GetError());
         }
     }
+
     @Override
     public void draw() {
         surface.setSize(width, height);
         numSticksNew = SDL_NumJoysticks();
         //output a message if required
-        if(numSticksNew != numSticksOld) {
+        if (numSticksNew != numSticksOld) {
             int joyStatus = numSticksNew;
-            if(joyStatus > 2) {
+            if (joyStatus > 2) {
                 joyStatus = 2;
             }
             System.out.println(msgsChange[joyStatus]);
         }
         //Check for joysticks
-        if(numSticksNew > 0) {
+        if (numSticksNew > 0) {
             SDL_GameController DS5 = null;
-            for(int i = 0; i < numSticksNew; i++) {
-                if(SDL_IsGameController(i)) {
+            for (int i = 0; i < numSticksNew; i++) {
+                if (SDL_IsGameController(i)) {
                     //Load DS5
                     DS5 = SDL_GameControllerOpen(i);
                 }
             }
-            if(DS5 == null) {
+            if (DS5 == null) {
                 System.out.println("Warning: Unable to open gamepad! SDL Error:" + SDL_GetError());
             } else {
-                if(SDL_GameControllerHasSensor(DS5, SDL_SENSOR_GYRO)) {
-                    if(SDL_GameControllerSetSensorEnabled(DS5, SDL_SENSOR_GYRO, true) == -1) {
+                if (SDL_GameControllerHasSensor(DS5, SDL_SENSOR_GYRO)) {
+                    if (SDL_GameControllerSetSensorEnabled(DS5, SDL_SENSOR_GYRO, true) == -1) {
                         System.out.println("Warning: unable to enable gyroscope");
                     } else {
                         SDL_Event e = new SDL_Event();
                         SDL_ControllerSensorEvent es;
                         SDL_PollEvent(e);
-                        if(e.type == SDL_CONTROLLERSENSORUPDATE) {
+                        if (e.type == SDL_CONTROLLERSENSORUPDATE) {
                             es = e.csensor;
-                            if(es.sensor == SDL_SENSOR_GYRO) {
+                            if (es.sensor == SDL_SENSOR_GYRO) {
                                 System.out.println(Arrays.toString(es.data));
                             }
                         }
@@ -98,66 +101,61 @@ public class DotFL extends PApplet {
                 SDL_GameControllerClose(DS5);
             }
         }
-        if(on) {
-            if(mousePressed) {
-                if(p.length > 0) {
-                    PVector ps = p[p.length-1];
-                    float angle = atan2(ps.y-mouseY, ps.x-mouseX);
-                    float dis = dist(mouseX, mouseY, ps.x, ps.y);
-                    while(dis > 5) {
-                        p = (PVector[]) append(p,new PVector(ps.x-5*cos(angle), ps.y-5*sin(angle)));
-                        ps = p[p.length-1];
-                        angle = atan2(ps.y-mouseY, ps.x-mouseX);
-                        dis = dist(mouseX, mouseY, ps.x, ps.y);
-                    }
-                } else {
-                    p = (PVector[]) append(p,new PVector(mouseX, mouseY));
+        if (mousePressed) {
+            if (p.length > 0) {
+                PVector ps = p[p.length - 1];
+                float angle = atan2(ps.y - mouseY, ps.x - mouseX);
+                float dis = dist(mouseX, mouseY, ps.x, ps.y);
+                while (dis > 5) {
+                    p = (PVector[]) append(p, new PVector(ps.x - 5 * cos(angle), ps.y - 5 * sin(angle)));
+                    ps = p[p.length - 1];
+                    angle = atan2(ps.y - mouseY, ps.x - mouseX);
+                    dis = dist(mouseX, mouseY, ps.x, ps.y);
                 }
+            } else {
+                p = (PVector[]) append(p, new PVector(mouseX, mouseY));
             }
         }
         //do all the actual drawing
         strokeWeight(10);
-        for(int i = 0;i < p.length;i ++) {
+        for (int i = 0; i < p.length; i++) {
             PVector prev = p[i];
-            if(i-1 >= 0) {
-                prev = p[i-1];
-            } else {
-                if(!on) {
-                    prev = p[p.length-1];
-                }
+            if (i - 1 >= 0) {
+                prev = p[i - 1];
             }
             line(p[i].x, p[i].y, prev.x, prev.y);
         }
         stroke(128);
-        circle(circleX, circleY, circleSize*2);
+        circle(circleX, circleY, circleSize * 2);
         stroke(255);
         numSticksOld = numSticksNew;
     }
+
     @Override
     public void mouseReleased() {
-        if(p.length > 10) {
+        if (p.length > 10) {
             circleX = 0;
             circleY = 0;
-            for ( PVector v : p) {
+            for (PVector v : p) {
                 circleX += v.x;
                 circleY += v.y;
             }
             circleX /= p.length;
             circleY /= p.length;
             int dis = 0;
-            for ( PVector v : p) {
+            for (PVector v : p) {
                 dis += dist(v.x, v.y, circleX, circleY);
             }
             dis /= p.length;
             circleSize = dis;
             int mistakes = 0;
-            for ( PVector v : p) {
+            for (PVector v : p) {
                 mistakes += abs(dist(v.x, v.y, circleX, circleY) - circleSize);
             }
             mistakes /= p.length;
-            if(circleSize > 24) {
+            if (circleSize > 24) {
                 p = new PVector[0];
-                System.out.println(ceil(20-mistakes));
+                System.out.println(ceil(20 - mistakes));
             }
         }
     }
