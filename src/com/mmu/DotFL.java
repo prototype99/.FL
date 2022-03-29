@@ -39,6 +39,7 @@ public class DotFL extends PApplet {
         //processing setup
         surface.setSize(displayWidth, displayHeight);
         windowResizable(true);
+        background(0);
         cursor(CROSS);
         noFill();
         stroke(255);
