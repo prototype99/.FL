@@ -101,7 +101,7 @@ public class DotFL extends PApplet {
                 SDL_GameControllerClose(DS5);
             }
         }
-        strokeWeight(health/2);
+        strokeWeight(10);
         for(int i = 0;i < p.length;i ++) {
             PVector prev = p[i];
             if(i-1 >= 0) {
