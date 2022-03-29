@@ -146,7 +146,7 @@ public class DotFL extends PApplet {
             y /= this.p.length;
             circleX = x;
             circleY = y;
-            var dis = 0;
+            int dis = 0;
             for ( PVector v : p) {
                 dis += dist(v.x, v.y, x, y);
             }
