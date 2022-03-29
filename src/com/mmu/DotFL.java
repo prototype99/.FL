@@ -142,23 +142,23 @@ public class DotFL extends PApplet {
                 x += v.x;
                 y += v.y;
             }
-            x /= this.p.length;
-            y /= this.p.length;
+            x /= p.length;
+            y /= p.length;
             circleX = x;
             circleY = y;
             int dis = 0;
             for ( PVector v : p) {
                 dis += dist(v.x, v.y, x, y);
             }
-            dis /= this.p.length;
+            dis /= p.length;
             circleSize = dis;
             int mistakes = 0;
             for ( PVector v : p) {
                 mistakes += abs(dist(v.x, v.y, x, y) - circleSize);
             }
-            mistakes /= this.p.length;
+            mistakes /= p.length;
             if(circleSize < 25) {
-                this.on = true;
+                on = true;
             } else {
                 p = new PVector[0];
                 System.out.println(ceil(20-mistakes));
