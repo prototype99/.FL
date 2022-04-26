@@ -4529,7 +4529,7 @@ Credit for online references is based on the textual content, hence user
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 btprint "btPrintCited"
-bibfiles "refs"
+bibfiles "library"
 options "bibtotoc,agsm"
 
 \end_inset
