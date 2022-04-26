@@ -1225,7 +1225,7 @@ A mouse has been one of the most successful user interfaces due to its intuitive
 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Yun2015"
+key "yunTurningMobileDevice2015"
 literal "false"
 
 \end_inset
@@ -1244,7 +1244,7 @@ rich options for users to choose from
 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Yun2015"
+key "yunTurningMobileDevice2015"
 literal "false"
 
 \end_inset
@@ -1261,7 +1261,7 @@ requires a surface
 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Yun2015"
+key "yunTurningMobileDevice2015"
 literal "false"
 
 \end_inset
@@ -1286,7 +1286,7 @@ VR promises to offer a new way to interact with computers in subtly different
  ways, however a high electrical, processing and £899
 \begin_inset CommandInset citation
 LatexCommand citep
-key "CurrysVive2021"
+key "currysBuyHTCVive2021"
 literal "false"
 
 \end_inset
@@ -1313,7 +1313,7 @@ literal "false"
  One solution is the Oculus quest 2 at a cost of £299
 \begin_inset CommandInset citation
 LatexCommand citep
-key "CurrysOculus2021"
+key "currysBuyOCULUSQuest2021"
 literal "false"
 
 \end_inset
@@ -1332,7 +1332,7 @@ Gamepads could prove to be the perfect stepping stone to future VR experiences
  £59.99
 \begin_inset CommandInset citation
 LatexCommand citep
-key "CurrysDualShock2021"
+key "currysBuyPLAYSTATIONPS52021"
 literal "false"
 
 \end_inset
@@ -1533,7 +1533,7 @@ A variety of `air mouse' devices do exist, however the hardware is often
  
 \begin_inset CommandInset citation
 LatexCommand citet
-key "Yun2015"
+key "yunTurningMobileDevice2015"
 literal "false"
 
 \end_inset
@@ -1608,7 +1608,7 @@ sends inaudible sound pulses at a few selected frequencies, and uses the
 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Yun2015"
+key "yunTurningMobileDevice2015"
 literal "false"
 
 \end_inset
@@ -1625,7 +1625,7 @@ the phase of received WiFi signal
 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Yun2015"
+key "yunTurningMobileDevice2015"
 literal "false"
 
 \end_inset
@@ -1645,7 +1645,7 @@ evaluation and user study
 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Yun2015"
+key "yunTurningMobileDevice2015"
 literal "false"
 
 \end_inset
@@ -1661,7 +1661,7 @@ high tracking accuracy (e.g., median error of around 1.4 cm)
 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Yun2015"
+key "yunTurningMobileDevice2015"
 literal "false"
 
 \end_inset
@@ -1922,7 +1922,7 @@ I am not familiar with this language, so it is an unlikely choice.
  2 which is quite old, it is based on processing.js
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Jenett2015"
+key "jenettFjenettCoffeescriptmodeprocessing2015"
 literal "false"
 
 \end_inset
@@ -2063,7 +2063,7 @@ literal "false"
  This project was archived, therefore it will be of minimal use
 \begin_inset CommandInset citation
 LatexCommand citep
-key "processingjs2018"
+key "processing.jsProcessingjsProcessingjs2018"
 literal "false"
 
 \end_inset
@@ -2087,7 +2087,7 @@ P5Py
 This is a native python implementation of processing.
 \begin_inset CommandInset citation
 LatexCommand citep
-key "p5py2021"
+key "p5pyP5py2021"
 literal "false"
 
 \end_inset
@@ -2122,7 +2122,7 @@ literal "false"
 ; python 2.7 is heavily deprecated
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Peterson2020"
+key "petersonPythonInsiderPython2020"
 literal "false"
 
 \end_inset
@@ -2187,7 +2187,7 @@ literal "false"
  With the latest code commit being from 2012
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Nathan2012"
+key "nathanSpde2012"
 literal "false"
 
 \end_inset
