@@ -1850,7 +1850,7 @@ Conceptually
 \end_layout
 
 \begin_layout Standard
-In an ideal situation, DotFL would leverage an existing codebase, in order
+In an ideal situation, .FL would leverage an existing codebase, in order
  to ensure the best performance and set of features.
  The easiest solution in such a hypothetical situation would be to design
  a plugin, however it is likely that it would not be possible to modify
@@ -2200,7 +2200,7 @@ Hardware input latency research
 \end_layout
 
 \begin_layout Standard
-Input latency is not a key concern for DotFL, however it is still a factor
+Input latency is not a key concern for .FL, however it is still a factor
  that can alter a user's experience.
  As seen in table 
 \begin_inset CommandInset ref
@@ -2214,7 +2214,7 @@ noprefix "false"
 
 , the DS4 has generally favourable latency, especially when used wirelessly.
  It is worth noting that latency does not stop at the gamepad, therefore
- it is best to test the experience of DotFL itself for latency issues.
+ it is best to test the experience of .FL itself for latency issues.
  ``With the original model DualShock 4s, even when a USB cable is connected
  the controller only communicates via Bluetooth
 \begin_inset Quotes erd
@@ -4485,8 +4485,8 @@ Demo
 \end_layout
 
 \begin_layout Standard
-DotFL could serve as a demo for a larger set of 6axis software, much like
- demo software for frameworks.
+.FL could serve as a demo for a larger set of 6axis software, much like demo
+ software for frameworks.
 \end_layout
 
 \begin_layout Subsection
@@ -4494,7 +4494,7 @@ Familiarisation
 \end_layout
 
 \begin_layout Standard
-DotFL could serve as a way to familiarise users with 6axis, due to it mirroring
+.FL could serve as a way to familiarise users with 6axis, due to it mirroring
  a concept users are often already very familiar with.
 \end_layout
 
@@ -4503,8 +4503,8 @@ Concept model
 \end_layout
 
 \begin_layout Standard
-DotFL could serve as a reference model for further integrations into more
- popular software as aforementioned.
+.FL could serve as a reference model for further integrations into more popular
+ software as aforementioned.
 \end_layout
 
 \begin_layout Subsection
@@ -4512,7 +4512,7 @@ Niche interest
 \end_layout
 
 \begin_layout Standard
-DotFL may just happen to fit one of the smaller demographics, such as those
+.FL may just happen to fit one of the smaller demographics, such as those
  with strict licensing requirements, language enthusiasts or both.
 \end_layout
 
