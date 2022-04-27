@@ -2021,7 +2021,7 @@ P5.js
 Having begun development in 2013
 \begin_inset CommandInset citation
 LatexCommand citep
-key "processing2021"
+key "processingCodeFrequencyProcessing2021"
 literal "false"
 
 \end_inset
@@ -2223,7 +2223,7 @@ noprefix "false"
 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Jinny2018"
+key "R2018"
 literal "false"
 
 \end_inset
@@ -2285,7 +2285,7 @@ literal "false"
 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Jinny2018"
+key "R2018"
 literal "false"
 
 \end_inset
@@ -2299,7 +2299,7 @@ literal "false"
 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Jinny2018"
+key "R2018"
 literal "false"
 
 \end_inset
@@ -2539,7 +2539,7 @@ This repository is listed as WIP, however it could be very possible to help
  the developer finish it
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Jakubek2022"
+key "jakubekXertDevDualSense2022"
 literal "false"
 
 \end_inset
@@ -2557,7 +2557,7 @@ This library is a basic one, it has no uniquely identifiable name.
  the rest
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Smeele2021"
+key "smeeleDualShock42021"
 literal "false"
 
 \end_inset
@@ -2631,7 +2631,7 @@ This library is both cross platform and has support for a range of controllers,
  this would probably be ideal if there was not a time constraint
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Smart2021"
+key "smartJoyShockLibrary2022a"
 literal "false"
 
 \end_inset
@@ -2643,7 +2643,7 @@ literal "false"
  to implement
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Electronicks2021"
+key "electronicksJoyShockMapper2022"
 literal "false"
 
 \end_inset
@@ -2700,7 +2700,7 @@ DualSenseSupport
 This claims to only have preliminary support
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Unlok2021"
+key "unlokDualSenseSupport2022"
 literal "false"
 
 \end_inset
@@ -2717,7 +2717,7 @@ This seems to be more advanced, having the ability to emulate the XB360
  gamepad or DS4
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Paliverse2022"
+key "paliverseDualSenseX2022a"
 literal "false"
 
 \end_inset
@@ -2734,7 +2734,7 @@ This is specifically an extension for unity, I expect it will be of minimal
  use
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Oliveira2021"
+key "oliveiraUniSenseDualSensePlugin2021"
 literal "false"
 
 \end_inset
@@ -2760,7 +2760,7 @@ This is a library designed for the DS4, at a glance it does not appear to
  have good documentation, which could be an issue
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Nong2020"
+key "darkautismGolangDualsock2020"
 literal "false"
 
 \end_inset
@@ -2783,7 +2783,7 @@ This is another library designed for the DS4.
  though it is older
 \begin_inset CommandInset citation
 LatexCommand citep
-key "kpeu3i2019"
+key "kpeu3iGods42019"
 literal "false"
 
 \end_inset
@@ -2805,8 +2805,8 @@ ControllerBuddy
 This may prove useful.
  support for DS4 and DS5 is listed, so it may be a helpful resource
 \begin_inset CommandInset citation
-LatexCommand citet
-key "Hausner2022"
+LatexCommand citep
+key "hausnerBwRavenclControllerBuddy2022"
 literal "false"
 
 \end_inset
@@ -2847,7 +2847,7 @@ noprefix "false"
  It is worth noting that there is a GitHub repository
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Lager2015"
+key "lagerGameControl2015"
 literal "false"
 
 \end_inset
@@ -2910,7 +2910,7 @@ This is another library with some potential.
  prompts
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Dudley2015"
+key "dudleyGamepad4J2021"
 literal "false"
 
 \end_inset
@@ -2942,7 +2942,7 @@ As previously mentioned, game control plus uses JInput extensively.
  newest JInput library does not appear to do such a thing
 \begin_inset CommandInset citation
 LatexCommand citep
-key "jinput2019"
+key "jinputJInput2019"
 literal "false"
 
 \end_inset
@@ -2958,7 +2958,7 @@ JInput steam controller
 There is no DS4 JInput, however, there is a steam controller JInput
 \begin_inset CommandInset citation
 LatexCommand citep
-key "oddwarg2021"
+key "oddwargJinputsteamcontroller2021"
 literal "false"
 
 \end_inset
@@ -2968,7 +2968,7 @@ literal "false"
  the DS4 has, so it could be possible to adapt it
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Dempsey2016"
+key "dempseyTeardownSteamController2016"
 literal "false"
 
 \end_inset
@@ -2996,7 +2996,7 @@ noprefix "false"
  It does not appear to receive many updates so it may not be the best choice
 \begin_inset CommandInset citation
 LatexCommand citep
-key "DeflatedPickle2021"
+key "deflatedpickleJSFML2021"
 literal "false"
 
 \end_inset
@@ -3014,7 +3014,7 @@ Kaliber
 This may be another solution, it is hard to tell as it is quite old
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Fennis2012"
+key "fennisJKFennisKaliber2012"
 literal "false"
 
 \end_inset
@@ -3030,7 +3030,7 @@ LibJSDL
 This is a direct port using JNA
 \begin_inset CommandInset citation
 LatexCommand citep
-key "shinedeveloper2021"
+key "siddiqiControllerInputVisualizer2022"
 literal "false"
 
 \end_inset
@@ -3082,7 +3082,7 @@ noprefix "false"
  the right trigger would not function
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Siddiqi2021"
+key "siddiqiControllerInputVisualizer2022"
 literal "false"
 
 \end_inset
@@ -3217,8 +3217,8 @@ This uses a windows DLL of SDL, however it may be possible to adapt it to
  use the Linux binary.
  This library uses JNA
 \begin_inset CommandInset citation
-LatexCommand citet
-key "Glosson2021"
+LatexCommand citep
+key "glossonGaming32SDL4J2021"
 literal "false"
 
 \end_inset
@@ -3233,8 +3233,8 @@ SDLJ
 \begin_layout Standard
 This has minimal information, but is relatively up to date
 \begin_inset CommandInset citation
-LatexCommand citet
-key "Lewis2021"
+LatexCommand citep
+key "lewisMattjlewisSdlj2021"
 literal "false"
 
 \end_inset
@@ -3260,7 +3260,7 @@ literal "false"
  Being a binding to SDL 1.2
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Rojek2014"
+key "rojekSdljava2014"
 literal "false"
 
 \end_inset
@@ -3269,7 +3269,7 @@ literal "false"
  as SDL 2 has major API changes
 \begin_inset CommandInset citation
 LatexCommand citep
-key "libsdl2021"
+key "Libsdl2021"
 literal "false"
 
 \end_inset
@@ -3285,8 +3285,8 @@ Sdljoystick4java
 This is another JNI SDL binding, it seems to be relatively up to date but
  focus on basic functions
 \begin_inset CommandInset citation
-LatexCommand citet
-key "Pavel2021"
+LatexCommand citep
+key "pavelSdljoystick4java2021"
 literal "false"
 
 \end_inset
@@ -3304,7 +3304,7 @@ This is a JNA based java SDL binding.
  may be
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Rihine2012"
+key "rihineNoqisofonYajsdl2012"
 literal "false"
 
 \end_inset
@@ -3325,7 +3325,7 @@ As the name suggests, this is a set of examples; this could be useful if
  I end up using JS
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Steinherz2021"
+key "steinherzDsexamples2021"
 literal "false"
 
 \end_inset
@@ -3349,7 +3349,7 @@ This node.js library may in fact have the most extensive set of capabilities
  out of any of the choices here
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Pecacheu2018"
+key "Pecacheu2021"
 literal "false"
 
 \end_inset
@@ -3383,7 +3383,7 @@ This claims to just collect information, however from what can be seen,
  it is likely that it can be used as an input library
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Reynolds2020"
+key "reynoldsSonyDualSenseWireless2020"
 literal "false"
 
 \end_inset
@@ -3418,7 +3418,7 @@ noprefix "false"
 ), it is able to read input and set LED status, powered by NodeJS
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Camille2021"
+key "camilleNodedualsense2022"
 literal "false"
 
 \end_inset
@@ -3503,7 +3503,7 @@ This relies on an external library called HIDAPI.
  It seems to allow configuration of the trigger pressure
 \begin_inset CommandInset citation
 LatexCommand citep
-key "pydualsense2021"
+key "kPydualsense2021"
 literal "false"
 
 \end_inset
@@ -3532,7 +3532,7 @@ This is designed primarily as a driver, however due to its user mode nature,
  it should be easy to adapt into a library
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Kozec2021"
+key "kozecSCController2021"
 literal "false"
 
 \end_inset
@@ -3563,7 +3563,7 @@ noprefix "false"
 )
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Cota2019"
+key "cotaDs4lightbar2021"
 literal "false"
 
 \end_inset
@@ -3581,7 +3581,7 @@ This library provides access to the battery level, and the ability to disconnect
  the controller
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Tomsons2021"
+key "tomsonsDsbattery2021"
 literal "false"
 
 \end_inset
@@ -3969,8 +3969,8 @@ noprefix "false"
  that the use of NativeLong was incorrect and should have been int, an error
  which misaligned the called addresses
 \begin_inset CommandInset citation
-LatexCommand citet
-key "Matthew2020"
+LatexCommand citep
+key "Widdis2020"
 literal "false"
 
 \end_inset
@@ -3997,7 +3997,7 @@ Now with the library appropriately enhanced it should be possible to finish
  Based on ω being radians per second, further research reveals that v is
  the cycles per second, or hertz
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "Mills2016"
 literal "false"
 
@@ -4127,7 +4127,7 @@ A cross-sectional comparison of a standard thumbstick and a proposed collapsible
  thumbstick
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Khim2022"
+key "khimVideoGameController1970"
 literal "false"
 
 \end_inset
@@ -4193,7 +4193,7 @@ A diagram of a collapsible thumbstick, an upgraded design 2 is showed collapsed,
  as well as a new design 3
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Khim2022"
+key "khimVideoGameController1970"
 literal "false"
 
 \end_inset
@@ -4264,7 +4264,7 @@ A diagram of the collapsed design 3 thumbstick model, it seems to have some
  structural reinforcement
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Khim2022"
+key "khimVideoGameController1970"
 literal "false"
 
 \end_inset
@@ -4341,7 +4341,7 @@ status open
 Isometric drawings of the potential locking mechanisms that could be used
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Khim2022"
+key "khimVideoGameController1970"
 literal "false"
 
 \end_inset
@@ -4393,7 +4393,7 @@ noprefix "false"
 , seeing as it is a Sony patent
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Khim2022"
+key "khimVideoGameController1970"
 literal "false"
 
 \end_inset
