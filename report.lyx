@@ -4799,12 +4799,20 @@ height "1pt"
 
 \end_inset
 
+
+\begin_inset Newline newline
+\end_inset
+
 Dr Huw Lloyd - Senior Lecturer, Departmental Disability Coordinator
 \begin_inset Newline newline
 \end_inset
 
 Department of Computing and Mathematics, Manchester Metropolitan University,
  Manchester M1 5GD
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset CommandInset line
 LatexCommand rule
 offset "0.5ex"
