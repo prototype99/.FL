@@ -330,7 +330,7 @@ Abbreviations
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="42" columns="2">
+<lyxtabular version="3" rows="43" columns="2">
 <features islongtable="true" longtabularalignment="center">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top" width="0pt">
@@ -489,6 +489,26 @@ DotFL
 
 \begin_layout Plain Layout
 Dance Of The Flowing Lines
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DS4/DS5
 \end_layout
 
 \end_inset
@@ -1230,6 +1250,1978 @@ The use of 6axis could present a new way to interact with PCs, this warrants
 \end_layout
 
 \begin_layout Section
+Course specific learning outcomes
+\end_layout
+
+\begin_layout Itemize
+Analyse, design, and implement algorithms using a range of appropriate languages
+ and/or methodologies.
+\end_layout
+
+\begin_layout Itemize
+Apply the principles and operation of languages, compilers and interpreters.
+\end_layout
+
+\begin_layout Section
+Hypothesis
+\end_layout
+
+\begin_layout Standard
+I hypothesise that the benefits seen in FPS videogames when 6axis is used
+ to aim
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Nerrel2020"
+literal "false"
+
+\end_inset
+
+ could also translate to a PC experience.
+ I hypothesise that users will give positive testimonials, including digital
+ artists, if available.
+ I hypothesise that with some basic practice a hardware keypad such as seen
+ for the DS5 could be comparable to an actual keyboard.
+\end_layout
+
+\begin_layout Section
+Aim
+\end_layout
+
+\begin_layout Standard
+Investigate alternatives to mouse and keyboard for a desktop PC by prototyping
+ gamepad-based drawing software that could later be extended and adapted
+ into a full system.
+\end_layout
+
+\begin_layout Section
+Objectives
+\end_layout
+
+\begin_layout Standard
+For this project there are three main deliverables: the software itself,
+ and two pieces of research.
+ A large part of the project will follow a linear structure, however near
+ the end I plan to adopt an agile/cyclical structure as I perfect the final
+ deliverable
+\end_layout
+
+\begin_layout Enumerate
+Create a Linux compatible layer to interact with the gyroscopic controls,
+ it is suspected that a library based around libSDL would be the best fit.
+\end_layout
+
+\begin_layout Enumerate
+Successfully translate gyroscopic movements to the movement of an onscreen
+ cursor
+\end_layout
+
+\begin_layout Enumerate
+Research existing art software that utilises the same or similar gamepads
+ (if any)
+\end_layout
+
+\begin_layout Enumerate
+Implement drawing features that illustrate the versatility of the hardware
+\end_layout
+
+\begin_layout Enumerate
+Investigate whether it is possible to make it windows compatible to increase
+ userbase
+\end_layout
+
+\begin_layout Enumerate
+Gather test user feedback
+\end_layout
+
+\begin_layout Enumerate
+As part of the project I will test the typing speed of a popular ``chatpad
+\begin_inset Quotes erd
+\end_inset
+
+ attachment/accessory.
+ While I feel it is important to have some preliminary data to support justifica
+tion for future developments I do not feel it is as important as establishing
+ whether or not 6axis gamepads could be viable as pointing devices according
+ to user opinions.
+\end_layout
+
+\begin_layout Section
+Problems
+\end_layout
+
+\begin_layout Standard
+The biggest risk I can see is that I have no experience writing software
+ to work with 6axis gamepads.
+ I feel that the allotted time should be enough for me to both design and
+ implement the appropriate software to do so.
+\end_layout
+
+\begin_layout Chapter
+Research
+\end_layout
+
+\begin_layout Section
+Drawing libraries
+\end_layout
+
+\begin_layout Standard
+This will form the crucial backbone for the rest of the application, therefore
+ all other libraries will need to work with this library (use the same language).
+ Although there are probably alternative ways to achieve the same effect,
+ I have decided to use processing as I am familiar with it, as a result
+ this chapter is mostly a compilation of the available options.
+\end_layout
+
+\begin_layout Subsection
+Clojure/ClojureScript: Quil
+\end_layout
+
+\begin_layout Standard
+I am not familiar with this language, so it is an unlikely choice.
+ This is a version of processing written in Clojure
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Quil2014"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+CoffeeScript mode
+\end_layout
+
+\begin_layout Standard
+I am not familiar with this language, so it is an unlikely choice.
+ The latest version of this is built to the specification of processing
+ 2 which is quite old, it is based on processing.js
+\begin_inset CommandInset citation
+LatexCommand citep
+key "jenettFjenettCoffeescriptmodeprocessing2015"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Go: GG
+\end_layout
+
+\begin_layout Standard
+GG is regarded by some to be the closest thing go has to an equivalent version
+ of processing
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Horton2018"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Java: Processing
+\end_layout
+
+\begin_layout Standard
+I am very familiar with this language and feels this may be the best choice
+ due to familiarity.
+ This is the original version produced in part by Casey Reas
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Reas2019"
+literal "false"
+
+\end_inset
+
+, and the one I used before.
+ The language was historically known as ``proce55ing
+\begin_inset Quotes erd
+\end_inset
+
+ due to ``proce55ing.net
+\begin_inset Quotes erd
+\end_inset
+
+ being the only available domain
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Reas2012"
+literal "false"
+
+\end_inset
+
+.
+ Even now, processing can often be referred to as ``p5
+\begin_inset Quotes erd
+\end_inset
+
+, an obscure holdover from the past
+\begin_inset CommandInset citation
+LatexCommand citep
+key "McCarthy2017"
+literal "false"
+
+\end_inset
+
+.
+ Processing is inspired by OpenGL, PostScript and Design By Numbers
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Parrish2016"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+JS
+\end_layout
+
+\begin_layout Standard
+I am familiar with this language, they do not have fond memories of it.
+ I also do not do well with weak typing.
+\end_layout
+
+\begin_layout Subsubsection
+P5.js
+\end_layout
+
+\begin_layout Standard
+Having begun development in 2013
+\begin_inset CommandInset citation
+LatexCommand citep
+key "processingCodeFrequencyProcessing2021"
+literal "false"
+
+\end_inset
+
+, this project produced by Lauren Lee McCarthy
+\begin_inset CommandInset citation
+LatexCommand citep
+key "McCarthy2013"
+literal "false"
+
+\end_inset
+
+ has grown to become the successor to the original processing.js and is the
+ official JS implementation
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Foundation2016"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Processing.js
+\end_layout
+
+\begin_layout Standard
+This is the original, having been produced in 2008
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Resig2008"
+literal "false"
+
+\end_inset
+
+.
+ This project was archived, therefore it will be of minimal use
+\begin_inset CommandInset citation
+LatexCommand citep
+key "processing.jsProcessingjsProcessingjs2018"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Python
+\end_layout
+
+\begin_layout Standard
+I do not do well with weak typing, therefore this is not a likely choice.
+\end_layout
+
+\begin_layout Subsubsection
+P5Py
+\end_layout
+
+\begin_layout Standard
+This is a native python implementation of processing.
+\begin_inset CommandInset citation
+LatexCommand citep
+key "p5pyP5py2021"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Processing.py
+\end_layout
+
+\begin_layout Standard
+This is the official python implementation
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Foundation2016"
+literal "false"
+
+\end_inset
+
+.
+ This uses Jython, a bridge that allows it to use both native python and
+ the original java classes present in processing.
+ This uses a custom Jython based upon python 2.7
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Parrish2016"
+literal "false"
+
+\end_inset
+
+; python 2.7 is heavily deprecated
+\begin_inset CommandInset citation
+LatexCommand citep
+key "petersonPythonInsiderPython2020"
+literal "false"
+
+\end_inset
+
+, so unless that detail has changed this is definitely not a good option.
+ 
+\end_layout
+
+\begin_layout Subsection
+R: Processing.R
+\end_layout
+
+\begin_layout Standard
+I am not familiar with this language, so it is an unlikely choice.
+ This version adapts the java version to work with R.
+ It is worth noting that it is listed as experimental
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Gao2017"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Ruby: JRubyArt
+\end_layout
+
+\begin_layout Standard
+I have tried to write code in this language previously and struggled, therefore
+ this language is an unlikely choice.
+ This uses JRuby to allow for processing in the ruby language.
+ JRuby allows ruby code to access java code
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Prout2017"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Scala: SPDE
+\end_layout
+
+\begin_layout Standard
+I am not familiar with this language, so it is an unlikely choice.
+ Scala runs on the JVM, so this can use the original processing libraries
+ without issue
+\begin_inset CommandInset citation
+LatexCommand citep
+key "SPDE2009"
+literal "false"
+
+\end_inset
+
+.
+ With the latest code commit being from 2012
+\begin_inset CommandInset citation
+LatexCommand citep
+key "nathanSpde2012"
+literal "false"
+
+\end_inset
+
+, it is unlikely this would work as expected.
+\end_layout
+
+\begin_layout Section
+Extended hardware testing
+\end_layout
+
+\begin_layout Standard
+In order to do long term hardware testing videogames were played over extended
+ periods of time.
+ This may at first seem like an odd choice, however by incorporating a leisure
+ activity it can be assured that the extended tests will be carried out
+ with a consistent amount of motivation; videogames have a wide range of
+ forms of interaction, which helps ensure that something can be found that
+ mirrors general PC usage.
+ For the XB1S gamepad there was generally no need to do so, as I already
+ had a high amount of familiarity, this was purely for the Sony produced
+ gamepads, for which I have no experience.
+\end_layout
+
+\begin_layout Subsection
+Among us
+\end_layout
+
+\begin_layout Standard
+This had a native DS control scheme.
+ The control scheme was however not optimal, as it required a trackpad click
+ to enter text, which proved to impact the overall performance.
+ I had to switch between gamepad and keyboard which was a generally bothersome
+ experience which would not occur with the keyboard attachment.
+\end_layout
+
+\begin_layout Subsection
+Sid Meier's civilization 6
+\end_layout
+
+\begin_layout Standard
+Although traditionally a keyboard and mouse game, the game is being ran
+ on steam which allows the use of custom control schemes
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Nerrel2020"
+literal "false"
+
+\end_inset
+
+.
+ At first there was issues due to intense drift to the right of the display,
+ however after calibrating the gamepad
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Faux2018"
+literal "false"
+
+\end_inset
+
+ this disappears; there may be a need to implement a calibration feature,
+ unless the calibration saves at a device level.
+\end_layout
+
+\begin_layout Subsection
+Warframe
+\end_layout
+
+\begin_layout Section
+Hardware experience
+\end_layout
+
+\begin_layout Subsection
+Connection
+\end_layout
+
+\begin_layout Subsubsection
+DS4
+\end_layout
+
+\begin_layout Standard
+This could not connect to my PC via USB, however it could do so via Bluetooth
+ with little issue.
+ As noted in appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:DS4-user-discussion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, it would appear that there is some kind of technical difference with the
+ official USB adaptor that facilitates a connection, however I struggled
+ to find a definitive source.
+ Thankfully, the gamepad has the least latency when used wirelessly, so
+ this is not a major issue.
+\end_layout
+
+\begin_layout Subsubsection
+DS5
+\end_layout
+
+\begin_layout Standard
+This could connect very easily to my PC via USB, it seems capable of using
+ all functionality successfully.
+\end_layout
+
+\begin_layout Subsubsection
+XB1S gamepad
+\end_layout
+
+\begin_layout Standard
+This gamepad can connect via USB very easily.
+ I did not test wireless connectivity as it was out of scope.
+\end_layout
+
+\begin_layout Subsection
+Recharging
+\end_layout
+
+\begin_layout Subsubsection
+DS4
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:DS4-recharge"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This was unable to charge, it is suspected this could be related to appendix
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:DS4-user-discussion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+DS5
+\end_layout
+
+\begin_layout Standard
+This was able to recharge easily using a USB C connector, this is the ideal
+ solution.
+\end_layout
+
+\begin_layout Subsubsection
+XB1S gamepad
+\end_layout
+
+\begin_layout Standard
+This can recharge using any micro USB connector.
+ The model I own is old and appears to struggle operating with solely the
+ internal battery, so battery degradation may be a key issue with this hardware.
+\end_layout
+
+\begin_layout Subsection
+Usage
+\end_layout
+
+\begin_layout Subsubsection
+XB1S gamepad
+\end_layout
+
+\begin_layout Standard
+I have an extensive amount of experience using this gamepad.
+ It has no notable features outside of localised force feedback for the
+ triggers, which can at times add to the immersive experience, however the
+ goal is not immersion.
+\end_layout
+
+\begin_layout Section
+Hardware input latency
+\end_layout
+
+\begin_layout Standard
+Input latency is not a key concern for .FL, however it is still a factor
+ that can alter a user's experience.
+ As seen in table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Gamepad-latency-of"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the DS4 has generally favourable latency, especially when used wirelessly.
+ It is worth noting that latency does not stop at the gamepad, therefore
+ it is best to test the experience of .FL itself for latency issues.
+ ``With the original model DualShock 4s, even when a USB cable is connected
+ the controller only communicates via Bluetooth
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "R2018"
+literal "false"
+
+\end_inset
+
+.
+ There are reports that a HDMI converter ``adds 0.25-0.5ms of lag
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Woodall2019"
+literal "false"
+
+\end_inset
+
+, so I could add the removal of any such converters as a suggested solution
+ for solving latency, however clearly there could be better results by switching
+ from wired to wireless in some situations, as there's a potential difference
+ of 10.7ms.
+ Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Gamepad-latency-of"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ does not account for monitor related latency
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Woodall2019"
+literal "false"
+
+\end_inset
+
+, therefore that is another factor to consider.
+ Esports is an industry that uses gamepads extensively; in the Esport community
+ it can be found that in real world applications while wireless latency
+ should be lower, it is often prone to variance
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Handa2018"
+literal "false"
+
+\end_inset
+
+.
+ it can be assumed that the range of the DS4 is 3 metres due to the fact
+ that ``my DS4 can have connection issues when I sit 3 meters (around 10
+ ft) away from my PS4, stretch and put the controller behind my back or
+ head
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "R2018"
+literal "false"
+
+\end_inset
+
+.
+ It is theorised that the DS4 USB port may be``lower than micro USB usually
+ is
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "R2018"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Gamepad
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Latency (ms)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DS4 v1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+43.9
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DS4 wired
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+54.8
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DS4 wireless
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+44.1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+GameCube
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+74.8
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Wii
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+73.9
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Wii U
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+76.9
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Input latency of well-known gamepads
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Woodall2019"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Gamepad-latency-of"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Hardware interaction
+\end_layout
+
+\begin_layout Standard
+There are a variety of possible libraries, as SDL is a popular library for
+ interacting with gamepads it is likely it will be the best choice, however
+ game control plus seems promising too.
+ Due to unforeseen difficulties with DS4 (see 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:DS4-recharge"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), it became a higher priority to finish DS5 development first.
+\end_layout
+
+\begin_layout Subsection
+C++
+\end_layout
+
+\begin_layout Standard
+C++ has a lot of promise for producing a high performance application.
+ The issue that could arise is the longer development time associated with
+ c++.
+\end_layout
+
+\begin_layout Subsubsection
+Dual_sense
+\end_layout
+
+\begin_layout Standard
+This repository is listed as WIP, however it could be very possible to help
+ the developer finish it
+\begin_inset CommandInset citation
+LatexCommand citep
+key "jakubekXertDevDualSense2022"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Thoom76/DualShock4
+\end_layout
+
+\begin_layout Standard
+This library is a basic one, it has no uniquely identifiable name.
+ It appears to purely expose the DS4 data, leaving the programmer to do
+ the rest
+\begin_inset CommandInset citation
+LatexCommand citep
+key "smeeleDualShock42021"
+literal "false"
+
+\end_inset
+
+.
+ As seen in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:An-excerpt-of"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, there is full access to the required 6axis data.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename dualshock4-cplusplus.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+An excerpt of the output, the format is too vertical to effectively include
+ all of it.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:An-excerpt-of"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+JoyShockLibrary
+\end_layout
+
+\begin_layout Standard
+This library is both cross platform and has support for a range of controllers,
+ this would probably be ideal if there was not a time constraint
+\begin_inset CommandInset citation
+LatexCommand citep
+key "smartJoyShockLibrary2022a"
+literal "false"
+
+\end_inset
+
+.
+ JoyShockMapper up to version 2.2.0 uses this library.
+ Even after setting the compiler to clang, however, this example application
+ would not compile, perhaps eluding to JoyShockLibrary not being the easiest
+ to implement
+\begin_inset CommandInset citation
+LatexCommand citep
+key "electronicksJoyShockMapper2022"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+SDL
+\end_layout
+
+\begin_layout Standard
+This is the native version of SDL, it can generally be expected that SDL
+ supports the DS4.
+ While it was easy enough to acquire the DS5, not everyone may wish to purchase
+ the DS5 as a standalone device, even for software development.
+ This should be simple enough: the DS5 is designed for the PS5, so just
+ get the PS5; however, due to shortages
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Mochizuki2022"
+literal "false"
+
+\end_inset
+
+, that is not as simple as it should be.
+ This all means that it could be expected that SDL would not have DS5 support,
+ however with release 2.0.14 that all changed
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Lantinga2020"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+C#
+\end_layout
+
+\begin_layout Standard
+This is not a likely choice.
+ Despite priding itself on being cross platform, C# is hardly ideal compared
+ to other languages.
+\end_layout
+
+\begin_layout Subsubsection
+DualSenseSupport
+\end_layout
+
+\begin_layout Standard
+This claims to only have preliminary support
+\begin_inset CommandInset citation
+LatexCommand citep
+key "unlokDualSenseSupport2022"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+DualSenseX
+\end_layout
+
+\begin_layout Standard
+This seems to be more advanced, having the ability to emulate the XB360
+ gamepad or DS4
+\begin_inset CommandInset citation
+LatexCommand citep
+key "paliverseDualSenseX2022a"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+UniSense
+\end_layout
+
+\begin_layout Standard
+This is specifically an extension for unity, I expect it will be of minimal
+ use
+\begin_inset CommandInset citation
+LatexCommand citep
+key "oliveiraUniSenseDualSensePlugin2021"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Go
+\end_layout
+
+\begin_layout Standard
+This language has a surprisingly more active than expected community for
+ the DS4.
+\end_layout
+
+\begin_layout Subsubsection
+Gds4
+\end_layout
+
+\begin_layout Standard
+This is a library designed for the DS4, at a glance it does not appear to
+ have good documentation, which could be an issue
+\begin_inset CommandInset citation
+LatexCommand citep
+key "darkautismGolangDualsock2020"
+literal "false"
+
+\end_inset
+
+.
+ When testing this library it did not work, quoting ``host is down
+\begin_inset Quotes erd
+\end_inset
+
+ as the issue.
+\end_layout
+
+\begin_layout Subsubsection
+Gods4
+\end_layout
+
+\begin_layout Standard
+This is another library designed for the DS4.
+ The documentation is quite extensive, making it a more likely choice even
+ though it is older
+\begin_inset CommandInset citation
+LatexCommand citep
+key "kpeu3iGods42019"
+literal "false"
+
+\end_inset
+
+.
+ Surprisingly this library could not detect the connected controller, meaning
+ no available go libraries seem to work.
+\end_layout
+
+\begin_layout Subsection
+Java
+\end_layout
+
+\begin_layout Subsubsection
+ControllerBuddy
+\end_layout
+
+\begin_layout Standard
+This may prove useful.
+ support for DS4 and DS5 is listed, so it may be a helpful resource
+\begin_inset CommandInset citation
+LatexCommand citep
+key "hausnerBwRavenclControllerBuddy2022"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Game control plus
+\end_layout
+
+\begin_layout Standard
+This library is designed specifically for use with processing.
+ The use of G4P in the library may prove useful as inspiration for UI drawing
+ in the future
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Lager2014"
+literal "false"
+
+\end_inset
+
+.
+ As seen in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Testing-the-library"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, this library is incapable of detecting the DS4's 6axis capabilities.
+ After some examination of the source code, it appears that this library
+ leverage's JInput from 2014 or 2015, so it may be as simple as swapping
+ out the JInput library that helps form the greater whole.
+ It is worth noting that there is a GitHub repository
+\begin_inset CommandInset citation
+LatexCommand citep
+key "lagerGameControl2015"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename game-control-plus.png
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Testing the library using the built in example
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Testing-the-library"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Gamepad4J
+\end_layout
+
+\begin_layout Standard
+This is another library with some potential.
+ Notable features include access to all basic input types and adaptive button
+ prompts
+\begin_inset CommandInset citation
+LatexCommand citep
+key "dudleyGamepad4J2021"
+literal "false"
+
+\end_inset
+
+.
+ Discussions surrounding the library suggest that it can access the required
+ data
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Park2018"
+literal "false"
+
+\end_inset
+
+.
+ This needed JUnit installed to proceed, Ouya code also had to be removed.
+ An assumption was made that this used SDL, that assumption soon proved
+ to be wrong, so no further testing will occur.
+\end_layout
+
+\begin_layout Subsubsection
+JInput
+\end_layout
+
+\begin_layout Standard
+As previously mentioned, game control plus uses JInput extensively.
+ Theoretically all that is needed to achieve 6axis support is to integrate
+ a newer JInput designed to utilise all the capabilities of the DS4, the
+ newest JInput library does not appear to do such a thing
+\begin_inset CommandInset citation
+LatexCommand citep
+key "jinputJInput2019"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+JInput steam controller
+\end_layout
+
+\begin_layout Standard
+There is no DS4 JInput, however, there is a steam controller JInput
+\begin_inset CommandInset citation
+LatexCommand citep
+key "oddwargJinputsteamcontroller2021"
+literal "false"
+
+\end_inset
+
+.
+ The steam controller provides all of the same crucial input types that
+ the DS4 has, so it could be possible to adapt it
+\begin_inset CommandInset citation
+LatexCommand citep
+key "dempseyTeardownSteamController2016"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+JSFML
+\end_layout
+
+\begin_layout Standard
+This is a port of SFML to java; as seen in appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Feasibility-study-review"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, it was suggested as a solution by the supervisor, so it is worth looking
+ at.
+ It does not appear to receive many updates so it may not be the best choice
+\begin_inset CommandInset citation
+LatexCommand citep
+key "deflatedpickleJSFML2021"
+literal "false"
+
+\end_inset
+
+.
+ Due to the fact that it is an engine as opposed to a dedicated library,
+ it does not immediately appear to be a good fit for the project.
+\end_layout
+
+\begin_layout Subsubsection
+Kaliber
+\end_layout
+
+\begin_layout Standard
+This may be another solution, it is hard to tell as it is quite old
+\begin_inset CommandInset citation
+LatexCommand citep
+key "fennisJKFennisKaliber2012"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+LibJSDL
+\end_layout
+
+\begin_layout Standard
+This is a direct port using JNA
+\begin_inset CommandInset citation
+LatexCommand citep
+key "siddiqiControllerInputVisualizer2022"
+literal "false"
+
+\end_inset
+
+.
+ This library is able to access SDL successfully and performantly.
+\end_layout
+
+\begin_layout Subsubsection
+Sdl2gdx
+\end_layout
+
+\begin_layout Standard
+This is designed as somewhat of a fusion of SDL and libGDX.
+ Supposed benefits over pure libGDX are hot-plugging support, screen-mode
+ change support, functional rumble support, predefined controller mappings
+ and support for more than 4 XInput controllers
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Smith2019"
+literal "false"
+
+\end_inset
+
+.
+ It is worth noting, however, that the project is 3 years old, and since
+ then it appears SDL has all of the features that were originally missing.
+ This uses JNI to access SDL.
+ This library does not appear to have 6axis support.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Firstly, the unofficial example program was tested, as seen in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-unofficial-GUI"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ This was interesting in that it correctly displayed every button, although
+ the right trigger would not function
+\begin_inset CommandInset citation
+LatexCommand citep
+key "siddiqiControllerInputVisualizer2022"
+literal "false"
+
+\end_inset
+
+.
+ At first the program would not function, however this was fixed by changing
+ it to bytecode version 6
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Veis2021"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename sdl2gdx.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The unofficial GUI example
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-unofficial-GUI"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Secondly, the official example program was tested, as seen in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-official-GUI"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ While less visual, all the buttons are detected, including the right trigger.
+ Despite being clearly advertised, the rumble did not work.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename sdl2gdx-official.png
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The official GUI example
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-official-GUI"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+SDL4J
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:SDL4J"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This uses a windows DLL of SDL, however it may be possible to adapt it to
+ use the Linux binary.
+ This library uses JNA
+\begin_inset CommandInset citation
+LatexCommand citep
+key "glossonGaming32SDL4J2021"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+SDLJ
+\end_layout
+
+\begin_layout Standard
+This has minimal information, but is relatively up to date
+\begin_inset CommandInset citation
+LatexCommand citep
+key "lewisMattjlewisSdlj2021"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Sdljava
+\end_layout
+
+\begin_layout Standard
+This is also a potential choice.
+ Along with the porting of SDL, it has OpenGL specific bindings
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Ganza2005"
+literal "false"
+
+\end_inset
+
+.
+ Being a binding to SDL 1.2
+\begin_inset CommandInset citation
+LatexCommand citep
+key "rojekSdljava2014"
+literal "false"
+
+\end_inset
+
+, it may prove to be a challenge getting this library to behave as expected
+ as SDL 2 has major API changes
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Libsdl2021"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Sdljoystick4java
+\end_layout
+
+\begin_layout Standard
+This is another JNI SDL binding, it seems to be relatively up to date but
+ focus on basic functions
+\begin_inset CommandInset citation
+LatexCommand citep
+key "pavelSdljoystick4java2021"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+YAJSDL
+\end_layout
+
+\begin_layout Standard
+This is a JNA based java SDL binding.
+ While the language is not a reason to discount the repository, the year
+ may be
+\begin_inset CommandInset citation
+LatexCommand citep
+key "rihineNoqisofonYajsdl2012"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+JS
+\end_layout
+
+\begin_layout Subsubsection
+DS-examples
+\end_layout
+
+\begin_layout Standard
+As the name suggests, this is a set of examples; this could be useful if
+ I end up using JS
+\begin_inset CommandInset citation
+LatexCommand citep
+key "steinherzDsexamples2021"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+DualShock library
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:JS:-Dualshock-library"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This node.js library may in fact have the most extensive set of capabilities
+ out of any of the choices here
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Pecacheu2021"
+literal "false"
+
+\end_inset
+
+.
+ The original branch of code does not work, however there are three other
+ branches
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Pecacheu2021"
+literal "false"
+
+\end_inset
+
+.
+ With so many forked versions available, it could be assumed that at least
+ one of them may fix the issue or offer guidance as to what needs doing.
+ The branch by wonderunit had a large number of revert commits that could
+ be avoided by having an earlier base commit, so the first necessary action
+ was to create a localised version with that corrective action taken; removing
+ unnecessary commits aids in analysis of source code changes as it cleans
+ up the data that will be analysed.
+\end_layout
+
+\begin_layout Subsubsection
+DualSense
+\end_layout
+
+\begin_layout Standard
+This claims to just collect information, however from what can be seen,
+ it is likely that it can be used as an input library
+\begin_inset CommandInset citation
+LatexCommand citep
+key "reynoldsSonyDualSenseWireless2020"
+literal "false"
+
+\end_inset
+
+.
+ Unfortunately this did not seem to work, it may be that this is designed
+ to interface with the windows driver.
+\end_layout
+
+\begin_layout Subsubsection
+Node-DualSense
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Node-dualsense"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This is based on pydualsense (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Pydualsense"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), it is able to read input and set LED status, powered by NodeJS
+\begin_inset CommandInset citation
+LatexCommand citep
+key "camilleNodedualsense2022"
+literal "false"
+
+\end_inset
+
+.
+ As seen in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:A-successful-basic"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, this library is definitely capable, unfortunately it does not read 6axis
+ data.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename dualsense-js.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A successful basic reading of DS5 input states
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:A-successful-basic"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Python
+\end_layout
+
+\begin_layout Subsubsection
+Pydualsense
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Pydualsense"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This relies on an external library called HIDAPI.
+ It seems to allow configuration of the trigger pressure
+\begin_inset CommandInset citation
+LatexCommand citep
+key "kPydualsense2021"
+literal "false"
+
+\end_inset
+
+.
+ Testing with a library based on this (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Node-dualsense"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) shows that it may be a capable base.
+ The code does not appear to be ready for 6xis capabilities.
+\end_layout
+
+\begin_layout Subsubsection
+SC controller
+\end_layout
+
+\begin_layout Standard
+This is designed primarily as a driver, however due to its user mode nature,
+ it should be easy to adapt into a library
+\begin_inset CommandInset citation
+LatexCommand citep
+key "kozecSCController2021"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Additional features
+\end_layout
+
+\begin_layout Subsubsection
+Ds4-lightbar
+\end_layout
+
+\begin_layout Standard
+This allows access to the gamepad light-bar.
+ This is done by leveraging DualShock library(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:JS:-Dualshock-library"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\begin_inset CommandInset citation
+LatexCommand citep
+key "cotaDs4lightbar2021"
+literal "false"
+
+\end_inset
+
+.
+ This could be used to display the current selected colour.
+\end_layout
+
+\begin_layout Subsubsection
+Dsbattery
+\end_layout
+
+\begin_layout Standard
+This library provides access to the battery level, and the ability to disconnect
+ the controller
+\begin_inset CommandInset citation
+LatexCommand citep
+key "tomsonsDsbattery2021"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
 Project background
 \end_layout
 
@@ -1689,115 +3681,28 @@ literal "false"
 .
 \end_layout
 
-\begin_layout Section
-Course specific learning outcomes
-\end_layout
-
-\begin_layout Itemize
-Analyse, design, and implement algorithms using a range of appropriate languages
- and/or methodologies.
-\end_layout
-
-\begin_layout Itemize
-Apply the principles and operation of languages, compilers and interpreters.
+\begin_layout Chapter
+Design
 \end_layout
 
 \begin_layout Section
-Hypothesis
+Concept
 \end_layout
 
 \begin_layout Standard
-I hypothesise that the benefits seen in FPS videogames when 6axis is used
- to aim
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Nerrel2020"
-literal "false"
-
-\end_inset
-
- could also translate to a PC experience.
- I hypothesise that users will give positive testimonials, including digital
- artists, if available.
- I hypothesise that with some basic practice a hardware keypad such as seen
- for the DS5 could be comparable to an actual keyboard.
+In an ideal situation, .FL would leverage an existing codebase, in order
+ to ensure the best performance and set of features.
+ The easiest solution in such a hypothetical situation would be to design
+ a plugin, however it is likely that it would not be possible to modify
+ the UI in order to offer clear gamepad control prompts.
+ Moving on from that, it would appear that making a fork would be the best
+ solution, however this would require extensive knowledge of the codebase.
+ As I do not have the extensive knowledge required, the next best solution
+ would be to create an application from scratch.
 \end_layout
 
 \begin_layout Section
-Aim
-\end_layout
-
-\begin_layout Standard
-Investigate alternatives to mouse and keyboard for a desktop PC by prototyping
- gamepad-based drawing software that could later be extended and adapted
- into a full system.
-\end_layout
-
-\begin_layout Section
-Objectives
-\end_layout
-
-\begin_layout Standard
-For this project there are three main deliverables: the software itself,
- and two pieces of research.
- A large part of the project will follow a linear structure, however near
- the end I plan to adopt an agile/cyclical structure as I perfect the final
- deliverable
-\end_layout
-
-\begin_layout Enumerate
-Create a Linux compatible layer to interact with the gyroscopic controls,
- it is suspected that a library based around libSDL would be the best fit.
-\end_layout
-
-\begin_layout Enumerate
-Successfully translate gyroscopic movements to the movement of an onscreen
- cursor
-\end_layout
-
-\begin_layout Enumerate
-Research existing art software that utilises the same or similar gamepads
- (if any)
-\end_layout
-
-\begin_layout Enumerate
-Implement drawing features that illustrate the versatility of the hardware
-\end_layout
-
-\begin_layout Enumerate
-Investigate whether it is possible to make it windows compatible to increase
- userbase
-\end_layout
-
-\begin_layout Enumerate
-Gather test user feedback
-\end_layout
-
-\begin_layout Enumerate
-As part of the project I will test the typing speed of a popular ``chatpad
-\begin_inset Quotes erd
-\end_inset
-
- attachment/accessory.
- While I feel it is important to have some preliminary data to support justifica
-tion for future developments I do not feel it is as important as establishing
- whether or not 6axis gamepads could be viable as pointing devices according
- to user opinions.
-\end_layout
-
-\begin_layout Section
-Problems
-\end_layout
-
-\begin_layout Standard
-The biggest risk I can see is that I have no experience writing software
- to work with 6axis gamepads.
- I feel that the allotted time should be enough for me to both design and
- implement the appropriate software to do so.
-\end_layout
-
-\begin_layout Section
-Required resources
+Equipment
 \end_layout
 
 \begin_layout Itemize
@@ -1822,43 +3727,7 @@ It may prove beneficial to acquisition artistic software that has an attached
 \end_layout
 
 \begin_layout Section
-Method
-\end_layout
-
-\begin_layout Subsection
-User experience level
-\end_layout
-
-\begin_layout Standard
-There is no direct focus on how experienced a user is.
- I am, however, entirely new to the DS4 and DS5 that will play a major part
- in this study.
- I will try to dedicate time outside of development to become more experienced
- with the DS4.
-\end_layout
-
-\begin_layout Chapter
-Design
-\end_layout
-
-\begin_layout Section
-Conceptually
-\end_layout
-
-\begin_layout Standard
-In an ideal situation, .FL would leverage an existing codebase, in order
- to ensure the best performance and set of features.
- The easiest solution in such a hypothetical situation would be to design
- a plugin, however it is likely that it would not be possible to modify
- the UI in order to offer clear gamepad control prompts.
- Moving on from that, it would appear that making a fork would be the best
- solution, however this would require extensive knowledge of the codebase.
- As I do not have the extensive knowledge required, the next best solution
- would be to create an application from scratch.
-\end_layout
-
-\begin_layout Section
-Etymologically
+Etymology
 \end_layout
 
 \begin_layout Standard
@@ -1879,1880 +3748,31 @@ d further to .FL, this is easier to say verbally and could be viewed as being
  more aesthetically pleasing, so that will be the final official name.
 \end_layout
 
-\begin_layout Chapter
-How do we produce visuals?
-\end_layout
-
-\begin_layout Standard
-This will form the crucial backbone for the rest of the application, therefore
- all other libraries will need to work with this library (use the same language).
- Although there are probably alternative ways to achieve the same effect,
- I have decided to use processing as I am familiar with it, as a result
- this chapter is mostly a compilation of the available options.
-\end_layout
-
 \begin_layout Section
-Clojure/ClojureScript: Quil
-\end_layout
-
-\begin_layout Standard
-I am not familiar with this language, so it is an unlikely choice.
- This is a version of processing written in Clojure
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Quil2014"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Section
-CoffeeScript mode
-\end_layout
-
-\begin_layout Standard
-I am not familiar with this language, so it is an unlikely choice.
- The latest version of this is built to the specification of processing
- 2 which is quite old, it is based on processing.js
-\begin_inset CommandInset citation
-LatexCommand citep
-key "jenettFjenettCoffeescriptmodeprocessing2015"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Section
-Go: GG
-\end_layout
-
-\begin_layout Standard
-GG is regarded by some to be the closest thing go has to an equivalent version
- of processing
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Horton2018"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Section
-Java: Processing
-\end_layout
-
-\begin_layout Standard
-I am very familiar with this language and feels this may be the best choice
- due to familiarity.
- This is the original version produced in part by Casey Reas
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Reas2019"
-literal "false"
-
-\end_inset
-
-, and the one I used before.
- The language was historically known as ``proce55ing
-\begin_inset Quotes erd
-\end_inset
-
- due to ``proce55ing.net
-\begin_inset Quotes erd
-\end_inset
-
- being the only available domain
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Reas2012"
-literal "false"
-
-\end_inset
-
-.
- Even now, processing can often be referred to as ``p5
-\begin_inset Quotes erd
-\end_inset
-
-, an obscure holdover from the past
-\begin_inset CommandInset citation
-LatexCommand citep
-key "McCarthy2017"
-literal "false"
-
-\end_inset
-
-.
- Processing is inspired by OpenGL, PostScript and Design By Numbers
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Parrish2016"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Section
-JS
-\end_layout
-
-\begin_layout Standard
-I am familiar with this language, they do not have fond memories of it.
- I also do not do well with weak typing.
+Methodology
 \end_layout
 
 \begin_layout Subsection
-P5.js
+User experience level
 \end_layout
 
 \begin_layout Standard
-Having begun development in 2013
-\begin_inset CommandInset citation
-LatexCommand citep
-key "processingCodeFrequencyProcessing2021"
-literal "false"
-
-\end_inset
-
-, this project produced by Lauren Lee McCarthy
-\begin_inset CommandInset citation
-LatexCommand citep
-key "McCarthy2013"
-literal "false"
-
-\end_inset
-
- has grown to become the successor to the original processing.js and is the
- official JS implementation
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Foundation2016"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsection
-Processing.js
-\end_layout
-
-\begin_layout Standard
-This is the original, having been produced in 2008
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Resig2008"
-literal "false"
-
-\end_inset
-
-.
- This project was archived, therefore it will be of minimal use
-\begin_inset CommandInset citation
-LatexCommand citep
-key "processing.jsProcessingjsProcessingjs2018"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Section
-Python
-\end_layout
-
-\begin_layout Standard
-I do not do well with weak typing, therefore this is not a likely choice.
-\end_layout
-
-\begin_layout Subsection
-P5Py
-\end_layout
-
-\begin_layout Standard
-This is a native python implementation of processing.
-\begin_inset CommandInset citation
-LatexCommand citep
-key "p5pyP5py2021"
-literal "false"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Processing.py
-\end_layout
-
-\begin_layout Standard
-This is the official python implementation
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Foundation2016"
-literal "false"
-
-\end_inset
-
-.
- This uses Jython, a bridge that allows it to use both native python and
- the original java classes present in processing.
- This uses a custom Jython based upon python 2.7
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Parrish2016"
-literal "false"
-
-\end_inset
-
-; python 2.7 is heavily deprecated
-\begin_inset CommandInset citation
-LatexCommand citep
-key "petersonPythonInsiderPython2020"
-literal "false"
-
-\end_inset
-
-, so unless that detail has changed this is definitely not a good option.
- 
-\end_layout
-
-\begin_layout Section
-R: Processing.R
-\end_layout
-
-\begin_layout Standard
-I am not familiar with this language, so it is an unlikely choice.
- This version adapts the java version to work with R.
- It is worth noting that it is listed as experimental
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Gao2017"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Section
-Ruby: JRubyArt
-\end_layout
-
-\begin_layout Standard
-I have tried to write code in this language previously and struggled, therefore
- this language is an unlikely choice.
- This uses JRuby to allow for processing in the ruby language.
- JRuby allows ruby code to access java code
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Prout2017"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Section
-Scala: SPDE
-\end_layout
-
-\begin_layout Standard
-I am not familiar with this language, so it is an unlikely choice.
- Scala runs on the JVM, so this can use the original processing libraries
- without issue
-\begin_inset CommandInset citation
-LatexCommand citep
-key "SPDE2009"
-literal "false"
-
-\end_inset
-
-.
- With the latest code commit being from 2012
-\begin_inset CommandInset citation
-LatexCommand citep
-key "nathanSpde2012"
-literal "false"
-
-\end_inset
-
-, it is unlikely this would work as expected.
+There is no direct focus on how experienced a user is.
+ I am, however, entirely new to the DS4 and DS5 that will play a major part
+ in this study.
+ I will try to dedicate time outside of development to become more experienced
+ with the DS4.
 \end_layout
 
 \begin_layout Chapter
-Hardware input latency research
-\end_layout
-
-\begin_layout Standard
-Input latency is not a key concern for .FL, however it is still a factor
- that can alter a user's experience.
- As seen in table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:Gamepad-latency-of"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, the DS4 has generally favourable latency, especially when used wirelessly.
- It is worth noting that latency does not stop at the gamepad, therefore
- it is best to test the experience of .FL itself for latency issues.
- ``With the original model DualShock 4s, even when a USB cable is connected
- the controller only communicates via Bluetooth
-\begin_inset Quotes erd
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand citep
-key "R2018"
-literal "false"
-
-\end_inset
-
-.
- There are reports that a HDMI converter ``adds 0.25-0.5ms of lag
-\begin_inset Quotes erd
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Woodall2019"
-literal "false"
-
-\end_inset
-
-, so I could add the removal of any such converters as a suggested solution
- for solving latency, however clearly there could be better results by switching
- from wired to wireless in some situations, as there's a potential difference
- of 10.7ms.
- Table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:Gamepad-latency-of"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- does not account for monitor related latency
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Woodall2019"
-literal "false"
-
-\end_inset
-
-, therefore that is another factor to consider.
- Esports is an industry that uses gamepads extensively; in the Esport community
- it can be found that in real world applications while wireless latency
- should be lower, it is often prone to variance
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Handa2018"
-literal "false"
-
-\end_inset
-
-.
- it can be assumed that the range of the DS4 is 3 metres due to the fact
- that ``my DS4 can have connection issues when I sit 3 meters (around 10
- ft) away from my PS4, stretch and put the controller behind my back or
- head
-\begin_inset Quotes erd
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand citep
-key "R2018"
-literal "false"
-
-\end_inset
-
-.
- It is theorised that the DS4 USB port may be``lower than micro USB usually
- is
-\begin_inset Quotes erd
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand citep
-key "R2018"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float table
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="7" columns="2">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Gamepad
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Latency (ms)
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-DS4 v1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-43.9
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-DS4 wired
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-54.8
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-DS4 wireless
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-44.1
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-GameCube
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-74.8
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Wii
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-73.9
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Wii U
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-76.9
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Input latency of well-known gamepads
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Woodall2019"
-literal "false"
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:Gamepad-latency-of"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Chapter
-Interacting with hardware
-\end_layout
-
-\begin_layout Standard
-There are a variety of possible libraries, as SDL is a popular library for
- interacting with gamepads it is likely it will be the best choice, however
- game control plus seems promising too.
- Due to unforeseen difficulties with DS4 (see 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "subsec:DS4-recharge"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-), it became a higher priority to finish DS5 development first.
+Implementation
 \end_layout
 
 \begin_layout Section
-C++
-\end_layout
-
-\begin_layout Standard
-C++ has a lot of promise for producing a high performance application.
- The issue that could arise is the longer development time associated with
- c++.
-\end_layout
-
-\begin_layout Subsection
-Dual_sense
-\end_layout
-
-\begin_layout Standard
-This repository is listed as WIP, however it could be very possible to help
- the developer finish it
-\begin_inset CommandInset citation
-LatexCommand citep
-key "jakubekXertDevDualSense2022"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsection
-Thoom76/DualShock4
-\end_layout
-
-\begin_layout Standard
-This library is a basic one, it has no uniquely identifiable name.
- It appears to purely expose the DS4 data, leaving the programmer to do
- the rest
-\begin_inset CommandInset citation
-LatexCommand citep
-key "smeeleDualShock42021"
-literal "false"
-
-\end_inset
-
-.
- As seen in figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:An-excerpt-of"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, there is full access to the required 6axis data.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename dualshock4-cplusplus.png
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-An excerpt of the output, the format is too vertical to effectively include
- all of it.
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:An-excerpt-of"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-JoyShockLibrary
-\end_layout
-
-\begin_layout Standard
-This library is both cross platform and has support for a range of controllers,
- this would probably be ideal if there was not a time constraint
-\begin_inset CommandInset citation
-LatexCommand citep
-key "smartJoyShockLibrary2022a"
-literal "false"
-
-\end_inset
-
-.
- JoyShockMapper up to version 2.2.0 uses this library.
- Even after setting the compiler to clang, however, this example application
- would not compile, perhaps eluding to JoyShockLibrary not being the easiest
- to implement
-\begin_inset CommandInset citation
-LatexCommand citep
-key "electronicksJoyShockMapper2022"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsection
-SDL
-\end_layout
-
-\begin_layout Standard
-This is the native version of SDL, it can generally be expected that SDL
- supports the DS4.
- While it was easy enough to acquire the DS5, not everyone may wish to purchase
- the DS5 as a standalone device, even for software development.
- This should be simple enough: the DS5 is designed for the PS5, so just
- get the PS5; however, due to shortages
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Mochizuki2022"
-literal "false"
-
-\end_inset
-
-, that is not as simple as it should be.
- This all means that it could be expected that SDL would not have DS5 support,
- however with release 2.0.14 that all changed
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Lantinga2020"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Section
-C#
-\end_layout
-
-\begin_layout Standard
-This is not a likely choice.
- Despite priding itself on being cross platform, C# is hardly ideal compared
- to other languages.
-\end_layout
-
-\begin_layout Subsection
-DualSenseSupport
-\end_layout
-
-\begin_layout Standard
-This claims to only have preliminary support
-\begin_inset CommandInset citation
-LatexCommand citep
-key "unlokDualSenseSupport2022"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsection
-DualSenseX
-\end_layout
-
-\begin_layout Standard
-This seems to be more advanced, having the ability to emulate the XB360
- gamepad or DS4
-\begin_inset CommandInset citation
-LatexCommand citep
-key "paliverseDualSenseX2022a"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsection
-UniSense
-\end_layout
-
-\begin_layout Standard
-This is specifically an extension for unity, I expect it will be of minimal
- use
-\begin_inset CommandInset citation
-LatexCommand citep
-key "oliveiraUniSenseDualSensePlugin2021"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Section
-Go
-\end_layout
-
-\begin_layout Standard
-This language has a surprisingly more active than expected community for
- the DS4.
-\end_layout
-
-\begin_layout Subsection
-Gds4
-\end_layout
-
-\begin_layout Standard
-This is a library designed for the DS4, at a glance it does not appear to
- have good documentation, which could be an issue
-\begin_inset CommandInset citation
-LatexCommand citep
-key "darkautismGolangDualsock2020"
-literal "false"
-
-\end_inset
-
-.
- When testing this library it did not work, quoting ``host is down
-\begin_inset Quotes erd
-\end_inset
-
- as the issue.
-\end_layout
-
-\begin_layout Subsection
-Gods4
-\end_layout
-
-\begin_layout Standard
-This is another library designed for the DS4.
- The documentation is quite extensive, making it a more likely choice even
- though it is older
-\begin_inset CommandInset citation
-LatexCommand citep
-key "kpeu3iGods42019"
-literal "false"
-
-\end_inset
-
-.
- Surprisingly this library could not detect the connected controller, meaning
- no available go libraries seem to work.
-\end_layout
-
-\begin_layout Section
-Java
-\end_layout
-
-\begin_layout Subsection
-ControllerBuddy
-\end_layout
-
-\begin_layout Standard
-This may prove useful.
- support for DS4 and DS5 is listed, so it may be a helpful resource
-\begin_inset CommandInset citation
-LatexCommand citep
-key "hausnerBwRavenclControllerBuddy2022"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsection
-Game control plus
-\end_layout
-
-\begin_layout Standard
-This library is designed specifically for use with processing.
- The use of G4P in the library may prove useful as inspiration for UI drawing
- in the future
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Lager2014"
-literal "false"
-
-\end_inset
-
-.
- As seen in figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Testing-the-library"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, this library is incapable of detecting the DS4's 6axis capabilities.
- After some examination of the source code, it appears that this library
- leverage's JInput from 2014 or 2015, so it may be as simple as swapping
- out the JInput library that helps form the greater whole.
- It is worth noting that there is a GitHub repository
-\begin_inset CommandInset citation
-LatexCommand citep
-key "lagerGameControl2015"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename game-control-plus.png
-	width 100col%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Testing the library using the built in example
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Testing-the-library"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Gamepad4J
-\end_layout
-
-\begin_layout Standard
-This is another library with some potential.
- Notable features include access to all basic input types and adaptive button
- prompts
-\begin_inset CommandInset citation
-LatexCommand citep
-key "dudleyGamepad4J2021"
-literal "false"
-
-\end_inset
-
-.
- Discussions surrounding the library suggest that it can access the required
- data
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Park2018"
-literal "false"
-
-\end_inset
-
-.
- This needed JUnit installed to proceed, Ouya code also had to be removed.
- An assumption was made that this used SDL, that assumption soon proved
- to be wrong, so no further testing will occur.
-\end_layout
-
-\begin_layout Subsection
-JInput
-\end_layout
-
-\begin_layout Standard
-As previously mentioned, game control plus uses JInput extensively.
- Theoretically all that is needed to achieve 6axis support is to integrate
- a newer JInput designed to utilise all the capabilities of the DS4, the
- newest JInput library does not appear to do such a thing
-\begin_inset CommandInset citation
-LatexCommand citep
-key "jinputJInput2019"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsubsection
-JInput steam controller
-\end_layout
-
-\begin_layout Standard
-There is no DS4 JInput, however, there is a steam controller JInput
-\begin_inset CommandInset citation
-LatexCommand citep
-key "oddwargJinputsteamcontroller2021"
-literal "false"
-
-\end_inset
-
-.
- The steam controller provides all of the same crucial input types that
- the DS4 has, so it could be possible to adapt it
-\begin_inset CommandInset citation
-LatexCommand citep
-key "dempseyTeardownSteamController2016"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsection
-JSFML
-\end_layout
-
-\begin_layout Standard
-This is a port of SFML to java; as seen in appendix 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "chap:Feasibility-study-review"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, it was suggested as a solution by the supervisor, so it is worth looking
- at.
- It does not appear to receive many updates so it may not be the best choice
-\begin_inset CommandInset citation
-LatexCommand citep
-key "deflatedpickleJSFML2021"
-literal "false"
-
-\end_inset
-
-.
- Due to the fact that it is an engine as opposed to a dedicated library,
- it does not immediately appear to be a good fit for the project.
-\end_layout
-
-\begin_layout Subsection
-Kaliber
-\end_layout
-
-\begin_layout Standard
-This may be another solution, it is hard to tell as it is quite old
-\begin_inset CommandInset citation
-LatexCommand citep
-key "fennisJKFennisKaliber2012"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsection
-LibJSDL
-\end_layout
-
-\begin_layout Standard
-This is a direct port using JNA
-\begin_inset CommandInset citation
-LatexCommand citep
-key "siddiqiControllerInputVisualizer2022"
-literal "false"
-
-\end_inset
-
-.
- This library is able to access SDL successfully and performantly.
-\end_layout
-
-\begin_layout Subsection
-Sdl2gdx
-\end_layout
-
-\begin_layout Standard
-This is designed as somewhat of a fusion of SDL and libGDX.
- Supposed benefits over pure libGDX are hot-plugging support, screen-mode
- change support, functional rumble support, predefined controller mappings
- and support for more than 4 XInput controllers
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Smith2019"
-literal "false"
-
-\end_inset
-
-.
- It is worth noting, however, that the project is 3 years old, and since
- then it appears SDL has all of the features that were originally missing.
- This uses JNI to access SDL.
- This library does not appear to have 6axis support.
-\end_layout
-
-\begin_layout Subsubsection
-Unofficial example
-\end_layout
-
-\begin_layout Standard
-Firstly, the unofficial example program was tested, as seen in figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:The-unofficial-GUI"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
- This was interesting in that it correctly displayed every button, although
- the right trigger would not function
-\begin_inset CommandInset citation
-LatexCommand citep
-key "siddiqiControllerInputVisualizer2022"
-literal "false"
-
-\end_inset
-
-.
- At first the program would not function, however this was fixed by changing
- it to bytecode version 6
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Veis2021"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename sdl2gdx.png
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-The unofficial GUI example
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:The-unofficial-GUI"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-Official example
-\end_layout
-
-\begin_layout Standard
-Secondly, the official example program was tested, as seen in figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:The-official-GUI"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
- While less visual, all the buttons are detected, including the right trigger.
- Despite being clearly advertised, the rumble did not work.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename sdl2gdx-official.png
-	width 100col%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-The official GUI example
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:The-official-GUI"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-SDL4J
-\begin_inset CommandInset label
-LatexCommand label
-name "subsec:SDL4J"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-This uses a windows DLL of SDL, however it may be possible to adapt it to
- use the Linux binary.
- This library uses JNA
-\begin_inset CommandInset citation
-LatexCommand citep
-key "glossonGaming32SDL4J2021"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsection
-SDLJ
-\end_layout
-
-\begin_layout Standard
-This has minimal information, but is relatively up to date
-\begin_inset CommandInset citation
-LatexCommand citep
-key "lewisMattjlewisSdlj2021"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsection
-Sdljava
-\end_layout
-
-\begin_layout Standard
-This is also a potential choice.
- Along with the porting of SDL, it has OpenGL specific bindings
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Ganza2005"
-literal "false"
-
-\end_inset
-
-.
- Being a binding to SDL 1.2
-\begin_inset CommandInset citation
-LatexCommand citep
-key "rojekSdljava2014"
-literal "false"
-
-\end_inset
-
-, it may prove to be a challenge getting this library to behave as expected
- as SDL 2 has major API changes
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Libsdl2021"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsection
-Sdljoystick4java
-\end_layout
-
-\begin_layout Standard
-This is another JNI SDL binding, it seems to be relatively up to date but
- focus on basic functions
-\begin_inset CommandInset citation
-LatexCommand citep
-key "pavelSdljoystick4java2021"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsection
-YAJSDL
-\end_layout
-
-\begin_layout Standard
-This is a JNA based java SDL binding.
- While the language is not a reason to discount the repository, the year
- may be
-\begin_inset CommandInset citation
-LatexCommand citep
-key "rihineNoqisofonYajsdl2012"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Section
-JS
-\end_layout
-
-\begin_layout Subsection
-DS-examples
-\end_layout
-
-\begin_layout Standard
-As the name suggests, this is a set of examples; this could be useful if
- I end up using JS
-\begin_inset CommandInset citation
-LatexCommand citep
-key "steinherzDsexamples2021"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsection
-DualShock library
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:JS:-Dualshock-library"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-This node.js library may in fact have the most extensive set of capabilities
- out of any of the choices here
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Pecacheu2021"
-literal "false"
-
-\end_inset
-
-.
- The original branch of code does not work, however there are three other
- branches
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Pecacheu2021"
-literal "false"
-
-\end_inset
-
-.
- With so many forked versions available, it could be assumed that at least
- one of them may fix the issue or offer guidance as to what needs doing.
- The branch by wonderunit had a large number of revert commits that could
- be avoided by having an earlier base commit, so the first necessary action
- was to create a localised version with that corrective action taken; removing
- unnecessary commits aids in analysis of source code changes as it cleans
- up the data that will be analysed.
-\end_layout
-
-\begin_layout Subsection
-DualSense
-\end_layout
-
-\begin_layout Standard
-This claims to just collect information, however from what can be seen,
- it is likely that it can be used as an input library
-\begin_inset CommandInset citation
-LatexCommand citep
-key "reynoldsSonyDualSenseWireless2020"
-literal "false"
-
-\end_inset
-
-.
- Unfortunately this did not seem to work, it may be that this is designed
- to interface with the windows driver.
-\end_layout
-
-\begin_layout Subsection
-Node-DualSense
-\begin_inset CommandInset label
-LatexCommand label
-name "subsec:Node-dualsense"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-This is based on pydualsense (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "subsec:Pydualsense"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-), it is able to read input and set LED status, powered by NodeJS
-\begin_inset CommandInset citation
-LatexCommand citep
-key "camilleNodedualsense2022"
-literal "false"
-
-\end_inset
-
-.
- As seen in figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:A-successful-basic"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, this library is definitely capable, unfortunately it does not read 6axis
- data.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename dualsense-js.png
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-A successful basic reading of DS5 input states
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:A-successful-basic"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Python
-\end_layout
-
-\begin_layout Subsection
-Pydualsense
-\begin_inset CommandInset label
-LatexCommand label
-name "subsec:Pydualsense"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-This relies on an external library called HIDAPI.
- It seems to allow configuration of the trigger pressure
-\begin_inset CommandInset citation
-LatexCommand citep
-key "kPydualsense2021"
-literal "false"
-
-\end_inset
-
-.
- Testing with a library based on this (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "subsec:Node-dualsense"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) shows that it may be a capable base.
- The code does not appear to be ready for 6xis capabilities.
-\end_layout
-
-\begin_layout Subsection
-SC controller
-\end_layout
-
-\begin_layout Standard
-This is designed primarily as a driver, however due to its user mode nature,
- it should be easy to adapt into a library
-\begin_inset CommandInset citation
-LatexCommand citep
-key "kozecSCController2021"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Section
-Additional features
-\end_layout
-
-\begin_layout Subsection
-Ds4-lightbar
-\end_layout
-
-\begin_layout Standard
-This allows access to the gamepad light-bar.
- This is done by leveraging DualShock library(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:JS:-Dualshock-library"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-)
-\begin_inset CommandInset citation
-LatexCommand citep
-key "cotaDs4lightbar2021"
-literal "false"
-
-\end_inset
-
-.
- This could be used to display the current selected colour.
-\end_layout
-
-\begin_layout Subsection
-Dsbattery
-\end_layout
-
-\begin_layout Standard
-This library provides access to the battery level, and the ability to disconnect
- the controller
-\begin_inset CommandInset citation
-LatexCommand citep
-key "tomsonsDsbattery2021"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Chapter
-Hardware experience
-\end_layout
-
-\begin_layout Section
-Connection
-\end_layout
-
-\begin_layout Subsection
-DS4
-\end_layout
-
-\begin_layout Standard
-This could not connect to my PC via USB, however it could do so via Bluetooth
- with little issue.
- As noted in appendix 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "chap:DS4-user-discussion"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, it would appear that there is some kind of technical difference with the
- official USB adaptor that facilitates a connection, however I struggled
- to find a definitive source.
- Thankfully, the gamepad has the least latency when used wirelessly, so
- this is not a major issue.
-\end_layout
-
-\begin_layout Subsection
-DS5
-\end_layout
-
-\begin_layout Standard
-This could connect very easily to my PC via USB, it seems capable of using
- all functionality successfully.
-\end_layout
-
-\begin_layout Subsection
-XB1S gamepad
-\end_layout
-
-\begin_layout Standard
-This gamepad can connect via USB very easily.
- I did not test wireless connectivity as it was out of scope.
-\end_layout
-
-\begin_layout Section
-Recharging
-\end_layout
-
-\begin_layout Subsection
-DS4
-\begin_inset CommandInset label
-LatexCommand label
-name "subsec:DS4-recharge"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-This was unable to charge, it is suspected this could be related to appendix
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "chap:DS4-user-discussion"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsection
-DS5
-\end_layout
-
-\begin_layout Standard
-This was able to recharge easily using a USB C connector, this is the ideal
- solution.
-\end_layout
-
-\begin_layout Subsection
-XB1S gamepad
-\end_layout
-
-\begin_layout Standard
-This can recharge using any micro USB connector.
- The model I own is old and appears to struggle operating with solely the
- internal battery, so battery degradation may be a key issue with this hardware.
-\end_layout
-
-\begin_layout Section
-Usage
-\end_layout
-
-\begin_layout Subsection
-DS4
-\end_layout
-
-\begin_layout Standard
-I am new to the DS4, so there is a necessity to become familiar with it.
-\end_layout
-
-\begin_layout Subsubsection
-Basic functionality
-\end_layout
-
-\begin_layout Standard
-To become used to the gamepad in general, I played the game ``among us
-\begin_inset Quotes erd
-\end_inset
-
-, which has a native DS4 control scheme.
- The control scheme was not optimal, as it required a trackpad click to
- enter text, which proved to impact the overall performance.
- I had to switch between gamepad and keyboard which was a generally bothersome
- experience which would not occur with the keyboard attachment.
-\end_layout
-
-\begin_layout Subsubsection
-6axis functionality
-\end_layout
-
-\begin_layout Standard
-At first I could not think of a way to properly test this experience.
- After a while, an idea came to incorporate it into as a custom control
- scheme into the game ``Sid Meier's civilization 6
-\begin_inset Quotes erd
-\end_inset
-
-.
- At first there was issues due to intense drift to the right of the display,
- however after calibrating the gamepad
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Faux2018"
-literal "false"
-
-\end_inset
-
- this disappears; there may be a need to implement a calibration feature,
- unless the calibration saves between software.
-\end_layout
-
-\begin_layout Subsection
-XB1S gamepad
-\end_layout
-
-\begin_layout Standard
-I have an extensive amount of experience using this gamepad.
- It has no notable features outside of localised force feedback for the
- triggers, which can at times add to the immersive experience, however the
- goal is not immersion.
-\end_layout
-
-\begin_layout Chapter
 Development tools
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 GitHub
 \end_layout
 
@@ -3762,7 +3782,7 @@ GitHub is used to store the project code.
  were no notable advantageous features for doing so.
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Intellij idea
 \end_layout
 
@@ -3776,11 +3796,11 @@ Intellij idea is used to aid in development of the code, it is capable of
 
 \end_layout
 
-\begin_layout Chapter
+\begin_layout Section
 The development journey
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Choosing the hardware library
 \end_layout
 
@@ -3829,7 +3849,7 @@ As a compiled language, C++ is the most performant choice of language, part
  
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Adapting LibJSDL
 \end_layout
 
@@ -3857,7 +3877,7 @@ literal "false"
  them would surely be an excellent way to test.
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Using LibJSDL
 \end_layout
 
@@ -3906,7 +3926,7 @@ literal "false"
  something similar.
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Yuzu inspired implementation
 \end_layout
 
@@ -3937,7 +3957,7 @@ literal "false"
  a more object orientated approach.
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 SDL4J improvements
 \end_layout
 
@@ -3977,7 +3997,7 @@ literal "false"
  code comments.
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Continued SDL development
 \end_layout
 
@@ -4025,7 +4045,7 @@ literal "false"
  and low latency.
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Introducing: the processing library
 \end_layout
 
@@ -4045,7 +4065,7 @@ During integration it was discovered that a good processing template existed
  anymore.
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 The circle test
 \end_layout
 
@@ -4114,7 +4134,7 @@ name "fig:A-prototype-of"
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Environmental hazard
 \end_layout
 
@@ -4150,7 +4170,7 @@ literal "false"
  there is now an environmental concern due to waste plastics.
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Application of further guidance
 \end_layout
 
