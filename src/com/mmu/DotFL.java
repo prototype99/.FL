@@ -156,7 +156,7 @@ public class DotFL extends PApplet {
             //error factor /= circleSize
             if (circleSize > 24) {
                 p = new PVector[0];
-                System.out.println(ceil(20 - errorFactor));
+                System.out.println(errorFactor);
             }
         }
     }
