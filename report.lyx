@@ -1723,10 +1723,6 @@ literal "false"
  for the DS5 could be comparable to an actual keyboard.
 \end_layout
 
-\begin_layout Chapter
-Planning
-\end_layout
-
 \begin_layout Section
 Aim
 \end_layout
@@ -1823,26 +1819,6 @@ DS5 chatpad (for testing alternative to full size keyboard)
 \begin_layout Itemize
 It may prove beneficial to acquisition artistic software that has an attached
  monetary cost for research purposes
-\end_layout
-
-\begin_layout Section
-Schedule
-\end_layout
-
-\begin_layout Subsection
-Library research
-\end_layout
-
-\begin_layout Subsection
-Library testing
-\end_layout
-
-\begin_layout Subsection
-DS4 prototype
-\end_layout
-
-\begin_layout Subsection
-DS5 modern implementation
 \end_layout
 
 \begin_layout Section
