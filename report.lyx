@@ -330,7 +330,7 @@ Abbreviations
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="41" columns="2">
+<lyxtabular version="3" rows="42" columns="2">
 <features islongtable="true" longtabularalignment="center">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top" width="0pt">
@@ -1049,6 +1049,26 @@ VR
 
 \begin_layout Plain Layout
 Virtual Reality
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+WD2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Karcher WD2 vacuum cleaner
 \end_layout
 
 \end_inset
@@ -4113,13 +4133,45 @@ name "fig:A-prototype-of"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+Environmental hazard
+\end_layout
+
+\begin_layout Standard
+Unfortunately development was stalled due to seasons changing, leading to
+ wasps invading the workplace; this created unproductive working conditions
+ which could become unsafe over time.
+ It was not possible to use a barrier such as a closed window to prevent
+ entry of wasps, due to the fact the workplace had no vents and regardless
+ needed an open window for temperature control as it is over-insulated and
+ can quickly accumulate heat otherwise.
+ Whilst field research showed that a WD2 was capable of neutralising a small
+ localised population of wasps (albeit with some ethical ramifications),
+ it would be unable to handle larger populations inhabiting the workplace,
+ especially as they were able enter spaces such as the interior of flush
+ fitted light fittings or water heaters, which a WD2 would not be able to
+ effectively or safely uninhabit.
+ This issue was solved through the acquisition of a glade solid gel scent
+ diffuser, cheaper brands were considered, however user testimonials seemed
+ to suggest they may not be as effective and the merchant's price of ₤1
+ for the glade version was deemed to be within allowance.
+ The scent diffuser was effective due to its inclusion of lavender oil,
+ which wasps (such as paper wasps) are strongly repelled by
+\begin_inset CommandInset citation
+LatexCommand citet
+key "zhangEssentialOilsTheir2013"
+literal "false"
+
+\end_inset
+
+.
+ It is worth noting that whilst the ethical concern has been alleviated,
+ there is now an environmental concern due to waste plastics.
 \end_layout
 
 \begin_layout Section
