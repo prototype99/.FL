@@ -1310,7 +1310,7 @@ literal "false"
  exploring a true three dimensional space.
  It can be expected that VR will become more common as increased demand
  leads to the development of cheaper, more affordable, viable solutions.
- One solution is the Oculus quest 2 at a cost of £299
+ One solution is the Oculus quest 2 at a cost of ₤299
 \begin_inset CommandInset citation
 LatexCommand citep
 key "currysBuyOCULUSQuest2021"
@@ -1329,7 +1329,7 @@ literal "false"
 
 Gamepads could prove to be the perfect stepping stone to future VR experiences
  due to their lower cost; the DS5, one of the most advanced currently, costs
- £59.99
+ ₤59.99
 \begin_inset CommandInset citation
 LatexCommand citep
 key "currysBuyPLAYSTATIONPS52021"
