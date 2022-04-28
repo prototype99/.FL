@@ -131,6 +131,7 @@ public class DotFL extends PApplet {
             circle(circleX, circleY, circleSize * 2);
             stroke(255);
         }
+        //update stored value
         numSticksOld = numSticksNew;
     }
 
