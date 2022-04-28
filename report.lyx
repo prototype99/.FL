@@ -4050,6 +4050,79 @@ During integration it was discovered that a good processing template existed
 \end_layout
 
 \begin_layout Section
+The circle test
+\end_layout
+
+\begin_layout Standard
+The first step is to implement a circle test, seeing as it most closely
+ emulates the intended functionality.
+ As a starting point, an existing open source circle test that was written
+ in JS was adapted to java.
+ Various aspects of the code were simplified as there was originally a somewhat
+ strong focus on an overuse of variable initialisation and code that exists
+ purely for aesthetic reasons.
+ As JS is weakly typed, at various points the correct type had to be estimated
+ in order to produce usable code.
+ This adapted code would rate drawn circles roughly out of 20.
+ The functionality of this early version can be seen in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:A-prototype-of"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename circletest.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A prototype of the circle drawing test
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:A-prototype-of"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Application of further guidance
 \end_layout
 
@@ -4062,9 +4135,20 @@ After a meeting some changes were made.
  After talks over the code it was evident that there was a lot of excess
  complexity to the code which was removed.
  After some discussion it was decided to implement two tests: a circle drawing
- test and a randomised target test.
+ test and a randomised target test, akin to that undertaken in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Nerrel2020"
+literal "false"
+
+\end_inset
+
+.
  The goal of the aforementioned tests is to generate quantitative data that
  could be used later.
+ doubt has begun when it comes to whether .FL will exist as a full usable
+ application, it may be limited to just a set of tests or a basic single
+ colour drawing function.
 \end_layout
 
 \begin_layout Chapter
