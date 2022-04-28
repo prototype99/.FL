@@ -152,6 +152,7 @@ public class DotFL extends PApplet {
                 errorFactor += abs(dist(v.x, v.y, circleX, circleY) - circleSize);
             }
             errorFactor /= p.length;
+            //get clarification and stop being forgetful!
             //error factor /= circleSize
             if (circleSize > 24) {
                 p = new PVector[0];
