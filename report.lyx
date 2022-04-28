@@ -4049,6 +4049,24 @@ During integration it was discovered that a good processing template existed
  anymore.
 \end_layout
 
+\begin_layout Section
+Further guidance
+\end_layout
+
+\begin_layout Standard
+After a meeting some changes were made.
+ The first change was to start calling 'mistakes' the 'error factor' as
+ it was deemed to be less ambiguous.
+ The next change was to use floating point at various points, in order to
+ increase calculation accuracy.
+ After talks over the code it was evident that there was a lot of excess
+ complexity to the code which was removed.
+ After some discussion it was decided to implement two tests: a circle drawing
+ test and a randomised target test.
+ The goal of the aforementioned tests is to generate quantitative data that
+ could be used later.
+\end_layout
+
 \begin_layout Chapter
 Evaluation
 \end_layout
