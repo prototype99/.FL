@@ -22,6 +22,7 @@ import static org.libsdl.api.joystick.SdlJoystick.SDL_NumJoysticks;
 import static org.libsdl.api.sensor.SDL_SensorType.SDL_SENSOR_GYRO;
 
 public class DotFL extends PApplet {
+    boolean circleTest = true;
     float circleSize, circleX, circleY;
     PVector[] p = new PVector[0];
     int numSticksNew;
@@ -101,39 +102,41 @@ public class DotFL extends PApplet {
                 SDL_GameControllerClose(DS5);
             }
         }
-        if (mousePressed) {
-            if (p.length > 0) {
-                PVector ps = p[p.length - 1];
-                float angle = atan2(ps.y - mouseY, ps.x - mouseX);
-                float dis = dist(mouseX, mouseY, ps.x, ps.y);
-                while (dis > 5) {
-                    p = (PVector[]) append(p, new PVector(ps.x - 5 * cos(angle), ps.y - 5 * sin(angle)));
-                    ps = p[p.length - 1];
-                    angle = atan2(ps.y - mouseY, ps.x - mouseX);
-                    dis = dist(mouseX, mouseY, ps.x, ps.y);
+        if (circleTest) {
+            if (mousePressed) {
+                if (p.length > 0) {
+                    PVector ps = p[p.length - 1];
+                    float angle = atan2(ps.y - mouseY, ps.x - mouseX);
+                    float dis = dist(mouseX, mouseY, ps.x, ps.y);
+                    while (dis > 5) {
+                        p = (PVector[]) append(p, new PVector(ps.x - 5 * cos(angle), ps.y - 5 * sin(angle)));
+                        ps = p[p.length - 1];
+                        angle = atan2(ps.y - mouseY, ps.x - mouseX);
+                        dis = dist(mouseX, mouseY, ps.x, ps.y);
+                    }
+                } else {
+                    p = (PVector[]) append(p, new PVector(mouseX, mouseY));
                 }
-            } else {
-                p = (PVector[]) append(p, new PVector(mouseX, mouseY));
             }
-        }
-        //do all the actual drawing
-        strokeWeight(10);
-        for (int i = 0; i < p.length; i++) {
-            PVector prev = p[i];
-            if (i - 1 >= 0) {
-                prev = p[i - 1];
+            //do all the actual drawing
+            strokeWeight(10);
+            for (int i = 0; i < p.length; i++) {
+                PVector prev = p[i];
+                if (i - 1 >= 0) {
+                    prev = p[i - 1];
+                }
+                line(p[i].x, p[i].y, prev.x, prev.y);
             }
-            line(p[i].x, p[i].y, prev.x, prev.y);
+            stroke(128);
+            circle(circleX, circleY, circleSize * 2);
+            stroke(255);
         }
-        stroke(128);
-        circle(circleX, circleY, circleSize * 2);
-        stroke(255);
         numSticksOld = numSticksNew;
     }
 
     @Override
     public void mouseReleased() {
-        if (p.length > 10) {
+        if (p.length > 10 && circleTest) {
             circleX = 0;
             circleY = 0;
             for (PVector v : p) {
@@ -155,8 +158,9 @@ public class DotFL extends PApplet {
             //get clarification and stop being forgetful!
             //error factor /= circleSize
             if (circleSize > 24) {
-                p = new PVector[0];
                 System.out.println(errorFactor);
+                circleTest = false;
+                background(0);
             }
         }
     }
