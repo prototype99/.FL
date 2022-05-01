@@ -155,10 +155,8 @@ public class DotFL extends PApplet {
             for (PVector v : p) {
                 errorFactor += abs(dist(v.x, v.y, circleX, circleY) - circleSize);
             }
-            errorFactor /= p.length;
-            //error factor /= circleSize
-            //working out mean absolute difference
-            //normalising to radius so it scales to size
+            //work out mean absolute difference and normalise to radius so it scales to size
+            errorFactor = (errorFactor / p.length) / circleSize;
             if (circleSize > 24) {
                 System.out.println(errorFactor);
                 circleTest = false;
