@@ -22,8 +22,8 @@ import static org.libsdl.api.joystick.SdlJoystick.SDL_NumJoysticks;
 import static org.libsdl.api.sensor.SDL_SensorType.SDL_SENSOR_GYRO;
 
 public class DotFL extends PApplet {
-    boolean circleTest = true;
-    float circleRad, circleX, circleY;
+    boolean circTest = true;
+    float circRad, circX, circY;
     PVector[] p = new PVector[0];
     int numSticksNew;
     int numSticksOld = 1;
@@ -102,7 +102,7 @@ public class DotFL extends PApplet {
                 SDL_GameControllerClose(DS5);
             }
         }
-        if (circleTest) {
+        if (circTest) {
             if (mousePressed) {
                 if (p.length > 0) {
                     PVector ps = p[p.length - 1];
@@ -128,7 +128,7 @@ public class DotFL extends PApplet {
                 line(p[i].x, p[i].y, prev.x, prev.y);
             }
             stroke(128);
-            circle(circleX, circleY, circleRad * 2);
+            circle(circX, circY, circRad * 2);
             stroke(255);
         }
         //update stored value
@@ -137,29 +137,29 @@ public class DotFL extends PApplet {
 
     @Override
     public void mouseReleased() {
-        if (p.length > 10 && circleTest) {
-            circleX = 0;
-            circleY = 0;
+        if (p.length > 10 && circTest) {
+            circX = 0;
+            circY = 0;
             for (PVector v : p) {
-                circleX += v.x;
-                circleY += v.y;
+                circX += v.x;
+                circY += v.y;
             }
-            circleX /= p.length;
-            circleY /= p.length;
-            circleRad = 0;
+            circX /= p.length;
+            circY /= p.length;
+            circRad = 0;
             for (PVector v : p) {
-                circleRad += dist(v.x, v.y, circleX, circleY);
+                circRad += dist(v.x, v.y, circX, circY);
             }
-            circleRad /= p.length;
+            circRad /= p.length;
             float errorFactor = 0;
             for (PVector v : p) {
-                errorFactor += abs(dist(v.x, v.y, circleX, circleY) - circleRad);
+                errorFactor += abs(dist(v.x, v.y, circX, circY) - circRad);
             }
             //work out mean absolute difference and normalise to radius so it scales to size
-            errorFactor = (errorFactor / p.length) / circleRad;
-            if (circleRad > 24) {
+            errorFactor = (errorFactor / p.length) / circRad;
+            if (circRad > 24) {
                 System.out.println(errorFactor);
-                circleTest = false;
+                circTest = false;
                 background(0);
             }
         }
