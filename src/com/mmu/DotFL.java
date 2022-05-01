@@ -156,7 +156,9 @@ public class DotFL extends PApplet {
                 errorFactor += abs(dist(v.x, v.y, circX, circY) - circRad);
             }
             //work out mean absolute difference and normalise to radius so it scales to size
+            //a higher error factor equates to more errors
             errorFactor = (errorFactor / p.length) / circRad;
+            //ensure circle has enough data points for accurate analysis
             if (circRad > 24) {
                 System.out.println(errorFactor);
                 circTest = false;
