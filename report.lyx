@@ -3686,6 +3686,25 @@ Design
 \end_layout
 
 \begin_layout Section
+6axis considerations
+\end_layout
+
+\begin_layout Standard
+"Humans can move our hands less when we're moving them downwards, and more
+ when we move it upwards" according to Tsubasa Sakaguchi
+\begin_inset CommandInset citation
+LatexCommand citep
+key "robinsonNintendoBrightFuture2015a"
+literal "false"
+
+\end_inset
+
+.
+ As a result, it can be assumed that such a consideration should perhaps
+ be implemented if possible.
+\end_layout
+
+\begin_layout Section
 Concept
 \end_layout
 
