@@ -23,7 +23,7 @@ import static org.libsdl.api.sensor.SDL_SensorType.SDL_SENSOR_GYRO;
 
 public class DotFL extends PApplet {
     boolean circleTest = true;
-    float circleSize, circleX, circleY;
+    float circleRad, circleX, circleY;
     PVector[] p = new PVector[0];
     int numSticksNew;
     int numSticksOld = 1;
@@ -128,7 +128,7 @@ public class DotFL extends PApplet {
                 line(p[i].x, p[i].y, prev.x, prev.y);
             }
             stroke(128);
-            circle(circleX, circleY, circleSize * 2);
+            circle(circleX, circleY, circleRad * 2);
             stroke(255);
         }
         //update stored value
@@ -146,18 +146,18 @@ public class DotFL extends PApplet {
             }
             circleX /= p.length;
             circleY /= p.length;
-            circleSize = 0;
+            circleRad = 0;
             for (PVector v : p) {
-                circleSize += dist(v.x, v.y, circleX, circleY);
+                circleRad += dist(v.x, v.y, circleX, circleY);
             }
-            circleSize /= p.length;
+            circleRad /= p.length;
             float errorFactor = 0;
             for (PVector v : p) {
-                errorFactor += abs(dist(v.x, v.y, circleX, circleY) - circleSize);
+                errorFactor += abs(dist(v.x, v.y, circleX, circleY) - circleRad);
             }
             //work out mean absolute difference and normalise to radius so it scales to size
-            errorFactor = (errorFactor / p.length) / circleSize;
-            if (circleSize > 24) {
+            errorFactor = (errorFactor / p.length) / circleRad;
+            if (circleRad > 24) {
                 System.out.println(errorFactor);
                 circleTest = false;
                 background(0);
