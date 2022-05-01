@@ -22,7 +22,7 @@ import static org.libsdl.api.joystick.SdlJoystick.SDL_NumJoysticks;
 import static org.libsdl.api.sensor.SDL_SensorType.SDL_SENSOR_GYRO;
 
 public class DotFL extends PApplet {
-    boolean circTest = true;
+    boolean circTest = true, targetTest = false;
     float circRad, circX, circY;
     PVector[] p = new PVector[0];
     int numSticksNew;
@@ -130,6 +130,8 @@ public class DotFL extends PApplet {
             stroke(128);
             circle(circX, circY, circRad * 2);
             stroke(255);
+        } else if (targetTest) {
+            System.out.println("target test activated");
         }
         //update stored value
         numSticksOld = numSticksNew;
@@ -162,6 +164,7 @@ public class DotFL extends PApplet {
             if (circRad > 24) {
                 System.out.println(errorFactor);
                 circTest = false;
+                targetTest = true;
                 background(0);
             }
         }
