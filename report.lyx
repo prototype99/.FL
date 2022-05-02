@@ -4216,6 +4216,30 @@ literal "false"
  doubt has begun when it comes to whether .FL will exist as a full usable
  application, it may be limited to just a set of tests or a basic single
  colour drawing function.
+ The error factor is now divided by the radius to make the data normalised
+ independent to circle size.
+\end_layout
+
+\begin_layout Subsection
+The target test
+\end_layout
+
+\begin_layout Standard
+This is the second test that exists to collect quantitative data.
+ This could be thought of as similar to interacting with dialog windows
+ in the GUI of a PC, or jumping to specific positions in a word processor
+ document.
+ To make the data comparable, the test will be quite similar to that seen
+ in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Nerrel2020"
+literal "false"
+
+\end_inset
+
+, however it will not be exactly the same, as the code for the original
+ test is not accessible.
 \end_layout
 
 \begin_layout Chapter
