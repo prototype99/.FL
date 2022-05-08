@@ -330,7 +330,7 @@ Abbreviations
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="43" columns="2">
+<lyxtabular version="3" rows="46" columns="2">
 <features islongtable="true" longtabularalignment="center">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top" width="0pt">
@@ -799,6 +799,46 @@ Java Virtual Machine
 \begin_inset Text
 
 \begin_layout Plain Layout
+Keyboard
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Computer keyboard
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Laptop
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Laptop PC
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 LIDAR
 \end_layout
 
@@ -809,6 +849,26 @@ LIDAR
 
 \begin_layout Plain Layout
 Laser Imaging, Detection, And Ranging
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mouse
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Computer mouse
 \end_layout
 
 \end_inset
@@ -3222,19 +3282,114 @@ literal "false"
 \end_layout
 
 \begin_layout Section
-Project background
+Input devices
 \end_layout
 
 \begin_layout Standard
-\begin_inset Quotes eld
+note: in progress.
+ basically converting project background into properly sectioned research
+\end_layout
+
+\begin_layout Subsection
+DS4
+\end_layout
+
+\begin_layout Subsection
+DS5
+\end_layout
+
+\begin_layout Section
+Input methods
+\end_layout
+
+\begin_layout Subsection
+Keyboard
+\end_layout
+
+\begin_layout Standard
+The keyboard has often been a limiting factor to the miniaturisation, leading
+ to popular form-factors such as laptops.
+ The first laptop, as seen in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-grid-compass"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
-A mouse has been one of the most successful user interfaces due to its intuitive
- use
-\begin_inset Quotes erd
+, is near indistinguishable to any modern laptop, the differences being
+ attributable to advances in miniaturisation and thermal efficiency.
+ For the foreseeable future the keyboard remains a necessary addition to
+ any all-purpose PC installation; Despite how the keyboard impacts portability,
+ alternatives fail to gain sizeable adoption.
+ It is possible to fully operate a PC with just a keyboard, however users
+ will often pair one with a high resolution pointing device.
+ When a keyboard is not required, devices can be much smaller, as seen with
+ smartphones or tablet PCs.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename grid-compass-laptop.jpg
+	display false
+	width 100text%
+
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A grid compass
+\begin_inset CommandInset citation
+LatexCommand citep
+key "anonymousTechnology2016"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-grid-compass"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Mouse
+\end_layout
+
+\begin_layout Standard
+The mouse has enjoyed success due to its intuitive design
 \begin_inset CommandInset citation
 LatexCommand citep
 key "yunTurningMobileDevice2015"
@@ -3243,17 +3398,7 @@ literal "false"
 \end_inset
 
 .
- This, paired with the keyboard, has stuck with personal computers as they
- have continuously miniaturised and evolved over time with disproportionately
- little to no changes despite the new, 
-\begin_inset Quotes eld
-\end_inset
-
-rich options for users to choose from
-\begin_inset Quotes erd
-\end_inset
-
-
+ Despite a wide array of options
 \begin_inset CommandInset citation
 LatexCommand citep
 key "yunTurningMobileDevice2015"
@@ -3261,7 +3406,8 @@ literal "false"
 
 \end_inset
 
- that have emerged.
+, the mouse has been a longstanding companion to the PC, often thought of
+ as being symbolically tied to them, although this is becoming less common.
  This interface 
 \begin_inset Quotes eld
 \end_inset
@@ -3278,11 +3424,30 @@ literal "false"
 
 \end_inset
 
- which is typically flat, and semi-dedicated which creates a rigid, fixed
- workspace layout that consumes a large amount of space compared to the
- other equipment.
- The limited set of motions seen in such a setup is well known to cause
- repetitive strain injury.
+ which is typically flat, and semi-dedicated, which creates a rigid, fixed
+ workspace layout that consumes a large amount of space compared to other
+ options.
+\end_layout
+
+\begin_layout Subsection
+XR
+\end_layout
+
+\begin_layout Subsubsection
+AR
+\end_layout
+
+\begin_layout Subsubsection
+VR
+\end_layout
+
+\begin_layout Section
+Project background
+\end_layout
+
+\begin_layout Standard
+(mouse) The limited set of motions seen in such a setup is well known to
+ cause repetitive strain injury.
  The goal of this project is not to solve repetitive strain, however it
  is expected that the final deliverable may assist with such an issue.
  I feel that users could benefit from a compact, portable alternative that
