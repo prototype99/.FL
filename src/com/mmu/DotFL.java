@@ -126,21 +126,20 @@ public class DotFL extends PApplet {
                     p = (PVector[]) append(p, new PVector(mouseX, mouseY));
                 }
             }
-        } else {
-            if (circTest) {
-                //do all the actual drawing
-                strokeWeight(10);
-                for (int i = 0; i < p.length; i++) {
-                    PVector prev = p[i];
-                    if (i - 1 >= 0) {
-                        prev = p[i - 1];
-                    }
-                    line(p[i].x, p[i].y, prev.x, prev.y);
+        }
+        if (circTest) {
+            //do all the actual drawing
+            strokeWeight(10);
+            for (int i = 0; i < p.length; i++) {
+                PVector prev = p[i];
+                if (i - 1 >= 0) {
+                    prev = p[i - 1];
                 }
-                stroke(128);
-                circle(circX, circY, circRad * 2);
-                stroke(255);
+                line(p[i].x, p[i].y, prev.x, prev.y);
             }
+            stroke(128);
+            circle(circX, circY, circRad * 2);
+            stroke(255);
         }
         //update stored value
         numSticksOld = numSticksNew;
