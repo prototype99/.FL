@@ -4538,7 +4538,73 @@ Logically, it can be inferred that 1MM is equal to 6.3, therefore to achieve
  key issue: the user must be able to interact with the targets.
  The issue of interaction can be solved through the implementation of a
  'target' object, such an object would be able to persist between loops
- and cease to exist upon a successful hit.
+ and cease to exist upon a successful hit, however after more thought, it
+ it is clear it would be perfectly possible to forego that and achieve more
+ performant code.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:A-more-refined"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ illustrates the improved target layout.
+ rather than drawing the circles every loop, the circles are drawn once
+ then replaced with background coloured circles upon a detected hit, this
+ is the most efficient way to operate, as processing uses a canvas model,
+ resulting in just two drawing operations per circle as opposed to 3 per
+ loop.
+ In addition, the if statements have been optimised to check for mouse clicks
+ then whether or not the target test mode is turned on, in order to try
+ and ensure least possible latency.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename target-test-better.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A more refined spread of targets
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:A-more-refined"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter

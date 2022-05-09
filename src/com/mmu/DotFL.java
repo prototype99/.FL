@@ -24,6 +24,7 @@ import static org.libsdl.api.sensor.SDL_SensorType.SDL_SENSOR_GYRO;
 public class DotFL extends PApplet {
     boolean circTest = true, targetTest = false;
     float circRad, circX, circY;
+    float[] sizes;
     PVector[] p = new PVector[0];
     int numSticksNew, numSticksOld = 1;
     //strings are predeclared to allow some cool math later. ye, i could probably use an enum but i've never liked them. also, less rewriting memory
@@ -130,7 +131,6 @@ public class DotFL extends PApplet {
             circle(circX, circY, circRad * 2);
             stroke(255);
         } else if (targetTest) {
-            circle(random(width),random(height),random(120.3F));
         }
         //update stored value
         numSticksOld = numSticksNew;
@@ -164,9 +164,16 @@ public class DotFL extends PApplet {
                 System.out.println(errorFactor);
                 circTest = false;
                 targetTest = true;
+                p = new PVector[3];
+                sizes = new float[3];
                 background(190);
                 noStroke();
                 fill(255,0,0);
+                for (int i = 0; i < 3; i++) {
+                    p[i] = new PVector(random(width),random(height));
+                    sizes[i] = random(120.3F);
+                    circle(p[i].x,p[i].y,sizes[i]);
+                }
             }
         }
     }
