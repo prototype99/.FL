@@ -330,7 +330,7 @@ Abbreviations
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="46" columns="2">
+<lyxtabular version="3" rows="47" columns="2">
 <features islongtable="true" longtabularalignment="center">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top" width="0pt">
@@ -489,6 +489,26 @@ DotFL
 
 \begin_layout Plain Layout
 Dance Of The Flowing Lines
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DPI
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dots Per Inch
 \end_layout
 
 \end_inset
@@ -4447,6 +4467,9 @@ literal "false"
 d background until there are 3 circles on screen, the user must click within
  the circle radius to register a successful 'hit'; the test differs by using
  2d and not placing targets on a grid.
+ Compensating for DPI was considered, however there is no standardised way
+ to retrieve such a number, therefore such considerations may be best reserved
+ for if a more in depth user study is needed at a later date.
 \end_layout
 
 \begin_layout Chapter
