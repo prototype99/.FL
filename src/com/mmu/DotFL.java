@@ -102,8 +102,9 @@ public class DotFL extends PApplet {
                 SDL_GameControllerClose(DS5);
             }
         }
-        if (circTest) {
-            if (mousePressed) {
+        if (mousePressed) {
+            if (targetTest) {
+            } else if (circTest) {
                 if (p.length > 0) {
                     PVector ps = p[p.length - 1];
                     float angle = atan2(ps.y - mouseY, ps.x - mouseX);
@@ -118,19 +119,21 @@ public class DotFL extends PApplet {
                     p = (PVector[]) append(p, new PVector(mouseX, mouseY));
                 }
             }
-            //do all the actual drawing
-            strokeWeight(10);
-            for (int i = 0; i < p.length; i++) {
-                PVector prev = p[i];
-                if (i - 1 >= 0) {
-                    prev = p[i - 1];
+        } else {
+            if (circTest) {
+                //do all the actual drawing
+                strokeWeight(10);
+                for (int i = 0; i < p.length; i++) {
+                    PVector prev = p[i];
+                    if (i - 1 >= 0) {
+                        prev = p[i - 1];
+                    }
+                    line(p[i].x, p[i].y, prev.x, prev.y);
                 }
-                line(p[i].x, p[i].y, prev.x, prev.y);
+                stroke(128);
+                circle(circX, circY, circRad * 2);
+                stroke(255);
             }
-            stroke(128);
-            circle(circX, circY, circRad * 2);
-            stroke(255);
-        } else if (targetTest) {
         }
         //update stored value
         numSticksOld = numSticksNew;
