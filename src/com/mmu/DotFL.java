@@ -165,7 +165,9 @@ public class DotFL extends PApplet {
                 System.out.println(errorFactor);
                 circTest = false;
                 targetTest = true;
-                background(0);
+                background(190);
+                noStroke();
+                fill(255,0,0);
             }
         }
     }
