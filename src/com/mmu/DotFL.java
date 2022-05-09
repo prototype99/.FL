@@ -25,8 +25,7 @@ public class DotFL extends PApplet {
     boolean circTest = true, targetTest = false;
     float circRad, circX, circY;
     PVector[] p = new PVector[0];
-    int numSticksNew;
-    int numSticksOld = 1;
+    int numSticksNew, numSticksOld = 1;
     //strings are predeclared to allow some cool math later. ye, i could probably use an enum but i've never liked them. also, less rewriting memory
     String[] msgsChange = new String[3];
 
