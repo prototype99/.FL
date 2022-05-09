@@ -4470,6 +4470,70 @@ d background until there are 3 circles on screen, the user must click within
  Compensating for DPI was considered, however there is no standardised way
  to retrieve such a number, therefore such considerations may be best reserved
  for if a more in depth user study is needed at a later date.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+The first instinct was to choose a randomised size up to 19, however as
+ seen in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:An-early-prototype"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ even the largest targets were proportionately quite small.
+ Based on what is approximately one of the largest targets, it would appear
+ that size 19 could approximately be 3MM.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename target-test-prototype.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+An early prototype of the target test
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:An-early-prototype"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Logically, it can be inferred that 1MM is equal to 6.3, therefore to achieve
+ a maximum size of 19MM a value of 120.3 should presumably be used, which
+ does result in the intended effect.
 \end_layout
 
 \begin_layout Chapter
