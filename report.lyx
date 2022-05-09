@@ -4443,7 +4443,7 @@ literal "false"
 , however it will not be exactly the same, as the code for the original
  test is not accessible.
  To be more exact: for a period of 1 minute, red circles that will be 3-19MM
- on a 310MM width, 165mm height display will appear on a grey tinted chequerboar
+ on a 310MM width, 165MM height display will appear on a grey tinted chequerboar
 d background until there are 3 circles on screen, the user must click within
  the circle radius to register a successful 'hit'; the test differs by using
  2d and not placing targets on a grid.
