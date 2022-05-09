@@ -131,7 +131,7 @@ public class DotFL extends PApplet {
             circle(circX, circY, circRad * 2);
             stroke(255);
         } else if (targetTest) {
-            System.out.println("target test activated");
+            circle(random(width),random(height),random(19));
         }
         //update stored value
         numSticksOld = numSticksNew;
