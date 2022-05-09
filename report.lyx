@@ -4534,6 +4534,11 @@ name "fig:An-early-prototype"
 Logically, it can be inferred that 1MM is equal to 6.3, therefore to achieve
  a maximum size of 19MM a value of 120.3 should presumably be used, which
  does result in the intended effect.
+ While it might appear that a lot of work has been achieved, there is one
+ key issue: the user must be able to interact with the targets.
+ The issue of interaction can be solved through the implementation of a
+ 'target' object, such an object would be able to persist between loops
+ and cease to exist upon a successful hit.
 \end_layout
 
 \begin_layout Chapter
