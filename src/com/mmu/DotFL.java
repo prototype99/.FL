@@ -105,8 +105,6 @@ public class DotFL extends PApplet {
             if (targetTest) {
                 for (int i = 0; i < 3; i++) {
                     if(dist(mouseX, mouseY, p[i].x, p[i].y) < sizes[i]/2) {
-                        fill(190);
-                        circle(p[i].x,p[i].y,sizes[i]+2);
                         genesisOfTarget(i);
                     }
                 }
@@ -142,11 +140,16 @@ public class DotFL extends PApplet {
     }
 
     //creates a new Target free from the past
-    public void genesisOfTarget(int i) {
-        fill(255,0,0);
-        p[i] = new PVector(random(width),random(height));
-        sizes[i] = random(120.3F);
-        circle(p[i].x,p[i].y,sizes[i]);
+    public void genesisOfTarget(int j) {
+        p[j] = new PVector(random(width),random(height));
+        sizes[j] = random(120.3F);
+        //refresh targets
+        background(190);
+        for (int i = 0; i < 3; i++) {
+            if(p[i] != null) {
+                circle(p[i].x,p[i].y,sizes[i]);
+            }
+        }
     }
 
     @Override
@@ -178,7 +181,7 @@ public class DotFL extends PApplet {
                 targetTest = true;
                 p = new PVector[3];
                 sizes = new float[3];
-                background(190);
+                fill(255,0,0);
                 noStroke();
                 for (int i = 0; i < 3; i++) {
                     genesisOfTarget(i);
