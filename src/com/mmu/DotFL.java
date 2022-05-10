@@ -143,6 +143,9 @@ public class DotFL extends PApplet {
     public void genesisOfTarget(int j) {
         p[j] = new PVector(random(width),random(height));
         sizes[j] = random(120.3F);
+        while(sizes[j] < 18.9){
+            sizes[j] = random(120.3F);
+        }
         //refresh targets
         background(190);
         for (int i = 0; i < 3; i++) {

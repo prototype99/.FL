@@ -4563,6 +4563,8 @@ noprefix "false"
  it was later chosen to use an alternative erasure mechanism where the canvas
  is cleared and all targets are redrawn, with the hit target being rewritten
  so it will now be different.
+ Just like the maximum size was calculated, the minimum size was calculated
+ to be 18.9MM.
 \end_layout
 
 \begin_layout Standard
