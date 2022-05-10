@@ -106,7 +106,7 @@ public class DotFL extends PApplet {
                 for (int i = 0; i < 3; i++) {
                     if(dist(mouseX, mouseY, p[i].x, p[i].y) < sizes[i]/2) {
                         fill(190);
-                        circle(p[i].x,p[i].y,sizes[i]);
+                        circle(p[i].x,p[i].y,sizes[i]+2);
                         genesisOfCircle(i);
                     }
                 }
