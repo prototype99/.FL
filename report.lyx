@@ -3897,12 +3897,12 @@ Concept
 In an ideal situation, .FL would leverage an existing codebase, in order
  to ensure the best performance and set of features.
  The easiest solution in such a hypothetical situation would be to design
- a plugin, however it is likely that it would not be possible to modify
- the UI in order to offer clear gamepad control prompts.
- Moving on from that, it would appear that making a fork would be the best
- solution, however this would require extensive knowledge of the codebase.
- As I do not have the extensive knowledge required, the next best solution
- would be to create an application from scratch.
+ a plugin, however it is likely it would not be possible to modify the UI
+ to offer clear gamepad control prompts.
+ Beyond that, it seems that making a fork would be the best solution, this
+ would require extensive knowledge of the codebase which is not available.
+ Accounting for aforementioned issues, a more viable solution would be to
+ create an application from scratch.
 \end_layout
 
 \begin_layout Standard
