@@ -23,7 +23,6 @@ import static org.libsdl.api.sensor.SDL_SensorType.SDL_SENSOR_GYRO;
 
 public class DotFL extends PApplet {
     boolean circTest = true, targetTest = false;
-    float circRad, circX, circY;
     float[] sizes;
     PVector[] p = new PVector[0];
     int numSticksNew, numSticksOld = 1;
@@ -137,9 +136,6 @@ public class DotFL extends PApplet {
                 }
                 line(p[i].x, p[i].y, prev.x, prev.y);
             }
-            stroke(128);
-            circle(circX, circY, circRad * 2);
-            stroke(255);
         }
         //update stored value
         numSticksOld = numSticksNew;
@@ -156,15 +152,14 @@ public class DotFL extends PApplet {
     @Override
     public void mouseReleased() {
         if (p.length > 10 && circTest) {
-            circX = 0;
-            circY = 0;
+            float circX = 0, circY = 0;
             for (PVector v : p) {
                 circX += v.x;
                 circY += v.y;
             }
             circX /= p.length;
             circY /= p.length;
-            circRad = 0;
+            float circRad = 0;
             for (PVector v : p) {
                 circRad += dist(v.x, v.y, circX, circY);
             }
