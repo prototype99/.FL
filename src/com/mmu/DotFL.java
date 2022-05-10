@@ -107,7 +107,7 @@ public class DotFL extends PApplet {
                     if(dist(mouseX, mouseY, p[i].x, p[i].y) < sizes[i]/2) {
                         fill(190);
                         circle(p[i].x,p[i].y,sizes[i]+2);
-                        genesisOfCircle(i);
+                        genesisOfTarget(i);
                     }
                 }
             } else if (circTest) {
@@ -141,8 +141,8 @@ public class DotFL extends PApplet {
         numSticksOld = numSticksNew;
     }
 
-    //creates a new  circle free from the past
-    public void genesisOfCircle(int i) {
+    //creates a new Target free from the past
+    public void genesisOfTarget(int i) {
         fill(255,0,0);
         p[i] = new PVector(random(width),random(height));
         sizes[i] = random(120.3F);
@@ -181,7 +181,7 @@ public class DotFL extends PApplet {
                 background(190);
                 noStroke();
                 for (int i = 0; i < 3; i++) {
-                    genesisOfCircle(i);
+                    genesisOfTarget(i);
                 }
             }
         }
