@@ -4033,15 +4033,7 @@ Intellij idea is used to aid in development of the code, it is capable of
  easy to use refactoring
 \end_layout
 
-\begin_layout Standard
-
-\end_layout
-
 \begin_layout Section
-The development journey
-\end_layout
-
-\begin_layout Subsection
 Choosing the hardware library
 \end_layout
 
@@ -4090,7 +4082,7 @@ As a compiled language, C++ is the most performant choice of language, part
  
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Adapting LibJSDL
 \end_layout
 
@@ -4118,7 +4110,7 @@ literal "false"
  them would surely be an excellent way to test.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Using LibJSDL
 \end_layout
 
@@ -4167,7 +4159,7 @@ literal "false"
  something similar.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Yuzu inspired implementation
 \end_layout
 
@@ -4198,7 +4190,7 @@ literal "false"
  a more object orientated approach.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 SDL4J improvements
 \end_layout
 
@@ -4238,7 +4230,7 @@ literal "false"
  code comments.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Continued SDL development
 \end_layout
 
@@ -4286,7 +4278,7 @@ literal "false"
  and low latency.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Introducing: the processing library
 \end_layout
 
@@ -4306,7 +4298,7 @@ During integration it was discovered that a good processing template existed
  anymore.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 The circle test
 \end_layout
 
@@ -4375,7 +4367,7 @@ name "fig:A-prototype-of"
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Environmental hazard
 \end_layout
 
@@ -4411,7 +4403,7 @@ literal "false"
  there is now an environmental concern due to waste plastics.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Application of further guidance
 \end_layout
 
@@ -4442,7 +4434,7 @@ literal "false"
  independent to circle size.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 The target test
 \end_layout
 
