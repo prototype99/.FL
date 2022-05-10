@@ -105,23 +105,13 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="-57.256306"
-       y="121.22002"
+       x="-46.285713"
+       y="137.65691"
        id="text7489"><tspan
          sodipodi:role="line"
-         id="tspan7487"
          style="stroke-width:0.264583"
-         x="-57.256306"
-         y="121.22002">display with a cursor,</tspan><tspan
-         sodipodi:role="line"
-         style="stroke-width:0.264583"
-         x="-57.256306"
-         y="134.44914"
-         id="tspan7491">tilt translates to motion</tspan><tspan
-         sodipodi:role="line"
-         style="stroke-width:0.264583"
-         x="-57.256306"
-         y="147.67827"
-         id="tspan8141">as indicated with arrows</tspan></text>
+         x="-46.285713"
+         y="137.65691"
+         id="tspan8141">display with a cursor</tspan></text>
   </g>
 </svg>

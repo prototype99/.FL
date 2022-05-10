@@ -3903,6 +3903,21 @@ In an ideal situation, .FL would leverage an existing codebase, in order
  would require extensive knowledge of the codebase which is not available.
  Accounting for aforementioned issues, a more viable solution would be to
  create an application from scratch.
+ Whilst test users will be permitted to use any variety of gamepad to ensure
+ they have compatible hardware, the DS5 is the most promising hardware solution.
+ As can be seen in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Basic-illustration-of"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ the tilt of the gamepad is intended to directly translate to the motion
+ of the cursor, as seen by the blue arrows, indicating the relationship
+ of motion.
 \end_layout
 
 \begin_layout Standard
@@ -3925,7 +3940,14 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Figure you still need to refer to!
+Basic illustration of the intended implementation
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Basic-illustration-of"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
