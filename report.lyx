@@ -3968,25 +3968,12 @@ name "fig:Basic-illustration-of"
 Equipment
 \end_layout
 
-\begin_layout Itemize
-DS4
-\end_layout
-
-\begin_layout Itemize
-DS5
-\end_layout
-
-\begin_layout Itemize
-Switch pro controller
-\end_layout
-
-\begin_layout Itemize
-DS5 chatpad (for testing alternative to full size keyboard)
-\end_layout
-
-\begin_layout Itemize
-It may prove beneficial to acquisition artistic software that has an attached
- monetary cost for research purposes
+\begin_layout Standard
+Any test user will need a few pieces of equipment to obtain a working system,
+ it is believed that these pieces of equipment would be widely available,
+ which is why it is believed this would be a good initial concept.
+ The user must have a compatible gamepad, a PC and a display (integrated
+ or otherwise).
 \end_layout
 
 \begin_layout Section
