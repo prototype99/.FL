@@ -146,9 +146,9 @@ public class DotFL extends PApplet {
         //refresh targets
         background(190);
         for (int i = 0; i < 3; i++) {
-            if(p[i] != null) {
+            try {
                 circle(p[i].x,p[i].y,sizes[i]);
-            }
+            } catch(NullPointerException ignored) {}
         }
     }
 
