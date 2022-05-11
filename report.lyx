@@ -4014,6 +4014,71 @@ There is no direct focus on how experienced a user is.
  with the DS4.
 \end_layout
 
+\begin_layout Section
+Order of operation
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Flow-chart-of"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is a flow chart of how the software is expected to operate.
+ Data is base64 encoded to prevent users from manipulating data to seem
+ more successful at the test.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename main.dia
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flow chart of the software
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Flow-chart-of"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
 Implementation
 \end_layout
