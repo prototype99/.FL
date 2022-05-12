@@ -4011,7 +4011,7 @@ There is no direct focus on how experienced a user is.
  I am, however, entirely new to the DS4 and DS5 that will play a major part
  in this study.
  I will try to dedicate time outside of development to become more experienced
- with the DS4.
+ with the DS gamepads.
 \end_layout
 
 \begin_layout Section
@@ -4094,7 +4094,7 @@ noprefix "false"
 
 \end_inset
 
- is a more detailed look at the target test.
+ is a flow chart of the target test.
  The user is given time to choose to continue to ensure that they do not
  begin a timed exercise with no idea what they are wanted to do.
 \end_layout
