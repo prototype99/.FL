@@ -4036,6 +4036,10 @@ noprefix "false"
  is a flow chart of how the software is expected to operate.
  Data is base64 encoded to prevent users from manipulating data to seem
  more successful at the test.
+ While some may be staunch advocates for enumerated values, for whatever
+ reason I am unable to efficiently work with them, therefore to switch between
+ the differing tasks the program performs, it will read an integer value
+ which will allow the use of case statements where applicable.
 \end_layout
 
 \begin_layout Standard
