@@ -4690,7 +4690,7 @@ noprefix "false"
  In addition, the if statements have been optimised to check for mouse clicks
  then whether or not the target test mode is turned on, in order to try
  and ensure least possible latency for such a time critical operation.
- it was later chosen to use an alternative erasure mechanism where the canvas
+ It was later chosen to use an alternative erasure mechanism where the canvas
  is cleared and all targets are redrawn, with the hit target being rewritten
  so it will now be different.
  Just like the maximum size was calculated, the minimum size was calculated
