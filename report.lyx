@@ -4084,6 +4084,61 @@ name "fig:Flow-chart-of-software"
 \end_layout
 
 \begin_layout Subsection
+Circle test
+\end_layout
+
+\begin_layout Standard
+The first test is involves the user drawing a circle, which will be assessed
+ for accuracy.
+ This test is designed to assess the degree of fluid motion a type of input
+ allows the user to achieve.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename circle.dia
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flow chart of the circle test
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Flow-chart-of-circle"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 Target test
 \end_layout
 
@@ -4468,9 +4523,7 @@ The circle test
 \end_layout
 
 \begin_layout Standard
-The first step is to implement a circle test, seeing as it most closely
- emulates the intended functionality.
- As a starting point, an existing open source circle test that was written
+As a starting point, an existing open source circle test that was written
  in JS was adapted to java.
  Various aspects of the code were simplified as there was originally a somewhat
  strong focus on an overuse of variable initialisation and code that exists
