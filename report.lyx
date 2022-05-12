@@ -4084,7 +4084,30 @@ Target test
 \end_layout
 
 \begin_layout Standard
-Figure 
+This is the second test that exists to collect quantitative data.
+ This could be thought of as similar to interacting with dialog windows
+ in the GUI of a PC, or jumping to specific positions in a word processor
+ document.
+ To make the data comparable, the test will be quite similar to that seen
+ in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Nerrel2020"
+literal "false"
+
+\end_inset
+
+, however it will not be exactly the same, as the code for the original
+ test is not accessible.
+ To be more exact: for a period of 1 minute, red circles that will be 3-19MM
+ on a 310MM width, 165MM height display will appear on a grey tinted chequerboar
+d background until there are 3 circles on screen, the user must click within
+ the circle radius to register a successful 'hit'; the test differs by using
+ 2d and not placing targets on a grid.
+ Compensating for DPI was considered, however there is no standardised way
+ to retrieve such a number, therefore such considerations may be best reserved
+ for if a more in depth user study is needed at a later date.
+ Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Flow-chart-of-target"
@@ -4577,36 +4600,6 @@ The target test
 \end_layout
 
 \begin_layout Standard
-This is the second test that exists to collect quantitative data.
- This could be thought of as similar to interacting with dialog windows
- in the GUI of a PC, or jumping to specific positions in a word processor
- document.
- To make the data comparable, the test will be quite similar to that seen
- in 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "Nerrel2020"
-literal "false"
-
-\end_inset
-
-, however it will not be exactly the same, as the code for the original
- test is not accessible.
- To be more exact: for a period of 1 minute, red circles that will be 3-19MM
- on a 310MM width, 165MM height display will appear on a grey tinted chequerboar
-d background until there are 3 circles on screen, the user must click within
- the circle radius to register a successful 'hit'; the test differs by using
- 2d and not placing targets on a grid.
- Compensating for DPI was considered, however there is no standardised way
- to retrieve such a number, therefore such considerations may be best reserved
- for if a more in depth user study is needed at a later date.
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
 The first instinct was to choose a randomised size up to 19, however as
  seen in figure 
 \begin_inset CommandInset ref
