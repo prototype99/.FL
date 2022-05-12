@@ -4018,11 +4018,15 @@ There is no direct focus on how experienced a user is.
 Order of operation
 \end_layout
 
+\begin_layout Subsection
+Overall process
+\end_layout
+
 \begin_layout Standard
 Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:Flow-chart-of"
+reference "fig:Flow-chart-of-software"
 plural "false"
 caps "false"
 noprefix "false"
@@ -4058,7 +4062,67 @@ status open
 Flow chart of the software
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:Flow-chart-of"
+name "fig:Flow-chart-of-software"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Target test
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Flow-chart-of-target"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is a more detailed look at the target test.
+ The user is given time to choose to continue to ensure that they do not
+ begin a timed exercise with no idea what they are wanted to do.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename target.dia
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flow chart of the target test
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Flow-chart-of-target"
 
 \end_inset
 
