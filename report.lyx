@@ -3965,6 +3965,17 @@ name "fig:Basic-illustration-of"
 \end_layout
 
 \begin_layout Section
+Cursor
+\end_layout
+
+\begin_layout Standard
+.FL will need a custom cursor due to the unique input methods in use.
+ it feels logical to use a combination of a cross-hair and a circle: the
+ cross-hair will denote the exact position, the circle will denote the current
+ drawing size.
+\end_layout
+
+\begin_layout Section
 Equipment
 \end_layout
 
@@ -4757,6 +4768,8 @@ noprefix "false"
  so it will now be different.
  Just like the maximum size was calculated, the minimum size was calculated
  to be 18.9MM.
+ After some more changes this was basically complete, now comes the task
+ of integrating other inputs.
 \end_layout
 
 \begin_layout Standard
@@ -4796,6 +4809,68 @@ name "fig:A-more-refined"
 \end_layout
 
 \begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Creating a cursor
+\end_layout
+
+\begin_layout Standard
+Given the fact there is a built-in circle function, it seemed best to begin
+ with the circle part of the cursor.
+ Rendering a circle cursor was easy, however there seemed to be clear discrepanc
+ies as seen in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-cursor-when"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename slow-cursor.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The cursor when processed in the draw loop
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-cursor-when"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 
 \end_layout
 

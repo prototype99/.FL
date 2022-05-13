@@ -38,7 +38,7 @@ public class DotFL extends PApplet {
         surface.setSize(displayWidth, displayHeight);
         windowResizable(true);
         background(0);
-        cursor(CROSS);
+        noCursor();
         noFill();
         stroke(255);
         //repetition free string construction~
@@ -147,6 +147,13 @@ public class DotFL extends PApplet {
                 }
             }
         }
+        //this is only changed in this mode
+        if (drawMode == 1) {
+            strokeWeight(2);
+        }
+        //draw the cursor
+        noFill();
+        circle(mouseX, mouseY, 10);
         //update stored value
         numSticksOld = numSticksNew;
     }
