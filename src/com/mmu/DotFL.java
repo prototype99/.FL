@@ -147,13 +147,6 @@ public class DotFL extends PApplet {
                 }
             }
         }
-        //this is only changed in this mode
-        if (drawMode == 1) {
-            strokeWeight(2);
-        }
-        //draw the cursor
-        noFill();
-        circle(mouseX, mouseY, 10);
         //update stored value
         numSticksOld = numSticksNew;
     }
@@ -172,6 +165,17 @@ public class DotFL extends PApplet {
                 circle(p[i].x,p[i].y,sizes[i]);
             } catch(NullPointerException ignored) {}
         }
+    }
+
+    @Override
+    public void mouseMoved() {
+        //this is only changed in this mode
+        if (drawMode == 1) {
+            strokeWeight(2);
+        }
+        //draw the cursor
+        noFill();
+        circle(mouseX, mouseY, 10);
     }
 
     @Override
