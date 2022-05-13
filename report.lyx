@@ -4179,6 +4179,13 @@ noprefix "false"
  is a flow chart of the target test.
  The user is given time to choose to continue to ensure that they do not
  begin a timed exercise with no idea what they are wanted to do.
+ By default 60 loops are called per second, therefore following the logic
+ that each second has 60 loops and every minute has 60 seconds, the test
+ should run for 
+\begin_inset Formula $60^{2}$
+\end_inset
+
+ loops, which resolves to 3600.
 \end_layout
 
 \begin_layout Standard
