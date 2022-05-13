@@ -101,43 +101,50 @@ public class DotFL extends PApplet {
             }
         }
         if (mousePressed) {
-            if (drawMode == 3) {
-                if (targetLoops >= 3600) {
-                    System.out.println(hitTargets);
-                } else {
+            switch(drawMode) {
+                case 1 -> {
+                    if (p.length > 0) {
+                        PVector ps = p[p.length - 1];
+                        float angle = atan2(ps.y - mouseY, ps.x - mouseX);
+                        float dis = dist(mouseX, mouseY, ps.x, ps.y);
+                        while (dis > 5) {
+                            p = (PVector[]) append(p, new PVector(ps.x - 5 * cos(angle), ps.y - 5 * sin(angle)));
+                            ps = p[p.length - 1];
+                            angle = atan2(ps.y - mouseY, ps.x - mouseX);
+                            dis = dist(mouseX, mouseY, ps.x, ps.y);
+                        }
+                    } else {
+                        p = (PVector[]) append(p, new PVector(mouseX, mouseY));
+                    }
+                }
+                case 3 -> {
                     for (int i = 0; i < 3; i++) {
                         if(dist(mouseX, mouseY, p[i].x, p[i].y) < sizes[i]/2) {
                             hitTargets++;
                             genesisOfTarget(i);
                         }
                     }
-                    targetLoops++;
-                }
-            } else if (drawMode == 1) {
-                if (p.length > 0) {
-                    PVector ps = p[p.length - 1];
-                    float angle = atan2(ps.y - mouseY, ps.x - mouseX);
-                    float dis = dist(mouseX, mouseY, ps.x, ps.y);
-                    while (dis > 5) {
-                        p = (PVector[]) append(p, new PVector(ps.x - 5 * cos(angle), ps.y - 5 * sin(angle)));
-                        ps = p[p.length - 1];
-                        angle = atan2(ps.y - mouseY, ps.x - mouseX);
-                        dis = dist(mouseX, mouseY, ps.x, ps.y);
-                    }
-                } else {
-                    p = (PVector[]) append(p, new PVector(mouseX, mouseY));
                 }
             }
         }
-        if (drawMode == 1) {
-            //do all the actual drawing
-            strokeWeight(10);
-            for (int i = 0; i < p.length; i++) {
-                PVector prev = p[i];
-                if (i - 1 >= 0) {
-                    prev = p[i - 1];
+        switch (drawMode) {
+            case 1 -> {
+                //do all the actual drawing
+                strokeWeight(10);
+                for (int i = 0; i < p.length; i++) {
+                    PVector prev = p[i];
+                    if (i - 1 >= 0) {
+                        prev = p[i - 1];
+                    }
+                    line(p[i].x, p[i].y, prev.x, prev.y);
                 }
-                line(p[i].x, p[i].y, prev.x, prev.y);
+            }
+            case 3 -> {
+                targetLoops++;
+                if (targetLoops >= 3600) {
+                    drawMode = 4;
+                    System.out.println(hitTargets);
+                }
             }
         }
         //update stored value
