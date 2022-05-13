@@ -102,7 +102,7 @@ public class DotFL extends PApplet {
         }
         if (mousePressed) {
             if (drawMode == 3) {
-                if (targetLoops == 3600) {
+                if (targetLoops >= 3600) {
                     System.out.println(hitTargets);
                 } else {
                     for (int i = 0; i < 3; i++) {
