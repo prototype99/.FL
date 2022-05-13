@@ -22,10 +22,9 @@ import static org.libsdl.api.joystick.SdlJoystick.SDL_NumJoysticks;
 import static org.libsdl.api.sensor.SDL_SensorType.SDL_SENSOR_GYRO;
 
 public class DotFL extends PApplet {
-    boolean circTest = true, targetTest = false;
     float[] sizes;
     PVector[] p = new PVector[0];
-    int numSticksNew, numSticksOld = 1;
+    int drawMode = 0, numSticksNew, numSticksOld = 1;
     //strings are predeclared to allow some cool math later. ye, i could probably use an enum but i've never liked them. also, less rewriting memory
     String[] msgsChange = new String[3];
 
@@ -102,13 +101,13 @@ public class DotFL extends PApplet {
             }
         }
         if (mousePressed) {
-            if (targetTest) {
+            if (drawMode == 3) {
                 for (int i = 0; i < 3; i++) {
                     if(dist(mouseX, mouseY, p[i].x, p[i].y) < sizes[i]/2) {
                         genesisOfTarget(i);
                     }
                 }
-            } else if (circTest) {
+            } else if (drawMode == 1) {
                 if (p.length > 0) {
                     PVector ps = p[p.length - 1];
                     float angle = atan2(ps.y - mouseY, ps.x - mouseX);
@@ -124,7 +123,7 @@ public class DotFL extends PApplet {
                 }
             }
         }
-        if (circTest) {
+        if (drawMode == 1) {
             //do all the actual drawing
             strokeWeight(10);
             for (int i = 0; i < p.length; i++) {
@@ -157,7 +156,7 @@ public class DotFL extends PApplet {
 
     @Override
     public void mouseReleased() {
-        if (p.length > 10 && circTest) {
+        if (p.length > 10 && drawMode == 1) {
             float circX = 0, circY = 0;
             for (PVector v : p) {
                 circX += v.x;
@@ -180,8 +179,7 @@ public class DotFL extends PApplet {
             //ensure circle has enough data points for accurate analysis
             if (circRad > 24) {
                 System.out.println(errorFactor);
-                circTest = false;
-                targetTest = true;
+                drawMode = 3;
                 p = new PVector[3];
                 sizes = new float[3];
                 fill(255,0,0);
