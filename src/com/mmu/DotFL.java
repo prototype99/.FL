@@ -65,7 +65,8 @@ public class DotFL extends PApplet {
 
     //creates a new Target free from the past
     public void addTarget() {
-        targets.add(new Target(this));
+        Target t = new Target(this);
+        targets.add(t);
     }
 
     @Override
