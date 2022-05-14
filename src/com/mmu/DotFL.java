@@ -25,7 +25,7 @@ import static org.libsdl.api.sensor.SDL_SensorType.SDL_SENSOR_GYRO;
 public class DotFL extends PApplet {
     //stored in the format: {x, y, size}
     ArrayList<float[]> targets;
-    PVector[] p = new PVector[0];
+    PVector[] p;
     int drawMode = 1, hitTargets = 0, numSticksNew, numSticksOld = 1, targetLoops = 0;
     //strings are predeclared to allow some cool math later. ye, i could probably use an enum but i've never liked them. also, less rewriting memory
     String[] msgsChange = new String[3];
@@ -213,12 +213,16 @@ public class DotFL extends PApplet {
                 //do all the actual drawing
                 stroke(255);
                 strokeWeight(10);
-                for (int i = 0; i < p.length; i++) {
-                    PVector prev = p[i];
-                    if (i - 1 >= 0) {
-                        prev = p[i - 1];
+                try {
+                    for (int i = 0; i < p.length; i++) {
+                        PVector prev = p[i];
+                        if (i - 1 >= 0) {
+                            prev = p[i - 1];
+                        }
+                        line(p[i].x, p[i].y, prev.x, prev.y);
                     }
-                    line(p[i].x, p[i].y, prev.x, prev.y);
+                } catch(NullPointerException n) {
+                    p = new PVector[0];
                 }
             }
             case 3 -> {
