@@ -4893,6 +4893,13 @@ noprefix "false"
 \end_inset
 
 .
+ By moving everything in the draw loop to a separate function and calling
+ it based on mouse events the software feels much more fluid, this also
+ results in cleaner code.
+ This means the software FPS/loop speed increases when the user is more
+ active, however this may be beneficial: most of the code is designed to
+ deal with changes in conditions, and if the user is less active there will
+ probably be less changes.
 \end_layout
 
 \begin_layout Standard

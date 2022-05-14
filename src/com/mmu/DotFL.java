@@ -37,9 +37,7 @@ public class DotFL extends PApplet {
         //processing setup
         surface.setSize(displayWidth, displayHeight);
         windowResizable(true);
-        background(0);
         noCursor();
-        noFill();
         //repetition free string construction~
         msgsChange[0] = "no ";
         for (int i = 0; i < 3; i++) {
@@ -53,10 +51,79 @@ public class DotFL extends PApplet {
         if ((SDL_Init(SDL_INIT_GAMECONTROLLER) == -1)) {
             System.out.println(SDL_GetError());
         }
+        redraw();
     }
 
     @Override
     public void draw() {
+        redraw();
+        if (drawMode == 3) {
+            targetLoops++;
+        }
+    }
+
+    //creates a new Target free from the past
+    public void genesisOfTarget(int j) {
+        p[j] = new PVector(random(width),random(height));
+        sizes[j] = random(120.3F);
+        while(sizes[j] < 18.9){
+            sizes[j] = random(120.3F);
+        }
+        redraw();
+    }
+
+    @Override
+    public void mouseDragged() {
+        redraw();
+    }
+
+    @Override
+    public void mouseMoved() {
+        redraw();
+    }
+
+    @Override
+    public void mousePressed() {
+        redraw();
+    }
+
+    @Override
+    public void mouseReleased() {
+        if (p.length > 10 && drawMode == 1) {
+            float circX = 0, circY = 0;
+            for (PVector v : p) {
+                circX += v.x;
+                circY += v.y;
+            }
+            circX /= p.length;
+            circY /= p.length;
+            float circRad = 0;
+            for (PVector v : p) {
+                circRad += dist(v.x, v.y, circX, circY);
+            }
+            circRad /= p.length;
+            float errorFactor = 0;
+            for (PVector v : p) {
+                errorFactor += abs(dist(v.x, v.y, circX, circY) - circRad);
+            }
+            //work out mean absolute difference and normalise to radius so it scales to size
+            //a higher error factor equates to more errors
+            errorFactor = (errorFactor / p.length) / circRad;
+            //ensure circle has enough data points for accurate analysis
+            if (circRad > 24) {
+                System.out.println(errorFactor);
+                drawMode = 3;
+                p = new PVector[3];
+                sizes = new float[3];
+                for (int i = 0; i < 3; i++) {
+                    genesisOfTarget(i);
+                }
+            }
+        }
+    }
+
+    //this is needed to ensure layering is done properly
+    public void redraw() {
         surface.setSize(width, height);
         numSticksNew = SDL_NumJoysticks();
         //output a message if required
@@ -99,6 +166,8 @@ public class DotFL extends PApplet {
                 SDL_GameControllerClose(DS5);
             }
         }
+        //handle processing code
+        background(190);
         if (mousePressed) {
             switch(drawMode) {
                 case 1 -> {
@@ -140,80 +209,27 @@ public class DotFL extends PApplet {
                 }
             }
             case 3 -> {
-                targetLoops++;
                 if (targetLoops >= 3600) {
                     drawMode = 4;
                     System.out.println(hitTargets);
+                } else {
+                    //draw targets
+                    fill(255,0,0);
+                    noStroke();
+                    for (int i = 0; i < 3; i++) {
+                        try {
+                            circle(p[i].x,p[i].y,sizes[i]);
+                        } catch(NullPointerException ignored) {}
+                    }
                 }
             }
-        }
-        //update stored value
-        numSticksOld = numSticksNew;
-    }
-
-    //creates a new Target free from the past
-    public void genesisOfTarget(int j) {
-        p[j] = new PVector(random(width),random(height));
-        sizes[j] = random(120.3F);
-        while(sizes[j] < 18.9){
-            sizes[j] = random(120.3F);
-        }
-        //refresh targets
-        background(190);
-        //set formatting
-        fill(255,0,0);
-        noStroke();
-        for (int i = 0; i < 3; i++) {
-            try {
-                circle(p[i].x,p[i].y,sizes[i]);
-            } catch(NullPointerException ignored) {}
-        }
-    }
-
-    @Override
-    public void mouseMoved() {
-        //handle mode specific formatting
-        if (drawMode != 1) {
-            noFill();
         }
         //draw the cursor
+        noFill();
         strokeWeight(2);
-        stroke(127);
+        stroke(0,255,0);
         circle(mouseX, mouseY, 10);
-    }
-
-    @Override
-    public void mouseReleased() {
-        if (p.length > 10 && drawMode == 1) {
-            float circX = 0, circY = 0;
-            for (PVector v : p) {
-                circX += v.x;
-                circY += v.y;
-            }
-            circX /= p.length;
-            circY /= p.length;
-            float circRad = 0;
-            for (PVector v : p) {
-                circRad += dist(v.x, v.y, circX, circY);
-            }
-            circRad /= p.length;
-            float errorFactor = 0;
-            for (PVector v : p) {
-                errorFactor += abs(dist(v.x, v.y, circX, circY) - circRad);
-            }
-            //work out mean absolute difference and normalise to radius so it scales to size
-            //a higher error factor equates to more errors
-            errorFactor = (errorFactor / p.length) / circRad;
-            //ensure circle has enough data points for accurate analysis
-            if (circRad > 24) {
-                System.out.println(errorFactor);
-                drawMode = 3;
-                p = new PVector[3];
-                sizes = new float[3];
-                for (int i = 0; i < 3; i++) {
-                    genesisOfTarget(i);
-                }
-            }
-        }
+        //update stored value
+        numSticksOld = numSticksNew;
     }
 }
