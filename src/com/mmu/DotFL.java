@@ -65,7 +65,7 @@ public class DotFL extends PApplet {
     }
 
     //creates a new Target free from the past
-    public void genesisOfTarget() {
+    public void addTargets() {
         targets.add(new Target(this));
     }
 
@@ -86,7 +86,7 @@ public class DotFL extends PApplet {
                 if(dist(mouseX, mouseY, t.x, t.y) < t.s/2) {
                     hitTargets++;
                     targets.remove(t);
-                    genesisOfTarget();
+                    addTargets();
                 }
             }
             redraw();
@@ -122,7 +122,7 @@ public class DotFL extends PApplet {
                 targets = new ArrayList<>();
                 sizes = new float[3];
                 for (int i = 0; i < 3; i++) {
-                    genesisOfTarget();
+                    addTargets();
                 }
                 redraw();
             }
