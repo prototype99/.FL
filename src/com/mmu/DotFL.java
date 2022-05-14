@@ -6,6 +6,7 @@ import org.libsdl.api.gamecontroller.SDL_GameController;
 import processing.core.PApplet;
 import processing.core.PVector;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 import static org.libsdl.api.SDL_SubSystem.SDL_INIT_GAMECONTROLLER;
@@ -22,6 +23,7 @@ import static org.libsdl.api.joystick.SdlJoystick.SDL_NumJoysticks;
 import static org.libsdl.api.sensor.SDL_SensorType.SDL_SENSOR_GYRO;
 
 public class DotFL extends PApplet {
+    ArrayList<Target> targets;
     float[] sizes;
     PVector[] p = new PVector[0];
     int drawMode = 1, hitTargets = 0, numSticksNew, numSticksOld = 1, targetLoops = 0;
@@ -63,13 +65,8 @@ public class DotFL extends PApplet {
     }
 
     //creates a new Target free from the past
-    public void genesisOfTarget(int j) {
-        p[j] = new PVector(random(width),random(height));
-        sizes[j] = random(120.3F);
-        while(sizes[j] < 18.9){
-            sizes[j] = random(120.3F);
-        }
-        redraw();
+    public void genesisOfTarget() {
+        targets.add(new Target(this));
     }
 
     @Override
@@ -113,11 +110,12 @@ public class DotFL extends PApplet {
             if (circRad > 24) {
                 System.out.println(errorFactor);
                 drawMode = 3;
-                p = new PVector[3];
+                targets = new ArrayList<>();
                 sizes = new float[3];
                 for (int i = 0; i < 3; i++) {
-                    genesisOfTarget(i);
+                    genesisOfTarget();
                 }
+                redraw();
             }
         }
     }
@@ -186,12 +184,14 @@ public class DotFL extends PApplet {
                     }
                 }
                 case 3 -> {
-                    for (int i = 0; i < 3; i++) {
-                        if(dist(mouseX, mouseY, p[i].x, p[i].y) < sizes[i]/2) {
+                    for (Target t : targets) {
+                        if(dist(mouseX, mouseY, t.x, t.y) < t.s/2) {
                             hitTargets++;
-                            genesisOfTarget(i);
+                            targets.remove(t);
+                            genesisOfTarget();
                         }
                     }
+                    redraw();
                 }
             }
         }
@@ -216,10 +216,8 @@ public class DotFL extends PApplet {
                     //draw targets
                     fill(255,0,0);
                     noStroke();
-                    for (int i = 0; i < 3; i++) {
-                        try {
-                            circle(p[i].x,p[i].y,sizes[i]);
-                        } catch(NullPointerException ignored) {}
+                    for (Target t : targets) {
+                        circle(t.x,t.y,t.s);
                     }
                 }
             }
