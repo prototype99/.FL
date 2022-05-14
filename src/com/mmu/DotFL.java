@@ -25,8 +25,8 @@ import static org.libsdl.api.sensor.SDL_SensorType.SDL_SENSOR_GYRO;
 public class DotFL extends PApplet {
     //stored in the format: {x, y, size}
     ArrayList<float[]> targets;
-    PVector[] p;
     int drawMode = 1, hitTargets, numSticksNew, numSticksOld = 1, targetLoops;
+    PVector[] p;
     //strings are predeclared to allow some cool math later. ye, i could probably use an enum but i've never liked them. also, less rewriting memory
     String[] msgsChange = new String[3];
 
