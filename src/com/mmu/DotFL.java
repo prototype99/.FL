@@ -23,7 +23,8 @@ import static org.libsdl.api.joystick.SdlJoystick.SDL_NumJoysticks;
 import static org.libsdl.api.sensor.SDL_SensorType.SDL_SENSOR_GYRO;
 
 public class DotFL extends PApplet {
-    ArrayList<Target> targets;
+    //stored in the format: {x, y, size}
+    ArrayList<float[]> targets;
     PVector[] p = new PVector[0];
     int drawMode = 1, hitTargets = 0, numSticksNew, numSticksOld = 1, targetLoops = 0;
     //strings are predeclared to allow some cool math later. ye, i could probably use an enum but i've never liked them. also, less rewriting memory
@@ -65,19 +66,23 @@ public class DotFL extends PApplet {
 
     //creates a new Target free from the past
     public void addTarget() {
-        Target t = new Target(this);
-        while(isIntersect(t.x, t.y, t.s) || t.s < 18.9) {
-            t = new Target(this);
+        float[] t = newTarget();
+        while(isIntersect(t[0], t[1], t[2]) || t[2] < 18.9) {
+            t = newTarget();
         }
         targets.add(t);
     }
 
-    public boolean isHit(Target t, float x, float y, float c) {
-        return dist(x, y, t.x, t.y) < (c + t.s) / 2;
+    public float[] newTarget() {
+        return new float[]{random(width), random(height), random(120.3F)};
+    }
+
+    public boolean isHit(float[] t, float x, float y, float c) {
+        return dist(x, y, t[0], t[1]) < (c + t[2]) / 2;
     }
 
     public boolean isIntersect(float x, float y, float c) {
-        for (Target t : targets) {
+        for (float[] t : targets) {
             if (isHit(t, x, y, c)) {
                 return true;
             }
@@ -224,8 +229,8 @@ public class DotFL extends PApplet {
                     //draw targets
                     fill(255,0,0);
                     noStroke();
-                    for (Target t : targets) {
-                        circle(t.x,t.y,t.s);
+                    for (float[] t : targets) {
+                        circle(t[0],t[1],t[2]);
                     }
                 }
             }
