@@ -24,7 +24,6 @@ import static org.libsdl.api.sensor.SDL_SensorType.SDL_SENSOR_GYRO;
 
 public class DotFL extends PApplet {
     ArrayList<Target> targets;
-    float[] sizes;
     PVector[] p = new PVector[0];
     int drawMode = 1, hitTargets = 0, numSticksNew, numSticksOld = 1, targetLoops = 0;
     //strings are predeclared to allow some cool math later. ye, i could probably use an enum but i've never liked them. also, less rewriting memory
@@ -120,7 +119,6 @@ public class DotFL extends PApplet {
                 System.out.println(errorFactor);
                 drawMode = 3;
                 targets = new ArrayList<>();
-                sizes = new float[3];
                 for (int i = 0; i < 3; i++) {
                     addTargets();
                 }
