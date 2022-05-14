@@ -1,1 +1,1 @@
-/home/seirra/Documents/src/.FL/libjsdl/src/main/java/org/libsdl/api/keyboard/SDL_Keysym.java
+../../../../../libjsdl/src/main/java/org/libsdl/api/keyboard/SDL_Keysym.java

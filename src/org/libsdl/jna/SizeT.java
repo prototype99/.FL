@@ -1,1 +1,1 @@
-/home/seirra/Documents/src/.FL/libjsdl/src/main/java/org/libsdl/jna/SizeT.java
+../../../../libjsdl/src/main/java/org/libsdl/jna/SizeT.java

@@ -1,1 +1,1 @@
-/home/seirra/Documents/src/.FL/libjsdl/src/main/java/org/libsdl/api/SDL_SubSystem.java
+../../../../libjsdl/src/main/java/org/libsdl/api/SDL_SubSystem.java

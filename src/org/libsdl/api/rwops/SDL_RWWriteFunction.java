@@ -1,1 +1,1 @@
-/home/seirra/Documents/src/.FL/libjsdl/src/main/java/org/libsdl/api/rwops/SDL_RWWriteFunction.java
+../../../../../libjsdl/src/main/java/org/libsdl/api/rwops/SDL_RWWriteFunction.java

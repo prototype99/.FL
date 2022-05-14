@@ -1,1 +1,1 @@
-/home/seirra/Documents/src/.FL/libjsdl/src/main/java/org/libsdl/api/joystick/SDL_Joystick.java
+../../../../../libjsdl/src/main/java/org/libsdl/api/joystick/SDL_Joystick.java
