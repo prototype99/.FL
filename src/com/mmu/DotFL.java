@@ -40,7 +40,6 @@ public class DotFL extends PApplet {
         background(0);
         noCursor();
         noFill();
-        stroke(255);
         //repetition free string construction~
         msgsChange[0] = "no ";
         for (int i = 0; i < 3; i++) {
@@ -130,6 +129,7 @@ public class DotFL extends PApplet {
         switch (drawMode) {
             case 1 -> {
                 //do all the actual drawing
+                stroke(255);
                 strokeWeight(10);
                 for (int i = 0; i < p.length; i++) {
                     PVector prev = p[i];
@@ -160,6 +160,9 @@ public class DotFL extends PApplet {
         }
         //refresh targets
         background(190);
+        //set formatting
+        fill(255,0,0);
+        noStroke();
         for (int i = 0; i < 3; i++) {
             try {
                 circle(p[i].x,p[i].y,sizes[i]);
@@ -169,12 +172,13 @@ public class DotFL extends PApplet {
 
     @Override
     public void mouseMoved() {
-        //this is only changed in this mode
-        if (drawMode == 1) {
-            strokeWeight(2);
+        //handle mode specific formatting
+        if (drawMode != 1) {
+            noFill();
         }
         //draw the cursor
-        noFill();
+        strokeWeight(2);
+        stroke(127);
         circle(mouseX, mouseY, 10);
     }
 
@@ -206,8 +210,6 @@ public class DotFL extends PApplet {
                 drawMode = 3;
                 p = new PVector[3];
                 sizes = new float[3];
-                fill(255,0,0);
-                noStroke();
                 for (int i = 0; i < 3; i++) {
                     genesisOfTarget(i);
                 }
