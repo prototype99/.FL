@@ -81,7 +81,16 @@ public class DotFL extends PApplet {
 
     @Override
     public void mousePressed() {
-        redraw();
+        if (drawMode == 3) {
+            for (Target t : targets) {
+                if(dist(mouseX, mouseY, t.x, t.y) < t.s/2) {
+                    hitTargets++;
+                    targets.remove(t);
+                    genesisOfTarget();
+                }
+            }
+            redraw();
+        }
     }
 
     @Override
@@ -166,9 +175,9 @@ public class DotFL extends PApplet {
         }
         //handle processing code
         background(190);
-        if (mousePressed) {
-            switch(drawMode) {
-                case 1 -> {
+        switch (drawMode) {
+            case 1 -> {
+                if (mousePressed) {
                     if (p.length > 0) {
                         PVector ps = p[p.length - 1];
                         float angle = atan2(ps.y - mouseY, ps.x - mouseX);
@@ -183,20 +192,6 @@ public class DotFL extends PApplet {
                         p = (PVector[]) append(p, new PVector(mouseX, mouseY));
                     }
                 }
-                case 3 -> {
-                    for (Target t : targets) {
-                        if(dist(mouseX, mouseY, t.x, t.y) < t.s/2) {
-                            hitTargets++;
-                            targets.remove(t);
-                            genesisOfTarget();
-                        }
-                    }
-                    redraw();
-                }
-            }
-        }
-        switch (drawMode) {
-            case 1 -> {
                 //do all the actual drawing
                 stroke(255);
                 strokeWeight(10);
