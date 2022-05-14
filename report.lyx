@@ -4769,9 +4769,9 @@ noprefix "false"
  Just like the maximum size was calculated, the minimum size was calculated
  to be 18.9MM.
  Due to clicking an overlap of targets hitting both no matter what solutions
- were tried, a target object was used after all.
- After some more changes this was basically complete, now comes the task
- of integrating other inputs.
+ were tried, an arraylist was used as a compromise.
+ After some more changes this was complete, awaiting the task of integrating
+ other inputs.
 \end_layout
 
 \begin_layout Standard

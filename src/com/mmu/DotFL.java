@@ -66,7 +66,23 @@ public class DotFL extends PApplet {
     //creates a new Target free from the past
     public void addTarget() {
         Target t = new Target(this);
+        while(isIntersect(t.x, t.y, t.s) || t.s < 18.9) {
+            t = new Target(this);
+        }
         targets.add(t);
+    }
+
+    public boolean isHit(Target t, float x, float y, float c) {
+        return dist(x, y, t.x, t.y) < (c + t.s) / 2;
+    }
+
+    public boolean isIntersect(float x, float y, float c) {
+        for (Target t : targets) {
+            if (isHit(t, x, y, c)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override
@@ -82,7 +98,7 @@ public class DotFL extends PApplet {
     @Override
     public void mousePressed() {
         if (drawMode == 3) {
-            targets.removeIf(t -> (dist(mouseX, mouseY, t.x, t.y) < t.s/2));
+            targets.removeIf(t -> (isHit(t, mouseX, mouseY, 0)));
             for (int i = 0; i < 3 - targets.size(); i++) {
                 hitTargets++;
                 addTarget();
