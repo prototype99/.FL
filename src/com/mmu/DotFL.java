@@ -1,6 +1,5 @@
 package com.mmu;
 
-import org.libsdl.api.event.events.SDL_ControllerSensorEvent;
 import org.libsdl.api.event.events.SDL_Event;
 import processing.core.PApplet;
 import processing.core.PVector;
@@ -180,12 +179,11 @@ public class DotFL extends PApplet {
                         System.out.println("Warning: unable to enable gyroscope");
                     } else {
                         SDL_Event e = new SDL_Event();
-                        SDL_ControllerSensorEvent es;
                         SDL_PollEvent(e);
                         if (e.type == SDL_CONTROLLERSENSORUPDATE) {
-                            es = e.csensor;
-                            if (es.sensor == SDL_SENSOR_GYRO) {
-                                System.out.println(Arrays.toString(es.data));
+                            logNew.gyroEvent = e.csensor;
+                            if (logNew.gyroEvent.sensor == SDL_SENSOR_GYRO) {
+                                System.out.println(Arrays.toString(logNew.gyroEvent.data));
                             }
                         }
                     }
@@ -252,6 +250,7 @@ public class DotFL extends PApplet {
         //present becomes past
         logOld.gamepad = logNew.gamepad;
         logOld.gamepadError = logNew.gamepadError;
+        logOld.gyroEvent = logNew.gyroEvent;
         logOld.gyroStatus = logNew.gyroStatus;
         logOld.numSticks = logNew.numSticks;
     }
