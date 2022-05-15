@@ -4994,6 +4994,8 @@ With the development now underway, it has become clear that the error reporting
  a hypothesis.
  Potential suspects included Intellij idea, various updated kernel packages,
  an update for SDL and various other system libraries.
+ Unfortunately, this did not appear to help, however after copying over
+ the updated libSDL binary it worked.
 \end_layout
 
 \begin_layout Chapter
