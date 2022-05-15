@@ -4901,6 +4901,10 @@ name "fig:The-cursor-when"
 
 \end_layout
 
+\begin_layout Section
+Refining the cursor
+\end_layout
+
 \begin_layout Standard
 By moving the cursor rendering into the mouseMoved event, the cursor is
  more fluid, and more representative of the mouse movement, even if not
