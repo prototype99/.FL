@@ -4948,6 +4948,21 @@ name "fig:The-cursor-using"
 
 \end_layout
 
+\begin_layout Section
+A gyroscope's return
+\end_layout
+
+\begin_layout Standard
+With the development now underway, it has become clear that the error reporting
+ must be refined more to be usable.
+ The best way to do so appears to be to compare conditions for changes,
+ so that every message is only reported per change, going by the assumption
+ that by default the program is successful.
+ To aid with this, a class has been made that can store the result of every
+ error check; by storing two instances of such a class, it is possible to
+ compare the past and the present for changes.
+\end_layout
+
 \begin_layout Chapter
 Evaluation
 \end_layout

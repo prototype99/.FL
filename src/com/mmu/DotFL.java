@@ -8,6 +8,7 @@ import processing.core.PVector;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Objects;
 
 import static org.libsdl.api.SDL_SubSystem.SDL_INIT_GAMECONTROLLER;
 import static org.libsdl.api.Sdl.SDL_Init;
@@ -25,7 +26,8 @@ import static org.libsdl.api.sensor.SDL_SensorType.SDL_SENSOR_GYRO;
 public class DotFL extends PApplet {
     //stored in the format: {x, y, size}
     ArrayList<float[]> targets;
-    int drawMode = 1, hitTargets, numSticksNew, numSticksOld = 1, targetLoops;
+    GhostLog logNew, logOld = new GhostLog();
+    int drawMode = 1, hitTargets, targetLoops;
     PVector[] p;
     //strings are predeclared to allow some cool math later. ye, i could probably use an enum but i've never liked them. also, less rewriting memory
     String[] msgsChange = new String[3];
@@ -150,29 +152,33 @@ public class DotFL extends PApplet {
     //this is needed to ensure layering is done properly
     public void redraw() {
         surface.setSize(width, height);
-        numSticksNew = SDL_NumJoysticks();
+        logNew = new GhostLog();
+        logNew.numSticks = SDL_NumJoysticks();
         //output a message if required
-        if (numSticksNew != numSticksOld) {
-            int joyStatus = numSticksNew;
+        if (logNew.numSticks != logOld.numSticks) {
+            int joyStatus = logNew.numSticks;
             if (joyStatus > 2) {
                 joyStatus = 2;
             }
             System.out.println(msgsChange[joyStatus]);
         }
         //Check for joysticks
-        if (numSticksNew > 0) {
-            SDL_GameController DS5 = null;
-            for (int i = 0; i < numSticksNew; i++) {
+        if (logNew.numSticks > 0) {
+            for (int i = 0; i < logNew.numSticks; i++) {
                 if (SDL_IsGameController(i)) {
                     //Load DS5
-                    DS5 = SDL_GameControllerOpen(i);
+                    logNew.gamepad = SDL_GameControllerOpen(i);
                 }
             }
-            if (DS5 == null) {
-                System.out.println("Warning: Unable to open gamepad! SDL Error:" + SDL_GetError());
+            if (logNew.gamepad == null) {
+                logNew.gamepadError = SDL_GetError();
+                if (logNew.gamepad != logOld.gamepad || !Objects.equals(logNew.gamepadError, logOld.gamepadError)) {
+                    System.out.println("Warning: Unable to open gamepad! SDL Error:" + logNew.gamepadError);
+                }
             } else {
-                if (SDL_GameControllerHasSensor(DS5, SDL_SENSOR_GYRO)) {
-                    if (SDL_GameControllerSetSensorEnabled(DS5, SDL_SENSOR_GYRO, true) == -1) {
+                logNew.gyroStatus = SDL_GameControllerHasSensor(logNew.gamepad, SDL_SENSOR_GYRO);
+                if (logNew.gyroStatus) {
+                    if (SDL_GameControllerSetSensorEnabled(logNew.gamepad, SDL_SENSOR_GYRO, true) == -1) {
                         System.out.println("Warning: unable to enable gyroscope");
                     } else {
                         SDL_Event e = new SDL_Event();
@@ -186,9 +192,11 @@ public class DotFL extends PApplet {
                         }
                     }
                 } else {
-                    System.out.println("Warning: no gyroscope detected, did you connect the right controller?");
+                    if (logNew.gyroStatus != logOld.gyroStatus) {
+                        System.out.println("Warning: no gyroscope detected, did you connect the right controller?");
+                    }
                 }
-                SDL_GameControllerClose(DS5);
+                SDL_GameControllerClose(logNew.gamepad);
             }
         }
         //handle processing code
@@ -244,7 +252,10 @@ public class DotFL extends PApplet {
         strokeWeight(2);
         stroke(0,255,0);
         circle(mouseX, mouseY, 10);
-        //update stored value
-        numSticksOld = numSticksNew;
+        //present becomes past
+        logOld.gamepad = logNew.gamepad;
+        logOld.gamepadError = logNew.gamepadError;
+        logOld.gyroStatus = logNew.gyroStatus;
+        logOld.numSticks = logNew.numSticks;
     }
 }
