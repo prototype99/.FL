@@ -4646,14 +4646,25 @@ Unfortunately development was stalled due to seasons changing, leading to
  especially as they were able enter spaces such as the interior of flush
  fitted light fittings or water heaters, which a WD2 would not be able to
  effectively or safely uninhabit.
+ A sample, shown in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:A-recently-deceased"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, suggested that the core population may be European paper wasps.
  This issue was solved through the acquisition of a glade solid gel scent
  diffuser, cheaper brands were considered, however user testimonials seemed
  to suggest they may not be as effective and the merchant's price of ₤1
  for the glade version was deemed to be within allowance.
  The scent diffuser was effective due to its inclusion of lavender oil,
- which wasps (such as paper wasps) are strongly repelled by
+ which paper wasps are strongly repelled by
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "zhangEssentialOilsTheir2013"
 literal "false"
 
@@ -4662,6 +4673,50 @@ literal "false"
 .
  It is worth noting that whilst the ethical concern has been alleviated,
  there is now an environmental concern due to waste plastics.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename wasp.jpg
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A recently deceased sample
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:A-recently-deceased"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
