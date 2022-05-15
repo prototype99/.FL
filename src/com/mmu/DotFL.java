@@ -2,7 +2,6 @@ package com.mmu;
 
 import org.libsdl.api.event.events.SDL_ControllerSensorEvent;
 import org.libsdl.api.event.events.SDL_Event;
-import org.libsdl.api.gamecontroller.SDL_GameController;
 import processing.core.PApplet;
 import processing.core.PVector;
 
@@ -15,7 +14,6 @@ import static org.libsdl.api.Sdl.SDL_Init;
 import static org.libsdl.api.error.SdlError.SDL_GetError;
 import static org.libsdl.api.event.SdlEvents.SDL_CONTROLLERSENSORUPDATE;
 import static org.libsdl.api.event.SdlEvents.SDL_PollEvent;
-import static org.libsdl.api.gamecontroller.SdlGamecontroller.SDL_GameControllerClose;
 import static org.libsdl.api.gamecontroller.SdlGamecontroller.SDL_GameControllerHasSensor;
 import static org.libsdl.api.gamecontroller.SdlGamecontroller.SDL_GameControllerOpen;
 import static org.libsdl.api.gamecontroller.SdlGamecontroller.SDL_GameControllerSetSensorEnabled;
@@ -196,7 +194,6 @@ public class DotFL extends PApplet {
                         System.out.println("Warning: no gyroscope detected, did you connect the right controller?");
                     }
                 }
-                SDL_GameControllerClose(logNew.gamepad);
             }
         }
         //handle processing code
