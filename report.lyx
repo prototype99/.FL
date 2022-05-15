@@ -4961,6 +4961,12 @@ With the development now underway, it has become clear that the error reporting
  To aid with this, a class has been made that can store the result of every
  error check; by storing two instances of such a class, it is possible to
  compare the past and the present for changes.
+ After some experimentation it appeared that something had changed: surely
+ a factor external to the code must have been altered, as now even with
+ some of the oldest iterations of known working code, now no data can be
+ extracted.
+ In response, the code was stripped away, until it truly failed, rather
+ than printing a designed error message.
 \end_layout
 
 \begin_layout Chapter
