@@ -330,7 +330,7 @@ Abbreviations
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="47" columns="2">
+<lyxtabular version="3" rows="48" columns="2">
 <features islongtable="true" longtabularalignment="center">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top" width="0pt">
@@ -629,6 +629,26 @@ ESport
 
 \begin_layout Plain Layout
 Electronic Sport
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+GB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+GigaBytes
 \end_layout
 
 \end_inset
@@ -4967,6 +4987,13 @@ With the development now underway, it has become clear that the error reporting
  extracted.
  In response, the code was stripped away, until it truly failed, rather
  than printing a designed error message.
+ Eventually after enough stripping back there was no error, but the data
+ was truly empty, every value being 0, as if nothing was enabled.
+ The next logical thought was that there could be outdated software, could
+ that be the case? There were 3.9GB of updates, lending plausibility to such
+ a hypothesis.
+ Potential suspects included Intellij idea, various updated kernel packages,
+ an update for SDL and various other system libraries.
 \end_layout
 
 \begin_layout Chapter
