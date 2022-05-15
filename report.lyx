@@ -5000,6 +5000,85 @@ With the development now underway, it has become clear that the error reporting
  an update for SDL and various other system libraries.
  Unfortunately, this did not appear to help, however after overwriting with
  the updated libSDL binary it worked.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+The gyroscope data is returned as an array of floating point integers, meaning
+ that there is a generally acceptable level of accuracy.
+ If it is assumed that the Y label is the front of the DS5, then the array,
+ if visualised as seen in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:A-rotational-gizmo"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, must be mapped as such: 
+\begin_inset Formula $\left[\begin{array}{ccc}
+Y & Z & X\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ill_rotation_trackball.gif
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A rotational gizmo
+\begin_inset CommandInset citation
+LatexCommand citep
+key "zaurnaghiyevUsingTransformGizmos2006"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:A-rotational-gizmo"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
