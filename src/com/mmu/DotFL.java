@@ -23,6 +23,7 @@ import static org.libsdl.api.sensor.SDL_SensorType.SDL_SENSOR_GYRO;
 public class DotFL extends PApplet {
     //stored in the format: {x, y, size}
     ArrayList<float[]> targets;
+    boolean inputMouse = true;
     GhostLog logNew, logOld = new GhostLog();
     int drawMode = 1, hitTargets, targetLoops;
     PVector[] p;
@@ -39,19 +40,6 @@ public class DotFL extends PApplet {
         surface.setSize(displayWidth, displayHeight);
         windowResizable(true);
         noCursor();
-        //repetition free string construction~
-        msgsChange[0] = "no ";
-        for (int i = 0; i < 3; i++) {
-            msgsChange[i] += "gamepad";
-        }
-        msgsChange[2] += "s";
-        for (int i = 0; i < 3; i++) {
-            msgsChange[i] += " connected";
-        }
-        //initialise sdl subsystems
-        if ((SDL_Init(SDL_INIT_GAMECONTROLLER) == -1)) {
-            System.out.println(SDL_GetError());
-        }
         redraw();
     }
 
@@ -102,94 +90,116 @@ public class DotFL extends PApplet {
     @Override
     public void mousePressed() {
         if (drawMode == 3) {
-            targets.removeIf(t -> (isHit(t, mouseX, mouseY, 0)));
-            for (int i = 0; i < 3 - targets.size(); i++) {
-                hitTargets++;
-                addTarget();
+            if (inputMouse) {
+                targets.removeIf(t -> (isHit(t, mouseX, mouseY, 0)));
+                for (int i = 0; i < 3 - targets.size(); i++) {
+                    hitTargets++;
+                    addTarget();
+                }
             }
-            redraw();
         }
+        redraw();
     }
 
     @Override
     public void mouseReleased() {
-        if (p.length > 10 && drawMode == 1) {
-            float circX = 0, circY = 0;
-            for (PVector v : p) {
-                circX += v.x;
-                circY += v.y;
-            }
-            circX /= p.length;
-            circY /= p.length;
-            float circRad = 0;
-            for (PVector v : p) {
-                circRad += dist(v.x, v.y, circX, circY);
-            }
-            circRad /= p.length;
-            float errorFactor = 0;
-            for (PVector v : p) {
-                errorFactor += abs(dist(v.x, v.y, circX, circY) - circRad);
-            }
-            //work out mean absolute difference and normalise to radius so it scales to size
-            //a higher error factor equates to more errors
-            errorFactor = (errorFactor / p.length) / circRad;
-            //ensure circle has enough data points for accurate analysis
-            if (circRad > 24) {
-                System.out.println(errorFactor);
-                drawMode = 3;
-                targets = new ArrayList<>();
-                for (int i = 0; i < 3; i++) {
-                    addTarget();
+        if (inputMouse) {
+            if (p.length > 10 && drawMode == 1) {
+                float circX = 0, circY = 0;
+                for (PVector v : p) {
+                    circX += v.x;
+                    circY += v.y;
                 }
-                redraw();
+                circX /= p.length;
+                circY /= p.length;
+                float circRad = 0;
+                for (PVector v : p) {
+                    circRad += dist(v.x, v.y, circX, circY);
+                }
+                circRad /= p.length;
+                float errorFactor = 0;
+                for (PVector v : p) {
+                    errorFactor += abs(dist(v.x, v.y, circX, circY) - circRad);
+                }
+                //work out mean absolute difference and normalise to radius so it scales to size
+                //a higher error factor equates to more errors
+                errorFactor = (errorFactor / p.length) / circRad;
+                System.out.println(errorFactor);
+                //ensure circle has enough data points for accurate analysis
+                if (circRad > 24) {
+                    if (inputMouse) {
+                        //repetition free string construction~
+                        msgsChange[0] = "no ";
+                        for (int i = 0; i < 3; i++) {
+                            msgsChange[i] += "gamepad";
+                        }
+                        msgsChange[2] += "s";
+                        for (int i = 0; i < 3; i++) {
+                            msgsChange[i] += " connected";
+                        }
+                        //initialise sdl subsystems
+                        if ((SDL_Init(SDL_INIT_GAMECONTROLLER) == -1)) {
+                            System.out.println(SDL_GetError());
+                        }
+                    } else {
+                        drawMode = 3;
+                        targets = new ArrayList<>();
+                        for (int i = 0; i < 3; i++) {
+                            addTarget();
+                        }
+                    }
+                }
             }
         }
+        redraw();
     }
 
     //this is needed to ensure layering is done properly
     public void redraw() {
         surface.setSize(width, height);
-        logNew = new GhostLog();
-        logNew.numSticks = SDL_NumJoysticks();
-        //output a message if required
-        if (logNew.numSticks != logOld.numSticks) {
-            int joyStatus = logNew.numSticks;
-            if (joyStatus > 2) {
-                joyStatus = 2;
-            }
-            System.out.println(msgsChange[joyStatus]);
-        }
-        //Check for joysticks
-        if (logNew.numSticks > 0) {
-            for (int i = 0; i < logNew.numSticks; i++) {
-                if (SDL_IsGameController(i)) {
-                    //Load DS5
-                    logNew.gamepad = SDL_GameControllerOpen(i);
+        if (!inputMouse) {
+            logNew = new GhostLog();
+            logNew.numSticks = SDL_NumJoysticks();
+            //output a message if required
+            if (logNew.numSticks != logOld.numSticks) {
+                int joyStatus = logNew.numSticks;
+                if (joyStatus > 2) {
+                    joyStatus = 2;
                 }
+                System.out.println(msgsChange[joyStatus]);
             }
-            if (logNew.gamepad == null) {
-                logNew.gamepadError = SDL_GetError();
-                if (logNew.gamepad != logOld.gamepad || !Objects.equals(logNew.gamepadError, logOld.gamepadError)) {
-                    System.out.println("Warning: Unable to open gamepad! SDL Error:" + logNew.gamepadError);
+            //Check for joysticks
+            if (logNew.numSticks > 0) {
+                for (int i = 0; i < logNew.numSticks; i++) {
+                    if (SDL_IsGameController(i)) {
+                        //Load DS5
+                        logNew.gamepad = SDL_GameControllerOpen(i);
+                    }
                 }
-            } else {
-                logNew.gyroStatus = SDL_GameControllerHasSensor(logNew.gamepad, SDL_SENSOR_GYRO);
-                if (logNew.gyroStatus) {
-                    if (SDL_GameControllerSetSensorEnabled(logNew.gamepad, SDL_SENSOR_GYRO, true) == -1) {
-                        System.out.println("Warning: unable to enable gyroscope");
-                    } else {
-                        SDL_Event e = new SDL_Event();
-                        SDL_PollEvent(e);
-                        if (e.type == SDL_CONTROLLERSENSORUPDATE) {
-                            logNew.gyroEvent = e.csensor;
-                            if (logNew.gyroEvent.sensor == SDL_SENSOR_GYRO) {
-                                System.out.println(Arrays.toString(logNew.gyroEvent.data));
-                            }
-                        }
+                if (logNew.gamepad == null) {
+                    logNew.gamepadError = SDL_GetError();
+                    if (logNew.gamepad != logOld.gamepad || !Objects.equals(logNew.gamepadError, logOld.gamepadError)) {
+                        System.out.println("Warning: Unable to open gamepad! SDL Error:" + logNew.gamepadError);
                     }
                 } else {
-                    if (logNew.gyroStatus != logOld.gyroStatus) {
-                        System.out.println("Warning: no gyroscope detected, did you connect the right controller?");
+                    logNew.gyroStatus = SDL_GameControllerHasSensor(logNew.gamepad, SDL_SENSOR_GYRO);
+                    if (logNew.gyroStatus) {
+                        if (SDL_GameControllerSetSensorEnabled(logNew.gamepad, SDL_SENSOR_GYRO, true) == -1) {
+                            System.out.println("Warning: unable to enable gyroscope");
+                        } else {
+                            SDL_Event e = new SDL_Event();
+                            SDL_PollEvent(e);
+                            if (e.type == SDL_CONTROLLERSENSORUPDATE) {
+                                logNew.gyroEvent = e.csensor;
+                                if (logNew.gyroEvent.sensor == SDL_SENSOR_GYRO) {
+                                    System.out.println(Arrays.toString(logNew.gyroEvent.data));
+                                }
+                            }
+                        }
+                    } else {
+                        if (logNew.gyroStatus != logOld.gyroStatus) {
+                            System.out.println("Warning: no gyroscope detected, did you connect the right controller?");
+                        }
                     }
                 }
             }
@@ -198,7 +208,7 @@ public class DotFL extends PApplet {
         background(190);
         switch (drawMode) {
             case 1 -> {
-                if (mousePressed) {
+                if (inputMouse && mousePressed) {
                     if (p.length > 0) {
                         PVector ps = p[p.length - 1];
                         float angle = atan2(ps.y - mouseY, ps.x - mouseX);
@@ -246,12 +256,15 @@ public class DotFL extends PApplet {
         noFill();
         strokeWeight(2);
         stroke(0,255,0);
-        circle(mouseX, mouseY, 10);
-        //present becomes past
-        logOld.gamepad = logNew.gamepad;
-        logOld.gamepadError = logNew.gamepadError;
-        logOld.gyroEvent = logNew.gyroEvent;
-        logOld.gyroStatus = logNew.gyroStatus;
-        logOld.numSticks = logNew.numSticks;
+        if (inputMouse) {
+            circle(mouseX, mouseY, 10);
+        } else {
+            //present becomes past
+            logOld.gamepad = logNew.gamepad;
+            logOld.gamepadError = logNew.gamepadError;
+            logOld.gyroEvent = logNew.gyroEvent;
+            logOld.gyroStatus = logNew.gyroStatus;
+            logOld.numSticks = logNew.numSticks;
+        }
     }
 }
