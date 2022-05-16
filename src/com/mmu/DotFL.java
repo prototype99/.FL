@@ -213,6 +213,7 @@ public class DotFL extends PApplet {
                                     }
                                     if(gtime > 0) {
                                         for (int i = 0; i < 2; i++) {
+                                            //move the cursor position data
                                             gyroV[i] += logNew.gyroEvent.data[i * 2] * gtime;
                                         }
                                     }
