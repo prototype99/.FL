@@ -165,8 +165,11 @@ public class DotFL extends PApplet {
     public void redraw() {
         surface.setSize(width, height);
         if (!inputMouse) {
-            logNew = new GhostLog();
-            logNew.numSticks = SDL_NumJoysticks();
+            try {
+                logNew.numSticks = SDL_NumJoysticks();
+            } catch(NullPointerException n) {
+                logNew = new GhostLog();
+            }
             //output a message if required
             if (logNew.numSticks != logOld.numSticks) {
                 int joyStatus = logNew.numSticks;
