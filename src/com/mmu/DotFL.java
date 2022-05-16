@@ -113,15 +113,20 @@ public class DotFL extends PApplet {
                     }
                     circV[i] /= p.size();
                 }
+                float[] dists = new float[p.size()];
+                float[] pd;
+                for (int i = 0; i < p.size(); i++) {
+                    pd = p.get(i);
+                    dists[i] = dist(pd[0], pd[1], circV[0], circV[1]);
+                }
                 float circRad = 0;
-                //you might be able to reuse the dist!!!
-                for (float[] v : p) {
-                    circRad += dist(v[0], v[1], circV[0], circV[1]);
+                for (float d : dists) {
+                    circRad += d;
                 }
                 circRad /= p.size();
                 float errorFactor = 0;
-                for (float[] v : p) {
-                    errorFactor += abs(dist(v[0], v[1], circV[0], circV[1]) - circRad);
+                for (float d : dists) {
+                    errorFactor += abs(d - circRad);
                 }
                 //work out mean absolute difference and normalise to radius so it scales to size
                 //a higher error factor equates to more errors
