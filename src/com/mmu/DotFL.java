@@ -128,6 +128,8 @@ public class DotFL extends PApplet {
                 //ensure circle has enough data points for accurate analysis
                 if (circRad > 24) {
                     if (inputMouse) {
+                        //reset the test
+                        p = new PVector[0];
                         //repetition free string construction~
                         msgsChange[0] = "no ";
                         for (int i = 0; i < 3; i++) {
