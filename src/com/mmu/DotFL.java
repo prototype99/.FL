@@ -247,7 +247,7 @@ public class DotFL extends PApplet {
                                 angles[i] = ps[i] - 5 * angles[i];
                             }
                             p.add(angles);
-                            ps = p.get(p.size() - 1);
+                            ps = angles;
                             angle = atan2(ps[1] - mouseY, ps[0] - mouseX);
                             dis = dist(mouseX, mouseY, ps[0], ps[1]);
                         }
