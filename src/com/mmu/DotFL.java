@@ -24,8 +24,8 @@ public class DotFL extends PApplet {
     //TODO: remove this
     ArrayList<float[]> targets;
     boolean inputMouse = true;
-    //in the format: {y, x}
-    float[] gyroV;
+    //gyroV in the format: {y, x}
+    float[] choir, gyroV, ps;
     GhostLog logNew, logOld = new GhostLog();
     int drawMode = 1, hitTargets, targetLoops;
     //strings are predeclared to allow some cool math later. ye, i could probably use an enum but i've never liked them. also, less rewriting memory
@@ -164,6 +164,10 @@ public class DotFL extends PApplet {
         redraw();
     }
 
+    public void song() {
+        choir = new float[]{atan2(ps[1] - mouseY, ps[0] - mouseX), dist(mouseX, mouseY, ps[0], ps[1])};
+    }
+
     //this is needed to ensure layering is done properly
     public void redraw() {
         surface.setSize(width, height);
@@ -238,8 +242,8 @@ public class DotFL extends PApplet {
             case 1 -> {
                 if (inputMouse && mousePressed) {
                     if (p.size() > 0) {
-                        float[] ps = p.get(p.size() - 1);
-                        float[] choir = new float[]{atan2(ps[1] - mouseY, ps[0] - mouseX), dist(mouseX, mouseY, ps[0], ps[1])};
+                        ps = p.get(p.size() - 1);
+                        song();
                         while (choir[1] > 5) {
                             float[] angles = new float[]{cos(choir[0]), sin(choir[0])};
                             for (int i = 0; i < 2; i++) {
@@ -247,7 +251,7 @@ public class DotFL extends PApplet {
                             }
                             p.add(angles);
                             ps = angles;
-                            choir = new float[]{atan2(ps[1] - mouseY, ps[0] - mouseX), dist(mouseX, mouseY, ps[0], ps[1])};
+                            song();
                         }
                     } else {
                         p.add(new float[]{mouseX, mouseY});
