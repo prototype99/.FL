@@ -242,7 +242,8 @@ public class DotFL extends PApplet {
                         float angle = atan2(ps[1] - mouseY, ps[0] - mouseX);
                         float dis = dist(mouseX, mouseY, ps[0], ps[1]);
                         while (dis > 5) {
-                            p.add(new float[]{ps[0] - 5 * cos(angle), ps[1] - 5 * sin(angle)});
+                            float[] angles = new float[]{cos(angle), sin(angle)};
+                            p.add(new float[]{ps[0] - 5 * angles[0], ps[1] - 5 * angles[1]});
                             ps = p.get(p.size() - 1);
                             angle = atan2(ps[1] - mouseY, ps[0] - mouseX);
                             dis = dist(mouseX, mouseY, ps[0], ps[1]);
