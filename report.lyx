@@ -5103,6 +5103,14 @@ Y & Z & X\end{array}\right]$
 .
  As the user is in this case not moving in a 3D space, only two axes are
  required, in this case: X and Y.
+ As development progresses, it becomes more and more clear that the current
+ code results in events not actually occurring in order.
+ Whilst the ordeal of concurrent operations may be ideal for a multi-threading
+ context, due to lack of knowledge, this is not an option.
+ As an alternative to multi-threading, should the need arise, each redraw
+ event will be given an identifier which increases with each iteration,
+ thus allowing the ability for a redraw event to wait for the one before
+ it to finish, prior to fully running.
 \end_layout
 
 \begin_layout Standard
