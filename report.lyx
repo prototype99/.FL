@@ -5111,6 +5111,8 @@ Y & Z & X\end{array}\right]$
  event will be given an identifier which increases with each iteration,
  thus allowing the ability for a redraw event to wait for the one before
  it to finish, prior to fully running.
+ The X axis had to be inverted, once doing so the motion performed as expected,
+ although not smoothly.
 \end_layout
 
 \begin_layout Standard
