@@ -24,6 +24,7 @@ public class DotFL extends PApplet {
     //stored in the format: {x, y, size}
     ArrayList<float[]> targets;
     boolean inputMouse = true;
+    float gyroX, gyroY;
     GhostLog logNew, logOld = new GhostLog();
     int drawMode = 1, hitTargets, targetLoops;
     PVector[] p;
@@ -131,6 +132,8 @@ public class DotFL extends PApplet {
                         //reset the test
                         p = new PVector[0];
                         //switch to gyro input
+                        gyroX = width / 2.0F;
+                        gyroY = height / 2.0F;
                         inputMouse = false;
                         //repetition free string construction~
                         msgsChange[0] = "no ";
@@ -263,6 +266,7 @@ public class DotFL extends PApplet {
         if (inputMouse) {
             circle(mouseX, mouseY, 10);
         } else {
+            circle(gyroX, gyroY, 10);
             //present becomes past
             logOld.gamepad = logNew.gamepad;
             logOld.gamepadError = logNew.gamepadError;
