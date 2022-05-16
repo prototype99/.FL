@@ -22,6 +22,7 @@ import static org.libsdl.api.sensor.SDL_SensorType.SDL_SENSOR_GYRO;
 public class DotFL extends PApplet {
     //stored in the format: {x, y, size}
     ArrayList<float[]> p;
+    //TODO: remove this
     ArrayList<float[]> targets;
     boolean inputMouse = true;
     float gyroX, gyroY;
