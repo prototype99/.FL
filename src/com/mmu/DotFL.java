@@ -138,6 +138,8 @@ public class DotFL extends PApplet {
                         //reset the test
                         p.clear();
                         inputMouse = false;
+                        //higher refresh rate for gyro
+                        frameRate(120);
                         //repetition free string construction~
                         msgsChange[0] = "no ";
                         for (int i = 0; i < 3; i++) {

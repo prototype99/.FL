@@ -5113,6 +5113,8 @@ Y & Z & X\end{array}\right]$
  it to finish, prior to fully running.
  The X axis had to be inverted, once doing so the motion performed as expected,
  although not smoothly.
+ Doubling the frame-rate from 60FPS to 120 FPS seemed to improve the input
+ smoothness.
 \end_layout
 
 \begin_layout Standard
