@@ -4405,12 +4405,12 @@ literal "false"
 \end_inset
 
  SDL seemed to only detect one joystick.
- Although the joystick reports having 6 axes which could cover all the loaded
+ Although the joystick reports having 6 axes which could cover all loaded
  joysticks, none of them appear to hold data.
  As an alternative, it was be switched to the GameController API which appears
  to better access the hardware.
- Afterwards it is unclear what the next step is, however it appears that
- the software yuzu implements motion control in the exact way required
+ Afterwards it is unclear what t do next, however it appears that yuzu implement
+s motion control as required
 \begin_inset CommandInset citation
 LatexCommand citep
 key "German2021"
@@ -4418,8 +4418,8 @@ literal "false"
 
 \end_inset
 
-, as a result the way forward may be to examine the relevant code and implement
- something similar.
+, as a result the way forward may be examining the relevant code and implementin
+g something similar.
 \end_layout
 
 \begin_layout Section
