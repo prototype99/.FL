@@ -200,6 +200,11 @@ public class DotFL extends PApplet {
                                 logNew.gyroEvent = e.csensor;
                                 if (logNew.gyroEvent.sensor == SDL_SENSOR_GYRO) {
                                     System.out.println(Arrays.toString(logNew.gyroEvent.data));
+                                    try{
+                                        if(logNew.gyroEvent.timestamp - logOld.gyroEvent.timestamp > 0) {
+                                            System.out.println(logNew.gyroEvent.timestamp - logOld.gyroEvent.timestamp);
+                                        }
+                                    } catch (NullPointerException ignored) {}
                                 }
                             }
                         }
