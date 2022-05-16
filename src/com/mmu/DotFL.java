@@ -1,5 +1,6 @@
 package com.mmu;
 
+import org.libsdl.api.event.events.SDL_ControllerButtonEvent;
 import org.libsdl.api.event.events.SDL_Event;
 import processing.core.PApplet;
 
@@ -9,6 +10,7 @@ import java.util.Objects;
 import static org.libsdl.api.SDL_SubSystem.SDL_INIT_GAMECONTROLLER;
 import static org.libsdl.api.Sdl.SDL_Init;
 import static org.libsdl.api.error.SdlError.SDL_GetError;
+import static org.libsdl.api.event.SdlEvents.SDL_CONTROLLERBUTTONDOWN;
 import static org.libsdl.api.event.SdlEvents.SDL_CONTROLLERSENSORUPDATE;
 import static org.libsdl.api.event.SdlEvents.SDL_PollEvent;
 import static org.libsdl.api.gamecontroller.SdlGamecontroller.SDL_GameControllerHasSensor;
@@ -208,23 +210,29 @@ public class DotFL extends PApplet {
                         } else {
                             SDL_Event e = new SDL_Event();
                             SDL_PollEvent(e);
-                            if (e.type == SDL_CONTROLLERSENSORUPDATE) {
-                                logNew.gyroEvent = e.csensor;
-                                if (logNew.gyroEvent.sensor == SDL_SENSOR_GYRO) {
-                                    int gtime;
-                                    try{
-                                        gtime = logNew.gyroEvent.timestamp - logOld.gyroEvent.timestamp;
-                                    } catch (NullPointerException ignored) {
-                                        gtime = logNew.gyroEvent.timestamp;
-                                    }
-                                    if(gtime > 0) {
-                                        for (int i = 0; i < 2; i++) {
-                                            //invert the x axis
-                                            if (i == 1) {
-                                                gtime *= -1;
+                            switch(e.type) {
+                                case SDL_CONTROLLERBUTTONDOWN -> {
+                                    SDL_ControllerButtonEvent buttonEvent = e.cbutton;
+                                    System.out.println("jycdhgjvrjyhvy");
+                                }
+                                case SDL_CONTROLLERSENSORUPDATE -> {
+                                    logNew.gyroEvent = e.csensor;
+                                    if (logNew.gyroEvent.sensor == SDL_SENSOR_GYRO) {
+                                        int gtime;
+                                        try{
+                                            gtime = logNew.gyroEvent.timestamp - logOld.gyroEvent.timestamp;
+                                        } catch (NullPointerException ignored) {
+                                            gtime = logNew.gyroEvent.timestamp;
+                                        }
+                                        if(gtime > 0) {
+                                            for (int i = 0; i < 2; i++) {
+                                                //invert the x axis
+                                                if (i == 1) {
+                                                    gtime *= -1;
+                                                }
+                                                //move the cursor position data
+                                                gyroV[i] += logNew.gyroEvent.data[i * 2] * gtime;
                                             }
-                                            //move the cursor position data
-                                            gyroV[i] += logNew.gyroEvent.data[i * 2] * gtime;
                                         }
                                     }
                                 }
