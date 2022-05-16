@@ -130,6 +130,8 @@ public class DotFL extends PApplet {
                     if (inputMouse) {
                         //reset the test
                         p = new PVector[0];
+                        //switch to gyro input
+                        inputMouse = false;
                         //repetition free string construction~
                         msgsChange[0] = "no ";
                         for (int i = 0; i < 3; i++) {
