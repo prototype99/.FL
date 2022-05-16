@@ -213,6 +213,10 @@ public class DotFL extends PApplet {
                                     }
                                     if(gtime > 0) {
                                         for (int i = 0; i < 2; i++) {
+                                            //invert the x axis
+                                            if (i == 1) {
+                                                gtime *= -1;
+                                            }
                                             //move the cursor position data
                                             gyroV[i] += logNew.gyroEvent.data[i * 2] * gtime;
                                         }
