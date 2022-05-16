@@ -285,10 +285,18 @@ public class DotFL extends PApplet {
         if (inputMouse) {
             circle(mouseX, mouseY, 10);
         } else {
+            float[] screenDim = new float[]{height, width};
             try {
+                for (int i = 0; i < 2; i++) {
+                    if (gyroV[i] < 0) {
+                        gyroV[i] = 0;
+                    } else if (gyroV[i] > screenDim[i]) {
+                        gyroV[i] = screenDim[i];
+                    }
+                }
                 circle(gyroV[1], gyroV[0], 10);
             } catch(NullPointerException n) {
-                gyroV = new float[]{height, width};
+                gyroV = screenDim;
                 for (int i = 0; i < 2; i++) {
                     gyroV[i] /= 2.0F;
                 }
