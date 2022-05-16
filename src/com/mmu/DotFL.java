@@ -1,6 +1,5 @@
 package com.mmu;
 
-import org.libsdl.api.event.events.SDL_ControllerButtonEvent;
 import org.libsdl.api.event.events.SDL_Event;
 import processing.core.PApplet;
 
@@ -212,8 +211,9 @@ public class DotFL extends PApplet {
                             SDL_PollEvent(e);
                             switch(e.type) {
                                 case SDL_CONTROLLERBUTTONDOWN -> {
-                                    SDL_ControllerButtonEvent buttonEvent = e.cbutton;
-                                    System.out.println("jycdhgjvrjyhvy");
+                                    if (e.cbutton.button == 0) {
+                                        System.out.println("jycdhgjvrjyhvy");
+                                    }
                                 }
                                 case SDL_CONTROLLERSENSORUPDATE -> {
                                     logNew.gyroEvent = e.csensor;
