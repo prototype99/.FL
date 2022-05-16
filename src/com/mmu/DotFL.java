@@ -4,7 +4,6 @@ import org.libsdl.api.event.events.SDL_Event;
 import processing.core.PApplet;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Objects;
 
 import static org.libsdl.api.SDL_SubSystem.SDL_INIT_GAMECONTROLLER;
@@ -213,7 +212,6 @@ public class DotFL extends PApplet {
                                         gtime = logNew.gyroEvent.timestamp;
                                     }
                                     if(gtime > 0) {
-                                        System.out.println(Arrays.toString(logNew.gyroEvent.data));
                                         for (int i = 0; i < 2; i++) {
                                             gyroV[i] += logNew.gyroEvent.data[i * 2] * gtime;
                                         }
