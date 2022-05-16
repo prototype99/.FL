@@ -2,7 +2,6 @@ package com.mmu;
 
 import org.libsdl.api.event.events.SDL_Event;
 import processing.core.PApplet;
-import processing.core.PVector;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -22,12 +21,12 @@ import static org.libsdl.api.sensor.SDL_SensorType.SDL_SENSOR_GYRO;
 
 public class DotFL extends PApplet {
     //stored in the format: {x, y, size}
+    ArrayList<float[]> p;
     ArrayList<float[]> targets;
     boolean inputMouse = true;
     float gyroX, gyroY;
     GhostLog logNew, logOld = new GhostLog();
     int drawMode = 1, hitTargets, targetLoops;
-    PVector[] p;
     //strings are predeclared to allow some cool math later. ye, i could probably use an enum but i've never liked them. also, less rewriting memory
     String[] msgsChange = new String[3];
 
@@ -105,32 +104,33 @@ public class DotFL extends PApplet {
     @Override
     public void mouseReleased() {
         if (inputMouse) {
-            if (p.length > 10 && drawMode == 1) {
-                float circX = 0, circY = 0;
-                for (PVector v : p) {
-                    circX += v.x;
-                    circY += v.y;
+            if (p.size() > 10 && drawMode == 1) {
+                float[] circV = new float[2];
+                for (int i = 0; i < 2; i++) {
+                    for (float[] v : p) {
+                        circV[i] += v[i];
+                    }
+                    circV[i] /= p.size();
                 }
-                circX /= p.length;
-                circY /= p.length;
                 float circRad = 0;
-                for (PVector v : p) {
-                    circRad += dist(v.x, v.y, circX, circY);
+                //you might be able to reuse the dist!!!
+                for (float[] v : p) {
+                    circRad += dist(v[0], v[1], circV[0], circV[1]);
                 }
-                circRad /= p.length;
+                circRad /= p.size();
                 float errorFactor = 0;
-                for (PVector v : p) {
-                    errorFactor += abs(dist(v.x, v.y, circX, circY) - circRad);
+                for (float[] v : p) {
+                    errorFactor += abs(dist(v[0], v[1], circV[0], circV[1]) - circRad);
                 }
                 //work out mean absolute difference and normalise to radius so it scales to size
                 //a higher error factor equates to more errors
-                errorFactor = (errorFactor / p.length) / circRad;
+                errorFactor = (errorFactor / p.size()) / circRad;
                 System.out.println(errorFactor);
                 //ensure circle has enough data points for accurate analysis
                 if (circRad > 24) {
                     if (inputMouse) {
                         //reset the test
-                        p = new PVector[0];
+                        p.clear();
                         //switch to gyro input
                         gyroX = width / 2.0F;
                         gyroY = height / 2.0F;
@@ -229,33 +229,34 @@ public class DotFL extends PApplet {
         switch (drawMode) {
             case 1 -> {
                 if (inputMouse && mousePressed) {
-                    if (p.length > 0) {
-                        PVector ps = p[p.length - 1];
-                        float angle = atan2(ps.y - mouseY, ps.x - mouseX);
-                        float dis = dist(mouseX, mouseY, ps.x, ps.y);
+                    if (p.size() > 0) {
+                        float[] ps = p.get(p.size() - 1);
+                        float angle = atan2(ps[1] - mouseY, ps[0] - mouseX);
+                        float dis = dist(mouseX, mouseY, ps[0], ps[1]);
                         while (dis > 5) {
-                            p = (PVector[]) append(p, new PVector(ps.x - 5 * cos(angle), ps.y - 5 * sin(angle)));
-                            ps = p[p.length - 1];
-                            angle = atan2(ps.y - mouseY, ps.x - mouseX);
-                            dis = dist(mouseX, mouseY, ps.x, ps.y);
+                            p.add(new float[]{ps[0] - 5 * cos(angle), ps[1] - 5 * sin(angle)});
+                            ps = p.get(p.size() - 1);
+                            angle = atan2(ps[1] - mouseY, ps[0] - mouseX);
+                            dis = dist(mouseX, mouseY, ps[0], ps[1]);
                         }
                     } else {
-                        p = (PVector[]) append(p, new PVector(mouseX, mouseY));
+                        p.add(new float[]{mouseX, mouseY});
                     }
                 }
                 //do all the actual drawing
                 stroke(255);
                 strokeWeight(10);
                 try {
-                    for (int i = 0; i < p.length; i++) {
-                        PVector prev = p[i];
+                    for (int i = 0; i < p.size(); i++) {
+                        float[] prev = p.get(i);
                         if (i - 1 >= 0) {
-                            prev = p[i - 1];
+                            prev = p.get(i - 1);
                         }
-                        line(p[i].x, p[i].y, prev.x, prev.y);
+                        float[] pl = p.get(i);
+                        line(pl[0], pl[1], prev[0], prev[1]);
                     }
                 } catch(NullPointerException n) {
-                    p = new PVector[0];
+                    p = new ArrayList<>();
                 }
             }
             case 3 -> {
