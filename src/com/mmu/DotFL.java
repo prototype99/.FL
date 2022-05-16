@@ -20,12 +20,13 @@ import static org.libsdl.api.joystick.SdlJoystick.SDL_NumJoysticks;
 import static org.libsdl.api.sensor.SDL_SensorType.SDL_SENSOR_GYRO;
 
 public class DotFL extends PApplet {
-    //stored in the format: {x, y, size}
+    //in the format: {x, y, size}
     ArrayList<float[]> p;
     //TODO: remove this
     ArrayList<float[]> targets;
     boolean inputMouse = true;
-    float gyroX, gyroY;
+    //in the format: {y, x}
+    float[] gyroV;
     GhostLog logNew, logOld = new GhostLog();
     int drawMode = 1, hitTargets, targetLoops;
     //strings are predeclared to allow some cool math later. ye, i could probably use an enum but i've never liked them. also, less rewriting memory
@@ -137,9 +138,6 @@ public class DotFL extends PApplet {
                     if (inputMouse) {
                         //reset the test
                         p.clear();
-                        //switch to gyro input
-                        gyroX = width / 2.0F;
-                        gyroY = height / 2.0F;
                         inputMouse = false;
                         //repetition free string construction~
                         msgsChange[0] = "no ";
@@ -216,8 +214,9 @@ public class DotFL extends PApplet {
                                     }
                                     if(gtime > 0) {
                                         System.out.println(Arrays.toString(logNew.gyroEvent.data));
-                                        gyroX += logNew.gyroEvent.data[2] * gtime;
-                                        gyroY += logNew.gyroEvent.data[0] * gtime;
+                                        for (int i = 0; i < 2; i++) {
+                                            gyroV[i] += logNew.gyroEvent.data[i * 2] * gtime;
+                                        }
                                     }
                                 }
                             }
@@ -286,7 +285,14 @@ public class DotFL extends PApplet {
         if (inputMouse) {
             circle(mouseX, mouseY, 10);
         } else {
-            circle(gyroX, gyroY, 10);
+            try {
+                circle(gyroV[1], gyroV[0], 10);
+            } catch(NullPointerException n) {
+                gyroV = new float[]{height, width};
+                for (int i = 0; i < 2; i++) {
+                    gyroV[i] /= 2.0F;
+                }
+            }
             //present becomes past
             logOld.gamepad = logNew.gamepad;
             logOld.gamepadError = logNew.gamepadError;
