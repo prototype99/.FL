@@ -5103,18 +5103,6 @@ Y & Z & X\end{array}\right]$
 .
  As the user is in this case not moving in a 3D space, only two axes are
  required, in this case: X and Y.
- As development progresses, it becomes more and more clear that the current
- code results in events not actually occurring in order.
- Whilst the ordeal of concurrent operations may be ideal for a multi-threading
- context, due to lack of knowledge, this is not an option.
- As an alternative to multi-threading, should the need arise, each redraw
- event will be given an identifier which increases with each iteration,
- thus allowing the ability for a redraw event to wait for the one before
- it to finish, prior to fully running.
- The X axis had to be inverted, once doing so the motion performed as expected,
- although not smoothly.
- Doubling the frame-rate from 60FPS to 120 FPS seemed to improve the input
- smoothness.
 \end_layout
 
 \begin_layout Standard
@@ -5150,6 +5138,90 @@ literal "false"
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:A-rotational-gizmo"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+A rotational song, from discordant screams born
+\end_layout
+
+\begin_layout Standard
+As development progresses, it becomes more and more clear that the current
+ code results in events not actually occurring in order.
+ Whilst the ordeal of concurrent operations may be ideal for a multi-threading
+ context, due to lack of knowledge, this is not an option.
+ As an alternative to multi-threading, should the need arise, each redraw
+ event will be given an identifier which increases with each iteration,
+ thus allowing the ability for a redraw event to wait for the one before
+ it to finish, prior to fully running.
+ The X axis had to be inverted, once doing so the motion performed as expected,
+ although not smoothly.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Calculation-of-gyroscopic"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is the algorithm used to position the cursor for a DS, every matrix is
+ an x and y value, every matrix has nonidentical values except for ϴ, which
+ is the same value, stored as a negative and positive value.
+ For clarification: O is the old values, C is the gyroscopic change and
+ ϴ is the difference in timestamps.
+ Doubling the frame-rate from 60FPS to 120 FPS seemed to improve the input
+ smoothness.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+N_{x} & N_{y}\end{array}\right]=\left[\begin{array}{cc}
+O_{x} & O_{y}\end{array}\right]+\left[\begin{array}{cc}
+C_{x} & C_{y}\end{array}\right]\left[\begin{array}{cc}
+-\theta_{x} & \theta_{y}\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Calculation of gyroscopic cursor positioning
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:Calculation-of-gyroscopic"
 
 \end_inset
 
