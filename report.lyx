@@ -5269,6 +5269,8 @@ noprefix "false"
 \end_inset
 
 , is particularly non-circular.
+ A few different variations were tried, however this appeared to be a more
+ base level issue: the algorithm was flawed.
 \end_layout
 
 \begin_layout Standard
