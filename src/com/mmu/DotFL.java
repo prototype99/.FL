@@ -27,7 +27,7 @@ public class DotFL extends PApplet {
     ArrayList<float[]> targets;
     boolean gyroPressed = false, inputMouse = true;
     //dims/gyroV in the format: {y, x}
-    float[] choir, dims, gyroV, ps;
+    float[] choir, dims, gyroCur, gyroVel, ps;
     GhostLog logNew, logOld = new GhostLog();
     int drawMode = 1, hitTargets, targetLoops;
     //strings are predeclared to allow some cool math later. ye, i could probably use an enum but i've never liked them. also, less rewriting memory
@@ -43,7 +43,7 @@ public class DotFL extends PApplet {
         surface.setSize(displayWidth, displayHeight);
         windowResizable(true);
         //higher refresh rate for smooth input
-        frameRate(120);
+        frameRate(480);
         //we draw our own cursor
         noCursor();
     }
@@ -125,7 +125,12 @@ public class DotFL extends PApplet {
                                                 pol *= -1;
                                             }
                                             //move the cursor position data
-                                            gyroV[i] += logNew.gyroEvent.data[i * 2] * pol;
+                                            try{
+                                                gyroVel[i] += logNew.gyroEvent.data[i * 2] * pol;
+                                            } catch(NullPointerException n) {
+                                                gyroVel = new float[2];
+                                            }
+                                            gyroCur[i] += gyroVel[i] / 8;
                                         }
                                     }
                                 }
@@ -176,7 +181,7 @@ public class DotFL extends PApplet {
                 }
             }
             case 3 -> {
-                if (targetLoops >= 7200) {
+                if (targetLoops >= 28800) {
                     drawMode = 4;
                     System.out.println(hitTargets);
                 } else {
@@ -200,17 +205,17 @@ public class DotFL extends PApplet {
             float[] screenDim = new float[]{height, width};
             try {
                 for (int i = 0; i < 2; i++) {
-                    if (gyroV[i] < 0) {
-                        gyroV[i] = 0;
-                    } else if (gyroV[i] > screenDim[i]) {
-                        gyroV[i] = screenDim[i];
+                    if (gyroCur[i] < 0) {
+                        gyroCur[i] = 0;
+                    } else if (gyroCur[i] > screenDim[i]) {
+                        gyroCur[i] = screenDim[i];
                     }
                 }
-                circle(gyroV[1], gyroV[0], 10);
+                circle(gyroCur[1], gyroCur[0], 10);
             } catch(NullPointerException n) {
-                gyroV = screenDim;
+                gyroCur = screenDim;
                 for (int i = 0; i < 2; i++) {
-                    gyroV[i] /= 2.0F;
+                    gyroCur[i] /= 2.0F;
                 }
             }
             //present becomes past
@@ -260,7 +265,7 @@ public class DotFL extends PApplet {
         if (inputMouse) {
             dims = new float[]{mouseY, mouseX};
         } else {
-            dims = gyroV;
+            dims = gyroCur;
         }
     }
 
