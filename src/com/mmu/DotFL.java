@@ -112,6 +112,7 @@ public class DotFL extends PApplet {
                                     if (e.cbutton.button == 0) {
                                         if (gyroPressed) {
                                             gyroPressed = false;
+                                            releaseEvent();
                                         }
                                     }
                                 }
@@ -271,7 +272,11 @@ public class DotFL extends PApplet {
 
     @Override
     public void mouseReleased() {
-        if (p.size() > 10 && drawMode == 1 && inputMouse) {
+        releaseEvent();
+    }
+
+    public void releaseEvent () {
+        if (p.size() > 10 && drawMode == 1) {
             float[] circV = new float[2];
             for (int i = 0; i < 2; i++) {
                 for (float[] v : p) {
