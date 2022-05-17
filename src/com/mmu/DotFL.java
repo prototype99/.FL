@@ -10,6 +10,7 @@ import static org.libsdl.api.SDL_SubSystem.SDL_INIT_GAMECONTROLLER;
 import static org.libsdl.api.Sdl.SDL_Init;
 import static org.libsdl.api.error.SdlError.SDL_GetError;
 import static org.libsdl.api.event.SdlEvents.SDL_CONTROLLERBUTTONDOWN;
+import static org.libsdl.api.event.SdlEvents.SDL_CONTROLLERBUTTONUP;
 import static org.libsdl.api.event.SdlEvents.SDL_CONTROLLERSENSORUPDATE;
 import static org.libsdl.api.event.SdlEvents.SDL_PollEvent;
 import static org.libsdl.api.gamecontroller.SdlGamecontroller.SDL_GameControllerHasSensor;
@@ -212,7 +213,12 @@ public class DotFL extends PApplet {
                             switch(e.type) {
                                 case SDL_CONTROLLERBUTTONDOWN -> {
                                     if (e.cbutton.button == 0) {
-                                        System.out.println("jycdhgjvrjyhvy");
+                                        System.out.println("down");
+                                    }
+                                }
+                                case SDL_CONTROLLERBUTTONUP -> {
+                                    if (e.cbutton.button == 0) {
+                                        System.out.println("up");
                                     }
                                 }
                                 case SDL_CONTROLLERSENSORUPDATE -> {
