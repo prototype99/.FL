@@ -118,21 +118,14 @@ public class DotFL extends PApplet {
                                 case SDL_CONTROLLERSENSORUPDATE -> {
                                     logNew.gyroEvent = e.csensor;
                                     if (logNew.gyroEvent.sensor == SDL_SENSOR_GYRO) {
-                                        int gtime;
-                                        try{
-                                            gtime = logNew.gyroEvent.timestamp - logOld.gyroEvent.timestamp;
-                                        } catch (NullPointerException ignored) {
-                                            gtime = logNew.gyroEvent.timestamp;
-                                        }
-                                        if(gtime > 0) {
-                                            for (int i = 0; i < 2; i++) {
-                                                //invert the x axis
-                                                if (i == 1) {
-                                                    gtime *= -1;
-                                                }
-                                                //move the cursor position data
-                                                gyroV[i] += logNew.gyroEvent.data[i * 2] * gtime;
+                                        int pol = 1;
+                                        for (int i = 0; i < 2; i++) {
+                                            //invert the x axis
+                                            if (i == 1) {
+                                                pol *= -1;
                                             }
+                                            //move the cursor position data
+                                            gyroV[i] += logNew.gyroEvent.data[i * 2] * pol;
                                         }
                                     }
                                 }
