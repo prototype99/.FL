@@ -5,6 +5,8 @@ import processing.core.PApplet;
 
 import java.util.ArrayList;
 import java.util.Objects;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import static org.libsdl.api.SDL_SubSystem.SDL_INIT_GAMECONTROLLER;
 import static org.libsdl.api.Sdl.SDL_Init;
@@ -25,13 +27,14 @@ public class DotFL extends PApplet {
     ArrayList<float[]> p;
     //TODO: remove this
     ArrayList<float[]> targets;
-    boolean gyroPressed = false, inputMouse = true;
+    boolean gyroPressed = false, inputMouse = true, timeElapsed;
     //dims/gyroV in the format: {y, x}
     float[] choir, dims, gyroCur, gyroVel, ps;
     GhostLog logNew, logOld = new GhostLog();
-    int drawMode = 1, hitTargets, targetLoops;
+    int drawMode = 1, hitTargets;
     //strings are predeclared to allow some cool math later. ye, i could probably use an enum but i've never liked them. also, less rewriting memory
     String[] msgsChange = new String[3];
+    Timer timer;
 
     public static void main(String[] args) {
         PApplet.main("com.mmu.DotFL");
@@ -182,9 +185,14 @@ public class DotFL extends PApplet {
                 }
             }
             case 3 -> {
-                if (targetLoops >= 28800) {
-                    drawMode = 4;
+                if (timeElapsed) {
                     System.out.println(hitTargets);
+                    if (inputMouse) {
+                        inputMouse = false;
+                        startTargets();
+                    } else {
+                        drawMode = 4;
+                    }
                 } else {
                     //draw targets
                     fill(255,0,0);
@@ -193,7 +201,6 @@ public class DotFL extends PApplet {
                         circle(t[0],t[1],t[2]);
                     }
                 }
-                targetLoops++;
             }
         }
         //draw the cursor
@@ -325,10 +332,7 @@ public class DotFL extends PApplet {
                 } else {
                     drawMode = 3;
                     inputMouse = true;
-                    targets = new ArrayList<>();
-                    for (int i = 0; i < 3; i++) {
-                        addTarget();
-                    }
+                    startTargets();
                 }
             }
         }
@@ -337,5 +341,27 @@ public class DotFL extends PApplet {
     public void song() {
         getDims();
         choir = new float[]{atan2(ps[1] - dims[0], ps[0] - dims[1]), dist(dims[1], dims[0], ps[0], ps[1])};
+    }
+
+    public void startTargets() {
+        timeElapsed = false;
+        targets = new ArrayList<>();
+        targetTimer(60);
+        for (int i = 0; i < 3; i++) {
+            addTarget();
+        }
+    }
+
+    public void targetTimer(int seconds) {
+        timer = new Timer();
+        timer.schedule(new TargetTask(), seconds* 1000L);
+    }
+
+    class TargetTask extends TimerTask {
+        @Override
+        public void run() {
+            timeElapsed = true;
+            timer.cancel();
+        }
     }
 }
