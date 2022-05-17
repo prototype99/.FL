@@ -52,6 +52,7 @@ public class DotFL extends PApplet {
         frameRate(480);
         //we draw our own cursor
         noCursor();
+        textSize(50);
     }
 
     @Override
@@ -171,6 +172,16 @@ public class DotFL extends PApplet {
         }
         switch (drawMode) {
             case 1 -> {
+                if (!isPressed()) {
+                    fill(0,0,255);
+                    String circleString = "please draw a circle with your ";
+                    if (inputMouse) {
+                        circleString += "mouse";
+                    } else {
+                        circleString += "gyro (X/A to draw)";
+                    }
+                    text(circleString, width/8.0F, height/2.0F);
+                }
                 //do all the actual drawing
                 stroke(255);
                 strokeWeight(10);
@@ -199,9 +210,20 @@ public class DotFL extends PApplet {
                     } else {
                         drawMode = 4;
                         //obfuscateeee
-                        System.out.println(Base64.getEncoder().encodeToString(userResults.getBytes(StandardCharsets.UTF_8)));
+                        fill(0,0,255);
+                        text(Base64.getEncoder().encodeToString(userResults.getBytes(StandardCharsets.UTF_8)), width/8.0F, height/2.0F);
                     }
                 } else {
+                    if (hitTargets == 0) {
+                        fill(0,0,255);
+                        String targetString = "please hit targets with your ";
+                        if (inputMouse) {
+                            targetString += "mouse";
+                        } else {
+                            targetString += "gyro (X/A to shoot)";
+                        }
+                        text(targetString, width/8.0F, height/2.0F);
+                    }
                     //draw targets
                     fill(255,0,0);
                     noStroke();
