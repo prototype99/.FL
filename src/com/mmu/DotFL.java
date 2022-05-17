@@ -25,7 +25,7 @@ public class DotFL extends PApplet {
     ArrayList<float[]> p;
     //TODO: remove this
     ArrayList<float[]> targets;
-    boolean inputMouse = true;
+    boolean gyroPressed = false, inputMouse = true;
     //dims/gyroV in the format: {y, x}
     float[] choir, dims, gyroV, ps;
     GhostLog logNew, logOld = new GhostLog();
@@ -103,12 +103,16 @@ public class DotFL extends PApplet {
                             switch(e.type) {
                                 case SDL_CONTROLLERBUTTONDOWN -> {
                                     if (e.cbutton.button == 0) {
-                                        System.out.println("down");
+                                        if (!gyroPressed) {
+                                            gyroPressed = true;
+                                        }
                                     }
                                 }
                                 case SDL_CONTROLLERBUTTONUP -> {
                                     if (e.cbutton.button == 0) {
-                                        System.out.println("up");
+                                        if (gyroPressed) {
+                                            gyroPressed = false;
+                                        }
                                     }
                                 }
                                 case SDL_CONTROLLERSENSORUPDATE -> {
