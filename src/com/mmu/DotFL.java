@@ -130,7 +130,7 @@ public class DotFL extends PApplet {
                                             } catch(NullPointerException n) {
                                                 gyroVel = new float[2];
                                             }
-                                            gyroCur[i] += gyroVel[i] / 8;
+                                            gyroCur[i] += gyroVel[i] / 3;
                                         }
                                     }
                                 }
