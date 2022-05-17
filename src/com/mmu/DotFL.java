@@ -36,7 +36,7 @@ public class DotFL extends PApplet {
     int drawMode = 1, hitTargets;
     //strings are predeclared to allow some cool math later. ye, i could probably use an enum but i've never liked them. also, less rewriting memory
     String[] msgsChange = new String[3];
-    String userResults;
+    String userResults = "circle|mouse|";
     Timer timer;
 
     public static void main(String[] args) {
@@ -189,8 +189,9 @@ public class DotFL extends PApplet {
             }
             case 3 -> {
                 if (timeElapsed) {
-                    System.out.println(hitTargets);
+                    userResults += hitTargets;
                     if (inputMouse) {
+                        userResults += "|gyro|";
                         inputMouse = false;
                         hitTargets = 0;
                         startTargets();
@@ -314,13 +315,13 @@ public class DotFL extends PApplet {
             }
             //work out mean absolute difference and normalise to radius so it scales to size
             //a higher error factor equates to more errors
-            errorFactor = (errorFactor / p.size()) / circRad;
-            System.out.println(errorFactor);
+            userResults += (errorFactor / p.size()) / circRad;
             //ensure circle has enough data points for accurate analysis
             if (circRad > 24) {
                 if (inputMouse) {
                     //reset the test
                     p.clear();
+                    userResults += "|gyro|";
                     inputMouse = false;
                     //repetition free string construction~
                     msgsChange[0] = "no ";
@@ -336,6 +337,7 @@ public class DotFL extends PApplet {
                         System.out.println(SDL_GetError());
                     }
                 } else {
+                    userResults += "|target|mouse|";
                     drawMode = 3;
                     inputMouse = true;
                     startTargets();
