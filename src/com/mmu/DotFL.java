@@ -214,7 +214,7 @@ public class DotFL extends PApplet {
         //draw the cursor
         noFill();
         strokeWeight(2);
-        stroke(0,255,0);
+        stroke(0);
         if (inputMouse) {
             circle(mouseX, mouseY, 10);
         } else {
