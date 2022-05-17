@@ -209,9 +209,6 @@ public class DotFL extends PApplet {
                         startTargets();
                     } else {
                         drawMode = 4;
-                        //obfuscateeee
-                        fill(0,0,255);
-                        text(Base64.getEncoder().encodeToString(userResults.getBytes(StandardCharsets.UTF_8)), width/8.0F, height/2.0F);
                     }
                 } else {
                     if (hitTargets == 0) {
@@ -231,6 +228,13 @@ public class DotFL extends PApplet {
                         circle(t[0],t[1],t[2]);
                     }
                 }
+            }
+            case 4 -> {
+                //obfuscateeee
+                fill(0,0,255);
+                userResults = Base64.getEncoder().encodeToString(userResults.getBytes(StandardCharsets.UTF_8));
+                System.out.println(userResults);
+                text(userResults, width/8.0F, height/2.0F);
             }
         }
         //draw the cursor
