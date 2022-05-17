@@ -146,24 +146,26 @@ public class DotFL extends PApplet {
                 }
             }
         }
+        if (isPressed()) {
+            if (p.size() > 0) {
+                ps = p.get(p.size() - 1);
+                song();
+                while (choir[1] > 5) {
+                    float[] angles = new float[]{cos(choir[0]), sin(choir[0])};
+                    for (int i = 0; i < 2; i++) {
+                        angles[i] = ps[i] - 5 * angles[i];
+                    }
+                    p.add(angles);
+                    ps = angles;
+                    song();
+                }
+            } else {
+                getDims();
+                p.add(new float[]{dims[1], dims[0]});
+            }
+        }
         switch (drawMode) {
             case 1 -> {
-                if (p.size() > 0) {
-                    ps = p.get(p.size() - 1);
-                    song();
-                    while (choir[1] > 5) {
-                        float[] angles = new float[]{cos(choir[0]), sin(choir[0])};
-                        for (int i = 0; i < 2; i++) {
-                            angles[i] = ps[i] - 5 * angles[i];
-                        }
-                        p.add(angles);
-                        ps = angles;
-                        song();
-                    }
-                } else {
-                    getDims();
-                    p.add(new float[]{dims[1], dims[0]});
-                }
                 //do all the actual drawing
                 stroke(255);
                 strokeWeight(10);
@@ -238,6 +240,14 @@ public class DotFL extends PApplet {
             }
         }
         return false;
+    }
+
+    public boolean isPressed() {
+        if (inputMouse) {
+            return mousePressed;
+        } else {
+            return gyroPressed;
+        }
     }
 
     public float[] newTarget() {
