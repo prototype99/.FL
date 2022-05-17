@@ -5257,6 +5257,59 @@ The low performance of gyroscope controls pre-120FPS is in many ways similar
 y hindered, allowing all inputs to share the same polling speed.
  The mouseReleased processing event has no equivalent that can be called
  from within the loop, which means it will remain event-based unfortunately.
+ In similar unfortunate circumstances, the first gyroscope circle, as seen
+ in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:A-non-circular-irregular"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, is particularly non-circular.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename pactagon.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A non-circular irregular polygon
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:A-non-circular-irregular"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
