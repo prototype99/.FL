@@ -223,6 +223,23 @@ public class DotFL extends PApplet {
         }
     }
 
+    public boolean isHit(float[] t, float x, float y, float c) {
+        return dist(x, y, t[0], t[1]) < (c + t[2]) / 2;
+    }
+
+    public boolean isIntersect(float x, float y, float c) {
+        for (float[] t : targets) {
+            if (isHit(t, x, y, c)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public float[] newTarget() {
+        return new float[]{random(width), random(height), random(120.3F)};
+    }
+
     //creates a new Target free from the past
     public void addTarget() {
         float[] t = newTarget();
@@ -238,23 +255,6 @@ public class DotFL extends PApplet {
         } else {
             dims = gyroV;
         }
-    }
-
-    public float[] newTarget() {
-        return new float[]{random(width), random(height), random(120.3F)};
-    }
-
-    public boolean isHit(float[] t, float x, float y, float c) {
-        return dist(x, y, t[0], t[1]) < (c + t[2]) / 2;
-    }
-
-    public boolean isIntersect(float x, float y, float c) {
-        for (float[] t : targets) {
-            if (isHit(t, x, y, c)) {
-                return true;
-            }
-        }
-        return false;
     }
 
     @Override
