@@ -3,7 +3,9 @@ package com.mmu;
 import org.libsdl.api.event.events.SDL_Event;
 import processing.core.PApplet;
 
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.Objects;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -34,6 +36,7 @@ public class DotFL extends PApplet {
     int drawMode = 1, hitTargets;
     //strings are predeclared to allow some cool math later. ye, i could probably use an enum but i've never liked them. also, less rewriting memory
     String[] msgsChange = new String[3];
+    String userResults;
     Timer timer;
 
     public static void main(String[] args) {
@@ -193,6 +196,8 @@ public class DotFL extends PApplet {
                         startTargets();
                     } else {
                         drawMode = 4;
+                        //obfuscateeee
+                        System.out.println(Base64.getEncoder().encodeToString(userResults.getBytes(StandardCharsets.UTF_8)));
                     }
                 } else {
                     //draw targets
