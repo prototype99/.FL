@@ -189,6 +189,7 @@ public class DotFL extends PApplet {
                     System.out.println(hitTargets);
                     if (inputMouse) {
                         inputMouse = false;
+                        hitTargets = 0;
                         startTargets();
                     } else {
                         drawMode = 4;
