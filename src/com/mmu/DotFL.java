@@ -324,6 +324,7 @@ public class DotFL extends PApplet {
                     }
                 } else {
                     drawMode = 3;
+                    inputMouse = true;
                     targets = new ArrayList<>();
                     for (int i = 0; i < 3; i++) {
                         addTarget();
