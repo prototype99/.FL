@@ -51,6 +51,8 @@ public class DotFL extends PApplet {
     @Override
     public void draw() {
         surface.setSize(width, height);
+        //handle processing code
+        background(190);
         if (!inputMouse) {
             try {
                 logNew.numSticks = SDL_NumJoysticks();
@@ -128,8 +130,6 @@ public class DotFL extends PApplet {
                 }
             }
         }
-        //handle processing code
-        background(190);
         if (inputMouse && mousePressed) {
             switch (drawMode) {
                 case 1 -> {
