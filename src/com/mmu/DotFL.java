@@ -56,19 +56,7 @@ public class DotFL extends PApplet {
         surface.setSize(width, height);
         //handle processing code
         background(190);
-        if (inputMouse) {
-            if (mousePressed) {
-                switch (drawMode) {
-                    case 3 -> {
-                        targets.removeIf(t -> (isHit(t, mouseX, mouseY, 0)));
-                        for (int i = 0; i < 3 - targets.size(); i++) {
-                            hitTargets++;
-                            addTarget();
-                        }
-                    }
-                }
-            }
-        } else {
+        if (!inputMouse) {
             try {
                 logNew.numSticks = SDL_NumJoysticks();
             } catch(NullPointerException n) {
@@ -149,21 +137,33 @@ public class DotFL extends PApplet {
             }
         }
         if (isPressed()) {
-            if (p.size() > 0) {
-                ps = p.get(p.size() - 1);
-                song();
-                while (choir[1] > 5) {
-                    float[] angles = new float[]{cos(choir[0]), sin(choir[0])};
-                    for (int i = 0; i < 2; i++) {
-                        angles[i] = ps[i] - 5 * angles[i];
+            switch (drawMode) {
+                case 1 -> {
+                    if (p.size() > 0) {
+                        ps = p.get(p.size() - 1);
+                        song();
+                        while (choir[1] > 5) {
+                            float[] angles = new float[]{cos(choir[0]), sin(choir[0])};
+                            for (int i = 0; i < 2; i++) {
+                                angles[i] = ps[i] - 5 * angles[i];
+                            }
+                            p.add(angles);
+                            ps = angles;
+                            song();
+                        }
+                    } else {
+                        getDims();
+                        p.add(new float[]{dims[1], dims[0]});
                     }
-                    p.add(angles);
-                    ps = angles;
-                    song();
                 }
-            } else {
-                getDims();
-                p.add(new float[]{dims[1], dims[0]});
+                case 3 -> {
+                    getDims();
+                    targets.removeIf(t -> (isHit(t, dims[1], dims[0], 0)));
+                    for (int i = 0; i < 3 - targets.size(); i++) {
+                        hitTargets++;
+                        addTarget();
+                    }
+                }
             }
         }
         switch (drawMode) {
