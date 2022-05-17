@@ -53,7 +53,36 @@ public class DotFL extends PApplet {
         surface.setSize(width, height);
         //handle processing code
         background(190);
-        if (!inputMouse) {
+        if (inputMouse) {
+            if (mousePressed) {
+                switch (drawMode) {
+                    case 1 -> {
+                        if (p.size() > 0) {
+                            ps = p.get(p.size() - 1);
+                            song();
+                            while (choir[1] > 5) {
+                                float[] angles = new float[]{cos(choir[0]), sin(choir[0])};
+                                for (int i = 0; i < 2; i++) {
+                                    angles[i] = ps[i] - 5 * angles[i];
+                                }
+                                p.add(angles);
+                                ps = angles;
+                                song();
+                            }
+                        } else {
+                            p.add(new float[]{mouseX, mouseY});
+                        }
+                    }
+                    case 3 -> {
+                        targets.removeIf(t -> (isHit(t, mouseX, mouseY, 0)));
+                        for (int i = 0; i < 3 - targets.size(); i++) {
+                            hitTargets++;
+                            addTarget();
+                        }
+                    }
+                }
+            }
+        } else {
             try {
                 logNew.numSticks = SDL_NumJoysticks();
             } catch(NullPointerException n) {
@@ -126,34 +155,6 @@ public class DotFL extends PApplet {
                         if (logNew.gyroStatus != logOld.gyroStatus) {
                             System.out.println("Warning: no gyroscope detected, did you connect the right controller?");
                         }
-                    }
-                }
-            }
-        }
-        if (inputMouse && mousePressed) {
-            switch (drawMode) {
-                case 1 -> {
-                    if (p.size() > 0) {
-                        ps = p.get(p.size() - 1);
-                        song();
-                        while (choir[1] > 5) {
-                            float[] angles = new float[]{cos(choir[0]), sin(choir[0])};
-                            for (int i = 0; i < 2; i++) {
-                                angles[i] = ps[i] - 5 * angles[i];
-                            }
-                            p.add(angles);
-                            ps = angles;
-                            song();
-                        }
-                    } else {
-                        p.add(new float[]{mouseX, mouseY});
-                    }
-                }
-                case 3 -> {
-                    targets.removeIf(t -> (isHit(t, mouseX, mouseY, 0)));
-                    for (int i = 0; i < 3 - targets.size(); i++) {
-                        hitTargets++;
-                        addTarget();
                     }
                 }
             }
