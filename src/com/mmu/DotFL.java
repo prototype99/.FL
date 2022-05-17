@@ -26,8 +26,8 @@ public class DotFL extends PApplet {
     //TODO: remove this
     ArrayList<float[]> targets;
     boolean inputMouse = true;
-    //gyroV in the format: {y, x}
-    float[] choir, gyroV, ps;
+    //dims/gyroV in the format: {y, x}
+    float[] choir, dims, gyroV, ps;
     GhostLog logNew, logOld = new GhostLog();
     int drawMode = 1, hitTargets, targetLoops;
     //strings are predeclared to allow some cool math later. ye, i could probably use an enum but i've never liked them. also, less rewriting memory
@@ -56,23 +56,6 @@ public class DotFL extends PApplet {
         if (inputMouse) {
             if (mousePressed) {
                 switch (drawMode) {
-                    case 1 -> {
-                        if (p.size() > 0) {
-                            ps = p.get(p.size() - 1);
-                            song();
-                            while (choir[1] > 5) {
-                                float[] angles = new float[]{cos(choir[0]), sin(choir[0])};
-                                for (int i = 0; i < 2; i++) {
-                                    angles[i] = ps[i] - 5 * angles[i];
-                                }
-                                p.add(angles);
-                                ps = angles;
-                                song();
-                            }
-                        } else {
-                            p.add(new float[]{mouseX, mouseY});
-                        }
-                    }
                     case 3 -> {
                         targets.removeIf(t -> (isHit(t, mouseX, mouseY, 0)));
                         for (int i = 0; i < 3 - targets.size(); i++) {
@@ -161,6 +144,22 @@ public class DotFL extends PApplet {
         }
         switch (drawMode) {
             case 1 -> {
+                if (p.size() > 0) {
+                    ps = p.get(p.size() - 1);
+                    song();
+                    while (choir[1] > 5) {
+                        float[] angles = new float[]{cos(choir[0]), sin(choir[0])};
+                        for (int i = 0; i < 2; i++) {
+                            angles[i] = ps[i] - 5 * angles[i];
+                        }
+                        p.add(angles);
+                        ps = angles;
+                        song();
+                    }
+                } else {
+                    getDims();
+                    p.add(new float[]{dims[1], dims[0]});
+                }
                 //do all the actual drawing
                 stroke(255);
                 strokeWeight(10);
@@ -231,6 +230,14 @@ public class DotFL extends PApplet {
             t = newTarget();
         }
         targets.add(t);
+    }
+
+    public void getDims() {
+        if (inputMouse) {
+            dims = new float[]{mouseY, mouseX};
+        } else {
+            dims = gyroV;
+        }
     }
 
     public float[] newTarget() {
@@ -310,6 +317,7 @@ public class DotFL extends PApplet {
     }
 
     public void song() {
-        choir = new float[]{atan2(ps[1] - mouseY, ps[0] - mouseX), dist(mouseX, mouseY, ps[0], ps[1])};
+        getDims();
+        choir = new float[]{atan2(ps[1] - dims[0], ps[0] - dims[1]), dist(dims[1], dims[0], ps[0], ps[1])};
     }
 }
