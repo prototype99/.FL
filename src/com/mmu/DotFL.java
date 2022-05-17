@@ -42,138 +42,14 @@ public class DotFL extends PApplet {
         //processing setup
         surface.setSize(displayWidth, displayHeight);
         windowResizable(true);
+        //higher refresh rate for smooth input
+        frameRate(120);
+        //we draw our own cursor
         noCursor();
-        redraw();
     }
 
     @Override
     public void draw() {
-        redraw();
-        if (drawMode == 3) {
-            targetLoops++;
-        }
-    }
-
-    //creates a new Target free from the past
-    public void addTarget() {
-        float[] t = newTarget();
-        while(isIntersect(t[0], t[1], t[2]) || t[2] < 18.9) {
-            t = newTarget();
-        }
-        targets.add(t);
-    }
-
-    public float[] newTarget() {
-        return new float[]{random(width), random(height), random(120.3F)};
-    }
-
-    public boolean isHit(float[] t, float x, float y, float c) {
-        return dist(x, y, t[0], t[1]) < (c + t[2]) / 2;
-    }
-
-    public boolean isIntersect(float x, float y, float c) {
-        for (float[] t : targets) {
-            if (isHit(t, x, y, c)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    @Override
-    public void mouseDragged() {
-        redraw();
-    }
-
-    @Override
-    public void mouseMoved() {
-        redraw();
-    }
-
-    @Override
-    public void mousePressed() {
-        if (drawMode == 3) {
-            if (inputMouse) {
-                targets.removeIf(t -> (isHit(t, mouseX, mouseY, 0)));
-                for (int i = 0; i < 3 - targets.size(); i++) {
-                    hitTargets++;
-                    addTarget();
-                }
-            }
-        }
-        redraw();
-    }
-
-    @Override
-    public void mouseReleased() {
-        if (inputMouse) {
-            if (p.size() > 10 && drawMode == 1) {
-                float[] circV = new float[2];
-                for (int i = 0; i < 2; i++) {
-                    for (float[] v : p) {
-                        circV[i] += v[i];
-                    }
-                    circV[i] /= p.size();
-                }
-                float[] dists = new float[p.size()];
-                float[] pd;
-                for (int i = 0; i < p.size(); i++) {
-                    pd = p.get(i);
-                    dists[i] = dist(pd[0], pd[1], circV[0], circV[1]);
-                }
-                float circRad = 0;
-                for (float d : dists) {
-                    circRad += d;
-                }
-                circRad /= p.size();
-                float errorFactor = 0;
-                for (float d : dists) {
-                    errorFactor += abs(d - circRad);
-                }
-                //work out mean absolute difference and normalise to radius so it scales to size
-                //a higher error factor equates to more errors
-                errorFactor = (errorFactor / p.size()) / circRad;
-                System.out.println(errorFactor);
-                //ensure circle has enough data points for accurate analysis
-                if (circRad > 24) {
-                    if (inputMouse) {
-                        //reset the test
-                        p.clear();
-                        inputMouse = false;
-                        //higher refresh rate for gyro
-                        frameRate(120);
-                        //repetition free string construction~
-                        msgsChange[0] = "no ";
-                        for (int i = 0; i < 3; i++) {
-                            msgsChange[i] += "gamepad";
-                        }
-                        msgsChange[2] += "s";
-                        for (int i = 0; i < 3; i++) {
-                            msgsChange[i] += " connected";
-                        }
-                        //initialise sdl subsystems
-                        if ((SDL_Init(SDL_INIT_GAMECONTROLLER) == -1)) {
-                            System.out.println(SDL_GetError());
-                        }
-                    } else {
-                        drawMode = 3;
-                        targets = new ArrayList<>();
-                        for (int i = 0; i < 3; i++) {
-                            addTarget();
-                        }
-                    }
-                }
-            }
-        }
-        redraw();
-    }
-
-    public void song() {
-        choir = new float[]{atan2(ps[1] - mouseY, ps[0] - mouseX), dist(mouseX, mouseY, ps[0], ps[1])};
-    }
-
-    //this is needed to ensure layering is done properly
-    public void redraw() {
         surface.setSize(width, height);
         if (!inputMouse) {
             try {
@@ -254,9 +130,9 @@ public class DotFL extends PApplet {
         }
         //handle processing code
         background(190);
-        switch (drawMode) {
-            case 1 -> {
-                if (inputMouse && mousePressed) {
+        if (inputMouse && mousePressed) {
+            switch (drawMode) {
+                case 1 -> {
                     if (p.size() > 0) {
                         ps = p.get(p.size() - 1);
                         song();
@@ -273,6 +149,17 @@ public class DotFL extends PApplet {
                         p.add(new float[]{mouseX, mouseY});
                     }
                 }
+                case 3 -> {
+                    targets.removeIf(t -> (isHit(t, mouseX, mouseY, 0)));
+                    for (int i = 0; i < 3 - targets.size(); i++) {
+                        hitTargets++;
+                        addTarget();
+                    }
+                }
+            }
+        }
+        switch (drawMode) {
+            case 1 -> {
                 //do all the actual drawing
                 stroke(255);
                 strokeWeight(10);
@@ -290,7 +177,7 @@ public class DotFL extends PApplet {
                 }
             }
             case 3 -> {
-                if (targetLoops >= 3600) {
+                if (targetLoops >= 7200) {
                     drawMode = 4;
                     System.out.println(hitTargets);
                 } else {
@@ -301,6 +188,7 @@ public class DotFL extends PApplet {
                         circle(t[0],t[1],t[2]);
                     }
                 }
+                targetLoops++;
             }
         }
         //draw the cursor
@@ -333,5 +221,94 @@ public class DotFL extends PApplet {
             logOld.gyroStatus = logNew.gyroStatus;
             logOld.numSticks = logNew.numSticks;
         }
+    }
+
+    //creates a new Target free from the past
+    public void addTarget() {
+        float[] t = newTarget();
+        while(isIntersect(t[0], t[1], t[2]) || t[2] < 18.9) {
+            t = newTarget();
+        }
+        targets.add(t);
+    }
+
+    public float[] newTarget() {
+        return new float[]{random(width), random(height), random(120.3F)};
+    }
+
+    public boolean isHit(float[] t, float x, float y, float c) {
+        return dist(x, y, t[0], t[1]) < (c + t[2]) / 2;
+    }
+
+    public boolean isIntersect(float x, float y, float c) {
+        for (float[] t : targets) {
+            if (isHit(t, x, y, c)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public void mouseReleased() {
+        if (p.size() > 10 && drawMode == 1 && inputMouse) {
+            float[] circV = new float[2];
+            for (int i = 0; i < 2; i++) {
+                for (float[] v : p) {
+                    circV[i] += v[i];
+                }
+                circV[i] /= p.size();
+            }
+            float[] dists = new float[p.size()];
+            float[] pd;
+            for (int i = 0; i < p.size(); i++) {
+                pd = p.get(i);
+                dists[i] = dist(pd[0], pd[1], circV[0], circV[1]);
+            }
+            float circRad = 0;
+            for (float d : dists) {
+                circRad += d;
+            }
+            circRad /= p.size();
+            float errorFactor = 0;
+            for (float d : dists) {
+                errorFactor += abs(d - circRad);
+            }
+            //work out mean absolute difference and normalise to radius so it scales to size
+            //a higher error factor equates to more errors
+            errorFactor = (errorFactor / p.size()) / circRad;
+            System.out.println(errorFactor);
+            //ensure circle has enough data points for accurate analysis
+            if (circRad > 24) {
+                if (inputMouse) {
+                    //reset the test
+                    p.clear();
+                    inputMouse = false;
+                    //repetition free string construction~
+                    msgsChange[0] = "no ";
+                    for (int i = 0; i < 3; i++) {
+                        msgsChange[i] += "gamepad";
+                    }
+                    msgsChange[2] += "s";
+                    for (int i = 0; i < 3; i++) {
+                        msgsChange[i] += " connected";
+                    }
+                    //initialise sdl subsystems
+                    if ((SDL_Init(SDL_INIT_GAMECONTROLLER) == -1)) {
+                        System.out.println(SDL_GetError());
+                    }
+                } else {
+                    drawMode = 3;
+                    targets = new ArrayList<>();
+                    for (int i = 0; i < 3; i++) {
+                        addTarget();
+                    }
+                }
+            }
+        }
+    }
+
+    public void song() {
+        choir = new float[]{atan2(ps[1] - mouseY, ps[0] - mouseX), dist(mouseX, mouseY, ps[0], ps[1])};
     }
 }
