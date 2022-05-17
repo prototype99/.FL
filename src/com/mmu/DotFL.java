@@ -193,6 +193,7 @@ public class DotFL extends PApplet {
                     if (inputMouse) {
                         userResults += "|gyro|";
                         inputMouse = false;
+                        centreGyro();
                         hitTargets = 0;
                         startTargets();
                     } else {
@@ -228,10 +229,7 @@ public class DotFL extends PApplet {
                 }
                 circle(gyroCur[1], gyroCur[0], 10);
             } catch(NullPointerException n) {
-                gyroCur = screenDim;
-                for (int i = 0; i < 2; i++) {
-                    gyroCur[i] /= 2.0F;
-                }
+                centreGyro();
             }
             //present becomes past
             logOld.gamepad = logNew.gamepad;
@@ -239,6 +237,14 @@ public class DotFL extends PApplet {
             logOld.gyroEvent = logNew.gyroEvent;
             logOld.gyroStatus = logNew.gyroStatus;
             logOld.numSticks = logNew.numSticks;
+        }
+    }
+
+    public void centreGyro () {
+        //grab screen size
+        gyroCur = new float[]{height, width};
+        for (int i = 0; i < 2; i++) {
+            gyroCur[i] /= 2.0F;
         }
     }
 
