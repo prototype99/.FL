@@ -5242,6 +5242,23 @@ name "alg:Calculation-of-gyroscopic"
 
 \end_layout
 
+\begin_layout Section
+A return to order
+\end_layout
+
+\begin_layout Standard
+The low performance of gyroscope controls pre-120FPS is in many ways similar
+ to the issues experienced by the mouse input prior to a move to event-focused
+ code.
+ Given the improvement experienced, it seemed possible to achieve similar
+ results with the mouse, as the gamepad events were purely dependant on
+ the main loop.
+ Even after a return to the monolithic loop, mouse performance was not noticeabl
+y hindered, allowing all inputs to share the same polling speed.
+ The mouseReleased processing event has no equivalent that can be called
+ from within the loop, which means it will remain event-based unfortunately.
+\end_layout
+
 \begin_layout Chapter
 Evaluation
 \end_layout
