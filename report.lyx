@@ -330,7 +330,7 @@ Abbreviations
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="49" columns="2">
+<lyxtabular version="3" rows="50" columns="2">
 <features islongtable="true" longtabularalignment="center">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top" width="0pt">
@@ -949,6 +949,26 @@ MS
 
 \begin_layout Plain Layout
 MilliSeconds
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+OBS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Open Broadcaster Software
 \end_layout
 
 \end_inset
@@ -1851,6 +1871,407 @@ literal "false"
 
 \begin_layout Subsection
 Warframe
+\end_layout
+
+\begin_layout Section
+Future hardware developments
+\end_layout
+
+\begin_layout Subsection
+Gamepad
+\end_layout
+
+\begin_layout Standard
+It can be expected that future developments will create an even better version
+ of an already good experience, as companies learn from each other and innovate.
+ As can be imagined, any developments from Sony are of particular interest,
+ as their DS5 is the current best candidate.
+ Whilst a purpose built gamepad could certainly be made, I'm unsure how
+ much benefit would be derived from such a concept.
+ After looking through developments I will hypothesise on the ideal DS6,
+ then a more realistic DS6.
+\end_layout
+
+\begin_layout Subsubsection
+Collapsible thumbsticks
+\end_layout
+
+\begin_layout Standard
+There is a patent for collapsible thumbsticks that has been filed, the goal
+ is to make gamepads more portable.
+ As seen in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:A-cross-sectional-comparison"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, point 101 is replaced with a full spring assembly, point 102 also appears
+ to become more reinforced.
+ In this current iteration, point 207 has a clear risk of snapping, due
+ to point 211 not having enough depth.
+ 208 is a spring, it can be assumed that this is to sustain enough rigidity
+ to allow thumbstick clicks (where the entire thumbstick is temporarily
+ pushed down into the gamepad, producing a ``click
+\begin_inset Quotes erd
+\end_inset
+
+ sound) as well as providing a consistent unlocked thumbstick height.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename collapse1.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A cross-sectional comparison of a standard thumbstick and a proposed collapsible
+ thumbstick
+\begin_inset CommandInset citation
+LatexCommand citep
+key "khimVideoGameController1970"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:A-cross-sectional-comparison"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:A-diagram-of"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows the design numbered 2 improved so the breakage point is protected.
+ The design of 3A is definitely superior, as it protects the internal shaft
+ thanks to point 303's addition, which may offer shock protection.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename collapse2.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A diagram of a collapsible thumbstick, an upgraded design 2 is showed collapsed,
+ as well as a new design 3
+\begin_inset CommandInset citation
+LatexCommand citep
+key "khimVideoGameController1970"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:A-diagram-of"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:A-diagram-of-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows design 3 in the collapsed mode.
+ As can be seen, this design offers full shaft protection both lowered and
+ raised.
+ I struggle to fathom the purpose of point 308, perhaps the circle just
+ exists for annotation purposes.
+ Design 3 seems to in many ways offer a lot of protection, while also adding
+ the same new functionality.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename collapse3.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A diagram of the collapsed design 3 thumbstick model, it seems to have some
+ structural reinforcement
+\begin_inset CommandInset citation
+LatexCommand citep
+key "khimVideoGameController1970"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:A-diagram-of-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The next drawing is skipped, it shows nothing new that isn't showed in the
+ following drawing.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Isometric-drawings-of"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows two hypothetical locking mechanisms.
+ 4D is a standard rotary lock, the use of only one locking point could affect
+ longevity or stability.
+ If I were to design it, I would have used two radial sets of grooves, they
+ do mention something to that effect as an option.
+ 404 and 409 are hooks which hold an elastic band; theoretically this is
+ repairable, although users may find it difficult.
+ Thumbsticks are typically plastic, however they make extensive mention
+ of kinds of metals that could be used, suggesting that they may believe
+ plastic would be too weak.
+ 5 is a more advanced system that uses non-Newtonian fluid.
+ 5 is interesting, however it could be considered to be over-engineered
+ and a negative impact to repairability.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename collapse5.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Isometric drawings of the potential locking mechanisms that could be used
+\begin_inset CommandInset citation
+LatexCommand citep
+key "khimVideoGameController1970"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Isometric-drawings-of"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Overall, this is an interesting way to create a more portable gamepad.
+ I feel it could be improved by allowing the thumbsticks to collapse into
+ the body fully, rather than just partially.
+ This feels especially important because while it is mentioned that thumbsticks
+ are prone to becoming caught in fabric, the final design shown does not
+ actually reduce the risk of becoming caught in fabric, only the risk of
+ breakage.
+ The only reason I can imagine they would want that behaviour is to mimic
+ the behaviour of the ``analogue nubs
+\begin_inset Quotes erd
+\end_inset
+
+ they mention earlier, by which they probably mean the controlstick which
+ is seen on the PSP as seen in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-analog-nub"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, seeing as it is a Sony patent
+\begin_inset CommandInset citation
+LatexCommand citep
+key "khimVideoGameController1970"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename nubs.jpg
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The analogue nub, the PSP's distinctive low-profile controlstick
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Guide2011"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-analog-nub"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Keyboard
 \end_layout
 
 \begin_layout Section
@@ -5319,411 +5740,6 @@ Evaluation
 \end_layout
 
 \begin_layout Section
-Future hardware developments
-\end_layout
-
-\begin_layout Subsection
-Gamepad
-\end_layout
-
-\begin_layout Standard
-It can be expected that future developments will create an even better version
- of an already good experience, as companies learn from each other and innovate.
- As can be imagined, any developments from Sony are of particular interest,
- as their DS5 is the current best candidate.
- Whilst a purpose built gamepad could certainly be made, I'm unsure how
- much benefit would be derived from such a concept.
- After looking through developments I will hypothesise on the ideal DS6,
- then a more realistic DS6.
-\end_layout
-
-\begin_layout Subsubsection
-Collapsible thumbsticks
-\end_layout
-
-\begin_layout Standard
-There is a patent for collapsible thumbsticks that has been filed, the goal
- is to make gamepads more portable.
- As seen in figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:A-cross-sectional-comparison"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, point 101 is replaced with a full spring assembly, point 102 also appears
- to become more reinforced.
- In this current iteration, point 207 has a clear risk of snapping, due
- to point 211 not having enough depth.
- 208 is a spring, it can be assumed that this is to sustain enough rigidity
- to allow thumbstick clicks (where the entire thumbstick is temporarily
- pushed down into the gamepad, producing a ``click
-\begin_inset Quotes erd
-\end_inset
-
- sound) as well as providing a consistent unlocked thumbstick height.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename collapse1.png
-	width 100text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-A cross-sectional comparison of a standard thumbstick and a proposed collapsible
- thumbstick
-\begin_inset CommandInset citation
-LatexCommand citep
-key "khimVideoGameController1970"
-literal "false"
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:A-cross-sectional-comparison"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:A-diagram-of"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- shows the design numbered 2 improved so the breakage point is protected.
- The design of 3A is definitely superior, as it protects the internal shaft
- thanks to point 303's addition, which may offer shock protection.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename collapse2.png
-	width 100text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-A diagram of a collapsible thumbstick, an upgraded design 2 is showed collapsed,
- as well as a new design 3
-\begin_inset CommandInset citation
-LatexCommand citep
-key "khimVideoGameController1970"
-literal "false"
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:A-diagram-of"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:A-diagram-of-1"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- shows design 3 in the collapsed mode.
- As can be seen, this design offers full shaft protection both lowered and
- raised.
- I struggle to fathom the purpose of point 308, perhaps the circle just
- exists for annotation purposes.
- Design 3 seems to in many ways offer a lot of protection, while also adding
- the same new functionality.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename collapse3.png
-	width 100text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-A diagram of the collapsed design 3 thumbstick model, it seems to have some
- structural reinforcement
-\begin_inset CommandInset citation
-LatexCommand citep
-key "khimVideoGameController1970"
-literal "false"
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:A-diagram-of-1"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The next drawing is skipped, it shows nothing new that isn't showed in the
- following drawing.
- Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Isometric-drawings-of"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- shows two hypothetical locking mechanisms.
- 4D is a standard rotary lock, the use of only one locking point could affect
- longevity or stability.
- If I were to design it, I would have used two radial sets of grooves, they
- do mention something to that effect as an option.
- 404 and 409 are hooks which hold an elastic band; theoretically this is
- repairable, although users may find it difficult.
- Thumbsticks are typically plastic, however they make extensive mention
- of kinds of metals that could be used, suggesting that they may believe
- plastic would be too weak.
- 5 is a more advanced system that uses non-Newtonian fluid.
- 5 is interesting, however it could be considered to be over-engineered
- and a negative impact to repairability.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename collapse5.png
-	width 100text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Isometric drawings of the potential locking mechanisms that could be used
-\begin_inset CommandInset citation
-LatexCommand citep
-key "khimVideoGameController1970"
-literal "false"
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Isometric-drawings-of"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Overall, this is an interesting way to create a more portable gamepad.
- I feel it could be improved by allowing the thumbsticks to collapse into
- the body fully, rather than just partially.
- This feels especially important because while it is mentioned that thumbsticks
- are prone to becoming caught in fabric, the final design shown does not
- actually reduce the risk of becoming caught in fabric, only the risk of
- breakage.
- The only reason I can imagine they would want that behaviour is to mimic
- the behaviour of the ``analogue nubs
-\begin_inset Quotes erd
-\end_inset
-
- they mention earlier, by which they probably mean the controlstick which
- is seen on the PSP as seen in figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:The-analog-nub"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, seeing as it is a Sony patent
-\begin_inset CommandInset citation
-LatexCommand citep
-key "khimVideoGameController1970"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename nubs.jpg
-	width 100text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-The analogue nub, the PSP's distinctive low-profile controlstick
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Guide2011"
-literal "false"
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:The-analog-nub"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Keyboard
-\end_layout
-
-\begin_layout Section
 Future software developments
 \end_layout
 
@@ -5781,6 +5797,57 @@ Niche interest
  with strict licensing requirements, language enthusiasts or both.
 \end_layout
 
+\begin_layout Section
+Showcase
+\end_layout
+
+\begin_layout Standard
+I feel that the showcase presented a large mixture of feelings.
+ I am not sure whether I could ever say a showcase is 'easy', as a researcher,
+ one would obviously have some level of attachment to their project, there
+ is seldom only one option available, after all, a choice was made, an expressio
+n of ideals and beliefs.
+ In many ways, a showcase is the act of surrendering oneself to judgement,
+ both good and bad.
+\end_layout
+
+\begin_layout Subsection
+Negative points
+\end_layout
+
+\begin_layout Standard
+I did not do well at ensuring time was left for answering questions, this
+ should be considered in the future.
+\end_layout
+
+\begin_layout Subsection
+Positive points
+\end_layout
+
+\begin_layout Standard
+I believe that I did a good job with the audio element of my showcase, I
+ had learnt to digitally remedy aspects of my voice I was insecure about,
+ which helped me avoid falling silent for long amounts of time.
+ I think drawing on a drawing on template slide based on questions helped
+ the questions at the end feel more involved than just a static slide.
+\end_layout
+
+\begin_layout Subsection
+Technical issues
+\end_layout
+
+\begin_layout Standard
+.FL was unable to run whilst OBS or Microsoft teams (the software used to
+ host the showcase) recorded the screen, which was unfortunate.
+ In the future I think I will make sure to receive confirmation whether
+ or not the showcase will be in person before doing a similar project, as
+ .FL could have been demonstrated live in person without issue.
+\end_layout
+
+\begin_layout Chapter
+Conclusion
+\end_layout
+
 \begin_layout Chapter
 References preface
 \end_layout
@@ -5808,6 +5875,302 @@ options "bibtotoc,agsm"
 \begin_layout Chapter
 \start_of_appendix
 Showcase slides
+\end_layout
+
+\begin_layout Section
+Software screenshots
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename screenshot-slide1.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename screenshot-slide2.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename screenshot-slide3.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename screenshot-slide4.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename screenshot-slide5.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename screenshot-slide6.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Due to the software being incompatible with recording software, screenshots
+ were hastily collected as a compromise.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Post-showcase questions
+\end_layout
+
+\begin_layout Standard
+Various slides were made live in response to questions to help support what
+ was being said, which are briefly explained below.
+\end_layout
+
+\begin_layout Subsection
+Capabilities of DS5
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename question0.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+This is the only slide from this section that is not in response to questions.
+ This illustrates various capabilities of the DS5.
+ Air mice and how single-handed use impacts accuracy was going to come into
+ discussion however time was running out.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Findings and motivation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename question1.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+This was created while discussing the differences to a mouse and how the
+ project was delayed
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Keyboard
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename question2.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+This is an illustration of the keyboard peripheral.
+ it was mentioned that it needed improvement to be promising
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Steam input
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename question3.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+It was mentioned how gamepad data differs a lot and steam input may have
+ resolved that
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+User inventions
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+Capabilities of DS5
+\begin_inset Graphics
+	filename question4.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+It is mentioned how one test user tried using the gamepad as the mouse,
+ due to interest generated by the study
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
