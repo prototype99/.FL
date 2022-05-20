@@ -1369,6 +1369,10 @@ Introduction
 Inspiration
 \end_layout
 
+\begin_layout Standard
+I was inspired by previous studies that showed promise for this concept.
+\end_layout
+
 \begin_layout Section
 Motivation
 \end_layout
@@ -1863,6 +1867,14 @@ literal "false"
 Warframe
 \end_layout
 
+\begin_layout Standard
+This was a 3D video-game, the range of tasks involving pointing proved insightfu
+l.
+ It helped me discover that 3D/continuous motion control is best paired
+ with some form of toggle key and that gyroscope alone may not be enough
+ for navigation in a 3D space.
+\end_layout
+
 \begin_layout Section
 Future hardware developments
 \end_layout
@@ -2260,12 +2272,19 @@ name "fig:The-analog-nub"
 
 \end_layout
 
-\begin_layout Subsection
-Keyboard
-\end_layout
-
 \begin_layout Section
 Hardware experience
+\end_layout
+
+\begin_layout Subsection
+Chatpad
+\end_layout
+
+\begin_layout Standard
+The chatpad was going to be tested for typing speed, however I found that
+ in its current state the connection is intermittent resulting in erroneous
+ typing.
+ Before it can be considered, it would have to be improved.
 \end_layout
 
 \begin_layout Subsection
@@ -3753,23 +3772,6 @@ literal "false"
 \end_layout
 
 \begin_layout Section
-Input devices
-\end_layout
-
-\begin_layout Standard
-note: in progress.
- basically converting project background into properly sectioned research
-\end_layout
-
-\begin_layout Subsection
-DS4
-\end_layout
-
-\begin_layout Subsection
-DS5
-\end_layout
-
-\begin_layout Section
 Input methods
 \end_layout
 
@@ -3898,6 +3900,12 @@ literal "false"
  which is typically flat, and semi-dedicated, which creates a rigid, fixed
  workspace layout that consumes a large amount of space compared to other
  options.
+ The limited set of motions seen in such a setup is well known to cause
+ repetitive strain injury.
+ The goal of this project is not to solve repetitive strain, however it
+ is expected that the final deliverable may assist with such an issue.
+ I feel that users could benefit from a compact, portable alternative that
+ is similarly low power.
 \end_layout
 
 \begin_layout Subsection
@@ -3917,19 +3925,6 @@ Project background
 \end_layout
 
 \begin_layout Standard
-(mouse) The limited set of motions seen in such a setup is well known to
- cause repetitive strain injury.
- The goal of this project is not to solve repetitive strain, however it
- is expected that the final deliverable may assist with such an issue.
- I feel that users could benefit from a compact, portable alternative that
- is similarly low power.
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
 VR promises to offer a new way to interact with computers in subtly different
  ways, however a high electrical, processing and £899
 \begin_inset CommandInset citation
@@ -5850,8 +5845,32 @@ name "alg:Calculation-of-change"
 
 \end_layout
 
+\begin_layout Section
+High resolution timers for a high resolution gyroscope
+\end_layout
+
+\begin_layout Standard
+I found that with the higher FPS the target test timer was no longer accurate,
+ this was resolved by using a built-in timer library that exists within
+ java.
+\end_layout
+
 \begin_layout Chapter
 Evaluation
+\end_layout
+
+\begin_layout Section
+Findings
+\end_layout
+
+\begin_layout Standard
+Due to unforeseen technical issues it was not possible to get data from
+ other users.
+ .FL had some imperfections in the gyroscopic control which impacted the
+ ability to get high quality results.
+ On DS4 gamepads it was near unusable, according to user experience, however
+ other gyroscopic software proved to offer a positive experience, which
+ this software inspired one user to try.
 \end_layout
 
 \begin_layout Section
@@ -5961,6 +5980,23 @@ Technical issues
 
 \begin_layout Chapter
 Conclusion
+\end_layout
+
+\begin_layout Standard
+In conclusion, despite failure near the end, I feel there was still a good
+ amount of research that has been collected that will help future ventures
+ in a similar field, the collection of results may have failed, but the
+ project as a whole is still generally a success.
+ I theorise that infrared could be worth researching, as well as an improved
+ keyboard peripheral of some description.
+ If there was a way to connect the software to 'steam input
+\begin_inset Quotes brd
+\end_inset
+
+, that could prove to offer better interoperability between gamepads.
+ More generally: gyroscopic controls hold promise, however they may not
+ be the whole answer, there needs to be a lot more research before they
+ can be fully viable.
 \end_layout
 
 \begin_layout Chapter
