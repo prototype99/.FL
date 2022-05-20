@@ -5855,6 +5855,17 @@ I found that with the higher FPS the target test timer was no longer accurate,
  java.
 \end_layout
 
+\begin_layout Section
+Base64-encoded results
+\end_layout
+
+\begin_layout Standard
+In order to prevent the submission of manually altered results, the results
+ were base64 encoded.
+ This does not constitute a unique identifier, as the encoded data is only
+ test results.
+\end_layout
+
 \begin_layout Chapter
 Evaluation
 \end_layout
