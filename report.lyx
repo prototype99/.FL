@@ -5607,8 +5607,8 @@ noprefix "false"
  is the algorithm used to position the cursor for a DS, every matrix is
  an x and y value, every matrix has nonidentical values except for ϴ, which
  is the same value, stored as a negative and positive value.
- For clarification: O is the old values, C is the gyroscopic change and
- ϴ is the difference in timestamps.
+ For clarification: Δ is the gyroscopic change and ϴ is the difference in
+ timestamps.
  Doubling the frame-rate from 60FPS to 120 FPS seemed to improve the input
  smoothness.
 \end_layout
@@ -5624,9 +5624,9 @@ status open
 \begin_inset Formula 
 \[
 \left[\begin{array}{cc}
-N_{x} & N_{y}\end{array}\right]=\left[\begin{array}{cc}
-O_{x} & O_{y}\end{array}\right]+\left[\begin{array}{cc}
-C_{x} & C_{y}\end{array}\right]\left[\begin{array}{cc}
+N_{x} & N_{y}\end{array}\right]^{'}=\left[\begin{array}{cc}
+N_{x} & N_{y}\end{array}\right]+\left[\begin{array}{cc}
+\Delta_{x} & \Delta_{y}\end{array}\right]\left[\begin{array}{cc}
 -\theta_{x} & \theta_{y}\end{array}\right]
 \]
 
@@ -5651,10 +5651,6 @@ name "alg:Calculation-of-gyroscopic"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -5719,6 +5715,135 @@ A non-circular irregular polygon
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:A-non-circular-irregular"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+The accelerating cursor
+\end_layout
+
+\begin_layout Standard
+Following this issue, I felt inspired to alter the algorithm, based on the
+ initial idea I had to use an accelerating cursor.
+ This new algorithm is more complex, utilising two algorithms instead of
+ one.
+ The updated algorithm can be seen in Algorithm 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Acceleration-based-calculation-positioning"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Timestamp compensation did not appear to have the intended effect, so it
+ was removed, replaced by the acceleration calculated in algorithm 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Calculation-of-change"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The acceleration is divided to reduce the sensitivity so as to be more
+ manageable.
+ P, is used to polarise the gyroscope data, much like timestamp did previously.
+ The frame-rate became 480FPS, as this seemed to be the most responsive.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+N_{x} & N_{y}\end{array}\right]^{'}=\left[\begin{array}{cc}
+N_{x} & N_{y}\end{array}\right]+\frac{\left[\begin{array}{cc}
+a_{x} & a_{y}\end{array}\right]}{3}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Acceleration-based calculation of gyroscopic cursor positioning
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:Acceleration-based-calculation-positioning"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+a_{x} & a_{y}\end{array}\right]^{'}=\left[\begin{array}{cc}
+a_{x} & a_{y}\end{array}\right]+\left[\begin{array}{cc}
+\Delta_{x} & \Delta_{y}\end{array}\right]\left[\begin{array}{cc}
+P_{x} & P_{y}\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Calculation of change in gyroscopic acceleration
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:Calculation-of-change"
 
 \end_inset
 
