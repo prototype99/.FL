@@ -3912,18 +3912,6 @@ literal "false"
 XR
 \end_layout
 
-\begin_layout Subsubsection
-AR
-\end_layout
-
-\begin_layout Subsubsection
-VR
-\end_layout
-
-\begin_layout Section
-Project background
-\end_layout
-
 \begin_layout Standard
 VR promises to offer a new way to interact with computers in subtly different
  ways, however a high electrical, processing and £899
@@ -3963,13 +3951,13 @@ literal "false"
 
  which also has wireless mobility, however the pricing model has lead to
  privacy concerns.
-\begin_inset Newline newline
-\end_inset
+\end_layout
 
+\begin_layout Section
+Project background
+\end_layout
 
-\begin_inset Newline newline
-\end_inset
-
+\begin_layout Standard
 Gamepads could prove to be the perfect stepping stone to future VR experiences
  due to their lower cost; the DS5, one of the most advanced currently, costs
  ₤59.99
