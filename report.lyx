@@ -244,16 +244,6 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Chapter*
-Abstract
-\end_layout
-
-\begin_layout Standard
-The abstract is a formal description of the reason for doing this work,
- the methods used and results found, and the conclusions drawn.
- It should not be more than one page in length.
-\end_layout
-
-\begin_layout Chapter*
 Declaration
 \end_layout
 
@@ -296,7 +286,7 @@ No part of this project has been submitted in support of an application
 \end_layout
 
 \begin_layout Plain Layout
-Signed:
+Signed: Seirra Blake
 \end_layout
 
 \begin_layout Plain Layout
@@ -307,7 +297,7 @@ Signed:
 \end_layout
 
 \begin_layout Plain Layout
-Date:
+Date: 20.5.2022
 \end_layout
 
 \end_inset
@@ -320,8 +310,8 @@ Acknowledgements
 \end_layout
 
 \begin_layout Standard
-The acknowledgements thank the people who helped you do the work.
- It's traditional to include your supervisor....
+I would like to thank my supervisor Dr Huw Lloyd for helping me see my way
+ through the project and my friend Stephan Lopez for always being supportive.
 \end_layout
 
 \begin_layout Chapter*
