@@ -6302,6 +6302,1767 @@ It is mentioned how one test user tried using the gamepad as the mouse,
 .FL code
 \end_layout
 
+\begin_layout Standard
+All software code can be found at 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://github.com/prototype99/.FL
+\end_layout
+
+\end_inset
+
+ therefore libraries have been omitted due to time constraints.
+\end_layout
+
+\begin_layout Section
+Main class
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Java,breaklines=true,showstringspaces=false"
+inline false
+status open
+
+\begin_layout Plain Layout
+package com.mmu;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+import org.libsdl.api.event.events.SDL_Event;
+\end_layout
+
+\begin_layout Plain Layout
+import processing.core.PApplet;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+import java.nio.charset.StandardCharsets;
+\end_layout
+
+\begin_layout Plain Layout
+import java.util.ArrayList;
+\end_layout
+
+\begin_layout Plain Layout
+import java.util.Base64;
+\end_layout
+
+\begin_layout Plain Layout
+import java.util.Objects;
+\end_layout
+
+\begin_layout Plain Layout
+import java.util.Timer;
+\end_layout
+
+\begin_layout Plain Layout
+import java.util.TimerTask;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+import static org.libsdl.api.SDL_SubSystem.SDL_INIT_GAMECONTROLLER;
+\end_layout
+
+\begin_layout Plain Layout
+import static org.libsdl.api.Sdl.SDL_Init;
+\end_layout
+
+\begin_layout Plain Layout
+import static org.libsdl.api.error.SdlError.SDL_GetError;
+\end_layout
+
+\begin_layout Plain Layout
+import static org.libsdl.api.event.SdlEvents.SDL_CONTROLLERBUTTONDOWN;
+\end_layout
+
+\begin_layout Plain Layout
+import static org.libsdl.api.event.SdlEvents.SDL_CONTROLLERBUTTONUP;
+\end_layout
+
+\begin_layout Plain Layout
+import static org.libsdl.api.event.SdlEvents.SDL_CONTROLLERSENSORUPDATE;
+\end_layout
+
+\begin_layout Plain Layout
+import static org.libsdl.api.event.SdlEvents.SDL_PollEvent;
+\end_layout
+
+\begin_layout Plain Layout
+import static org.libsdl.api.gamecontroller.SdlGamecontroller.SDL_GameControllerHasSe
+nsor;
+\end_layout
+
+\begin_layout Plain Layout
+import static org.libsdl.api.gamecontroller.SdlGamecontroller.SDL_GameControllerOpen;
+\end_layout
+
+\begin_layout Plain Layout
+import static org.libsdl.api.gamecontroller.SdlGamecontroller.SDL_GameControllerSetSe
+nsorEnabled;
+\end_layout
+
+\begin_layout Plain Layout
+import static org.libsdl.api.gamecontroller.SdlGamecontroller.SDL_IsGameController;
+\end_layout
+
+\begin_layout Plain Layout
+import static org.libsdl.api.joystick.SdlJoystick.SDL_NumJoysticks;
+\end_layout
+
+\begin_layout Plain Layout
+import static org.libsdl.api.sensor.SDL_SensorType.SDL_SENSOR_GYRO;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+public class DotFL extends PApplet {
+\end_layout
+
+\begin_layout Plain Layout
+    //in the format: {x, y, size}
+\end_layout
+
+\begin_layout Plain Layout
+    ArrayList<float[]> p;
+\end_layout
+
+\begin_layout Plain Layout
+    //TODO: remove this
+\end_layout
+
+\begin_layout Plain Layout
+    ArrayList<float[]> targets;
+\end_layout
+
+\begin_layout Plain Layout
+    boolean gyroPressed = false, inputMouse = true, timeElapsed;
+\end_layout
+
+\begin_layout Plain Layout
+    //dims/gyroV in the format: {y, x}
+\end_layout
+
+\begin_layout Plain Layout
+    float[] choir, dims, gyroCur, gyroVel, ps;
+\end_layout
+
+\begin_layout Plain Layout
+    GhostLog logNew, logOld = new GhostLog();
+\end_layout
+
+\begin_layout Plain Layout
+    int drawMode = 1, hitTargets;
+\end_layout
+
+\begin_layout Plain Layout
+    //strings are predeclared to allow some cool math later.
+ ye, i could probably use an enum but i've never liked them.
+ also, less rewriting memory
+\end_layout
+
+\begin_layout Plain Layout
+    String[] msgsChange = new String[3];
+\end_layout
+
+\begin_layout Plain Layout
+    String userResults = "circle|mouse|";
+\end_layout
+
+\begin_layout Plain Layout
+    Timer timer;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    public static void main(String[] args) {
+\end_layout
+
+\begin_layout Plain Layout
+        PApplet.main("com.mmu.DotFL");
+\end_layout
+
+\begin_layout Plain Layout
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    @Override
+\end_layout
+
+\begin_layout Plain Layout
+    public void setup() {
+\end_layout
+
+\begin_layout Plain Layout
+        //processing setup
+\end_layout
+
+\begin_layout Plain Layout
+        surface.setSize(displayWidth, displayHeight);
+\end_layout
+
+\begin_layout Plain Layout
+        windowResizable(true);
+\end_layout
+
+\begin_layout Plain Layout
+        //higher refresh rate for smooth input
+\end_layout
+
+\begin_layout Plain Layout
+        frameRate(480);
+\end_layout
+
+\begin_layout Plain Layout
+        //we draw our own cursor
+\end_layout
+
+\begin_layout Plain Layout
+        noCursor();
+\end_layout
+
+\begin_layout Plain Layout
+        textSize(50);
+\end_layout
+
+\begin_layout Plain Layout
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    @Override
+\end_layout
+
+\begin_layout Plain Layout
+    public void draw() {
+\end_layout
+
+\begin_layout Plain Layout
+        surface.setSize(width, height);
+\end_layout
+
+\begin_layout Plain Layout
+        //handle processing code
+\end_layout
+
+\begin_layout Plain Layout
+        background(190);
+\end_layout
+
+\begin_layout Plain Layout
+        if (!inputMouse) {
+\end_layout
+
+\begin_layout Plain Layout
+            try {
+\end_layout
+
+\begin_layout Plain Layout
+                logNew.numSticks = SDL_NumJoysticks();
+\end_layout
+
+\begin_layout Plain Layout
+            } catch(NullPointerException n) {
+\end_layout
+
+\begin_layout Plain Layout
+                logNew = new GhostLog();
+\end_layout
+
+\begin_layout Plain Layout
+            }
+\end_layout
+
+\begin_layout Plain Layout
+            //output a message if required
+\end_layout
+
+\begin_layout Plain Layout
+            if (logNew.numSticks != logOld.numSticks) {
+\end_layout
+
+\begin_layout Plain Layout
+                int joyStatus = logNew.numSticks;
+\end_layout
+
+\begin_layout Plain Layout
+                if (joyStatus > 2) {
+\end_layout
+
+\begin_layout Plain Layout
+                    joyStatus = 2;
+\end_layout
+
+\begin_layout Plain Layout
+                }
+\end_layout
+
+\begin_layout Plain Layout
+                System.out.println(msgsChange[joyStatus]);
+\end_layout
+
+\begin_layout Plain Layout
+            }
+\end_layout
+
+\begin_layout Plain Layout
+            //Check for joysticks
+\end_layout
+
+\begin_layout Plain Layout
+            if (logNew.numSticks > 0) {
+\end_layout
+
+\begin_layout Plain Layout
+                for (int i = 0; i < logNew.numSticks; i++) {
+\end_layout
+
+\begin_layout Plain Layout
+                    if (SDL_IsGameController(i)) {
+\end_layout
+
+\begin_layout Plain Layout
+                        //Load DS5
+\end_layout
+
+\begin_layout Plain Layout
+                        logNew.gamepad = SDL_GameControllerOpen(i);
+\end_layout
+
+\begin_layout Plain Layout
+                    }
+\end_layout
+
+\begin_layout Plain Layout
+                }
+\end_layout
+
+\begin_layout Plain Layout
+                if (logNew.gamepad == null) {
+\end_layout
+
+\begin_layout Plain Layout
+                    logNew.gamepadError = SDL_GetError();
+\end_layout
+
+\begin_layout Plain Layout
+                    if (logNew.gamepad != logOld.gamepad || !Objects.equals(logNew.g
+amepadError, logOld.gamepadError)) {
+\end_layout
+
+\begin_layout Plain Layout
+                        System.out.println("Warning: Unable to open gamepad!
+ SDL Error:" + logNew.gamepadError);
+\end_layout
+
+\begin_layout Plain Layout
+                    }
+\end_layout
+
+\begin_layout Plain Layout
+                } else {
+\end_layout
+
+\begin_layout Plain Layout
+                    logNew.gyroStatus = SDL_GameControllerHasSensor(logNew.gamepad
+, SDL_SENSOR_GYRO);
+\end_layout
+
+\begin_layout Plain Layout
+                    if (logNew.gyroStatus) {
+\end_layout
+
+\begin_layout Plain Layout
+                        if (SDL_GameControllerSetSensorEnabled(logNew.gamepad,
+ SDL_SENSOR_GYRO, true) == -1) {
+\end_layout
+
+\begin_layout Plain Layout
+                            System.out.println("Warning: unable to enable
+ gyroscope");
+\end_layout
+
+\begin_layout Plain Layout
+                        } else {
+\end_layout
+
+\begin_layout Plain Layout
+                            SDL_Event e = new SDL_Event();
+\end_layout
+
+\begin_layout Plain Layout
+                            SDL_PollEvent(e);
+\end_layout
+
+\begin_layout Plain Layout
+                            switch(e.type) {
+\end_layout
+
+\begin_layout Plain Layout
+                                case SDL_CONTROLLERBUTTONDOWN -> {
+\end_layout
+
+\begin_layout Plain Layout
+                                    if (e.cbutton.button == 0) {
+\end_layout
+
+\begin_layout Plain Layout
+                                        if (!gyroPressed) {
+\end_layout
+
+\begin_layout Plain Layout
+                                            gyroPressed = true;
+\end_layout
+
+\begin_layout Plain Layout
+                                        }
+\end_layout
+
+\begin_layout Plain Layout
+                                    }
+\end_layout
+
+\begin_layout Plain Layout
+                                }
+\end_layout
+
+\begin_layout Plain Layout
+                                case SDL_CONTROLLERBUTTONUP -> {
+\end_layout
+
+\begin_layout Plain Layout
+                                    if (e.cbutton.button == 0) {
+\end_layout
+
+\begin_layout Plain Layout
+                                        if (gyroPressed) {
+\end_layout
+
+\begin_layout Plain Layout
+                                            gyroPressed = false;
+\end_layout
+
+\begin_layout Plain Layout
+                                            releaseEvent();
+\end_layout
+
+\begin_layout Plain Layout
+                                        }
+\end_layout
+
+\begin_layout Plain Layout
+                                    }
+\end_layout
+
+\begin_layout Plain Layout
+                                }
+\end_layout
+
+\begin_layout Plain Layout
+                                case SDL_CONTROLLERSENSORUPDATE -> {
+\end_layout
+
+\begin_layout Plain Layout
+                                    logNew.gyroEvent = e.csensor;
+\end_layout
+
+\begin_layout Plain Layout
+                                    if (logNew.gyroEvent.sensor == SDL_SENSOR_GYRO
+) {
+\end_layout
+
+\begin_layout Plain Layout
+                                        int pol = 1;
+\end_layout
+
+\begin_layout Plain Layout
+                                        for (int i = 0; i < 2; i++) {
+\end_layout
+
+\begin_layout Plain Layout
+                                            //invert the x axis
+\end_layout
+
+\begin_layout Plain Layout
+                                            if (i == 1) {
+\end_layout
+
+\begin_layout Plain Layout
+                                                pol *= -1;
+\end_layout
+
+\begin_layout Plain Layout
+                                            }
+\end_layout
+
+\begin_layout Plain Layout
+                                            //move the cursor position data
+\end_layout
+
+\begin_layout Plain Layout
+                                            try{
+\end_layout
+
+\begin_layout Plain Layout
+                                                gyroVel[i] += logNew.gyroEvent.dat
+a[i * 2] * pol;
+\end_layout
+
+\begin_layout Plain Layout
+                                            } catch(NullPointerException
+ n) {
+\end_layout
+
+\begin_layout Plain Layout
+                                                gyroVel = new float[2];
+\end_layout
+
+\begin_layout Plain Layout
+                                            }
+\end_layout
+
+\begin_layout Plain Layout
+                                            gyroCur[i] += gyroVel[i] / 3;
+\end_layout
+
+\begin_layout Plain Layout
+                                        }
+\end_layout
+
+\begin_layout Plain Layout
+                                    }
+\end_layout
+
+\begin_layout Plain Layout
+                                }
+\end_layout
+
+\begin_layout Plain Layout
+                            }
+\end_layout
+
+\begin_layout Plain Layout
+                        }
+\end_layout
+
+\begin_layout Plain Layout
+                    } else {
+\end_layout
+
+\begin_layout Plain Layout
+                        if (logNew.gyroStatus != logOld.gyroStatus) {
+\end_layout
+
+\begin_layout Plain Layout
+                            System.out.println("Warning: no gyroscope detected,
+ did you connect the right controller?");
+\end_layout
+
+\begin_layout Plain Layout
+                        }
+\end_layout
+
+\begin_layout Plain Layout
+                    }
+\end_layout
+
+\begin_layout Plain Layout
+                }
+\end_layout
+
+\begin_layout Plain Layout
+            }
+\end_layout
+
+\begin_layout Plain Layout
+        }
+\end_layout
+
+\begin_layout Plain Layout
+        if (isPressed()) {
+\end_layout
+
+\begin_layout Plain Layout
+            switch (drawMode) {
+\end_layout
+
+\begin_layout Plain Layout
+                case 1 -> {
+\end_layout
+
+\begin_layout Plain Layout
+                    if (p.size() > 0) {
+\end_layout
+
+\begin_layout Plain Layout
+                        ps = p.get(p.size() - 1);
+\end_layout
+
+\begin_layout Plain Layout
+                        song();
+\end_layout
+
+\begin_layout Plain Layout
+                        while (choir[1] > 5) {
+\end_layout
+
+\begin_layout Plain Layout
+                            float[] angles = new float[]{cos(choir[0]),
+ sin(choir[0])};
+\end_layout
+
+\begin_layout Plain Layout
+                            for (int i = 0; i < 2; i++) {
+\end_layout
+
+\begin_layout Plain Layout
+                                angles[i] = ps[i] - 5 * angles[i];
+\end_layout
+
+\begin_layout Plain Layout
+                            }
+\end_layout
+
+\begin_layout Plain Layout
+                            p.add(angles);
+\end_layout
+
+\begin_layout Plain Layout
+                            ps = angles;
+\end_layout
+
+\begin_layout Plain Layout
+                            song();
+\end_layout
+
+\begin_layout Plain Layout
+                        }
+\end_layout
+
+\begin_layout Plain Layout
+                    } else {
+\end_layout
+
+\begin_layout Plain Layout
+                        getDims();
+\end_layout
+
+\begin_layout Plain Layout
+                        p.add(new float[]{dims[1], dims[0]});
+\end_layout
+
+\begin_layout Plain Layout
+                    }
+\end_layout
+
+\begin_layout Plain Layout
+                }
+\end_layout
+
+\begin_layout Plain Layout
+                case 3 -> {
+\end_layout
+
+\begin_layout Plain Layout
+                    getDims();
+\end_layout
+
+\begin_layout Plain Layout
+                    targets.removeIf(t -> (isHit(t, dims[1], dims[0], 0)));
+\end_layout
+
+\begin_layout Plain Layout
+                    for (int i = 0; i < 3 - targets.size(); i++) {
+\end_layout
+
+\begin_layout Plain Layout
+                        hitTargets++;
+\end_layout
+
+\begin_layout Plain Layout
+                        addTarget();
+\end_layout
+
+\begin_layout Plain Layout
+                    }
+\end_layout
+
+\begin_layout Plain Layout
+                }
+\end_layout
+
+\begin_layout Plain Layout
+            }
+\end_layout
+
+\begin_layout Plain Layout
+        }
+\end_layout
+
+\begin_layout Plain Layout
+        switch (drawMode) {
+\end_layout
+
+\begin_layout Plain Layout
+            case 1 -> {
+\end_layout
+
+\begin_layout Plain Layout
+                if (!isPressed()) {
+\end_layout
+
+\begin_layout Plain Layout
+                    fill(0,0,255);
+\end_layout
+
+\begin_layout Plain Layout
+                    String circleString = "please draw a circle with your
+ ";
+\end_layout
+
+\begin_layout Plain Layout
+                    if (inputMouse) {
+\end_layout
+
+\begin_layout Plain Layout
+                        circleString += "mouse";
+\end_layout
+
+\begin_layout Plain Layout
+                    } else {
+\end_layout
+
+\begin_layout Plain Layout
+                        circleString += "gyro (X/A to draw)";
+\end_layout
+
+\begin_layout Plain Layout
+                    }
+\end_layout
+
+\begin_layout Plain Layout
+                    text(circleString, width/8.0F, height/2.0F);
+\end_layout
+
+\begin_layout Plain Layout
+                }
+\end_layout
+
+\begin_layout Plain Layout
+                //do all the actual drawing
+\end_layout
+
+\begin_layout Plain Layout
+                stroke(255);
+\end_layout
+
+\begin_layout Plain Layout
+                strokeWeight(10);
+\end_layout
+
+\begin_layout Plain Layout
+                try {
+\end_layout
+
+\begin_layout Plain Layout
+                    for (int i = 0; i < p.size(); i++) {
+\end_layout
+
+\begin_layout Plain Layout
+                        float[] prev = p.get(i);
+\end_layout
+
+\begin_layout Plain Layout
+                        if (i - 1 >= 0) {
+\end_layout
+
+\begin_layout Plain Layout
+                            prev = p.get(i - 1);
+\end_layout
+
+\begin_layout Plain Layout
+                        }
+\end_layout
+
+\begin_layout Plain Layout
+                        float[] pl = p.get(i);
+\end_layout
+
+\begin_layout Plain Layout
+                        line(pl[0], pl[1], prev[0], prev[1]);
+\end_layout
+
+\begin_layout Plain Layout
+                    }
+\end_layout
+
+\begin_layout Plain Layout
+                } catch(NullPointerException n) {
+\end_layout
+
+\begin_layout Plain Layout
+                    p = new ArrayList<>();
+\end_layout
+
+\begin_layout Plain Layout
+                }
+\end_layout
+
+\begin_layout Plain Layout
+            }
+\end_layout
+
+\begin_layout Plain Layout
+            case 3 -> {
+\end_layout
+
+\begin_layout Plain Layout
+                if (timeElapsed) {
+\end_layout
+
+\begin_layout Plain Layout
+                    userResults += hitTargets;
+\end_layout
+
+\begin_layout Plain Layout
+                    if (inputMouse) {
+\end_layout
+
+\begin_layout Plain Layout
+                        userResults += "|gyro|";
+\end_layout
+
+\begin_layout Plain Layout
+                        inputMouse = false;
+\end_layout
+
+\begin_layout Plain Layout
+                        centreGyro();
+\end_layout
+
+\begin_layout Plain Layout
+                        hitTargets = 0;
+\end_layout
+
+\begin_layout Plain Layout
+                        startTargets();
+\end_layout
+
+\begin_layout Plain Layout
+                    } else {
+\end_layout
+
+\begin_layout Plain Layout
+                        drawMode = 4;
+\end_layout
+
+\begin_layout Plain Layout
+                        //obfuscateeee
+\end_layout
+
+\begin_layout Plain Layout
+                        userResults = Base64.getEncoder().encodeToString(userResul
+ts.getBytes(StandardCharsets.UTF_8));
+\end_layout
+
+\begin_layout Plain Layout
+                        System.out.println(userResults);
+\end_layout
+
+\begin_layout Plain Layout
+                    }
+\end_layout
+
+\begin_layout Plain Layout
+                } else {
+\end_layout
+
+\begin_layout Plain Layout
+                    if (hitTargets == 0) {
+\end_layout
+
+\begin_layout Plain Layout
+                        fill(0,0,255);
+\end_layout
+
+\begin_layout Plain Layout
+                        String targetString = "please hit targets with your
+ ";
+\end_layout
+
+\begin_layout Plain Layout
+                        if (inputMouse) {
+\end_layout
+
+\begin_layout Plain Layout
+                            targetString += "mouse";
+\end_layout
+
+\begin_layout Plain Layout
+                        } else {
+\end_layout
+
+\begin_layout Plain Layout
+                            targetString += "gyro (X/A to shoot)";
+\end_layout
+
+\begin_layout Plain Layout
+                        }
+\end_layout
+
+\begin_layout Plain Layout
+                        text(targetString, width/8.0F, height/2.0F);
+\end_layout
+
+\begin_layout Plain Layout
+                    }
+\end_layout
+
+\begin_layout Plain Layout
+                    //draw targets
+\end_layout
+
+\begin_layout Plain Layout
+                    fill(255,0,0);
+\end_layout
+
+\begin_layout Plain Layout
+                    noStroke();
+\end_layout
+
+\begin_layout Plain Layout
+                    for (float[] t : targets) {
+\end_layout
+
+\begin_layout Plain Layout
+                        circle(t[0],t[1],t[2]);
+\end_layout
+
+\begin_layout Plain Layout
+                    }
+\end_layout
+
+\begin_layout Plain Layout
+                }
+\end_layout
+
+\begin_layout Plain Layout
+            }
+\end_layout
+
+\begin_layout Plain Layout
+            case 4 -> {
+\end_layout
+
+\begin_layout Plain Layout
+                fill(0,0,255);
+\end_layout
+
+\begin_layout Plain Layout
+                //get the middle of the String
+\end_layout
+
+\begin_layout Plain Layout
+                final int mid = userResults.length() / 2;
+\end_layout
+
+\begin_layout Plain Layout
+                String[] parts = {userResults.substring(0, mid),userResults.substr
+ing(mid)};
+\end_layout
+
+\begin_layout Plain Layout
+                text(parts[0], width/8.0F, height/2.0F);
+\end_layout
+
+\begin_layout Plain Layout
+                text(parts[1], width/8.0F, height/2.0F+50);
+\end_layout
+
+\begin_layout Plain Layout
+            }
+\end_layout
+
+\begin_layout Plain Layout
+        }
+\end_layout
+
+\begin_layout Plain Layout
+        //draw the cursor
+\end_layout
+
+\begin_layout Plain Layout
+        noFill();
+\end_layout
+
+\begin_layout Plain Layout
+        strokeWeight(2);
+\end_layout
+
+\begin_layout Plain Layout
+        stroke(0);
+\end_layout
+
+\begin_layout Plain Layout
+        if (inputMouse) {
+\end_layout
+
+\begin_layout Plain Layout
+            circle(mouseX, mouseY, 10);
+\end_layout
+
+\begin_layout Plain Layout
+        } else {
+\end_layout
+
+\begin_layout Plain Layout
+            float[] screenDim = new float[]{height, width};
+\end_layout
+
+\begin_layout Plain Layout
+            try {
+\end_layout
+
+\begin_layout Plain Layout
+                for (int i = 0; i < 2; i++) {
+\end_layout
+
+\begin_layout Plain Layout
+                    if (gyroCur[i] < 0) {
+\end_layout
+
+\begin_layout Plain Layout
+                        gyroCur[i] = 0;
+\end_layout
+
+\begin_layout Plain Layout
+                    } else if (gyroCur[i] > screenDim[i]) {
+\end_layout
+
+\begin_layout Plain Layout
+                        gyroCur[i] = screenDim[i];
+\end_layout
+
+\begin_layout Plain Layout
+                    }
+\end_layout
+
+\begin_layout Plain Layout
+                }
+\end_layout
+
+\begin_layout Plain Layout
+                circle(gyroCur[1], gyroCur[0], 10);
+\end_layout
+
+\begin_layout Plain Layout
+            } catch(NullPointerException n) {
+\end_layout
+
+\begin_layout Plain Layout
+                centreGyro();
+\end_layout
+
+\begin_layout Plain Layout
+            }
+\end_layout
+
+\begin_layout Plain Layout
+            //present becomes past
+\end_layout
+
+\begin_layout Plain Layout
+            logOld.gamepad = logNew.gamepad;
+\end_layout
+
+\begin_layout Plain Layout
+            logOld.gamepadError = logNew.gamepadError;
+\end_layout
+
+\begin_layout Plain Layout
+            logOld.gyroEvent = logNew.gyroEvent;
+\end_layout
+
+\begin_layout Plain Layout
+            logOld.gyroStatus = logNew.gyroStatus;
+\end_layout
+
+\begin_layout Plain Layout
+            logOld.numSticks = logNew.numSticks;
+\end_layout
+
+\begin_layout Plain Layout
+        }
+\end_layout
+
+\begin_layout Plain Layout
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    public void centreGyro () {
+\end_layout
+
+\begin_layout Plain Layout
+        //grab screen size
+\end_layout
+
+\begin_layout Plain Layout
+        gyroCur = new float[]{height, width};
+\end_layout
+
+\begin_layout Plain Layout
+        for (int i = 0; i < 2; i++) {
+\end_layout
+
+\begin_layout Plain Layout
+            gyroCur[i] /= 2.0F;
+\end_layout
+
+\begin_layout Plain Layout
+        }
+\end_layout
+
+\begin_layout Plain Layout
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    public boolean isHit(float[] t, float x, float y, float c) {
+\end_layout
+
+\begin_layout Plain Layout
+        return dist(x, y, t[0], t[1]) < (c + t[2]) / 2;
+\end_layout
+
+\begin_layout Plain Layout
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    public boolean isIntersect(float x, float y, float c) {
+\end_layout
+
+\begin_layout Plain Layout
+        for (float[] t : targets) {
+\end_layout
+
+\begin_layout Plain Layout
+            if (isHit(t, x, y, c)) {
+\end_layout
+
+\begin_layout Plain Layout
+                return true;
+\end_layout
+
+\begin_layout Plain Layout
+            }
+\end_layout
+
+\begin_layout Plain Layout
+        }
+\end_layout
+
+\begin_layout Plain Layout
+        return false;
+\end_layout
+
+\begin_layout Plain Layout
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    public boolean isPressed() {
+\end_layout
+
+\begin_layout Plain Layout
+        if (inputMouse) {
+\end_layout
+
+\begin_layout Plain Layout
+            return mousePressed;
+\end_layout
+
+\begin_layout Plain Layout
+        } else {
+\end_layout
+
+\begin_layout Plain Layout
+            return gyroPressed;
+\end_layout
+
+\begin_layout Plain Layout
+        }
+\end_layout
+
+\begin_layout Plain Layout
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    public float[] newTarget() {
+\end_layout
+
+\begin_layout Plain Layout
+        return new float[]{random(width), random(height), random(120.3F)};
+\end_layout
+
+\begin_layout Plain Layout
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    //creates a new Target free from the past
+\end_layout
+
+\begin_layout Plain Layout
+    public void addTarget() {
+\end_layout
+
+\begin_layout Plain Layout
+        float[] t = newTarget();
+\end_layout
+
+\begin_layout Plain Layout
+        while(isIntersect(t[0], t[1], t[2]) || t[2] < 18.9) {
+\end_layout
+
+\begin_layout Plain Layout
+            t = newTarget();
+\end_layout
+
+\begin_layout Plain Layout
+        }
+\end_layout
+
+\begin_layout Plain Layout
+        targets.add(t);
+\end_layout
+
+\begin_layout Plain Layout
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    public void getDims() {
+\end_layout
+
+\begin_layout Plain Layout
+        if (inputMouse) {
+\end_layout
+
+\begin_layout Plain Layout
+            dims = new float[]{mouseY, mouseX};
+\end_layout
+
+\begin_layout Plain Layout
+        } else {
+\end_layout
+
+\begin_layout Plain Layout
+            dims = gyroCur;
+\end_layout
+
+\begin_layout Plain Layout
+        }
+\end_layout
+
+\begin_layout Plain Layout
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    @Override
+\end_layout
+
+\begin_layout Plain Layout
+    public void mouseReleased() {
+\end_layout
+
+\begin_layout Plain Layout
+        releaseEvent();
+\end_layout
+
+\begin_layout Plain Layout
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    public void releaseEvent () {
+\end_layout
+
+\begin_layout Plain Layout
+        if (p.size() > 10 && drawMode == 1) {
+\end_layout
+
+\begin_layout Plain Layout
+            float[] circV = new float[2];
+\end_layout
+
+\begin_layout Plain Layout
+            for (int i = 0; i < 2; i++) {
+\end_layout
+
+\begin_layout Plain Layout
+                for (float[] v : p) {
+\end_layout
+
+\begin_layout Plain Layout
+                    circV[i] += v[i];
+\end_layout
+
+\begin_layout Plain Layout
+                }
+\end_layout
+
+\begin_layout Plain Layout
+                circV[i] /= p.size();
+\end_layout
+
+\begin_layout Plain Layout
+            }
+\end_layout
+
+\begin_layout Plain Layout
+            float[] dists = new float[p.size()];
+\end_layout
+
+\begin_layout Plain Layout
+            float[] pd;
+\end_layout
+
+\begin_layout Plain Layout
+            for (int i = 0; i < p.size(); i++) {
+\end_layout
+
+\begin_layout Plain Layout
+                pd = p.get(i);
+\end_layout
+
+\begin_layout Plain Layout
+                dists[i] = dist(pd[0], pd[1], circV[0], circV[1]);
+\end_layout
+
+\begin_layout Plain Layout
+            }
+\end_layout
+
+\begin_layout Plain Layout
+            float circRad = 0;
+\end_layout
+
+\begin_layout Plain Layout
+            for (float d : dists) {
+\end_layout
+
+\begin_layout Plain Layout
+                circRad += d;
+\end_layout
+
+\begin_layout Plain Layout
+            }
+\end_layout
+
+\begin_layout Plain Layout
+            circRad /= p.size();
+\end_layout
+
+\begin_layout Plain Layout
+            float errorFactor = 0;
+\end_layout
+
+\begin_layout Plain Layout
+            for (float d : dists) {
+\end_layout
+
+\begin_layout Plain Layout
+                errorFactor += abs(d - circRad);
+\end_layout
+
+\begin_layout Plain Layout
+            }
+\end_layout
+
+\begin_layout Plain Layout
+            //work out mean absolute difference and normalise to radius
+ so it scales to size
+\end_layout
+
+\begin_layout Plain Layout
+            //a higher error factor equates to more errors
+\end_layout
+
+\begin_layout Plain Layout
+            userResults += (errorFactor / p.size()) / circRad;
+\end_layout
+
+\begin_layout Plain Layout
+            //ensure circle has enough data points for accurate analysis
+\end_layout
+
+\begin_layout Plain Layout
+            if (circRad > 24) {
+\end_layout
+
+\begin_layout Plain Layout
+                if (inputMouse) {
+\end_layout
+
+\begin_layout Plain Layout
+                    //reset the test
+\end_layout
+
+\begin_layout Plain Layout
+                    p.clear();
+\end_layout
+
+\begin_layout Plain Layout
+                    userResults += "|gyro|";
+\end_layout
+
+\begin_layout Plain Layout
+                    inputMouse = false;
+\end_layout
+
+\begin_layout Plain Layout
+                    //repetition free string construction~
+\end_layout
+
+\begin_layout Plain Layout
+                    msgsChange[0] = "no ";
+\end_layout
+
+\begin_layout Plain Layout
+                    for (int i = 0; i < 3; i++) {
+\end_layout
+
+\begin_layout Plain Layout
+                        msgsChange[i] += "gamepad";
+\end_layout
+
+\begin_layout Plain Layout
+                    }
+\end_layout
+
+\begin_layout Plain Layout
+                    msgsChange[2] += "s";
+\end_layout
+
+\begin_layout Plain Layout
+                    for (int i = 0; i < 3; i++) {
+\end_layout
+
+\begin_layout Plain Layout
+                        msgsChange[i] += " connected";
+\end_layout
+
+\begin_layout Plain Layout
+                    }
+\end_layout
+
+\begin_layout Plain Layout
+                    //initialise sdl subsystems
+\end_layout
+
+\begin_layout Plain Layout
+                    if ((SDL_Init(SDL_INIT_GAMECONTROLLER) == -1)) {
+\end_layout
+
+\begin_layout Plain Layout
+                        System.out.println(SDL_GetError());
+\end_layout
+
+\begin_layout Plain Layout
+                    }
+\end_layout
+
+\begin_layout Plain Layout
+                } else {
+\end_layout
+
+\begin_layout Plain Layout
+                    userResults += "|target|mouse|";
+\end_layout
+
+\begin_layout Plain Layout
+                    drawMode = 3;
+\end_layout
+
+\begin_layout Plain Layout
+                    inputMouse = true;
+\end_layout
+
+\begin_layout Plain Layout
+                    startTargets();
+\end_layout
+
+\begin_layout Plain Layout
+                }
+\end_layout
+
+\begin_layout Plain Layout
+            }
+\end_layout
+
+\begin_layout Plain Layout
+        }
+\end_layout
+
+\begin_layout Plain Layout
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    public void song() {
+\end_layout
+
+\begin_layout Plain Layout
+        getDims();
+\end_layout
+
+\begin_layout Plain Layout
+        choir = new float[]{atan2(ps[1] - dims[0], ps[0] - dims[1]), dist(dims[1
+], dims[0], ps[0], ps[1])};
+\end_layout
+
+\begin_layout Plain Layout
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    public void startTargets() {
+\end_layout
+
+\begin_layout Plain Layout
+        timeElapsed = false;
+\end_layout
+
+\begin_layout Plain Layout
+        targets = new ArrayList<>();
+\end_layout
+
+\begin_layout Plain Layout
+        targetTimer(60);
+\end_layout
+
+\begin_layout Plain Layout
+        for (int i = 0; i < 3; i++) {
+\end_layout
+
+\begin_layout Plain Layout
+            addTarget();
+\end_layout
+
+\begin_layout Plain Layout
+        }
+\end_layout
+
+\begin_layout Plain Layout
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    public void targetTimer(int seconds) {
+\end_layout
+
+\begin_layout Plain Layout
+        timer = new Timer();
+\end_layout
+
+\begin_layout Plain Layout
+        timer.schedule(new TargetTask(), seconds* 1000L);
+\end_layout
+
+\begin_layout Plain Layout
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    class TargetTask extends TimerTask {
+\end_layout
+
+\begin_layout Plain Layout
+        @Override
+\end_layout
+
+\begin_layout Plain Layout
+        public void run() {
+\end_layout
+
+\begin_layout Plain Layout
+            timeElapsed = true;
+\end_layout
+
+\begin_layout Plain Layout
+            timer.cancel();
+\end_layout
+
+\begin_layout Plain Layout
+        }
+\end_layout
+
+\begin_layout Plain Layout
+    }
+\end_layout
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+GhostLog class
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Java"
+inline false
+status open
+
+\begin_layout Plain Layout
+package com.mmu;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+import org.libsdl.api.event.events.SDL_ControllerSensorEvent;
+\end_layout
+
+\begin_layout Plain Layout
+import org.libsdl.api.gamecontroller.SDL_GameController;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+public class GhostLog {
+\end_layout
+
+\begin_layout Plain Layout
+    boolean gyroStatus = true;
+\end_layout
+
+\begin_layout Plain Layout
+    int numSticks = 1;
+\end_layout
+
+\begin_layout Plain Layout
+    SDL_ControllerSensorEvent gyroEvent = null;
+\end_layout
+
+\begin_layout Plain Layout
+    SDL_GameController gamepad = null;
+\end_layout
+
+\begin_layout Plain Layout
+    String gamepadError = "";
+\end_layout
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
 Feasibility study review email
 \begin_inset CommandInset label
