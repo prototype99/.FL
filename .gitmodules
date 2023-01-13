@@ -7,3 +7,6 @@
 [submodule "processing4"]
 	path = processing4
 	url = https://github.com/processing/processing4.git
+[submodule "references"]
+	path = references
+	url = https://github.com/prototype99/references.git
